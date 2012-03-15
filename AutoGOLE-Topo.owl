@@ -214,7 +214,7 @@
             skype: just1sand0s  
             Network Engineer: Ralph Koning 
             email: r.koning@uva.nl  
-            skype: ralph-uva-sne	
+            skype: ralph-uva-sne
             Key software engineer: Jeroen van der Ham
             email: vdham@uva.nl mobile: use skype   
             skype: just1sand0s  
@@ -761,18 +761,18 @@
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:nsa:starlight">
     <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-	             http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
-	         </csProviderEndpoint>
+             http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
+         </csProviderEndpoint>
     <adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-	             NSA: OpenNSA (NORDUnet) over Argia 
-	             Project manager: Scott Campbell 
-	             email: scott.campbell@crc.gc.ca  
-	             mobile:   
-	             skype: scottcampbell00 
-	             Key software engineer: Henrik Thostrup-Jensen 
-	             email: htj@nordu.net 
-	             skype: henrik.thostrup.jensen
-	         </adminContact>
+             NSA: OpenNSA (NORDUnet) over Argia 
+             Project manager: Scott Campbell 
+             email: scott.campbell@crc.gc.ca  
+             mobile:   
+             skype: scottcampbell00 
+             Key software engineer: Henrik Thostrup-Jensen 
+             email: htj@nordu.net 
+             skype: henrik.thostrup.jensen
+         </adminContact>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
     <managing rdf:resource="urn:ogf:network:nsnetwork:starlight.ets"/>
@@ -949,18 +949,18 @@
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:nsa:northernlight">
     <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-	             https://orval.grid.aau.dk:9443/NSI/services/ConnectionService
-	         </csProviderEndpoint>
+             https://orval.grid.aau.dk:9443/NSI/services/ConnectionService
+         </csProviderEndpoint>
     <adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-	             NSA: OpenNSA (NORDUnet) 
-	             Project Management: Jerry Sobieski 
-	             email: jerry@nordu.net 
-	             mobile:  1-301-346-1849 
-	             skype: jerry.sobieski 
-	             Software Development: Henrik Thostrup-Jensen 
-	             email: htj@nordu.net 
-	             skype: henrik.thostrup.jensen
-	         </adminContact>
+             NSA: OpenNSA (NORDUnet) 
+             Project Management: Jerry Sobieski 
+             email: jerry@nordu.net 
+             mobile:  1-301-346-1849 
+             skype: jerry.sobieski 
+             Software Development: Henrik Thostrup-Jensen 
+             email: htj@nordu.net 
+             skype: henrik.thostrup.jensen
+         </adminContact>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
     <managing rdf:resource="urn:ogf:network:nsnetwork:northernlight.ets"/>
@@ -1236,7 +1236,7 @@
             Project manager: Tomohiro Kudoh 
             email: t.kudoh@aist.go.jp 
             mobile:  81-90-8741-3165 
-            skype: t.kudoh 4.3.	
+            skype: t.kudoh 4.3.
             Key software engineer: Atsuko Takefusa 
             email: nsi-gl@m.aist.go.jp 
             mobile:  81-29-861-3091 
