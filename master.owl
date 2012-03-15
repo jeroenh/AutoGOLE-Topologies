@@ -1,0 +1,50 @@
+<rdf:RDF xmlns="http://www.glif.is/working-groups/tech/dtox#"
+     xml:base="http://www.glif.is/working-groups/tech/dtox"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dtox="http://www.glif.is/working-groups/tech/dtox#">
+
+    <owl:Ontology rdf:about="http://www.glif.is/working-groups/tech/dtox"/>
+
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:aist">
+		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/OpenNSA-tools/master/topologies/goles/aist.owl"/>
+	</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:czechlight">
+		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/OpenNSA-tools/master/topologies/goles/czechlight.owl"/>
+	</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:esnet">
+		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/OpenNSA-tools/master/topologies/goles/esnet.owl"/>
+	</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:geant">
+		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/OpenNSA-tools/master/topologies/goles/geant.owl"/>
+	</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:gloriad">
+		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/OpenNSA-tools/master/topologies/goles/gloriad.owl"/>
+	</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:jgnx">
+		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/OpenNSA-tools/master/topologies/goles/jgnx.owl"/>
+	</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:kddi-labs">
+		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/OpenNSA-tools/master/topologies/goles/kddi-labs.owl"/>
+	</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:krlight">
+		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/OpenNSA-tools/master/topologies/goles/krlight.owl"/>
+	</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:netherlight">
+		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/OpenNSA-tools/master/topologies/goles/netherlight.owl"/>
+	</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:northernlight">
+		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/OpenNSA-tools/master/topologies/goles/northernlight.owl"/>
+	</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:pionier">
+		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/OpenNSA-tools/master/topologies/goles/pionier.owl"/>
+	</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:starlight">
+		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/OpenNSA-tools/master/topologies/goles/starlight.owl"/>
+	</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:uvalight">
+		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/OpenNSA-tools/master/topologies/goles/uvalight.owl"/>
+	</owl:NamedIndividual>
+</rdf:RDF>
