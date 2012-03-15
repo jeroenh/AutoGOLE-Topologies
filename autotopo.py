@@ -29,13 +29,13 @@ class MasterTopology(object):
         return links
 
                 
-def mergeTopologies(masterFile):
+def mergeTopologies(masterFile,outfile):
     "Parse the masterfile and open all the separate topologies."
     m = MasterTopology(masterFile)
     g = rdflib.Graph()
     for l in m.getSeeAlsoLinks():
         g.parse(l,format='xml')
-    print g.serialize()
+    print g.serialize(outfile)
     
 def crawlTopology(startTopo):
     """
@@ -62,7 +62,7 @@ def crawlTopology(startTopo):
     return allLocs, conList
 
 def main():
-    mergeTopologies("master.owl")
+    mergeTopologies("master.owl","AutoGOLE-Topo.owl")
     
 if __name__ == '__main__':
     main()
