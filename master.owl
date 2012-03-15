@@ -45,4 +45,5 @@
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:uvalight.ets">
         <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/uvalight.owl"/>
     </owl:NamedIndividual>
+
 </rdf:RDF>
