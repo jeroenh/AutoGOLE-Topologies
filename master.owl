@@ -7,42 +7,42 @@
     <owl:Ontology rdf:about="http://www.glif.is/working-groups/tech/dtox"/>
 
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:aist.ets">
-		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/aist.owl"/>
-	</owl:NamedIndividual>
+        <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/aist.owl"/>
+    </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:czechlight.ets">
-		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/czechlight.owl"/>
-	</owl:NamedIndividual>
+        <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/czechlight.owl"/>
+    </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:esnet.ets">
-		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/esnet.owl"/>
-	</owl:NamedIndividual>
+        <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/esnet.owl"/>
+    </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:geant.ets">
-		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/geant.owl"/>
-	</owl:NamedIndividual>
+        <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/geant.owl"/>
+    </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:gloriad.ets">
-		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/gloriad.owl"/>
-	</owl:NamedIndividual>
+        <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/gloriad.owl"/>
+    </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:jgnx.ets">
-		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/jgnx.owl"/>
-	</owl:NamedIndividual>
+        <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/jgnx.owl"/>
+    </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:kddi-labs.ets">
-		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/kddi-labs.owl"/>
-	</owl:NamedIndividual>
+        <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/kddi-labs.owl"/>
+    </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:krlight.ets">
-		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/krlight.owl"/>
-	</owl:NamedIndividual>
+        <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/krlight.owl"/>
+    </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:netherlight.ets">
-		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/netherlight.owl"/>
-	</owl:NamedIndividual>
+        <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/netherlight.owl"/>
+    </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:northernlight.ets">
-		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/northernlight.owl"/>
-	</owl:NamedIndividual>
+        <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/northernlight.owl"/>
+    </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:pionier.ets">
-		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/pionier.owl"/>
-	</owl:NamedIndividual>
+        <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/pionier.owl"/>
+    </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:starlight.ets">
-		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/starlight.owl"/>
-	</owl:NamedIndividual>
+        <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/starlight.owl"/>
+    </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:uvalight.ets">
-		<rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/uvalight.owl"/>
-	</owl:NamedIndividual>
+        <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/uvalight.owl"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
