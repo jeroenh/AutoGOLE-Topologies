@@ -26,8 +26,8 @@
     <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#Location"/>
 
-	 <!-- *** StarLight -->    
-    
+    <!-- *** StarLight -->    
+
      <!-- urn:ogf:network:stp:starlight.ets:ps-80 -->
      <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:ps-80">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
@@ -44,12 +44,12 @@
      <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:ps-83">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
      </owl:NamedIndividual>
-    
-     <!-- urn:ogf:network:stp:starlight.ets:ams-80    IRNC -->  
+
+     <!-- urn:ogf:network:stp:starlight.ets:ams-80    IRNC -->
      <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:ams-80">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
          <connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-80"/>
-     </owl:NamedIndividual>                   
+     </owl:NamedIndividual>
      <!-- urn:ogf:network:stp:starlight.ets:ams-81    IRNC -->
      <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:ams-81">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
@@ -65,7 +65,7 @@
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
          <connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-83"/>
      </owl:NamedIndividual>
-    
+
      <!-- urn:ogf:network:stp:starlight.ets:esn-80   USLHCnet -->
      <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:esn-80">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
@@ -86,7 +86,7 @@
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
          <connectedTo rdf:resource="urn:ogf:network:stp:esnet.ets:chi-83"/>
      </owl:NamedIndividual>
-    
+
      <!-- urn:ogf:network:stp:starlight.ets:tok-80  -->
      <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:tok-80">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
@@ -107,7 +107,7 @@
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
          <connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-83"/>
      </owl:NamedIndividual>
-    
+
      <!-- urn:ogf:network:stp:starlight.ets:glo06f4 -->
      <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:glo-06f4">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
@@ -128,9 +128,9 @@
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
          <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl.3"/>
      </owl:NamedIndividual>
-    
+
      <!-- urn:ogf:network:nsnetwork:starlight.ets -->
-    
+
      <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:starlight.ets">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
          <rdfs:label xml:lang="en">starlight.ets</rdfs:label>
@@ -157,17 +157,17 @@
          <managedBy rdf:resource="urn:ogf:network:nsa:starlight"/>
          <locatedAt rdf:resource="urn:ogf:network:nsnetwork:starlight.ets:location"/>
      </owl:NamedIndividual>
-    
+
      <!-- urn:ogf:network:nsnetwork:starlight.ets:location Chicago, US -->
-    
+
      <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:starlight.ets:location">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
          <lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.947906</lat>
          <long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.655791</long>
      </owl:NamedIndividual>
-    
+
      <!-- urn:ogf:network:nsa:starlight -->
-    
+
      <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:starlight">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
          <managing rdf:resource="urn:ogf:network:nsnetwork:starlight.ets" />
@@ -185,6 +185,6 @@
              http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
          </csProviderEndpoint>
      </owl:NamedIndividual>
- 
+
  </rdf:RDF>
 
