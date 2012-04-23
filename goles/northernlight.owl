@@ -157,6 +157,10 @@
         <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1781"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1782"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1783"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:max-80"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:max-81"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:max-82"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:max-83"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:nl-jive-2001"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:onsala-2001"/>
         <managedBy rdf:resource="urn:ogf:network:nsa:northernlight"/>

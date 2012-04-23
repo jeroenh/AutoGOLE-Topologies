@@ -159,7 +159,7 @@
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-80"/> 
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-81"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-82"/>
-         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-83"/>     
+         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-83"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:esn-80"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:esn-81"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:esn-82"/>
@@ -168,6 +168,10 @@
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:tok-81"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:tok-82"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:tok-83"/>
+         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:max-80"/>
+         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:max-81"/>
+         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:max-82"/>
+         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:max-83"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-06f4"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-06f5"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-06f6"/>
