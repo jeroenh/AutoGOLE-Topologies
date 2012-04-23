@@ -108,6 +108,24 @@
         <connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-3"/>
     </owl:NamedIndividual>
 
+    <!-- MAX -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:max-80">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:ndn-80"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:max-81">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:ndn-81"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:max-82">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:ndn-82"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:max-83">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:ndn-83"/>
+    </owl:NamedIndividual>
+
     <!-- urn:ogf:network:stp:northernlight.ets:nl-jive-2001 -->
     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:nl-jive-2001">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
