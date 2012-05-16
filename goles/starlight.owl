@@ -138,7 +138,7 @@
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
          <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:sl-81"/>
      </owl:NamedIndividual>
-     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:max-81">
+     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:max-82">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
          <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:sl-82"/>
      </owl:NamedIndividual>
