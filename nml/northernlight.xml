@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<nml:Topology 
+  xmlns:nml="http://schemas.ogf.org/nml/2013/10/base/"
+  xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+  xmlns:dtox="http://www.glif.is/working-groups/tech/dtox#"
+  xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0"
+>
+
+    <nml:Topology id="urn:ogf:network:nordu.net:2011:northernlight.ets">
+        <nml:name xml:lang="en">Northernlight</nml:name>
+        <dtox:managedBy idRef="urn:ogf:network:nordu.net:2011:NORDUnet:org"/>
+        <nml:locatedAt idRef="urn:ogf:network:nordu.net:2011:DK-CPH"/>
+        
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:nordu.net:2011:nordunet-netherlight">
+                <nml:label>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
+                </nml:label>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                    <nml:PortGroup idRef="urn:ogf:network:netherlight.net:2010:nordunet-netherlight"/>
+                </nml:Relation>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:nordu.net:2011:nordunet-pionier">
+                <nml:label>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
+                </nml:label>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                    <nml:PortGroup idRef="urn:ogf:network:pionier.net.pl:2012:nordunet-pionier"/>
+                </nml:Relation>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:nordu.net:2011:nordunet-uva">
+                <nml:label>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
+                </nml:label>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                    <nml:PortGroup idRef="urn:ogf:network:sne.science.uva.nl:2010:nordunet-uva"/>
+                </nml:Relation>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:nordu.net:2011:nordunet-maxgigapop">
+                <nml:label>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
+                </nml:label>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                    <nml:PortGroup idRef="urn:ogf:network:maxgigapop.net:2012:nordunet-maxgigapop"/>
+                </nml:Relation>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:nordu.net:2011:nordunet-jive">
+                <nml:label>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
+                </nml:label>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                    <nml:PortGroup idRef="urn:ogf:network:jive.nl:2012:nordunet-jive"/>
+                </nml:Relation>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:nordu.net:2011:nordunet-perfsonar-endpoint">
+                <nml:label>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">2001</nml:parameter>
+                </nml:label>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:nordu.net:2011:nordunet-onsala-endpoint">
+                <nml:label>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">2001</nml:parameter>
+                </nml:label>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/inboundPort">
+            <nml:PortGroup id="urn:ogf:network:nordu.net:2011:netherlight-nordunet">
+                <nml:label>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
+                </nml:label>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                    <nml:PortGroup idRef="urn:ogf:network:netherlight.net:2010:netherlight-nordunet"/>
+                </nml:Relation>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:nordu.net:2011:pionier-nordunet">
+                <nml:label>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
+                </nml:label>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                    <nml:PortGroup idRef="urn:ogf:network:pionier.net.pl:2012:pionier-nordunet"/>
+                </nml:Relation>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:nordu.net:2011:uva-nordunet">
+                <nml:label>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
+                </nml:label>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                    <nml:PortGroup idRef="urn:ogf:network:sne.science.uva.nl:2010:uva-nordunet"/>
+                </nml:Relation>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:nordu.net:2011:maxgigapop-nordunet">
+                <nml:label>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
+                </nml:label>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                    <nml:PortGroup idRef="urn:ogf:network:maxgigapop.net:2012:maxgigapop-nordunet"/>
+                </nml:Relation>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:nordu.net:2011:jive-nordunet">
+                <nml:label>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
+                </nml:label>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                    <nml:PortGroup idRef="urn:ogf:network:jive.nl:2012:jive-nordunet"/>
+                </nml:Relation>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:nordu.net:2011:nordunet-perfsonar-startpoint">
+                <nml:label>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">2001</nml:parameter>
+                </nml:label>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:nordu.net:2011:nordunet-onsala-startpoint">
+                <nml:label>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
+                    <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">2001</nml:parameter>
+                </nml:label>
+            </nml:PortGroup>
+        </nml:Relation>
+        
+        <nml:BidirectionalPort id="urn:ogf:network:nordu.net:2011:ams">
+            <nml:PortGroup idRef="urn:ogf:network:nordu.net:2011:nordunet-netherlight"/>
+            <nml:PortGroup idRef="urn:ogf:network:nordu.net:2011:netherlight-nordunet"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:nordu.net:2011:po`">
+            <nml:PortGroup idRef="urn:ogf:network:nordu.net:2011:nordunet-pionier"/>
+            <nml:PortGroup idRef="urn:ogf:network:nordu.net:2011:pionier-nordunet"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:nordu.net:2011:uva">
+            <nml:PortGroup idRef="urn:ogf:network:nordu.net:2011:nordunet-uva"/>
+            <nml:PortGroup idRef="urn:ogf:network:nordu.net:2011:uva-nordunet"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:nordu.net:2011:max">
+            <nml:PortGroup idRef="urn:ogf:network:nordu.net:2011:nordunet-maxgigapop"/>
+            <nml:PortGroup idRef="urn:ogf:network:nordu.net:2011:maxgigapop-nordunet"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:nordu.net:2011:nl-jive">
+            <nml:PortGroup idRef="urn:ogf:network:nordu.net:2011:nordunet-jive"/>
+            <nml:PortGroup idRef="urn:ogf:network:nordu.net:2011:jive-nordunet"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:nordu.net:2011:ps">
+            <nml:PortGroup idRef="urn:ogf:network:nordu.net:2011:nordunet-perfsonar-endpoint"/>
+            <nml:PortGroup idRef="urn:ogf:network:nordu.net:2011:nordunet-perfsonar-startpoint"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:nordu.net:2011:onsala">
+            <nml:PortGroup idRef="urn:ogf:network:nordu.net:2011:nordunet-onsala-endpoint"/>
+            <nml:PortGroup idRef="urn:ogf:network:nordu.net:2011:nordunet-onsala-startpoint"/>
+        </nml:BidirectionalPort>
+    </nml:Topology>
+
+    <!-- urn:ogf:network:nsnetwork:northernlight.ets:location  Copenhagen, DK -->
+
+    <nml:Location id="urn:ogf:network:nordu.net:2011:DK-CPH">
+        <nml:name xml:lang="en">Kobenhavn</nml:name>
+        <nml:unlocode>DK CPH</nml:unlocode>
+        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">55.637</nml:lat>
+        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.641</nml:long>
+    </nml:Location>
+
+    <!-- urn:ogf:network:nsa:northernlight -->
+
+    <dtox:NSA id="urn:ogf:network:nsa:northernlight">
+        <dtox:managing idRef="urn:ogf:network:nsnetwork:northernlight.ets" />
+        <dtox:adminContact>
+            <vc:vcards xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0">
+                <vc:vcard>
+                    <vc:fn><vc:text>Jerry Sobieski</vc:text></vc:fn>
+                    <vc:tel>
+                        <vc:parameters>
+                            <vc:type>
+                                <vc:text>work</vc:text>
+                                <vc:text>voice</vc:text>
+                            </vc:type>
+                        </vc:parameters>
+                        <vc:text>+1-301-346-1849</vc:text>
+                    </vc:tel>
+                    <vc:email>
+                        <vc:parameters>
+                            <vc:type>
+                                <vc:text>work</vc:text>
+                            </vc:type>
+                        </vc:parameters>
+                        <vc:text>jerry@nordu.net</vc:text>
+                    </vc:email>
+                    </vc:x-skype-username>
+                        <vc:parameters>
+                            <vc:type>
+                                <vc:text>work</vc:text>
+                                <vc:text>voice</vc:text>
+                                <vc:text>video</vc:text>
+                                <vc:text>text</vc:text>
+                            </vc:type>
+                        </vc:parameters>
+                        <vc:text>jerry.sobieski</vc:text>
+                    </vc:x-skype-username>
+                    <vc:org><vc:text>NORDUnet</vc:text></vc:org>
+                    <vc:role><vc:text>Project Management</vc:text></vc:role>
+                </vc:vcard>
+                <vc:vcard>
+                    <vc:fn><vc:text>Henrik Thostrup-Jensen</vc:text></vc:fn>
+                    <vc:email>
+                        <vc:parameters>
+                            <vc:type>
+                                <vc:text>work</vc:text>
+                            </vc:type>
+                        </vc:parameters>
+                        <vc:text>htj@nordu.net</vc:text>
+                    </vc:email>
+                    </vc:x-skype-username>
+                        <vc:parameters>
+                            <vc:type>
+                                <vc:text>work</vc:text>
+                                <vc:text>voice</vc:text>
+                                <vc:text>video</vc:text>
+                                <vc:text>text</vc:text>
+                            </vc:type>
+                        </vc:parameters>
+                        <vc:text>henrik.thostrup.jensen</vc:text>
+                    </vc:x-skype-username>
+                    <vc:org><vc:text>NORDUnet</vc:text></vc:org>
+                    <vc:role><vc:text>Software Development</vc:text></vc:role>
+                </vc:vcard>
+            <vc:vcards>
+        </dtox:adminContact>
+        <dtox:csProviderEndpoint>https://orval.grid.aau.dk:9443/NSI/services/ConnectionService</csProviderEndpoint>
+    </dtox:NSA>
+
+</rdf:RDF>
+
