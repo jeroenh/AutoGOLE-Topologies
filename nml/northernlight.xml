@@ -163,10 +163,10 @@
     <!-- urn:ogf:network:nsnetwork:northernlight.ets:location  Copenhagen, DK -->
 
     <nml:Location id="urn:ogf:network:nordu.net:2011:DK-CPH">
-        <nml:name xml:lang="en">Kobenhavn</nml:name>
+        <nml:name xml:lang="en">København</nml:name>
         <nml:unlocode>DK CPH</nml:unlocode>
-        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">55.637</nml:lat>
-        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.641</nml:long>
+        <nml:lat>55.637</nml:lat>
+        <nml:long>12.641</nml:long>
     </nml:Location>
 
     <!-- urn:ogf:network:nsa:northernlight -->
@@ -174,27 +174,28 @@
     <dtox:NSA id="urn:ogf:network:nsa:northernlight">
         <dtox:managing idRef="urn:ogf:network:nsnetwork:northernlight.ets" />
         <dtox:adminContact>
-            <vc:vcards xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0">
+            <vc:vcards>
                 <vc:vcard>
                     <vc:fn><vc:text>Jerry Sobieski</vc:text></vc:fn>
                     <vc:tel>
+                        <vc:text>+1-301-346-1849</vc:text>
                         <vc:parameters>
                             <vc:type>
                                 <vc:text>work</vc:text>
                                 <vc:text>voice</vc:text>
                             </vc:type>
                         </vc:parameters>
-                        <vc:text>+1-301-346-1849</vc:text>
                     </vc:tel>
                     <vc:email>
+                        <vc:text>jerry@nordu.net</vc:text>
                         <vc:parameters>
                             <vc:type>
                                 <vc:text>work</vc:text>
                             </vc:type>
                         </vc:parameters>
-                        <vc:text>jerry@nordu.net</vc:text>
                     </vc:email>
-                    </vc:x-skype-username>
+                    <vc:x-skype-username>
+                        <vc:text>jerry.sobieski</vc:text>
                         <vc:parameters>
                             <vc:type>
                                 <vc:text>work</vc:text>
@@ -203,7 +204,6 @@
                                 <vc:text>text</vc:text>
                             </vc:type>
                         </vc:parameters>
-                        <vc:text>jerry.sobieski</vc:text>
                     </vc:x-skype-username>
                     <vc:org><vc:text>NORDUnet</vc:text></vc:org>
                     <vc:role><vc:text>Project Management</vc:text></vc:role>
@@ -211,14 +211,15 @@
                 <vc:vcard>
                     <vc:fn><vc:text>Henrik Thostrup-Jensen</vc:text></vc:fn>
                     <vc:email>
+                        <vc:text>htj@nordu.net</vc:text>
                         <vc:parameters>
                             <vc:type>
                                 <vc:text>work</vc:text>
                             </vc:type>
                         </vc:parameters>
-                        <vc:text>htj@nordu.net</vc:text>
                     </vc:email>
-                    </vc:x-skype-username>
+                    <vc:x-skype-username>
+                        <vc:text>henrik.thostrup.jensen</vc:text>
                         <vc:parameters>
                             <vc:type>
                                 <vc:text>work</vc:text>
@@ -227,15 +228,14 @@
                                 <vc:text>text</vc:text>
                             </vc:type>
                         </vc:parameters>
-                        <vc:text>henrik.thostrup.jensen</vc:text>
                     </vc:x-skype-username>
                     <vc:org><vc:text>NORDUnet</vc:text></vc:org>
                     <vc:role><vc:text>Software Development</vc:text></vc:role>
                 </vc:vcard>
-            <vc:vcards>
+            </vc:vcards>
         </dtox:adminContact>
-        <dtox:csProviderEndpoint>https://orval.grid.aau.dk:9443/NSI/services/ConnectionService</csProviderEndpoint>
+        <dtox:csProviderEndpoint>https://orval.grid.aau.dk:9443/NSI/services/ConnectionService</dtox:csProviderEndpoint>
     </dtox:NSA>
 
-</rdf:RDF>
+</nml:Topology>
 
