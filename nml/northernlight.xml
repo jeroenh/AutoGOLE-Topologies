@@ -17,7 +17,7 @@
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
                 </nml:label>
-                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/isAlias">
                     <nml:PortGroup idRef="urn:ogf:network:netherlight.net:2010:nordunet-netherlight"/>
                 </nml:Relation>
             </nml:PortGroup>
@@ -26,7 +26,7 @@
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
                 </nml:label>
-                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/isAlias">
                     <nml:PortGroup idRef="urn:ogf:network:pionier.net.pl:2012:nordunet-pionier"/>
                 </nml:Relation>
             </nml:PortGroup>
@@ -35,7 +35,7 @@
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
                 </nml:label>
-                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/isAlias">
                     <nml:PortGroup idRef="urn:ogf:network:sne.science.uva.nl:2010:nordunet-uva"/>
                 </nml:Relation>
             </nml:PortGroup>
@@ -44,7 +44,7 @@
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
                 </nml:label>
-                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/isAlias">
                     <nml:PortGroup idRef="urn:ogf:network:maxgigapop.net:2012:nordunet-maxgigapop"/>
                 </nml:Relation>
             </nml:PortGroup>
@@ -53,7 +53,7 @@
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
                 </nml:label>
-                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/isAlias">
                     <nml:PortGroup idRef="urn:ogf:network:jive.nl:2012:nordunet-jive"/>
                 </nml:Relation>
             </nml:PortGroup>
@@ -70,13 +70,13 @@
                 </nml:label>
             </nml:PortGroup>
         </nml:Relation>
-        <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/inboundPort">
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/hasInboundPort">
             <nml:PortGroup id="urn:ogf:network:nordu.net:2011:netherlight-nordunet">
                 <nml:label>
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
                 </nml:label>
-                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/isAlias">
                     <nml:PortGroup idRef="urn:ogf:network:netherlight.net:2010:netherlight-nordunet"/>
                 </nml:Relation>
             </nml:PortGroup>
@@ -85,7 +85,7 @@
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
                 </nml:label>
-                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/isAlias">
                     <nml:PortGroup idRef="urn:ogf:network:pionier.net.pl:2012:pionier-nordunet"/>
                 </nml:Relation>
             </nml:PortGroup>
@@ -94,7 +94,7 @@
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
                 </nml:label>
-                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/isAlias">
                     <nml:PortGroup idRef="urn:ogf:network:sne.science.uva.nl:2010:uva-nordunet"/>
                 </nml:Relation>
             </nml:PortGroup>
@@ -103,7 +103,7 @@
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
                 </nml:label>
-                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/isAlias">
                     <nml:PortGroup idRef="urn:ogf:network:maxgigapop.net:2012:maxgigapop-nordunet"/>
                 </nml:Relation>
             </nml:PortGroup>
@@ -112,7 +112,7 @@
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/type">http://schemas.ogf.org/nml/2013/10/ethernet/vlan</nml:parameter>
                     <nml:parameter type="http://schemas.ogf.org/nml/2013/10/labelparameter/values">1780-1783</nml:parameter>
                 </nml:label>
-                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/alias">
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/10/relation/isAlias">
                     <nml:PortGroup idRef="urn:ogf:network:jive.nl:2012:jive-nordunet"/>
                 </nml:Relation>
             </nml:PortGroup>
@@ -169,10 +169,10 @@
         <nml:long>12.641</nml:long>
     </nml:Location>
 
-    <!-- urn:ogf:network:nsa:northernlight -->
+    <!-- urn:ogf:network:nordu.net:2011:NORDUnet:org -->
 
-    <dtox:NSA id="urn:ogf:network:nsa:northernlight">
-        <dtox:managing idRef="urn:ogf:network:nsnetwork:northernlight.ets" />
+    <dtox:NSA id="urn:ogf:network:nordu.net:2011:NORDUnet:org">
+        <dtox:managing idRef="urn:ogf:network:nordu.net:2011:northernlight.ets" />
         <dtox:adminContact>
             <vc:vcards>
                 <vc:vcard>
