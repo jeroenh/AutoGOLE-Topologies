@@ -1,101 +1,20 @@
-<rdf:RDF xmlns="http://www.glif.is/working-groups/tech/dtox#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:dtox="http://www.glif.is/working-groups/tech/dtox#">
-
-    <owl:Ontology rdf:about="http://www.glif.is/working-groups/tech/dtox"/>
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#hasPart"/>
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#partOf"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#connectedTo"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#hasSTP"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#managedBy"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#managing"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#mapsTo"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#locatedAt"/>
-
-    <owl:DatatypeProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#adminContact"/>
-    <owl:DatatypeProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#csProviderEndpoint"/>
-
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#Location"/>
-
-    <!-- urn:ogf:network:stp:aist.ets:ps-80 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:aist.ets:ps-80">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:aist.ets:ps-81 --> 
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:aist.ets:ps-81">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:aist.ets:ps-82 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:aist.ets:ps-82">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:aist.ets:ps-83 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:aist.ets:ps-83">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:stp:aist.ets:tok-80 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:aist.ets:tok-80">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-80"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:aist.ets:tok-81 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:aist.ets:tok-81">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-81"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:aist.ets:tok-82 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:aist.ets:tok-82">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-82"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:aist.ets:tok-83 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:aist.ets:tok-83">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-83"/>
-    </owl:NamedIndividual>
-    
- 
-    <!-- urn:ogf:network:nsnetwork:aist.ets -->
-
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:aist.ets">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-        <rdfs:label xml:lang="en">aist.ets</rdfs:label>
-        <hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:ps-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:ps-81"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:ps-82"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:ps-83"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:tok-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:tok-81"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:tok-82"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:tok-83"/>
-        <managedBy rdf:resource="urn:ogf:network:nsa:aist"/>
-        <locatedAt rdf:resource="urn:ogf:network:nsnetwork:aist.ets:location"/>
-    </owl:NamedIndividual>
-
-    <!-- urn:ogf:network:nsnetwork:aist.ets:location  Tsukuba, JP -->
-    
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:aist.ets:location">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-        <lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.060</lat>
-        <long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">140.133</long>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:nsa:aist -->
-
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:aist">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-        <managing rdf:resource="urn:ogf:network:nsnetwork:aist.ets" />
-        <adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+>
+  <nml:Location rdf:about="urn:ogf:network:aist.net:2012:location">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:Location>
+  <nsi:NSA rdf:about="urn:ogf:network:aist.net:2012:nsa">
+    <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://163.220.30.174:8090/nsi_gl_proxy/services/ConnectionServiceProvider
+        </nsi:csProviderEndpoint>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA:  G-Lambda/AIST  (AIST)
             Project manager: Tomohiro Kudoh 
             email: t.kudoh@aist.go.jp 
@@ -105,10 +24,37 @@
             email: nsi-gl@m.aist.go.jp 
             mobile:  81-29-861-3091 
             skype: taketake320
-        </adminContact>
-        <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://163.220.30.174:8090/nsi_gl_proxy/services/ConnectionServiceProvider
-        </csProviderEndpoint>
-    </owl:NamedIndividual>
-
+        </nsi:adminContact>
+    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.060</nml:lat>
+    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">140.133</nml:long>
+    <nsi:managing>
+      <nml:Topology rdf:about="urn:ogf:network:aist.net:2012:topology">
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:aist.net:2012:tok-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:aist.net:2012:ps-out"/>
+        <nml:locatedAt rdf:resource="urn:ogf:network:aist.net:2012:location"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:aist.net:2012:tok-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:aist.net:2012:ps-in"/>
+        <nsi:managedBy rdf:resource="urn:ogf:network:aist.net:2012:nsa"/>
+      </nml:Topology>
+    </nsi:managing>
+  </nsi:NSA>
+  <nml:PortGroup rdf:about="urn:ogf:network:aist.net:2012:tok-out">
+    <nml:alias rdf:resource="urn:ogf:network:jgnx.net:2012:tsu-in"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:aist.net:2012:ps-out">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:aist.net:2012:tok-in">
+    <nml:alias rdf:resource="urn:ogf:network:jgnx.net:2012:tsu-out"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:aist.net:2012:ps-in">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
 </rdf:RDF>

@@ -29,11 +29,13 @@ class AGTopology:
         self.storev2.bind("nmleth",NMLETH)
         
     def addTopo(self,oldtopo):
-        topo = self.prefix+"topology"
-        self.storev2.add((topo,OWL.NamedIndividual,NML.Topology))
+        topo = rdflib.term.URIRef(self.prefix+"topology")
+        self.storev2.add((topo,RDF.type,OWL.NamedIndividual))
+        self.storev2.add((topo,RDF.type,NML.Topology))
         # NSA
-        nsa = self.prefix+"nsa"
-        self.storev2.add((nsa,OWL.NamedIndividual,NSI.NSA))
+        nsa = rdflib.term.URIRef(self.prefix+"nsa")
+        self.storev2.add((nsa,RDF.type,OWL.NamedIndividual))
+        self.storev2.add((nsa,RDF.type,NSI.NSA))
         self.storev2.add((topo,NSI.managedBy,nsa))
         self.storev2.add((nsa,NSI.managing,topo))
         oldnsa = self.storev1.value(subject=oldtopo,predicate=DTOX.managedBy)
@@ -42,22 +44,27 @@ class AGTopology:
         csProviderEndpoint = self.storev1.value(subject=oldnsa,predicate=DTOX.csProviderEndpoint)
         self.storev2.add((nsa,NSI.csProviderEndpoint,csProviderEndpoint))
         # Location
-        location = self.prefix+"location"
-        self.storev2.add((location,OWL.NamedIndividual,NML.Location))
+        location = rdflib.term.URIRef(self.prefix+"location")
+        self.storev2.add((location,RDF.type,OWL.NamedIndividual))
+        self.storev2.add((location,RDF.type,NML.Location))
         self.storev2.add((topo,NML.locatedAt,location))
         oldloc = self.storev1.value(subject=oldtopo,predicate=DTOX.locatedAt)
-        lat = self.storev1.value(subject=oldnsa,predicate=DTOX.lat)
+        lat = self.storev1.value(subject=oldloc,predicate=DTOX.lat)
         self.storev2.add((nsa,NML.lat,lat))
-        long = self.storev1.value(subject=oldnsa,predicate=DTOX.long)
+        long = self.storev1.value(subject=oldloc,predicate=DTOX.long)
         self.storev2.add((nsa,NML.long,long))
         return topo
     
     def addUniPorts(self,stp,topo,target=None):
-        outPort = self.prefix+stp+"-out"
-        inPort = self.prefix+stp+"-in"
+        outPort = rdflib.term.URIRef(self.prefix+stp+"-out")
+        inPort = rdflib.term.URIRef(self.prefix+stp+"-in")
         for p in (outPort,inPort):
-            self.storev2.add((p,OWL.NamedIndividual,NML.Port))
-            self.storev2.add((p,NMLETH.vlans,"1780-1783"))
+            self.storev2.add((p,RDF.type,OWL.NamedIndividual))
+            self.storev2.add((p,RDF.type,NML.PortGroup))
+            self.storev2.add((p,NMLETH.vlans,rdflib.term.Literal("1780-1783")))
+        if target:
+            self.storev2.add((outPort,NML.alias,rdflib.term.URIRef(target+"-in")))
+            self.storev2.add((inPort,NML.alias,rdflib.term.URIRef(target+"-out")))
         self.storev2.add((topo,NML.hasOutboundPort,outPort))
         self.storev2.add((topo,NML.hasInboundPort,inPort))
         
@@ -65,26 +72,29 @@ class AGTopology:
         topo = self.storev1.value(predicate=RDF.type, object=DTOX.NSNetwork)
         toponame = topo.split(":")[-1]
         self.prefix = "urn:ogf:network:%s.net:2012:" % toponame[:-4]
-        print "using prefix: %s" % self.prefix
         self.storev2.bind("owl",OWL)
         self.storev2.bind(toponame,self.prefix)
         # Convert the Topology and its basic attributes
         topov2 = self.addTopo(topo)
         # Convert the STPs
         for stp in self.storev1.objects(topo,DTOX.hasSTP):
+            target = self.storev1.value(subject=stp,predicate=DTOX.connectedTo)
             # We take off the invalid network urn prefix
             stp = stp.split(":")[-1]
             # and then we take off the label suffix
-            stp = stp.split("-")[0]
             # This means we'll add each port 4 times. Fortunately rdflib is robust to that.
-            self.addUniPorts(stp,topov2)
-        self.storev2.commit()
+            stp = stp.split("-")[0]
+            if target:
+                # We're taking off the label, removing the "stp:" and replacing .ets with .net
+                # e.g.: urn:ogf:network:stp:jgnx.ets:tsu-81 -> urn:ogf:network:jgnx.net:tsu
+                target = target[:-3].replace("stp:","").replace(".ets:",".net:2012:")
+            self.addUniPorts(stp,topov2,target)
         return self.storev2
 
 def main():
-    topo = AGTopology("golesv1/aist.owl")
-    graph = topo.convert()
-    graph.commit()
-    print graph.serialize()
+    for name in ["aist","czechlight","esnet","geant","gloriad","jgnx","kddi-labs","krlight","max","netherlight","northernlight","pionier","starlight","uvalight"]:
+        topo = AGTopology("golesv1/%s.owl" % name)
+        graph = topo.convert()
+        graph.serialize("goles/%s.owl"%name,format="pretty-xml")
 if __name__ == '__main__':
     main()

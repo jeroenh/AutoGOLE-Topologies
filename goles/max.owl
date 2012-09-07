@@ -1,118 +1,68 @@
-<rdf:RDF xmlns="http://www.glif.is/working-groups/tech/dtox#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:dtox="http://www.glif.is/working-groups/tech/dtox#">
-
-    <owl:Ontology rdf:about="http://www.glif.is/working-groups/tech/dtox"/>
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#hasPart"/>
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#partOf"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#connectedTo"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#hasSTP"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#managedBy"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#managing"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#mapsTo"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#locatedAt"/>
-
-    <owl:DatatypeProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#adminContact"/>
-    <owl:DatatypeProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#csProviderEndpoint"/>
-
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#Location"/>
-
-    <!-- MAX -->
-
-    <!-- Local STPs -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:max.ets:ps-80">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:max.ets:ps-81">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:max.ets:ps-82">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:max.ets:ps-83">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-
-    <!-- NothernLight -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:max.ets:ndn-80">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:max-80"/>
-    </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:max.ets:ndn-81">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:max-81"/>
-    </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:max.ets:ndn-82">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:max-82"/>
-    </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:max.ets:ndn-83">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:max-83"/>
-    </owl:NamedIndividual>
-
-    <!-- Starlight -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:max.ets:sl-80">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:max-80"/>
-    </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:max.ets:sl-81">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:max-81"/>
-    </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:max.ets:sl-82">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:max-82"/>
-    </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:max.ets:sl-83">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:max-83"/>
-    </owl:NamedIndividual>
-
-    <!-- urn:ogf:network:nsnetwork:max.ets -->
-
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:max.ets">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-        <rdfs:label xml:lang="en">max.ets</rdfs:label>
-        <hasSTP rdf:resource="urn:ogf:network:stp:max.ets:ps-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:max.ets:ps-81"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:max.ets:ps-82"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:max.ets:ps-83"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:max.ets:ndn-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:max.ets:ndn-81"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:max.ets:ndn-82"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:max.ets:ndn-83"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:max.ets:sl-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:max.ets:sl-81"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:max.ets:sl-82"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:max.ets:sl-83"/>
-        <managedBy rdf:resource="urn:ogf:network:nsa:max"/>
-        <locatedAt rdf:resource="urn:ogf:network:nsnetwork:max.ets:location"/>
-    </owl:NamedIndividual>
-
-    <!-- urn:ogf:network:nsnetwork:max.ets:location  Maryland, USA -->
-
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:max.ets:location">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-        <lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">38.995</lat>
-        <long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-76.933</long>
-    </owl:NamedIndividual>
-
-    <!-- urn:ogf:network:nsa:max -->
-
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:max">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-        <managing rdf:resource="urn:ogf:network:nsnetwork:max.ets" />
-        <adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+>
+  <nml:Topology rdf:about="urn:ogf:network:max.net:2012:topology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:max.net:2012:ndn-out">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:alias rdf:resource="urn:ogf:network:northernlight.net:2012:max-in"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:max.net:2012:ps-out">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:max.net:2012:sl-out">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:alias rdf:resource="urn:ogf:network:starlight.net:2012:max-in"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:max.net:2012:ndn-in">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:alias rdf:resource="urn:ogf:network:northernlight.net:2012:max-out"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:max.net:2012:ps-in">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:max.net:2012:sl-in">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:alias rdf:resource="urn:ogf:network:starlight.net:2012:max-out"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:locatedAt>
+      <nml:Location rdf:about="urn:ogf:network:max.net:2012:location">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:Location>
+    </nml:locatedAt>
+    <nsi:managedBy>
+      <nsi:NSA rdf:about="urn:ogf:network:max.net:2012:nsa">
+        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-76.933</nml:long>
+        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">38.995</nml:lat>
+        <nsi:managing rdf:resource="urn:ogf:network:max.net:2012:topology"/>
+        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://nsa.maxgigapop.net:9080/NSI/services/ConnectionService/
+        </nsi:csProviderEndpoint>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: OpenNSA
             Project manager:
             email:
@@ -126,9 +76,8 @@
             Key software engineer:
             email:
             skype:
-        </adminContact>
-        <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://nsa.maxgigapop.net:9080/NSI/services/ConnectionService/
-        </csProviderEndpoint>
-    </owl:NamedIndividual>
+        </nsi:adminContact>
+      </nsi:NSA>
+    </nsi:managedBy>
+  </nml:Topology>
 </rdf:RDF>

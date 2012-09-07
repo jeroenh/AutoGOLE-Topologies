@@ -1,157 +1,73 @@
-<rdf:RDF xmlns="http://www.glif.is/working-groups/tech/dtox#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:dtox="http://www.glif.is/working-groups/tech/dtox#">
-
-    <owl:Ontology rdf:about="http://www.glif.is/working-groups/tech/dtox"/>
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#hasPart"/>
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#partOf"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#connectedTo"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#hasSTP"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#managedBy"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#managing"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#mapsTo"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#locatedAt"/>
-
-    <owl:DatatypeProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#adminContact"/>
-    <owl:DatatypeProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#csProviderEndpoint"/>
-
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#Location"/>
-
-	<!-- *** Gloriad -->
-   
-    <!-- urn:ogf:network:stp:gloriad.ets:ps-80-chi -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:ps-80-chi">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:gloriad.ets:ps-81-chi -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:ps-81-chi">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:gloriad.ets:ps-82-chi -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:ps-82-chi">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:gloriad.ets:ps-83-chi -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:ps-83-chi">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:stp:gloriad.ets:ps-80-sea -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:ps-80-sea">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:gloriad.ets:ps-81-sea -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:ps-81-sea">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:gloriad.ets:ps-82-sea -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:ps-82-sea">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:gloriad.ets:ps-83-sea -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:ps-83-sea">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:stp:gloriad.ets:sl.0 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:sl.0">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:glo-06f4"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:gloriad.ets:sl.1 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:sl.1">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:glo-06f5"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:gloriad.ets:sl.2 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:sl.2">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:glo-06f6"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:gloriad.ets:sl.3 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:sl.3">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:glo-06f7"/>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:stp:gloriad.ets:krl.0 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:krl.0">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:krlight.ets:glo-80"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:gloriad.ets:krl.1 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:krl.1">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:krlight.ets:glo-81"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:gloriad.ets:krl.2 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:krl.2">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:krlight.ets:glo-82"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:gloriad.ets:krl.3 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:gloriad.ets:krl.3">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:krlight.ets:glo-83"/>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:nsnetwork:gloriad.ets -->
-    
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:gloriad.ets">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-        <rdfs:label xml:lang="en">gloriad.ets</rdfs:label>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-80-chi"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-81-chi"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-82-chi"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-83-chi"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-80-sea"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-81-sea"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-82-sea"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-83-sea"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:sl.0"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:sl.1"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:sl.2"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:sl.3"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.0"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.1"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.2"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.3"/>
-        <managedBy rdf:resource="urn:ogf:network:nsa:gloriad"/>
-        <locatedAt rdf:resource="urn:ogf:network:nsnetwork:gloriad.ets:location"/>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:nsnetwork:gloriad.ets:location  Chicago, US -->
-    
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:gloriad.ets:location">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-        <lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.866342</lat>
-        <long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.607777</long>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:nsa:gloriad -->
-    
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:gloriad">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-        <managing rdf:resource="urn:ogf:network:nsnetwork:gloriad.ets" />
-        <adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+>
+  <nml:PortGroup rdf:about="urn:ogf:network:gloriad.net:2012:ps-in">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:gloriad.net:2012:sl-out">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <nml:alias rdf:resource="urn:ogf:network:starlight.net:2012:glo-in"/>
+  </nml:PortGroup>
+  <nml:Topology rdf:about="urn:ogf:network:gloriad.net:2012:topology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nml:locatedAt>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:gloriad.net:2012:location">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
+      </owl:NamedIndividual>
+    </nml:locatedAt>
+    <nsi:managedBy>
+      <nsi:NSA rdf:about="urn:ogf:network:gloriad.net:2012:nsa">
+        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.866342</nml:lat>
+        <nsi:managing rdf:resource="urn:ogf:network:gloriad.net:2012:topology"/>
+        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://nsa.gloriad.org:9080/NSI/services/ConnectionService
+        </nsi:csProviderEndpoint>
+        <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: OpenNSA 
             Project Manager: Predrag Redulovic 
             Email: predrag@gloriad.net
             Software development engineer: Henrik Thostrup.Jensen 
             Email:  htj@nordu.net
-        </adminContact>
-        <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://nsa.gloriad.org:9080/NSI/services/ConnectionService
-        </csProviderEndpoint>
-    </owl:NamedIndividual>
-    
+        </nsi:adminContact>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.607777</nml:long>
+      </nsi:NSA>
+    </nsi:managedBy>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:gloriad.net:2012:ps-in"/>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:gloriad.net:2012:sl-in">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <nml:alias rdf:resource="urn:ogf:network:starlight.net:2012:glo-out"/>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:gloriad.net:2012:krl-in">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <nml:alias rdf:resource="urn:ogf:network:krlight.net:2012:glo-out"/>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:gloriad.net:2012:sl-out"/>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:gloriad.net:2012:krl-out">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <nml:alias rdf:resource="urn:ogf:network:krlight.net:2012:glo-in"/>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:gloriad.net:2012:ps-out">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+  </nml:Topology>
 </rdf:RDF>

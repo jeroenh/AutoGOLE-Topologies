@@ -1,154 +1,46 @@
-<rdf:RDF xmlns="http://www.glif.is/working-groups/tech/dtox#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:dtox="http://www.glif.is/working-groups/tech/dtox#">
-
-    <owl:Ontology rdf:about="http://www.glif.is/working-groups/tech/dtox"/>
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#hasPart"/>
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#partOf"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#connectedTo"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#hasSTP"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#managedBy"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#managing"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#mapsTo"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#locatedAt"/>
-
-    <owl:DatatypeProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#adminContact"/>
-    <owl:DatatypeProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#csProviderEndpoint"/>
-
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#Location"/>
-
-
-
-	<!-- *** Pionier -->
-
-    <!-- urn:ogf:network:stp:pionier.ets:ps-80 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:ps-80">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:ps-81 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:ps-81">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:ps-82 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:ps-82">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:ps-83 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:ps-83">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:stp:pionier.ets:ams-80  -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:ams-80">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-80"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:ams-81 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:ams-81">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-81"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:ams-82 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:ams-82">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-82"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:ams-83 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:ams-83">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-83"/>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:stp:pionier.ets:gn3-80 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:gn3-80">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:poz-80"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:gn3-81 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:gn3-81">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:poz-81"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:gn3-82 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:gn3-82">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:poz-82"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:gn3-83 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:gn3-83">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:poz-83"/>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:stp:pionier.ets:cpha -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cpha">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-0"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:cphb -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cphb">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-1"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:cphc -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cphc">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-2"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:cphd -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cphd">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-3"/>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:nsnetwork:pionier.ets -->
-    
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:pionier.ets">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-        <rdfs:label xml:lang="en">pionier.ets</rdfs:label>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ps-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ps-81"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ps-82"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ps-83"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ams-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ams-81"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ams-82"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ams-83"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-81"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-82"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-83"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cpha"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cphb"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cphc"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cphd"/>
-        <managedBy rdf:resource="urn:ogf:network:nsa:pionier"/>
-        <locatedAt rdf:resource="urn:ogf:network:nsnetwork:pionier.ets:location"/>
-    </owl:NamedIndividual> 
-    
-    <!-- urn:ogf:network:nsnetwork:pionier.ets:location Poznan,PL -->
-    
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:pionier.ets:location">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-        <lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.412</lat>
-        <long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.916</long>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:nsa:pionier -->
-    
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:pionier">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-        <managing rdf:resource="urn:ogf:network:nsnetwork:pionier.ets" />
-        <adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+>
+  <nml:Topology rdf:about="urn:ogf:network:pionier.net:2012:topology">
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:pionier.net:2012:cph-out">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:alias rdf:resource="urn:ogf:network:northernlight.net:2012:poz-in"/>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:pionier.net:2012:gn3-out">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:alias rdf:resource="urn:ogf:network:geant.net:2012:poz-in"/>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:pionier.net:2012:ams-out">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:alias rdf:resource="urn:ogf:network:netherlight.net:2012:poz-in"/>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:pionier.net:2012:ps-out">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nsi:managedBy>
+      <nsi:NSA rdf:about="urn:ogf:network:pionier.net:2012:nsa">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.916</nml:long>
+        <nsi:managing rdf:resource="urn:ogf:network:pionier.net:2012:topology"/>
+        <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: AutoBAHN  (GEANT) 
             Project manager: Radek Krzywania  
             email: radek.krzywania@man.poznan.pl  
@@ -156,9 +48,44 @@
             Software development: Michal Balcerkiewicz  
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
-        </adminContact>
-        <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        </nsi:adminContact>
+        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             http://194.132.53.174:9080/nsi/ConnectionProviderPort
-        </csProviderEndpoint>
-    </owl:NamedIndividual>
-    </rdf:RDF>
+        </nsi:csProviderEndpoint>
+        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.412</nml:lat>
+      </nsi:NSA>
+    </nsi:managedBy>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:pionier.net:2012:ps-in">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:pionier.net:2012:cph-in">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:alias rdf:resource="urn:ogf:network:northernlight.net:2012:poz-out"/>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:pionier.net:2012:gn3-in">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:alias rdf:resource="urn:ogf:network:geant.net:2012:poz-out"/>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:pionier.net:2012:ams-in">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:alias rdf:resource="urn:ogf:network:netherlight.net:2012:poz-out"/>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:locatedAt>
+      <nml:Location rdf:about="urn:ogf:network:pionier.net:2012:location">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:Location>
+    </nml:locatedAt>
+  </nml:Topology>
+</rdf:RDF>

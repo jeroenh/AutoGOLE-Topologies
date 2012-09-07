@@ -1,106 +1,24 @@
-<rdf:RDF xmlns="http://www.glif.is/working-groups/tech/dtox#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:dtox="http://www.glif.is/working-groups/tech/dtox#">
-
-    <owl:Ontology rdf:about="http://www.glif.is/working-groups/tech/dtox"/>
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#hasPart"/>
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#partOf"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#connectedTo"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#hasSTP"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#managedBy"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#managing"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#mapsTo"/>
-    <owl:ObjectProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#locatedAt"/>
-
-    <owl:DatatypeProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#adminContact"/>
-    <owl:DatatypeProperty rdf:about="http://www.glif.is/working-groups/tech/dtox#csProviderEndpoint"/>
-
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#Location"/>
-
-
-	<!-- *** KrLight -->
-
-    <!-- urn:ogf:network:stp:krlight.ets:ps-80 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:krlight.ets:ps-80">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:krlight.ets:ps-81 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:krlight.ets:ps-81">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:krlight.ets:ps-82 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:krlight.ets:ps-82">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:krlight.ets:ps-83 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:krlight.ets:ps-83">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-
-    <!-- urn:ogf:network:stp:krlight.ets:glo-80 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:krlight.ets:glo-80">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.0"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:krlight.ets:glo-81 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:krlight.ets:glo-81">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.1"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:krlight.ets:glo-82 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:krlight.ets:glo-82">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.2"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:krlight.ets:glo-83 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:krlight.ets:glo-83">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.3"/>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:nsnetwork:krlight.ets -->
-
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:krlight.ets">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-        <rdfs:label xml:lang="en">krlight.ets</rdfs:label>
-        <hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:ps-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:ps-81"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:ps-82"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:ps-83"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:glo-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:glo-81"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:glo-82"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:glo-83"/>
-        <managedBy rdf:resource="urn:ogf:network:nsa:krlight"/>
-        <locatedAt rdf:resource="urn:ogf:network:nsnetwork:krlight.ets:location"/>
-    </owl:NamedIndividual>
-
-    <!-- urn:ogf:network:nsnetwork:krlight.ets:location  Daejeon, KR -->
-    
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:krlight.ets:location">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-        <lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.366</lat>
-        <long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">127.359</long>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:nsa:krlight -->
-
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:krlight">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-        <managing rdf:resource="urn:ogf:network:nsnetwork:krlight.ets" />
-        <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://203.230.116.202:8090/nsi/ConnectionServiceProvider
-        </csProviderEndpoint>
-        <adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:ps-in">
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:location">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:ps-out">
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+  </owl:NamedIndividual>
+  <nsi:NSA rdf:about="urn:ogf:network:krlight.net:2012:nsa">
+    <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             DynamicKL  (KISTI) 
             Project Mgmt: 
             Jonguk Kong
@@ -117,7 +35,33 @@
             - Kyungmin Lee, +82-10-9958-8979, tsoc@naver.com, kyungmin_ 
             - Kwangjong Cho, +82-10-4192-8992, kjcho@kisti.re.kr, kwangjong cho
             : SC2011 booth#  656  KISTI
-        </adminContact>
-    </owl:NamedIndividual>
-    
+        </nsi:adminContact>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://203.230.116.202:8090/nsi/ConnectionServiceProvider
+        </nsi:csProviderEndpoint>
+    <nsi:managing>
+      <nml:Topology rdf:about="urn:ogf:network:krlight.net:2012:topology">
+        <nml:locatedAt rdf:resource="urn:ogf:network:krlight.net:2012:location"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:krlight.net:2012:glo-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:krlight.net:2012:ps-in"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:krlight.net:2012:ps-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:krlight.net:2012:glo-out"/>
+        <nsi:managedBy rdf:resource="urn:ogf:network:krlight.net:2012:nsa"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:Topology>
+    </nsi:managing>
+    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.366</nml:lat>
+    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">127.359</nml:long>
+  </nsi:NSA>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:glo-in">
+    <nml:alias rdf:resource="urn:ogf:network:gloriad.net:2012:krl-out"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:glo-out">
+    <nml:alias rdf:resource="urn:ogf:network:gloriad.net:2012:krl-in"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+  </owl:NamedIndividual>
 </rdf:RDF>
