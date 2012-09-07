@@ -6,68 +6,63 @@
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <nml:PortGroup rdf:about="urn:ogf:network:gloriad.net:2012:ps-in">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:gloriad.net:2012:krl-in">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nml:alias rdf:resource="urn:ogf:network:krlight.net:2012:glo-out"/>
     <nmleth:vlans>1780-1783</nmleth:vlans>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:gloriad.net:2012:sl-out">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:gloriad.net:2012:ps-out">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
     <nmleth:vlans>1780-1783</nmleth:vlans>
-    <nml:alias rdf:resource="urn:ogf:network:starlight.net:2012:glo-in"/>
-  </nml:PortGroup>
-  <nml:Topology rdf:about="urn:ogf:network:gloriad.net:2012:topology">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:locatedAt>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:gloriad.net:2012:location">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:gloriad.net:2012:krl-out">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nml:alias rdf:resource="urn:ogf:network:krlight.net:2012:glo-in"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:gloriad.net:2012:nsa">
+    <nsi:managing>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:gloriad.net:2012:topology">
+        <nsi:managedBy rdf:resource="urn:ogf:network:gloriad.net:2012:nsa"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:gloriad.net:2012:krl-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:gloriad.net:2012:sl-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:gloriad.net:2012:ps-in"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:gloriad.net:2012:sl-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:gloriad.net:2012:ps-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:gloriad.net:2012:krl-out"/>
+        <nml:locatedAt rdf:resource="urn:ogf:network:gloriad.net:2012:location"/>
       </owl:NamedIndividual>
-    </nml:locatedAt>
-    <nsi:managedBy>
-      <nsi:NSA rdf:about="urn:ogf:network:gloriad.net:2012:nsa">
-        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.866342</nml:lat>
-        <nsi:managing rdf:resource="urn:ogf:network:gloriad.net:2012:topology"/>
-        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://nsa.gloriad.org:9080/NSI/services/ConnectionService
-        </nsi:csProviderEndpoint>
-        <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+    </nsi:managing>
+    <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: OpenNSA 
             Project Manager: Predrag Redulovic 
             Email: predrag@gloriad.net
             Software development engineer: Henrik Thostrup.Jensen 
             Email:  htj@nordu.net
         </nsi:adminContact>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.607777</nml:long>
-      </nsi:NSA>
-    </nsi:managedBy>
-    <nml:hasInboundPort rdf:resource="urn:ogf:network:gloriad.net:2012:ps-in"/>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:gloriad.net:2012:sl-in">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <nml:alias rdf:resource="urn:ogf:network:starlight.net:2012:glo-out"/>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:gloriad.net:2012:krl-in">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <nml:alias rdf:resource="urn:ogf:network:krlight.net:2012:glo-out"/>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasOutboundPort rdf:resource="urn:ogf:network:gloriad.net:2012:sl-out"/>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:gloriad.net:2012:krl-out">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <nml:alias rdf:resource="urn:ogf:network:krlight.net:2012:glo-in"/>
-      </nml:PortGroup>
-    </nml:hasOutboundPort>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:gloriad.net:2012:ps-out">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasOutboundPort>
-  </nml:Topology>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
+    <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://nsa.gloriad.org:9080/NSI/services/ConnectionService
+        </nsi:csProviderEndpoint>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:gloriad.net:2012:location">
+    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.607777</nml:long>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
+    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.866342</nml:lat>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:gloriad.net:2012:sl-out">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nml:alias rdf:resource="urn:ogf:network:starlight.net:2012:glo-in"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:gloriad.net:2012:sl-in">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nml:alias rdf:resource="urn:ogf:network:starlight.net:2012:glo-out"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:gloriad.net:2012:ps-in">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </owl:NamedIndividual>
 </rdf:RDF>

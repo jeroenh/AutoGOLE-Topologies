@@ -6,17 +6,21 @@
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <owl:NamedIndividual rdf:about="urn:ogf:network:jgnx.net:2012:chi-out">
+  <nml:PortGroup rdf:about="urn:ogf:network:jgnx.net:2012:fuj-out">
+    <nml:alias rdf:resource="urn:ogf:network:kddi-labs.net:2012:tok-in"/>
     <nmleth:vlans>1780-1783</nmleth:vlans>
-    <nml:alias rdf:resource="urn:ogf:network:starlight.net:2012:tok-in"/>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:jgnx.net:2012:topology">
-    <nsi:managedBy>
-      <nsi:NSA rdf:about="urn:ogf:network:jgnx.net:2012:nsa">
-        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">139.764</nml:long>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:jgnx.net:2012:tsu-in">
+    <nml:alias rdf:resource="urn:ogf:network:aist.net:2012:tok-out"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nsi:NSA rdf:about="urn:ogf:network:jgnx.net:2012:nsa">
+    <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://202.180.38.130:8080/connectionprovider
+        </nsi:csProviderEndpoint>
+    <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: G-Lambda/KDDILabs (KDDI Labs) 
             Project manager name: Jin Tanaka  
             email: tanaka@ote.kddi.com  
@@ -27,66 +31,54 @@
             mobile:  81-90-1966-5153  
             skype: takahiro.miyamoto 
         </nsi:adminContact>
-        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35.688</nml:lat>
-        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://202.180.38.130:8080/connectionprovider
-        </nsi:csProviderEndpoint>
-        <nsi:managing rdf:resource="urn:ogf:network:jgnx.net:2012:topology"/>
-      </nsi:NSA>
-    </nsi:managedBy>
-    <nml:hasInboundPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:jgnx.net:2012:fuj-in">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <nml:alias rdf:resource="urn:ogf:network:kddi-labs.net:2012:tok-out"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:jgnx.net:2012:chi-in">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <nml:alias rdf:resource="urn:ogf:network:starlight.net:2012:tok-out"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:jgnx.net:2012:tsu-in">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <nml:alias rdf:resource="urn:ogf:network:aist.net:2012:tok-out"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:jgnx.net:2012:ps-in">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasInboundPort>
-    <nml:hasOutboundPort rdf:resource="urn:ogf:network:jgnx.net:2012:chi-out"/>
-    <nml:hasOutboundPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:jgnx.net:2012:ps-out">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasOutboundPort>
-    <nml:hasOutboundPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:jgnx.net:2012:tsu-out">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <nml:alias rdf:resource="urn:ogf:network:aist.net:2012:tok-in"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasOutboundPort>
-    <nml:hasOutboundPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:jgnx.net:2012:fuj-out">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <nml:alias rdf:resource="urn:ogf:network:kddi-labs.net:2012:tok-in"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasOutboundPort>
-    <nml:locatedAt>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:jgnx.net:2012:location">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
-      </owl:NamedIndividual>
-    </nml:locatedAt>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-  </owl:NamedIndividual>
+    <nsi:managing>
+      <nml:Topology rdf:about="urn:ogf:network:jgnx.net:2012:topology">
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:jgnx.net:2012:chi-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:jgnx.net:2012:tsu-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:jgnx.net:2012:ps-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:jgnx.net:2012:fuj-in"/>
+        <nml:locatedAt rdf:resource="urn:ogf:network:jgnx.net:2012:location"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:jgnx.net:2012:fuj-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:jgnx.net:2012:ps-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:jgnx.net:2012:tsu-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:jgnx.net:2012:chi-out"/>
+        <nsi:managedBy rdf:resource="urn:ogf:network:jgnx.net:2012:nsa"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:Topology>
+    </nsi:managing>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nsi:NSA>
+  <nml:PortGroup rdf:about="urn:ogf:network:jgnx.net:2012:chi-out">
+    <nml:alias rdf:resource="urn:ogf:network:starlight.net:2012:tok-in"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:jgnx.net:2012:ps-in">
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:jgnx.net:2012:chi-in">
+    <nml:alias rdf:resource="urn:ogf:network:starlight.net:2012:tok-out"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:jgnx.net:2012:fuj-in">
+    <nml:alias rdf:resource="urn:ogf:network:kddi-labs.net:2012:tok-out"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:jgnx.net:2012:tsu-out">
+    <nml:alias rdf:resource="urn:ogf:network:aist.net:2012:tok-in"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:Location rdf:about="urn:ogf:network:jgnx.net:2012:location">
+    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">139.764</nml:long>
+    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35.688</nml:lat>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:Location>
+  <nml:PortGroup rdf:about="urn:ogf:network:jgnx.net:2012:ps-out">
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
 </rdf:RDF>

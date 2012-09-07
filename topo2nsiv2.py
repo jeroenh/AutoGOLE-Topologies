@@ -50,9 +50,9 @@ class AGTopology:
         self.storev2.add((topo,NML.locatedAt,location))
         oldloc = self.storev1.value(subject=oldtopo,predicate=DTOX.locatedAt)
         lat = self.storev1.value(subject=oldloc,predicate=DTOX.lat)
-        self.storev2.add((nsa,NML.lat,lat))
+        self.storev2.add((location,NML.lat,lat))
         long = self.storev1.value(subject=oldloc,predicate=DTOX.long)
-        self.storev2.add((nsa,NML.long,long))
+        self.storev2.add((location,NML.long,long))
         return topo
     
     def addUniPorts(self,stp,topo,target=None):

@@ -6,8 +6,7 @@
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <owl:NamedIndividual rdf:about="urn:ogf:network:esnet.net:2012:nsa">
-    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.703516</nml:lat>
+  <nsi:NSA rdf:about="urn:ogf:network:esnet.net:2012:nsa">
     <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: OSCARS 
             Project Manager: Inder Monga 
@@ -16,41 +15,42 @@
             Email:  haniotak@es.net
         </nsi:adminContact>
     <nsi:managing>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:esnet.net:2012:topology">
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:esnet.net:2012:ps-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:esnet.net:2012:chi-in"/>
+      <nml:Topology rdf:about="urn:ogf:network:esnet.net:2012:topology">
         <nml:hasOutboundPort rdf:resource="urn:ogf:network:esnet.net:2012:ps-out"/>
         <nml:hasOutboundPort rdf:resource="urn:ogf:network:esnet.net:2012:chi-out"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:esnet.net:2012:ps-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:esnet.net:2012:chi-in"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <nml:locatedAt rdf:resource="urn:ogf:network:esnet.net:2012:location"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
         <nsi:managedBy rdf:resource="urn:ogf:network:esnet.net:2012:nsa"/>
-      </owl:NamedIndividual>
+      </nml:Topology>
     </nsi:managing>
-    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.988120</nml:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             http://jupiter.es.net:8288/ConnectionService
         </nsi:csProviderEndpoint>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:esnet.net:2012:ps-in">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:esnet.net:2012:location">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:esnet.net:2012:ps-out">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:esnet.net:2012:chi-out">
+  </nsi:NSA>
+  <nml:PortGroup rdf:about="urn:ogf:network:esnet.net:2012:chi-out">
     <nml:alias rdf:resource="urn:ogf:network:starlight.net:2012:esn-in"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:esnet.net:2012:chi-in">
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:esnet.net:2012:ps-in">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:esnet.net:2012:chi-in">
     <nml:alias rdf:resource="urn:ogf:network:starlight.net:2012:esn-out"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+  </nml:PortGroup>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:esnet.net:2012:location">
+    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.703516</nml:lat>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
+    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.988120</nml:long>
   </owl:NamedIndividual>
+  <nml:PortGroup rdf:about="urn:ogf:network:esnet.net:2012:ps-out">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
 </rdf:RDF>

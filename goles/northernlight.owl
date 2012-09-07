@@ -6,10 +6,103 @@
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <nsi:NSA rdf:about="urn:ogf:network:northernlight.net:2012:nsa">
+  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:max-in">
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <nml:alias rdf:resource="urn:ogf:network:max.net:2012:ndn-out"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.641</nml:long>
-    <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:onsala-out">
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:poz-out">
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <nml:alias rdf:resource="urn:ogf:network:pionier.net:2012:c-in"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:ams-out">
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <nml:alias rdf:resource="urn:ogf:network:netherlight.net:2012:cph-in"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:nl-in">
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <nml:alias rdf:resource="urn:ogf:network:netherlight.net:2012:jive5-out"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:ams-in">
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <nml:alias rdf:resource="urn:ogf:network:netherlight.net:2012:cph-out"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:uva-out">
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <nml:alias rdf:resource="urn:ogf:network:uvalight.net:2012:nd-in"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:ps-out">
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:Topology rdf:about="urn:ogf:network:northernlight.net:2012:topology">
+    <nml:locatedAt>
+      <nml:Location rdf:about="urn:ogf:network:northernlight.net:2012:location">
+        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">55.637</nml:lat>
+        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.641</nml:long>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:Location>
+    </nml:locatedAt>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:onsala-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:poz-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:ams-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:uva-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:ps-out"/>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:nl-out">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <nml:alias rdf:resource="urn:ogf:network:netherlight.net:2012:jive5-in"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:max-out">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <nml:alias rdf:resource="urn:ogf:network:max.net:2012:ndn-in"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:max-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:nl-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:ams-in"/>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:poz-in">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <nml:alias rdf:resource="urn:ogf:network:pionier.net:2012:c-out"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:uva-in">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <nml:alias rdf:resource="urn:ogf:network:uvalight.net:2012:nd-out"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:ps-in">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:onsala-in">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nsi:managedBy>
+      <nsi:NSA rdf:about="urn:ogf:network:northernlight.net:2012:nsa">
+        <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: OpenNSA (NORDUnet)
             Project Management: Jerry Sobieski
             email: jerry@nordu.net
@@ -19,97 +112,11 @@
             email: htj@nordu.net
             skype: henrik.thostrup.jensen
         </nsi:adminContact>
-    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">55.637</nml:lat>
-    <nsi:managing>
-      <nml:Topology rdf:about="urn:ogf:network:northernlight.net:2012:topology">
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:max-out"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:ps-out"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:nl-out"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:uva-out"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:onsala-out"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:poz-out"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:ams-out"/>
-        <nml:locatedAt rdf:resource="urn:ogf:network:northernlight.net:2012:location"/>
-        <nsi:managedBy rdf:resource="urn:ogf:network:northernlight.net:2012:nsa"/>
+        <nsi:managing rdf:resource="urn:ogf:network:northernlight.net:2012:topology"/>
+        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orval.grid.aau.dk:9443/NSI/services/ConnectionService</nsi:csProviderEndpoint>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:poz-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:max-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:onsala-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:ps-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:ams-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:uva-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:northernlight.net:2012:nl-in"/>
-      </nml:Topology>
-    </nsi:managing>
-    <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orval.grid.aau.dk:9443/NSI/services/ConnectionService</nsi:csProviderEndpoint>
-  </nsi:NSA>
-  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:max-out">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nsi:NSA>
+    </nsi:managedBy>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:alias rdf:resource="urn:ogf:network:max.net:2012:ndn-in"/>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:ps-in">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:max-in">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:alias rdf:resource="urn:ogf:network:max.net:2012:ndn-out"/>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:onsala-in">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:poz-out">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:alias rdf:resource="urn:ogf:network:pionier.net:2012:c-in"/>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:uva-out">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:alias rdf:resource="urn:ogf:network:uvalight.net:2012:nd-in"/>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:poz-in">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:alias rdf:resource="urn:ogf:network:pionier.net:2012:c-out"/>
-  </nml:PortGroup>
-  <nml:Location rdf:about="urn:ogf:network:northernlight.net:2012:location">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:Location>
-  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:ams-in">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:alias rdf:resource="urn:ogf:network:netherlight.net:2012:cph-out"/>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:onsala-out">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:ps-out">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:uva-in">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:alias rdf:resource="urn:ogf:network:uvalight.net:2012:nd-out"/>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:nl-out">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:alias rdf:resource="urn:ogf:network:netherlight.net:2012:jive5-in"/>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:nl-in">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:alias rdf:resource="urn:ogf:network:netherlight.net:2012:jive5-out"/>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:northernlight.net:2012:ams-out">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:alias rdf:resource="urn:ogf:network:netherlight.net:2012:cph-in"/>
-  </nml:PortGroup>
+  </nml:Topology>
 </rdf:RDF>
