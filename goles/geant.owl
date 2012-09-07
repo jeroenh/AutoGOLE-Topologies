@@ -6,8 +6,12 @@
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
+  <owl:NamedIndividual rdf:about="urn:ogf:network:geant.net:2012:location">
+    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48.859</nml:lat>
+    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.295</nml:long>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
+  </owl:NamedIndividual>
   <owl:NamedIndividual rdf:about="urn:ogf:network:geant.net:2012:nsa">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
     <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: AutoBAHN  (GEANT)
             Project manager: 
@@ -23,37 +27,33 @@
         </nsi:csProviderEndpoint>
     <nsi:managing>
       <nml:Topology rdf:about="urn:ogf:network:geant.net:2012:topology">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:geant.net:2012:poz-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:geant.net:2012:ps-in"/>
-        <nml:locatedAt rdf:resource="urn:ogf:network:geant.net:2012:location"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:geant.net:2012:poz-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:geant.net:2012:geant-pionier"/>
         <nml:hasOutboundPort rdf:resource="urn:ogf:network:geant.net:2012:ps-out"/>
+        <nml:locatedAt rdf:resource="urn:ogf:network:geant.net:2012:location"/>
         <nsi:managedBy rdf:resource="urn:ogf:network:geant.net:2012:nsa"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:geant.net:2012:pionier-geant"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:geant.net:2012:ps-in"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
       </nml:Topology>
     </nsi:managing>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
   </owl:NamedIndividual>
-  <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:poz-out">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:alias rdf:resource="urn:ogf:network:pionier.net:2012:gn3-in"/>
+  <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:pionier-geant">
+    <nml:alias rdf:resource="urn:ogf:network:pionier.net:2012:pionier-geant"/>
     <nmleth:vlans>1780-1783</nmleth:vlans>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:ps-in">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-  </nml:PortGroup>
-  <nml:Location rdf:about="urn:ogf:network:geant.net:2012:location">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48.859</nml:lat>
-    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.295</nml:long>
-  </nml:Location>
-  <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:poz-in">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:alias rdf:resource="urn:ogf:network:pionier.net:2012:gn3-out"/>
-    <nmleth:vlans>1780-1783</nmleth:vlans>
   </nml:PortGroup>
   <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:ps-out">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:ps-in">
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:geant-pionier">
+    <nml:alias rdf:resource="urn:ogf:network:pionier.net:2012:geant-pionier"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </nml:PortGroup>
 </rdf:RDF>

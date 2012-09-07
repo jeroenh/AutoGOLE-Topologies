@@ -56,24 +56,32 @@ class AGTopology:
         return topo
     
     def addUniPorts(self,stp,topo,target=None):
-        outPort = rdflib.term.URIRef(self.prefix+stp+"-out")
-        inPort = rdflib.term.URIRef(self.prefix+stp+"-in")
+        if target:
+            outPort = rdflib.term.URIRef(self.prefix+self.netname+"-"+target)
+            inPort = rdflib.term.URIRef(self.prefix+target+"-"+self.netname)
+            outTarget = rdflib.term.URIRef("urn:ogf:network:%s.net:2012:%s-%s" %
+                                                 (target,target,self.netname))
+            inTarget = rdflib.term.URIRef("urn:ogf:network:%s.net:2012:%s-%s" %
+                                                 (target,self.netname,target))
+            self.storev2.add((outPort,NML.alias,inTarget))
+            self.storev2.add((inPort,NML.alias,outTarget))
+        else:
+            outPort = rdflib.term.URIRef(self.prefix+stp+"-out")
+            inPort = rdflib.term.URIRef(self.prefix+stp+"-in")
         for p in (outPort,inPort):
             self.storev2.add((p,RDF.type,OWL.NamedIndividual))
             self.storev2.add((p,RDF.type,NML.PortGroup))
             self.storev2.add((p,NMLETH.vlans,rdflib.term.Literal("1780-1783")))
-        if target:
-            self.storev2.add((outPort,NML.alias,rdflib.term.URIRef(target+"-in")))
-            self.storev2.add((inPort,NML.alias,rdflib.term.URIRef(target+"-out")))
         self.storev2.add((topo,NML.hasOutboundPort,outPort))
         self.storev2.add((topo,NML.hasInboundPort,inPort))
         
     def convert(self):
         topo = self.storev1.value(predicate=RDF.type, object=DTOX.NSNetwork)
         toponame = topo.split(":")[-1]
-        self.prefix = "urn:ogf:network:%s.net:2012:" % toponame[:-4]
+        self.netname = toponame[:-4]
+        self.prefix = rdflib.Namespace("urn:ogf:network:%s.net:2012:" % self.netname)
         self.storev2.bind("owl",OWL)
-        self.storev2.bind(toponame,self.prefix)
+        self.storev2.bind(self.netname,self.prefix)
         # Convert the Topology and its basic attributes
         topov2 = self.addTopo(topo)
         # Convert the STPs
@@ -85,9 +93,8 @@ class AGTopology:
             # This means we'll add each port 4 times. Fortunately rdflib is robust to that.
             stp = stp.split("-")[0]
             if target:
-                # We're taking off the label, removing the "stp:" and replacing .ets with .net
-                # e.g.: urn:ogf:network:stp:jgnx.ets:tsu-81 -> urn:ogf:network:jgnx.net:tsu
-                target = target[:-3].replace("stp:","").replace(".ets:",".net:2012:")
+                # We take out the network name of the other end to pass as target
+                target = target.split(":")[4][:-4]
             self.addUniPorts(stp,topov2,target)
         return self.storev2
 
