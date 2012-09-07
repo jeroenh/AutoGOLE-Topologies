@@ -67,23 +67,23 @@
     </owl:NamedIndividual>
 
     
-    <!-- urn:ogf:network:stp:uvalight.ets:ndn-0 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-0">
+    <!-- urn:ogf:network:stp:uvalight.ets:ndn-80 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-80">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
         <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1780"/>
     </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:uvalight.ets:ndn-1 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-1">
+    <!-- urn:ogf:network:stp:uvalight.ets:ndn-81 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-81">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
         <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1781"/>
     </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:uvalight.ets:ndn-2 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-2">
+    <!-- urn:ogf:network:stp:uvalight.ets:ndn-82 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-82">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
         <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1782"/>
     </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:uvalight.ets:ndn-3 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-3">
+    <!-- urn:ogf:network:stp:uvalight.ets:ndn-83 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-83">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
         <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1783"/>
     </owl:NamedIndividual>
@@ -101,10 +101,10 @@
         <hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-81"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-82"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-83"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-0"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-1"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-2"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-3"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-80"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-81"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-82"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-83"/>
         <managedBy rdf:resource="urn:ogf:network:nsa:uvalight"/>
         <locatedAt rdf:resource="urn:ogf:network:nsnetwork:uvalight.ets:location"/>
     </owl:NamedIndividual>

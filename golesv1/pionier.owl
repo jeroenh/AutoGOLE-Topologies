@@ -89,25 +89,25 @@
         <connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:poz-83"/>
     </owl:NamedIndividual>
     
-    <!-- urn:ogf:network:stp:pionier.ets:cpha -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cpha">
+    <!-- urn:ogf:network:stp:pionier.ets:cph-80 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cph-80">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-0"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-80"/>
     </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:cphb -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cphb">
+    <!-- urn:ogf:network:stp:pionier.ets:cph-80 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cph-80">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-1"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-81"/>
     </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:cphc -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cphc">
+    <!-- urn:ogf:network:stp:pionier.ets:cph-80 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cph-80">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-2"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-82"/>
     </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:pionier.ets:cphd -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cphd">
+    <!-- urn:ogf:network:stp:pionier.ets:cph-80 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cph-80">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-3"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-83"/>
     </owl:NamedIndividual>
     
     <!-- urn:ogf:network:nsnetwork:pionier.ets -->
@@ -127,10 +127,10 @@
         <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-81"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-82"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-83"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cpha"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cphb"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cphc"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cphd"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cph-80"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cph-80"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cph-80"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cph-80"/>
         <managedBy rdf:resource="urn:ogf:network:nsa:pionier"/>
         <locatedAt rdf:resource="urn:ogf:network:nsnetwork:pionier.ets:location"/>
     </owl:NamedIndividual> 

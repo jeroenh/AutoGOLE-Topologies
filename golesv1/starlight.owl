@@ -109,24 +109,24 @@
      </owl:NamedIndividual>
 
      <!-- urn:ogf:network:stp:starlight.ets:glo06f4 -->
-     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:glo-06f4">
+     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:glo-84">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-         <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl.0"/>
+         <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-80"/>
      </owl:NamedIndividual>
      <!-- urn:ogf:network:stp:starlight.ets:glo06f5 -->
-     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:glo-06f5">
+     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:glo-85">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-         <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl.1"/>
+         <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-81"/>
      </owl:NamedIndividual>
      <!-- urn:ogf:network:stp:starlight.ets:glo06f6 -->
-     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:glo-06f6">
+     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:glo-86">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-         <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl.2"/>
+         <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-82"/>
      </owl:NamedIndividual>
      <!-- urn:ogf:network:stp:starlight.ets:glo06f7 -->
-     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:glo-06f7">
+     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:glo-87">
          <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-         <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl.3"/>
+         <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-83"/>
      </owl:NamedIndividual>
 
      <!-- MAX -->
@@ -172,10 +172,10 @@
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:max-81"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:max-82"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:max-83"/>
-         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-06f4"/>
-         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-06f5"/>
-         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-06f6"/>
-         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-06f7"/>
+         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-84"/>
+         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-85"/>
+         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-86"/>
+         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-87"/>
          <managedBy rdf:resource="urn:ogf:network:nsa:starlight"/>
          <locatedAt rdf:resource="urn:ogf:network:nsnetwork:starlight.ets:location"/>
      </owl:NamedIndividual>
