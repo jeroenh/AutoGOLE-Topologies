@@ -1,0 +1,56 @@
+@prefix czechlight: <urn:ogf:network:czechlight.net:2012:> .
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+czechlight:czechlight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:czechlight-netherlight>;
+    nmleth:vlans "1780-1783" .
+
+czechlight:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "50.088"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "14.421"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+czechlight:netherlight-czechlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-czechlight>;
+    nmleth:vlans "1780-1783" .
+
+czechlight:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OpenDRAC (SURFnet) 
+            Proj Manager: Michal Altmann  
+            email: m.altmann@cesnet.cz 
+            phone: +420775603522   
+            skype: michal_altmann 
+            Software Developer: John MacAuley 
+            email: john.macauley@surfnet.nl 
+            phone:  1-613-220-6817 
+            skype: john.macauley
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing czechlight:topology .
+
+czechlight:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+czechlight:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+czechlight:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort czechlight:netherlight-czechlight,
+        czechlight:ps-in;
+    nml:hasOutboundPort czechlight:czechlight-netherlight,
+        czechlight:ps-out;
+    nml:locatedAt czechlight:location;
+    nsi:managedBy czechlight:nsa .
+

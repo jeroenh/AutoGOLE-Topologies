@@ -63,8 +63,8 @@ class AGTopology:
                                                  (target,target,self.netname))
             inTarget = rdflib.term.URIRef("urn:ogf:network:%s.net:2012:%s-%s" %
                                                  (target,self.netname,target))
-            self.storev2.add((outPort,NML.alias,inTarget))
-            self.storev2.add((inPort,NML.alias,outTarget))
+            self.storev2.add((outPort,NML.isAlias,inTarget))
+            self.storev2.add((inPort,NML.isAlias,outTarget))
         else:
             outPort = rdflib.term.URIRef(self.prefix+stp+"-out")
             inPort = rdflib.term.URIRef(self.prefix+stp+"-in")
@@ -103,5 +103,6 @@ def main():
         topo = AGTopology("golesv1/%s.owl" % name)
         graph = topo.convert()
         graph.serialize("goles/%s.owl"%name,format="pretty-xml")
+        graph.serialize("goles/%s.n3"%name,format="n3")
 if __name__ == '__main__':
     main()

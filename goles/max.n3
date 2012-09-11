@@ -1,0 +1,72 @@
+@prefix max: <urn:ogf:network:max.net:2012:> .
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+max:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "38.995"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "-76.933"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+max:max-northernlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:northernlight.net:2012:max-northernlight>;
+    nmleth:vlans "1780-1783" .
+
+max:max-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:starlight.net:2012:max-starlight>;
+    nmleth:vlans "1780-1783" .
+
+max:northernlight-max a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:northernlight.net:2012:northernlight-max>;
+    nmleth:vlans "1780-1783" .
+
+max:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OpenNSA
+            Project manager:
+            email:
+            mobile:
+            skype: 
+
+            Network Engineer: Balasubramania Pillai
+            email: bpillai@maxgigapop.net
+            skype: b_pillai
+
+            Key software engineer:
+            email:
+            skype:
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://nsa.maxgigapop.net:9080/NSI/services/ConnectionService/
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing max:topology .
+
+max:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+max:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+max:starlight-max a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:starlight.net:2012:starlight-max>;
+    nmleth:vlans "1780-1783" .
+
+max:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort max:northernlight-max,
+        max:ps-in,
+        max:starlight-max;
+    nml:hasOutboundPort max:max-northernlight,
+        max:max-starlight,
+        max:ps-out;
+    nml:locatedAt max:location;
+    nsi:managedBy max:nsa .
+

@@ -6,52 +6,51 @@
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:netherlight-starlight">
-    <nml:alias rdf:resource="urn:ogf:network:netherlight.net:2012:netherlight-starlight"/>
-    <nmleth:vlans>1780-1783</nmleth:vlans>
+  <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:starlight-jgnx">
+    <nml:isAlias rdf:resource="urn:ogf:network:jgnx.net:2012:starlight-jgnx"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
   </nml:PortGroup>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:starlight.net:2012:topology">
-    <nml:hasInboundPort rdf:resource="urn:ogf:network:starlight.net:2012:netherlight-starlight"/>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:max-starlight">
-        <nml:alias rdf:resource="urn:ogf:network:max.net:2012:max-starlight"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
+  <nml:Location rdf:about="urn:ogf:network:starlight.net:2012:location">
+    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.947906</nml:lat>
+    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.655791</nml:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:Location>
+  <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:ps-in">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:starlight-esnet">
+    <nml:isAlias rdf:resource="urn:ogf:network:esnet.net:2012:starlight-esnet"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:gloriad-starlight">
+    <nml:isAlias rdf:resource="urn:ogf:network:gloriad.net:2012:gloriad-starlight"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nsi:NSA rdf:about="urn:ogf:network:starlight.net:2012:nsa">
+    <nsi:managing>
+      <nml:Topology rdf:about="urn:ogf:network:starlight.net:2012:topology">
+        <nml:locatedAt rdf:resource="urn:ogf:network:starlight.net:2012:location"/>
+        <nsi:managedBy rdf:resource="urn:ogf:network:starlight.net:2012:nsa"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:jgnx-starlight">
-        <nml:alias rdf:resource="urn:ogf:network:jgnx.net:2012:jgnx-starlight"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:gloriad-starlight">
-        <nml:alias rdf:resource="urn:ogf:network:gloriad.net:2012:gloriad-starlight"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:esnet-starlight">
-        <nml:alias rdf:resource="urn:ogf:network:esnet.net:2012:esnet-starlight"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:ps-in">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-    <nsi:managedBy>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:starlight.net:2012:nsa">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
-        <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:starlight.net:2012:starlight-jgnx"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:starlight.net:2012:starlight-max"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:starlight.net:2012:starlight-esnet"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:starlight.net:2012:starlight-netherlight"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:starlight.net:2012:starlight-gloriad"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:starlight.net:2012:ps-out"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:starlight.net:2012:esnet-starlight"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:starlight.net:2012:ps-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:starlight.net:2012:jgnx-starlight"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:starlight.net:2012:max-starlight"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:starlight.net:2012:gloriad-starlight"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:starlight.net:2012:netherlight-starlight"/>
+      </nml:Topology>
+    </nsi:managing>
+    <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
              NSA: OpenNSA (NORDUnet) over Argia 
              Project manager: Scott Campbell 
              email: scott.campbell@crc.gc.ca  
@@ -61,59 +60,48 @@
              email: htj@nordu.net 
              skype: henrik.thostrup.jensen
          </nsi:adminContact>
-        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
              http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
          </nsi:csProviderEndpoint>
-        <nsi:managing rdf:resource="urn:ogf:network:starlight.net:2012:topology"/>
-      </owl:NamedIndividual>
-    </nsi:managedBy>
-    <nml:locatedAt>
-      <nml:Location rdf:about="urn:ogf:network:starlight.net:2012:location">
-        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.655791</nml:long>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.947906</nml:lat>
-      </nml:Location>
-    </nml:locatedAt>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:starlight-jgnx">
-        <nml:alias rdf:resource="urn:ogf:network:jgnx.net:2012:starlight-jgnx"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </nml:PortGroup>
-    </nml:hasOutboundPort>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:starlight-gloriad">
-        <nml:alias rdf:resource="urn:ogf:network:gloriad.net:2012:starlight-gloriad"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </nml:PortGroup>
-    </nml:hasOutboundPort>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:starlight-esnet">
-        <nml:alias rdf:resource="urn:ogf:network:esnet.net:2012:starlight-esnet"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </nml:PortGroup>
-    </nml:hasOutboundPort>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:ps-out">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasOutboundPort>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:starlight-netherlight">
-        <nml:alias rdf:resource="urn:ogf:network:netherlight.net:2012:starlight-netherlight"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </nml:PortGroup>
-    </nml:hasOutboundPort>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:starlight-max">
-        <nml:alias rdf:resource="urn:ogf:network:max.net:2012:starlight-max"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </nml:PortGroup>
-    </nml:hasOutboundPort>
-  </owl:NamedIndividual>
+  </nsi:NSA>
+  <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:jgnx-starlight">
+    <nml:isAlias rdf:resource="urn:ogf:network:jgnx.net:2012:jgnx-starlight"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:esnet-starlight">
+    <nml:isAlias rdf:resource="urn:ogf:network:esnet.net:2012:esnet-starlight"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:max-starlight">
+    <nml:isAlias rdf:resource="urn:ogf:network:max.net:2012:max-starlight"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:starlight-max">
+    <nml:isAlias rdf:resource="urn:ogf:network:max.net:2012:starlight-max"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:starlight-gloriad">
+    <nml:isAlias rdf:resource="urn:ogf:network:gloriad.net:2012:starlight-gloriad"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:netherlight-starlight">
+    <nml:isAlias rdf:resource="urn:ogf:network:netherlight.net:2012:netherlight-starlight"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:ps-out">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:starlight.net:2012:starlight-netherlight">
+    <nml:isAlias rdf:resource="urn:ogf:network:netherlight.net:2012:starlight-netherlight"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
 </rdf:RDF>

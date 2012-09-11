@@ -1,0 +1,69 @@
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix uvalight: <urn:ogf:network:uvalight.net:2012:> .
+
+uvalight:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+uvalight:netherlight-uvalight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-uvalight>;
+    nmleth:vlans "1780-1783" .
+
+uvalight:northernlight-uvalight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:northernlight.net:2012:northernlight-uvalight>;
+    nmleth:vlans "1780-1783" .
+
+uvalight:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OpenNSA   
+            Project manager: Jeroen van der Ham   
+            email: vdham@uva.nl mobile: use skype   
+            skype: just1sand0s  
+            Network Engineer: Ralph Koning 
+            email: r.koning@uva.nl  
+            skype: ralph-uva-sne
+            Key software engineer: Jeroen van der Ham
+            email: vdham@uva.nl mobile: use skype   
+            skype: just1sand0s  
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://nsa.uvalight.nl:9080/NSI/services/ConnectionService/        
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing uvalight:topology .
+
+uvalight:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+uvalight:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+uvalight:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort uvalight:netherlight-uvalight,
+        uvalight:northernlight-uvalight,
+        uvalight:ps-in;
+    nml:hasOutboundPort uvalight:ps-out,
+        uvalight:uvalight-netherlight,
+        uvalight:uvalight-northernlight;
+    nml:locatedAt uvalight:location;
+    nsi:managedBy uvalight:nsa .
+
+uvalight:uvalight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:uvalight-netherlight>;
+    nmleth:vlans "1780-1783" .
+
+uvalight:uvalight-northernlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:northernlight.net:2012:uvalight-northernlight>;
+    nmleth:vlans "1780-1783" .
+

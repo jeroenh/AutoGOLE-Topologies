@@ -1,0 +1,63 @@
+@prefix krlight: <urn:ogf:network:krlight.net:2012:> .
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+krlight:gloriad-krlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:gloriad.net:2012:gloriad-krlight>;
+    nmleth:vlans "1780-1783" .
+
+krlight:krlight-gloriad a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:gloriad.net:2012:krlight-gloriad>;
+    nmleth:vlans "1780-1783" .
+
+krlight:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "36.366"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "127.359"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+krlight:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            DynamicKL  (KISTI) 
+            Project Mgmt: 
+            Jonguk Kong
+            mobile: +82-10-3444-7418, 
+            email: kju@kisti.re.kr, 
+            skype: jonguk
+            Jeonghoon Moon
+            mobile: +82-10-2534-6754
+            email: otello90@gmail.com
+            jhmoon@kisti.re.kr, 
+            skype: otello90 
+            : Eng
+            - Youngwook Cha, +82-10-2456-3237, ywcha@andong.ac.kr, .ngnlab414
+            - Kyungmin Lee, +82-10-9958-8979, tsoc@naver.com, kyungmin_ 
+            - Kwangjong Cho, +82-10-4192-8992, kjcho@kisti.re.kr, kwangjong cho
+            : SC2011 booth#  656  KISTI
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://203.230.116.202:8090/nsi/ConnectionServiceProvider
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing krlight:topology .
+
+krlight:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+krlight:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+krlight:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort krlight:gloriad-krlight,
+        krlight:ps-in;
+    nml:hasOutboundPort krlight:krlight-gloriad,
+        krlight:ps-out;
+    nml:locatedAt krlight:location;
+    nsi:managedBy krlight:nsa .
+

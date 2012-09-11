@@ -1,0 +1,55 @@
+@prefix geant: <urn:ogf:network:geant.net:2012:> .
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+geant:geant-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:pionier.net:2012:geant-pionier>;
+    nmleth:vlans "1780-1783" .
+
+geant:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "48.859"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "2.295"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+geant:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: AutoBAHN  (GEANT)
+            Project manager: 
+            Radek Krzywania  
+            email: radek.krzywania@man.poznan.pl  
+            skype: Radoslaw.krzywania 
+            Key software engineer: Michal Balcerkiewicz  
+            email: michalb@man.poznan.pl  
+            skype= michalb.psnc
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://194.132.53.174:9082/nsi/ConnectionProviderPort
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing geant:topology .
+
+geant:pionier-geant a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:pionier.net:2012:pionier-geant>;
+    nmleth:vlans "1780-1783" .
+
+geant:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+geant:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+geant:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort geant:pionier-geant,
+        geant:ps-in;
+    nml:hasOutboundPort geant:geant-pionier,
+        geant:ps-out;
+    nml:locatedAt geant:location;
+    nsi:managedBy geant:nsa .
+

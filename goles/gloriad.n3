@@ -1,0 +1,64 @@
+@prefix gloriad: <urn:ogf:network:gloriad.net:2012:> .
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+gloriad:gloriad-krlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:krlight.net:2012:gloriad-krlight>;
+    nmleth:vlans "1780-1783" .
+
+gloriad:gloriad-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:starlight.net:2012:gloriad-starlight>;
+    nmleth:vlans "1780-1783" .
+
+gloriad:krlight-gloriad a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:krlight.net:2012:krlight-gloriad>;
+    nmleth:vlans "1780-1783" .
+
+gloriad:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "41.866342"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "-87.607777"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+gloriad:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OpenNSA 
+            Project Manager: Predrag Redulovic 
+            Email: predrag@gloriad.net
+            Software development engineer: Henrik Thostrup.Jensen 
+            Email:  htj@nordu.net
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://nsa.gloriad.org:9080/NSI/services/ConnectionService
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing gloriad:topology .
+
+gloriad:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+gloriad:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+gloriad:starlight-gloriad a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:starlight.net:2012:starlight-gloriad>;
+    nmleth:vlans "1780-1783" .
+
+gloriad:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort gloriad:krlight-gloriad,
+        gloriad:ps-in,
+        gloriad:starlight-gloriad;
+    nml:hasOutboundPort gloriad:gloriad-krlight,
+        gloriad:gloriad-starlight,
+        gloriad:ps-out;
+    nml:locatedAt gloriad:location;
+    nsi:managedBy gloriad:nsa .
+

@@ -1,0 +1,56 @@
+@prefix aist: <urn:ogf:network:aist.net:2012:> .
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+aist:aist-jgnx a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:jgnx.net:2012:aist-jgnx>;
+    nmleth:vlans "1780-1783" .
+
+aist:jgnx-aist a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:jgnx.net:2012:jgnx-aist>;
+    nmleth:vlans "1780-1783" .
+
+aist:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "36.060"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "140.133"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+aist:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA:  G-Lambda/AIST  (AIST)
+            Project manager: Tomohiro Kudoh 
+            email: t.kudoh@aist.go.jp 
+            mobile:  81-90-8741-3165 
+            skype: t.kudoh 4.3.
+            Key software engineer: Atsuko Takefusa 
+            email: nsi-gl@m.aist.go.jp 
+            mobile:  81-29-861-3091 
+            skype: taketake320
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://163.220.30.174:8090/nsi_gl_proxy/services/ConnectionServiceProvider
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing aist:topology .
+
+aist:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+aist:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+aist:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort aist:jgnx-aist,
+        aist:ps-in;
+    nml:hasOutboundPort aist:aist-jgnx,
+        aist:ps-out;
+    nml:locatedAt aist:location;
+    nsi:managedBy aist:nsa .
+

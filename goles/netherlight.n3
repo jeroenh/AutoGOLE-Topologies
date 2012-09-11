@@ -1,0 +1,104 @@
+@prefix netherlight: <urn:ogf:network:netherlight.net:2012:> .
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+netherlight:czechlight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:czechlight.net:2012:czechlight-netherlight>;
+    nmleth:vlans "1780-1783" .
+
+netherlight:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+netherlight:netherlight-czechlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:czechlight.net:2012:netherlight-czechlight>;
+    nmleth:vlans "1780-1783" .
+
+netherlight:netherlight-northernlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:northernlight.net:2012:netherlight-northernlight>;
+    nmleth:vlans "1780-1783" .
+
+netherlight:netherlight-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:pionier.net:2012:netherlight-pionier>;
+    nmleth:vlans "1780-1783" .
+
+netherlight:netherlight-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:starlight.net:2012:netherlight-starlight>;
+    nmleth:vlans "1780-1783" .
+
+netherlight:netherlight-uvalight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:uvalight.net:2012:netherlight-uvalight>;
+    nmleth:vlans "1780-1783" .
+
+netherlight:northernlight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:northernlight.net:2012:northernlight-netherlight>;
+    nmleth:vlans "1780-1783" .
+
+netherlight:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            OpenDRAC (SURFnet) 
+            Proj Manager: John MacAuley 
+            email: john.macauley@surfnet.nl 
+            phone:  1-613-220-6817 
+            skype: john.macauley
+            Software Developer: John MacAuley 
+            email: john.macauley@surfnet.nl 
+            phone:  1-613-220-6817 
+            skype: john.macauley
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing netherlight:topology .
+
+netherlight:pionier-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:pionier.net:2012:pionier-netherlight>;
+    nmleth:vlans "1780-1783" .
+
+netherlight:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+netherlight:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+netherlight:starlight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:starlight.net:2012:starlight-netherlight>;
+    nmleth:vlans "1780-1783" .
+
+netherlight:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort netherlight:czechlight-netherlight,
+        netherlight:northernlight-netherlight,
+        netherlight:pionier-netherlight,
+        netherlight:ps-in,
+        netherlight:starlight-netherlight,
+        netherlight:uvalight-netherlight;
+    nml:hasOutboundPort netherlight:netherlight-czechlight,
+        netherlight:netherlight-northernlight,
+        netherlight:netherlight-pionier,
+        netherlight:netherlight-starlight,
+        netherlight:netherlight-uvalight,
+        netherlight:ps-out;
+    nml:locatedAt netherlight:location;
+    nsi:managedBy netherlight:nsa .
+
+netherlight:uvalight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:uvalight.net:2012:uvalight-netherlight>;
+    nmleth:vlans "1780-1783" .
+
