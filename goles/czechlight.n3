@@ -4,20 +4,26 @@
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-czechlight:czechlight-netherlight a nml:PortGroup,
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+czechlight:bi-czechlight-None a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:czechlight-netherlight>;
-    nmleth:vlans "1780-1783" .
+    nml:hasPort czechlight:ps-in,
+        czechlight:ps-out .
+
+czechlight:bi-czechlight-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort czechlight:czechlight-netherlight,
+        czechlight:netherlight-czechlight .
+
+<urn:ogf:network:netherlight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3" .
 
 czechlight:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "50.088"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "14.421"^^<http://www.w3.org/2001/XMLSchema#float> .
-
-czechlight:netherlight-czechlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-czechlight>;
-    nmleth:vlans "1780-1783" .
 
 czechlight:nsa a nsi:NSA,
         owl:NamedIndividual;
@@ -37,14 +43,6 @@ czechlight:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing czechlight:topology .
 
-czechlight:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-czechlight:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
 czechlight:topology a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort czechlight:netherlight-czechlight,
@@ -53,4 +51,22 @@ czechlight:topology a nml:Topology,
         czechlight:ps-out;
     nml:locatedAt czechlight:location;
     nsi:managedBy czechlight:nsa .
+
+czechlight:czechlight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:czechlight-netherlight>;
+    nmleth:vlans "1780-1783" .
+
+czechlight:netherlight-czechlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-czechlight>;
+    nmleth:vlans "1780-1783" .
+
+czechlight:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+czechlight:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
 

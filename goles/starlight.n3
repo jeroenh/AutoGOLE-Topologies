@@ -4,35 +4,62 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix starlight: <urn:ogf:network:starlight.net:2012:> .
 
-starlight:esnet-starlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:esnet.net:2012:esnet-starlight>;
-    nmleth:vlans "1780-1783" .
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-starlight:gloriad-starlight a nml:PortGroup,
+<urn:ogf:network:esnet.net:2012:topology> a nml:Topology,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:gloriad.net:2012:gloriad-starlight>;
-    nmleth:vlans "1780-1783" .
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/esnet.n3" .
 
-starlight:jgnx-starlight a nml:PortGroup,
+<urn:ogf:network:gloriad.net:2012:topology> a nml:Topology,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx.net:2012:jgnx-starlight>;
-    nmleth:vlans "1780-1783" .
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.n3" .
+
+<urn:ogf:network:jgnx.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3" .
+
+<urn:ogf:network:max.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/max.n3" .
+
+<urn:ogf:network:netherlight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3" .
+
+starlight:bi-starlight-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort starlight:ps-in,
+        starlight:ps-out .
+
+starlight:bi-starlight-esnet a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort starlight:esnet-starlight,
+        starlight:starlight-esnet .
+
+starlight:bi-starlight-gloriad a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort starlight:gloriad-starlight,
+        starlight:starlight-gloriad .
+
+starlight:bi-starlight-jgnx a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort starlight:jgnx-starlight,
+        starlight:starlight-jgnx .
+
+starlight:bi-starlight-max a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort starlight:max-starlight,
+        starlight:starlight-max .
+
+starlight:bi-starlight-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort starlight:netherlight-starlight,
+        starlight:starlight-netherlight .
 
 starlight:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "41.947906"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "-87.655791"^^<http://www.w3.org/2001/XMLSchema#float> .
-
-starlight:max-starlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:max.net:2012:max-starlight>;
-    nmleth:vlans "1780-1783" .
-
-starlight:netherlight-starlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-starlight>;
-    nmleth:vlans "1780-1783" .
 
 starlight:nsa a nsi:NSA,
         owl:NamedIndividual;
@@ -50,6 +77,48 @@ starlight:nsa a nsi:NSA,
              http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
          """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing starlight:topology .
+
+starlight:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort starlight:esnet-starlight,
+        starlight:gloriad-starlight,
+        starlight:jgnx-starlight,
+        starlight:max-starlight,
+        starlight:netherlight-starlight,
+        starlight:ps-in;
+    nml:hasOutboundPort starlight:ps-out,
+        starlight:starlight-esnet,
+        starlight:starlight-gloriad,
+        starlight:starlight-jgnx,
+        starlight:starlight-max,
+        starlight:starlight-netherlight;
+    nml:locatedAt starlight:location;
+    nsi:managedBy starlight:nsa .
+
+starlight:esnet-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:esnet.net:2012:esnet-starlight>;
+    nmleth:vlans "1780-1783" .
+
+starlight:gloriad-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:gloriad.net:2012:gloriad-starlight>;
+    nmleth:vlans "1780-1783" .
+
+starlight:jgnx-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:jgnx.net:2012:jgnx-starlight>;
+    nmleth:vlans "1780-1783" .
+
+starlight:max-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:max.net:2012:max-starlight>;
+    nmleth:vlans "1780-1783" .
+
+starlight:netherlight-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-starlight>;
+    nmleth:vlans "1780-1783" .
 
 starlight:ps-in a nml:PortGroup,
         owl:NamedIndividual;
@@ -83,21 +152,4 @@ starlight:starlight-netherlight a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias <urn:ogf:network:netherlight.net:2012:starlight-netherlight>;
     nmleth:vlans "1780-1783" .
-
-starlight:topology a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort starlight:esnet-starlight,
-        starlight:gloriad-starlight,
-        starlight:jgnx-starlight,
-        starlight:max-starlight,
-        starlight:netherlight-starlight,
-        starlight:ps-in;
-    nml:hasOutboundPort starlight:ps-out,
-        starlight:starlight-esnet,
-        starlight:starlight-gloriad,
-        starlight:starlight-jgnx,
-        starlight:starlight-max,
-        starlight:starlight-netherlight;
-    nml:locatedAt starlight:location;
-    nsi:managedBy starlight:nsa .
 

@@ -4,15 +4,21 @@
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-kddi-labs:jgnx-kddi-labs a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx.net:2012:jgnx-kddi-labs>;
-    nmleth:vlans "1780-1783" .
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-kddi-labs:kddi-labs-jgnx a nml:PortGroup,
+<urn:ogf:network:jgnx.net:2012:topology> a nml:Topology,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx.net:2012:kddi-labs-jgnx>;
-    nmleth:vlans "1780-1783" .
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3" .
+
+kddi-labs:bi-kddi-labs-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort kddi-labs:ps-in,
+        kddi-labs:ps-out .
+
+kddi-labs:bi-kddi-labs-jgnx a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort kddi-labs:jgnx-kddi-labs,
+        kddi-labs:kddi-labs-jgnx .
 
 kddi-labs:location a nml:Location,
         owl:NamedIndividual;
@@ -37,14 +43,6 @@ kddi-labs:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing kddi-labs:topology .
 
-kddi-labs:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-kddi-labs:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
 kddi-labs:topology a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort kddi-labs:jgnx-kddi-labs,
@@ -53,4 +51,22 @@ kddi-labs:topology a nml:Topology,
         kddi-labs:ps-out;
     nml:locatedAt kddi-labs:location;
     nsi:managedBy kddi-labs:nsa .
+
+kddi-labs:jgnx-kddi-labs a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:jgnx.net:2012:jgnx-kddi-labs>;
+    nmleth:vlans "1780-1783" .
+
+kddi-labs:kddi-labs-jgnx a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:jgnx.net:2012:kddi-labs-jgnx>;
+    nmleth:vlans "1780-1783" .
+
+kddi-labs:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+kddi-labs:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
 

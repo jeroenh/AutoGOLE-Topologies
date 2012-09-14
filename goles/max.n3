@@ -4,25 +4,35 @@
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+max:bi-max-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort max:ps-in,
+        max:ps-out .
+
+max:bi-max-northernlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort max:max-northernlight,
+        max:northernlight-max .
+
+max:bi-max-starlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort max:max-starlight,
+        max:starlight-max .
+
+<urn:ogf:network:northernlight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/northernlight.n3" .
+
+<urn:ogf:network:starlight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/starlight.n3" .
+
 max:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "38.995"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "-76.933"^^<http://www.w3.org/2001/XMLSchema#float> .
-
-max:max-northernlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:northernlight.net:2012:max-northernlight>;
-    nmleth:vlans "1780-1783" .
-
-max:max-starlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:starlight.net:2012:max-starlight>;
-    nmleth:vlans "1780-1783" .
-
-max:northernlight-max a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:northernlight.net:2012:northernlight-max>;
-    nmleth:vlans "1780-1783" .
 
 max:nsa a nsi:NSA,
         owl:NamedIndividual;
@@ -46,6 +56,32 @@ max:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing max:topology .
 
+max:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort max:northernlight-max,
+        max:ps-in,
+        max:starlight-max;
+    nml:hasOutboundPort max:max-northernlight,
+        max:max-starlight,
+        max:ps-out;
+    nml:locatedAt max:location;
+    nsi:managedBy max:nsa .
+
+max:max-northernlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:northernlight.net:2012:max-northernlight>;
+    nmleth:vlans "1780-1783" .
+
+max:max-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:starlight.net:2012:max-starlight>;
+    nmleth:vlans "1780-1783" .
+
+max:northernlight-max a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:northernlight.net:2012:northernlight-max>;
+    nmleth:vlans "1780-1783" .
+
 max:ps-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
@@ -58,15 +94,4 @@ max:starlight-max a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias <urn:ogf:network:starlight.net:2012:starlight-max>;
     nmleth:vlans "1780-1783" .
-
-max:topology a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort max:northernlight-max,
-        max:ps-in,
-        max:starlight-max;
-    nml:hasOutboundPort max:max-northernlight,
-        max:max-starlight,
-        max:ps-out;
-    nml:locatedAt max:location;
-    nsi:managedBy max:nsa .
 

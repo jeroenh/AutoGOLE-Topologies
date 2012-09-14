@@ -4,25 +4,44 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pionier: <urn:ogf:network:pionier.net:2012:> .
 
-pionier:geant-pionier a nml:PortGroup,
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+<urn:ogf:network:geant.net:2012:topology> a nml:Topology,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:geant.net:2012:geant-pionier>;
-    nmleth:vlans "1780-1783" .
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/geant.n3" .
+
+<urn:ogf:network:netherlight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3" .
+
+<urn:ogf:network:northernlight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/northernlight.n3" .
+
+pionier:bi-pionier-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier:ps-in,
+        pionier:ps-out .
+
+pionier:bi-pionier-geant a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier:geant-pionier,
+        pionier:pionier-geant .
+
+pionier:bi-pionier-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier:netherlight-pionier,
+        pionier:pionier-netherlight .
+
+pionier:bi-pionier-northernlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier:northernlight-pionier,
+        pionier:pionier-northernlight .
 
 pionier:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "16.916"^^<http://www.w3.org/2001/XMLSchema#float> .
-
-pionier:netherlight-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-pionier>;
-    nmleth:vlans "1780-1783" .
-
-pionier:northernlight-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:northernlight.net:2012:northernlight-pionier>;
-    nmleth:vlans "1780-1783" .
 
 pionier:nsa a nsi:NSA,
         owl:NamedIndividual;
@@ -39,6 +58,34 @@ pionier:nsa a nsi:NSA,
             http://194.132.53.174:9080/nsi/ConnectionProviderPort
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing pionier:topology .
+
+pionier:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort pionier:geant-pionier,
+        pionier:netherlight-pionier,
+        pionier:northernlight-pionier,
+        pionier:ps-in;
+    nml:hasOutboundPort pionier:pionier-geant,
+        pionier:pionier-netherlight,
+        pionier:pionier-northernlight,
+        pionier:ps-out;
+    nml:locatedAt pionier:location;
+    nsi:managedBy pionier:nsa .
+
+pionier:geant-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:geant.net:2012:geant-pionier>;
+    nmleth:vlans "1780-1783" .
+
+pionier:netherlight-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-pionier>;
+    nmleth:vlans "1780-1783" .
+
+pionier:northernlight-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:northernlight.net:2012:northernlight-pionier>;
+    nmleth:vlans "1780-1783" .
 
 pionier:pionier-geant a nml:PortGroup,
         owl:NamedIndividual;
@@ -62,17 +109,4 @@ pionier:ps-in a nml:PortGroup,
 pionier:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
-
-pionier:topology a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort pionier:geant-pionier,
-        pionier:netherlight-pionier,
-        pionier:northernlight-pionier,
-        pionier:ps-in;
-    nml:hasOutboundPort pionier:pionier-geant,
-        pionier:pionier-netherlight,
-        pionier:pionier-northernlight,
-        pionier:ps-out;
-    nml:locatedAt pionier:location;
-    nsi:managedBy pionier:nsa .
 

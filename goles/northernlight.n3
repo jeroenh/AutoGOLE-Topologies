@@ -4,10 +4,87 @@
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+<urn:ogf:network:max.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/max.n3" .
+
+<urn:ogf:network:netherlight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3" .
+
+northernlight:bi-northernlight-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort northernlight:onsala-in,
+        northernlight:onsala-out,
+        northernlight:ps-in,
+        northernlight:ps-out .
+
+northernlight:bi-northernlight-max a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort northernlight:max-northernlight,
+        northernlight:northernlight-max .
+
+northernlight:bi-northernlight-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort northernlight:netherlight-northernlight,
+        northernlight:northernlight-netherlight .
+
+northernlight:bi-northernlight-pionier a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort northernlight:northernlight-pionier,
+        northernlight:pionier-northernlight .
+
+northernlight:bi-northernlight-uvalight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort northernlight:northernlight-uvalight,
+        northernlight:uvalight-northernlight .
+
+<urn:ogf:network:pionier.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.n3" .
+
+<urn:ogf:network:uvalight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.n3" .
+
 northernlight:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "55.637"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "12.641"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+northernlight:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OpenNSA (NORDUnet)
+            Project Management: Jerry Sobieski
+            email: jerry@nordu.net
+            mobile:  1-301-346-1849
+            skype: jerry.sobieski
+            Software Development: Henrik Thostrup-Jensen
+            email: htj@nordu.net
+            skype: henrik.thostrup.jensen
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint "https://orval.grid.aau.dk:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing northernlight:topology .
+
+northernlight:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort northernlight:max-northernlight,
+        northernlight:netherlight-northernlight,
+        northernlight:onsala-in,
+        northernlight:pionier-northernlight,
+        northernlight:ps-in,
+        northernlight:uvalight-northernlight;
+    nml:hasOutboundPort northernlight:northernlight-max,
+        northernlight:northernlight-netherlight,
+        northernlight:northernlight-pionier,
+        northernlight:northernlight-uvalight,
+        northernlight:onsala-out,
+        northernlight:ps-out;
+    nml:locatedAt northernlight:location;
+    nsi:managedBy northernlight:nsa .
 
 northernlight:max-northernlight a nml:PortGroup,
         owl:NamedIndividual;
@@ -39,21 +116,6 @@ northernlight:northernlight-uvalight a nml:PortGroup,
     nml:isAlias <urn:ogf:network:uvalight.net:2012:northernlight-uvalight>;
     nmleth:vlans "1780-1783" .
 
-northernlight:nsa a nsi:NSA,
-        owl:NamedIndividual;
-    nsi:adminContact """
-            NSA: OpenNSA (NORDUnet)
-            Project Management: Jerry Sobieski
-            email: jerry@nordu.net
-            mobile:  1-301-346-1849
-            skype: jerry.sobieski
-            Software Development: Henrik Thostrup-Jensen
-            email: htj@nordu.net
-            skype: henrik.thostrup.jensen
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:csProviderEndpoint "https://orval.grid.aau.dk:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing northernlight:topology .
-
 northernlight:onsala-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
@@ -74,23 +136,6 @@ northernlight:ps-in a nml:PortGroup,
 northernlight:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
-
-northernlight:topology a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort northernlight:max-northernlight,
-        northernlight:netherlight-northernlight,
-        northernlight:onsala-in,
-        northernlight:pionier-northernlight,
-        northernlight:ps-in,
-        northernlight:uvalight-northernlight;
-    nml:hasOutboundPort northernlight:northernlight-max,
-        northernlight:northernlight-netherlight,
-        northernlight:northernlight-pionier,
-        northernlight:northernlight-uvalight,
-        northernlight:onsala-out,
-        northernlight:ps-out;
-    nml:locatedAt northernlight:location;
-    nsi:managedBy northernlight:nsa .
 
 northernlight:uvalight-northernlight a nml:PortGroup,
         owl:NamedIndividual;

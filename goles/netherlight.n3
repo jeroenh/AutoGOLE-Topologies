@@ -4,15 +4,102 @@
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-netherlight:czechlight-netherlight a nml:PortGroup,
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+<urn:ogf:network:czechlight.net:2012:topology> a nml:Topology,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:czechlight.net:2012:czechlight-netherlight>;
-    nmleth:vlans "1780-1783" .
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/czechlight.n3" .
+
+netherlight:bi-netherlight-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:ps-in,
+        netherlight:ps-out .
+
+netherlight:bi-netherlight-czechlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:czechlight-netherlight,
+        netherlight:netherlight-czechlight .
+
+netherlight:bi-netherlight-northernlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:netherlight-northernlight,
+        netherlight:northernlight-netherlight .
+
+netherlight:bi-netherlight-pionier a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:netherlight-pionier,
+        netherlight:pionier-netherlight .
+
+netherlight:bi-netherlight-starlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:netherlight-starlight,
+        netherlight:starlight-netherlight .
+
+netherlight:bi-netherlight-uvalight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:netherlight-uvalight,
+        netherlight:uvalight-netherlight .
+
+<urn:ogf:network:northernlight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/northernlight.n3" .
+
+<urn:ogf:network:pionier.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.n3" .
+
+<urn:ogf:network:starlight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/starlight.n3" .
+
+<urn:ogf:network:uvalight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.n3" .
 
 netherlight:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+netherlight:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            OpenDRAC (SURFnet) 
+            Proj Manager: John MacAuley 
+            email: john.macauley@surfnet.nl 
+            phone:  1-613-220-6817 
+            skype: john.macauley
+            Software Developer: John MacAuley 
+            email: john.macauley@surfnet.nl 
+            phone:  1-613-220-6817 
+            skype: john.macauley
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing netherlight:topology .
+
+netherlight:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort netherlight:czechlight-netherlight,
+        netherlight:northernlight-netherlight,
+        netherlight:pionier-netherlight,
+        netherlight:ps-in,
+        netherlight:starlight-netherlight,
+        netherlight:uvalight-netherlight;
+    nml:hasOutboundPort netherlight:netherlight-czechlight,
+        netherlight:netherlight-northernlight,
+        netherlight:netherlight-pionier,
+        netherlight:netherlight-starlight,
+        netherlight:netherlight-uvalight,
+        netherlight:ps-out;
+    nml:locatedAt netherlight:location;
+    nsi:managedBy netherlight:nsa .
+
+netherlight:czechlight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:czechlight.net:2012:czechlight-netherlight>;
+    nmleth:vlans "1780-1783" .
 
 netherlight:netherlight-czechlight a nml:PortGroup,
         owl:NamedIndividual;
@@ -44,24 +131,6 @@ netherlight:northernlight-netherlight a nml:PortGroup,
     nml:isAlias <urn:ogf:network:northernlight.net:2012:northernlight-netherlight>;
     nmleth:vlans "1780-1783" .
 
-netherlight:nsa a nsi:NSA,
-        owl:NamedIndividual;
-    nsi:adminContact """
-            OpenDRAC (SURFnet) 
-            Proj Manager: John MacAuley 
-            email: john.macauley@surfnet.nl 
-            phone:  1-613-220-6817 
-            skype: john.macauley
-            Software Developer: John MacAuley 
-            email: john.macauley@surfnet.nl 
-            phone:  1-613-220-6817 
-            skype: john.macauley
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:csProviderEndpoint """
-            http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing netherlight:topology .
-
 netherlight:pionier-netherlight a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias <urn:ogf:network:pionier.net:2012:pionier-netherlight>;
@@ -79,23 +148,6 @@ netherlight:starlight-netherlight a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias <urn:ogf:network:starlight.net:2012:starlight-netherlight>;
     nmleth:vlans "1780-1783" .
-
-netherlight:topology a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort netherlight:czechlight-netherlight,
-        netherlight:northernlight-netherlight,
-        netherlight:pionier-netherlight,
-        netherlight:ps-in,
-        netherlight:starlight-netherlight,
-        netherlight:uvalight-netherlight;
-    nml:hasOutboundPort netherlight:netherlight-czechlight,
-        netherlight:netherlight-northernlight,
-        netherlight:netherlight-pionier,
-        netherlight:netherlight-starlight,
-        netherlight:netherlight-uvalight,
-        netherlight:ps-out;
-    nml:locatedAt netherlight:location;
-    nsi:managedBy netherlight:nsa .
 
 netherlight:uvalight-netherlight a nml:PortGroup,
         owl:NamedIndividual;

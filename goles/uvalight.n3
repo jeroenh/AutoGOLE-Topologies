@@ -4,20 +4,35 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix uvalight: <urn:ogf:network:uvalight.net:2012:> .
 
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+<urn:ogf:network:netherlight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3" .
+
+<urn:ogf:network:northernlight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/northernlight.n3" .
+
+uvalight:bi-uvalight-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort uvalight:ps-in,
+        uvalight:ps-out .
+
+uvalight:bi-uvalight-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort uvalight:netherlight-uvalight,
+        uvalight:uvalight-netherlight .
+
+uvalight:bi-uvalight-northernlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort uvalight:northernlight-uvalight,
+        uvalight:uvalight-northernlight .
+
 uvalight:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
-
-uvalight:netherlight-uvalight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-uvalight>;
-    nmleth:vlans "1780-1783" .
-
-uvalight:northernlight-uvalight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:northernlight.net:2012:northernlight-uvalight>;
-    nmleth:vlans "1780-1783" .
 
 uvalight:nsa a nsi:NSA,
         owl:NamedIndividual;
@@ -38,14 +53,6 @@ uvalight:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing uvalight:topology .
 
-uvalight:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-uvalight:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
 uvalight:topology a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort uvalight:netherlight-uvalight,
@@ -56,6 +63,24 @@ uvalight:topology a nml:Topology,
         uvalight:uvalight-northernlight;
     nml:locatedAt uvalight:location;
     nsi:managedBy uvalight:nsa .
+
+uvalight:netherlight-uvalight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-uvalight>;
+    nmleth:vlans "1780-1783" .
+
+uvalight:northernlight-uvalight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:northernlight.net:2012:northernlight-uvalight>;
+    nmleth:vlans "1780-1783" .
+
+uvalight:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+uvalight:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
 
 uvalight:uvalight-netherlight a nml:PortGroup,
         owl:NamedIndividual;

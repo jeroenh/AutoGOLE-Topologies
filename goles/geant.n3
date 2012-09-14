@@ -4,10 +4,21 @@
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-geant:geant-pionier a nml:PortGroup,
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+geant:bi-geant-None a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier.net:2012:geant-pionier>;
-    nmleth:vlans "1780-1783" .
+    nml:hasPort geant:ps-in,
+        geant:ps-out .
+
+geant:bi-geant-pionier a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort geant:geant-pionier,
+        geant:pionier-geant .
+
+<urn:ogf:network:pionier.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.n3" .
 
 geant:location a nml:Location,
         owl:NamedIndividual;
@@ -31,6 +42,20 @@ geant:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing geant:topology .
 
+geant:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort geant:pionier-geant,
+        geant:ps-in;
+    nml:hasOutboundPort geant:geant-pionier,
+        geant:ps-out;
+    nml:locatedAt geant:location;
+    nsi:managedBy geant:nsa .
+
+geant:geant-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:pionier.net:2012:geant-pionier>;
+    nmleth:vlans "1780-1783" .
+
 geant:pionier-geant a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias <urn:ogf:network:pionier.net:2012:pionier-geant>;
@@ -43,13 +68,4 @@ geant:ps-in a nml:PortGroup,
 geant:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
-
-geant:topology a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort geant:pionier-geant,
-        geant:ps-in;
-    nml:hasOutboundPort geant:geant-pionier,
-        geant:ps-out;
-    nml:locatedAt geant:location;
-    nsi:managedBy geant:nsa .
 

@@ -4,10 +4,21 @@
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-esnet:esnet-starlight a nml:PortGroup,
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+esnet:bi-esnet-None a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:starlight.net:2012:esnet-starlight>;
-    nmleth:vlans "1780-1783" .
+    nml:hasPort esnet:ps-in,
+        esnet:ps-out .
+
+esnet:bi-esnet-starlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort esnet:esnet-starlight,
+        esnet:starlight-esnet .
+
+<urn:ogf:network:starlight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/starlight.n3" .
 
 esnet:location a nml:Location,
         owl:NamedIndividual;
@@ -28,6 +39,20 @@ esnet:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing esnet:topology .
 
+esnet:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort esnet:ps-in,
+        esnet:starlight-esnet;
+    nml:hasOutboundPort esnet:esnet-starlight,
+        esnet:ps-out;
+    nml:locatedAt esnet:location;
+    nsi:managedBy esnet:nsa .
+
+esnet:esnet-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:starlight.net:2012:esnet-starlight>;
+    nmleth:vlans "1780-1783" .
+
 esnet:ps-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
@@ -40,13 +65,4 @@ esnet:starlight-esnet a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias <urn:ogf:network:starlight.net:2012:starlight-esnet>;
     nmleth:vlans "1780-1783" .
-
-esnet:topology a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort esnet:ps-in,
-        esnet:starlight-esnet;
-    nml:hasOutboundPort esnet:esnet-starlight,
-        esnet:ps-out;
-    nml:locatedAt esnet:location;
-    nsi:managedBy esnet:nsa .
 

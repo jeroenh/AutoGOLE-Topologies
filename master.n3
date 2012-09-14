@@ -1,0 +1,1176 @@
+@prefix aist: <urn:ogf:network:aist.net:2012:> .
+@prefix czechlight: <urn:ogf:network:czechlight.net:2012:> .
+@prefix esnet: <urn:ogf:network:esnet.net:2012:> .
+@prefix geant: <urn:ogf:network:geant.net:2012:> .
+@prefix gloriad: <urn:ogf:network:gloriad.net:2012:> .
+@prefix jgnx: <urn:ogf:network:jgnx.net:2012:> .
+@prefix kddi-labs: <urn:ogf:network:kddi-labs.net:2012:> .
+@prefix krlight: <urn:ogf:network:krlight.net:2012:> .
+@prefix max: <urn:ogf:network:max.net:2012:> .
+@prefix netherlight: <urn:ogf:network:netherlight.net:2012:> .
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix northernlight: <urn:ogf:network:northernlight.net:2012:> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pionier: <urn:ogf:network:pionier.net:2012:> .
+@prefix starlight: <urn:ogf:network:starlight.net:2012:> .
+@prefix uvalight: <urn:ogf:network:uvalight.net:2012:> .
+
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+aist:bi-aist-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort aist:ps-in,
+        aist:ps-out .
+
+aist:bi-aist-jgnx a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort aist:aist-jgnx,
+        aist:jgnx-aist .
+
+czechlight:bi-czechlight-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort czechlight:ps-in,
+        czechlight:ps-out .
+
+czechlight:bi-czechlight-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort czechlight:czechlight-netherlight,
+        czechlight:netherlight-czechlight .
+
+esnet:bi-esnet-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort esnet:ps-in,
+        esnet:ps-out .
+
+esnet:bi-esnet-starlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort esnet:esnet-starlight,
+        esnet:starlight-esnet .
+
+geant:bi-geant-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort geant:ps-in,
+        geant:ps-out .
+
+geant:bi-geant-pionier a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort geant:geant-pionier,
+        geant:pionier-geant .
+
+gloriad:bi-gloriad-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort gloriad:ps-in,
+        gloriad:ps-out .
+
+gloriad:bi-gloriad-krlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort gloriad:gloriad-krlight,
+        gloriad:krlight-gloriad .
+
+gloriad:bi-gloriad-starlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort gloriad:gloriad-starlight,
+        gloriad:starlight-gloriad .
+
+jgnx:bi-jgnx-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort jgnx:ps-in,
+        jgnx:ps-out .
+
+jgnx:bi-jgnx-aist a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort jgnx:aist-jgnx,
+        jgnx:jgnx-aist .
+
+jgnx:bi-jgnx-kddi-labs a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort jgnx:jgnx-kddi-labs,
+        jgnx:kddi-labs-jgnx .
+
+jgnx:bi-jgnx-starlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort jgnx:jgnx-starlight,
+        jgnx:starlight-jgnx .
+
+kddi-labs:bi-kddi-labs-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort kddi-labs:ps-in,
+        kddi-labs:ps-out .
+
+kddi-labs:bi-kddi-labs-jgnx a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort kddi-labs:jgnx-kddi-labs,
+        kddi-labs:kddi-labs-jgnx .
+
+krlight:bi-krlight-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort krlight:ps-in,
+        krlight:ps-out .
+
+krlight:bi-krlight-gloriad a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort krlight:gloriad-krlight,
+        krlight:krlight-gloriad .
+
+max:bi-max-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort max:ps-in,
+        max:ps-out .
+
+max:bi-max-northernlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort max:max-northernlight,
+        max:northernlight-max .
+
+max:bi-max-starlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort max:max-starlight,
+        max:starlight-max .
+
+netherlight:bi-netherlight-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:ps-in,
+        netherlight:ps-out .
+
+netherlight:bi-netherlight-czechlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:czechlight-netherlight,
+        netherlight:netherlight-czechlight .
+
+netherlight:bi-netherlight-northernlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:netherlight-northernlight,
+        netherlight:northernlight-netherlight .
+
+netherlight:bi-netherlight-pionier a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:netherlight-pionier,
+        netherlight:pionier-netherlight .
+
+netherlight:bi-netherlight-starlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:netherlight-starlight,
+        netherlight:starlight-netherlight .
+
+netherlight:bi-netherlight-uvalight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:netherlight-uvalight,
+        netherlight:uvalight-netherlight .
+
+northernlight:bi-northernlight-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort northernlight:onsala-in,
+        northernlight:onsala-out,
+        northernlight:ps-in,
+        northernlight:ps-out .
+
+northernlight:bi-northernlight-max a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort northernlight:max-northernlight,
+        northernlight:northernlight-max .
+
+northernlight:bi-northernlight-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort northernlight:netherlight-northernlight,
+        northernlight:northernlight-netherlight .
+
+northernlight:bi-northernlight-pionier a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort northernlight:northernlight-pionier,
+        northernlight:pionier-northernlight .
+
+northernlight:bi-northernlight-uvalight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort northernlight:northernlight-uvalight,
+        northernlight:uvalight-northernlight .
+
+pionier:bi-pionier-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier:ps-in,
+        pionier:ps-out .
+
+pionier:bi-pionier-geant a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier:geant-pionier,
+        pionier:pionier-geant .
+
+pionier:bi-pionier-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier:netherlight-pionier,
+        pionier:pionier-netherlight .
+
+pionier:bi-pionier-northernlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier:northernlight-pionier,
+        pionier:pionier-northernlight .
+
+starlight:bi-starlight-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort starlight:ps-in,
+        starlight:ps-out .
+
+starlight:bi-starlight-esnet a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort starlight:esnet-starlight,
+        starlight:starlight-esnet .
+
+starlight:bi-starlight-gloriad a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort starlight:gloriad-starlight,
+        starlight:starlight-gloriad .
+
+starlight:bi-starlight-jgnx a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort starlight:jgnx-starlight,
+        starlight:starlight-jgnx .
+
+starlight:bi-starlight-max a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort starlight:max-starlight,
+        starlight:starlight-max .
+
+starlight:bi-starlight-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort starlight:netherlight-starlight,
+        starlight:starlight-netherlight .
+
+uvalight:bi-uvalight-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort uvalight:ps-in,
+        uvalight:ps-out .
+
+uvalight:bi-uvalight-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort uvalight:netherlight-uvalight,
+        uvalight:uvalight-netherlight .
+
+uvalight:bi-uvalight-northernlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort uvalight:northernlight-uvalight,
+        uvalight:uvalight-northernlight .
+
+aist:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "36.060"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "140.133"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+aist:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA:  G-Lambda/AIST  (AIST)
+            Project manager: Tomohiro Kudoh 
+            email: t.kudoh@aist.go.jp 
+            mobile:  81-90-8741-3165 
+            skype: t.kudoh 4.3.
+            Key software engineer: Atsuko Takefusa 
+            email: nsi-gl@m.aist.go.jp 
+            mobile:  81-29-861-3091 
+            skype: taketake320
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://163.220.30.174:8090/nsi_gl_proxy/services/ConnectionServiceProvider
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing aist:topology .
+
+aist:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort aist:jgnx-aist,
+        aist:ps-in;
+    nml:hasOutboundPort aist:aist-jgnx,
+        aist:ps-out;
+    nml:locatedAt aist:location;
+    nsi:managedBy aist:nsa .
+
+czechlight:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "50.088"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "14.421"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+czechlight:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OpenDRAC (SURFnet) 
+            Proj Manager: Michal Altmann  
+            email: m.altmann@cesnet.cz 
+            phone: +420775603522   
+            skype: michal_altmann 
+            Software Developer: John MacAuley 
+            email: john.macauley@surfnet.nl 
+            phone:  1-613-220-6817 
+            skype: john.macauley
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing czechlight:topology .
+
+czechlight:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort czechlight:netherlight-czechlight,
+        czechlight:ps-in;
+    nml:hasOutboundPort czechlight:czechlight-netherlight,
+        czechlight:ps-out;
+    nml:locatedAt czechlight:location;
+    nsi:managedBy czechlight:nsa .
+
+esnet:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "41.703516"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "-87.988120"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+esnet:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OSCARS 
+            Project Manager: Inder Monga 
+            Email: imonga@es.net 
+            Software development engineer: Evangelos Chaniotakis 
+            Email:  haniotak@es.net
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://jupiter.es.net:8288/ConnectionService
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing esnet:topology .
+
+esnet:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort esnet:ps-in,
+        esnet:starlight-esnet;
+    nml:hasOutboundPort esnet:esnet-starlight,
+        esnet:ps-out;
+    nml:locatedAt esnet:location;
+    nsi:managedBy esnet:nsa .
+
+geant:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "48.859"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "2.295"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+geant:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: AutoBAHN  (GEANT)
+            Project manager: 
+            Radek Krzywania  
+            email: radek.krzywania@man.poznan.pl  
+            skype: Radoslaw.krzywania 
+            Key software engineer: Michal Balcerkiewicz  
+            email: michalb@man.poznan.pl  
+            skype= michalb.psnc
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://194.132.53.174:9082/nsi/ConnectionProviderPort
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing geant:topology .
+
+geant:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort geant:pionier-geant,
+        geant:ps-in;
+    nml:hasOutboundPort geant:geant-pionier,
+        geant:ps-out;
+    nml:locatedAt geant:location;
+    nsi:managedBy geant:nsa .
+
+gloriad:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "41.866342"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "-87.607777"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+gloriad:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OpenNSA 
+            Project Manager: Predrag Redulovic 
+            Email: predrag@gloriad.net
+            Software development engineer: Henrik Thostrup.Jensen 
+            Email:  htj@nordu.net
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://nsa.gloriad.org:9080/NSI/services/ConnectionService
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing gloriad:topology .
+
+gloriad:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort gloriad:krlight-gloriad,
+        gloriad:ps-in,
+        gloriad:starlight-gloriad;
+    nml:hasOutboundPort gloriad:gloriad-krlight,
+        gloriad:gloriad-starlight,
+        gloriad:ps-out;
+    nml:locatedAt gloriad:location;
+    nsi:managedBy gloriad:nsa .
+
+jgnx:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "35.688"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "139.764"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+jgnx:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: G-Lambda/KDDILabs (KDDI Labs) 
+            Project manager name: Jin Tanaka  
+            email: tanaka@ote.kddi.com  
+            mobile: +81-80-5062-9352   
+            skype: jintanapan 
+            Key software engineer: Takahiro Miyamoto  
+            email: tk-miyamoto@kddilabs.jp 
+            mobile:  81-90-1966-5153  
+            skype: takahiro.miyamoto 
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://202.180.38.130:8080/connectionprovider
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing jgnx:topology .
+
+jgnx:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort jgnx:aist-jgnx,
+        jgnx:kddi-labs-jgnx,
+        jgnx:ps-in,
+        jgnx:starlight-jgnx;
+    nml:hasOutboundPort jgnx:jgnx-aist,
+        jgnx:jgnx-kddi-labs,
+        jgnx:jgnx-starlight,
+        jgnx:ps-out;
+    nml:locatedAt jgnx:location;
+    nsi:managedBy jgnx:nsa .
+
+kddi-labs:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "35.879"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "139.517"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+kddi-labs:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: G-Lambda/KDDILabs (KDDI Labs) 
+            Project manager: Takahiro Miyamoto  
+            email: tk-miyamoto@kddilabs.jp 
+            mobile:  81-90-1966-5153  
+            skype: takahiro.miyamoto  
+            Key software engineer: Takahiro Miyamoto  
+            email: tk-miyamoto@kddilabs.jp 
+            mobile:  81-90-1966-5153  
+            skype: takahiro.miyamoto 
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://210.196.65.114:9352/connectionprovider
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing kddi-labs:topology .
+
+kddi-labs:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort kddi-labs:jgnx-kddi-labs,
+        kddi-labs:ps-in;
+    nml:hasOutboundPort kddi-labs:kddi-labs-jgnx,
+        kddi-labs:ps-out;
+    nml:locatedAt kddi-labs:location;
+    nsi:managedBy kddi-labs:nsa .
+
+krlight:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "36.366"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "127.359"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+krlight:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            DynamicKL  (KISTI) 
+            Project Mgmt: 
+            Jonguk Kong
+            mobile: +82-10-3444-7418, 
+            email: kju@kisti.re.kr, 
+            skype: jonguk
+            Jeonghoon Moon
+            mobile: +82-10-2534-6754
+            email: otello90@gmail.com
+            jhmoon@kisti.re.kr, 
+            skype: otello90 
+            : Eng
+            - Youngwook Cha, +82-10-2456-3237, ywcha@andong.ac.kr, .ngnlab414
+            - Kyungmin Lee, +82-10-9958-8979, tsoc@naver.com, kyungmin_ 
+            - Kwangjong Cho, +82-10-4192-8992, kjcho@kisti.re.kr, kwangjong cho
+            : SC2011 booth#  656  KISTI
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://203.230.116.202:8090/nsi/ConnectionServiceProvider
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing krlight:topology .
+
+krlight:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort krlight:gloriad-krlight,
+        krlight:ps-in;
+    nml:hasOutboundPort krlight:krlight-gloriad,
+        krlight:ps-out;
+    nml:locatedAt krlight:location;
+    nsi:managedBy krlight:nsa .
+
+max:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "38.995"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "-76.933"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+max:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OpenNSA
+            Project manager:
+            email:
+            mobile:
+            skype: 
+
+            Network Engineer: Balasubramania Pillai
+            email: bpillai@maxgigapop.net
+            skype: b_pillai
+
+            Key software engineer:
+            email:
+            skype:
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://nsa.maxgigapop.net:9080/NSI/services/ConnectionService/
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing max:topology .
+
+max:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort max:northernlight-max,
+        max:ps-in,
+        max:starlight-max;
+    nml:hasOutboundPort max:max-northernlight,
+        max:max-starlight,
+        max:ps-out;
+    nml:locatedAt max:location;
+    nsi:managedBy max:nsa .
+
+netherlight:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+netherlight:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            OpenDRAC (SURFnet) 
+            Proj Manager: John MacAuley 
+            email: john.macauley@surfnet.nl 
+            phone:  1-613-220-6817 
+            skype: john.macauley
+            Software Developer: John MacAuley 
+            email: john.macauley@surfnet.nl 
+            phone:  1-613-220-6817 
+            skype: john.macauley
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing netherlight:topology .
+
+netherlight:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort netherlight:czechlight-netherlight,
+        netherlight:northernlight-netherlight,
+        netherlight:pionier-netherlight,
+        netherlight:ps-in,
+        netherlight:starlight-netherlight,
+        netherlight:uvalight-netherlight;
+    nml:hasOutboundPort netherlight:netherlight-czechlight,
+        netherlight:netherlight-northernlight,
+        netherlight:netherlight-pionier,
+        netherlight:netherlight-starlight,
+        netherlight:netherlight-uvalight,
+        netherlight:ps-out;
+    nml:locatedAt netherlight:location;
+    nsi:managedBy netherlight:nsa .
+
+northernlight:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "55.637"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "12.641"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+northernlight:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OpenNSA (NORDUnet)
+            Project Management: Jerry Sobieski
+            email: jerry@nordu.net
+            mobile:  1-301-346-1849
+            skype: jerry.sobieski
+            Software Development: Henrik Thostrup-Jensen
+            email: htj@nordu.net
+            skype: henrik.thostrup.jensen
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint "https://orval.grid.aau.dk:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing northernlight:topology .
+
+northernlight:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort northernlight:max-northernlight,
+        northernlight:netherlight-northernlight,
+        northernlight:onsala-in,
+        northernlight:pionier-northernlight,
+        northernlight:ps-in,
+        northernlight:uvalight-northernlight;
+    nml:hasOutboundPort northernlight:northernlight-max,
+        northernlight:northernlight-netherlight,
+        northernlight:northernlight-pionier,
+        northernlight:northernlight-uvalight,
+        northernlight:onsala-out,
+        northernlight:ps-out;
+    nml:locatedAt northernlight:location;
+    nsi:managedBy northernlight:nsa .
+
+pionier:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "16.916"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+pionier:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: AutoBAHN  (GEANT) 
+            Project manager: Radek Krzywania  
+            email: radek.krzywania@man.poznan.pl  
+            skype: Radoslaw.krzywania 
+            Software development: Michal Balcerkiewicz  
+            email: michalb@man.poznan.pl  
+            skype= michalb.psnc
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://194.132.53.174:9080/nsi/ConnectionProviderPort
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing pionier:topology .
+
+pionier:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort pionier:geant-pionier,
+        pionier:netherlight-pionier,
+        pionier:northernlight-pionier,
+        pionier:ps-in;
+    nml:hasOutboundPort pionier:pionier-geant,
+        pionier:pionier-netherlight,
+        pionier:pionier-northernlight,
+        pionier:ps-out;
+    nml:locatedAt pionier:location;
+    nsi:managedBy pionier:nsa .
+
+starlight:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "41.947906"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "-87.655791"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+starlight:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+             NSA: OpenNSA (NORDUnet) over Argia 
+             Project manager: Scott Campbell 
+             email: scott.campbell@crc.gc.ca  
+             mobile:   
+             skype: scottcampbell00 
+             Key software engineer: Henrik Thostrup-Jensen 
+             email: htj@nordu.net 
+             skype: henrik.thostrup.jensen
+         """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+             http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
+         """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing starlight:topology .
+
+starlight:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort starlight:esnet-starlight,
+        starlight:gloriad-starlight,
+        starlight:jgnx-starlight,
+        starlight:max-starlight,
+        starlight:netherlight-starlight,
+        starlight:ps-in;
+    nml:hasOutboundPort starlight:ps-out,
+        starlight:starlight-esnet,
+        starlight:starlight-gloriad,
+        starlight:starlight-jgnx,
+        starlight:starlight-max,
+        starlight:starlight-netherlight;
+    nml:locatedAt starlight:location;
+    nsi:managedBy starlight:nsa .
+
+uvalight:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+uvalight:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OpenNSA   
+            Project manager: Jeroen van der Ham   
+            email: vdham@uva.nl mobile: use skype   
+            skype: just1sand0s  
+            Network Engineer: Ralph Koning 
+            email: r.koning@uva.nl  
+            skype: ralph-uva-sne
+            Key software engineer: Jeroen van der Ham
+            email: vdham@uva.nl mobile: use skype   
+            skype: just1sand0s  
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://nsa.uvalight.nl:9080/NSI/services/ConnectionService/        
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing uvalight:topology .
+
+uvalight:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort uvalight:netherlight-uvalight,
+        uvalight:northernlight-uvalight,
+        uvalight:ps-in;
+    nml:hasOutboundPort uvalight:ps-out,
+        uvalight:uvalight-netherlight,
+        uvalight:uvalight-northernlight;
+    nml:locatedAt uvalight:location;
+    nsi:managedBy uvalight:nsa .
+
+aist:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+aist:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+czechlight:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+czechlight:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+esnet:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+esnet:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+geant:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+geant:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+gloriad:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+gloriad:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+jgnx:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+jgnx:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+kddi-labs:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+kddi-labs:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+krlight:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+krlight:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+max:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+max:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+netherlight:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+netherlight:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+northernlight:onsala-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+northernlight:onsala-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+northernlight:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+northernlight:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+pionier:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+pionier:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+starlight:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+starlight:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+uvalight:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+uvalight:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+aist:aist-jgnx a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias jgnx:aist-jgnx;
+    nmleth:vlans "1780-1783" .
+
+aist:jgnx-aist a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias jgnx:jgnx-aist;
+    nmleth:vlans "1780-1783" .
+
+czechlight:czechlight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias netherlight:czechlight-netherlight;
+    nmleth:vlans "1780-1783" .
+
+czechlight:netherlight-czechlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias netherlight:netherlight-czechlight;
+    nmleth:vlans "1780-1783" .
+
+esnet:esnet-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias starlight:esnet-starlight;
+    nmleth:vlans "1780-1783" .
+
+esnet:starlight-esnet a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias starlight:starlight-esnet;
+    nmleth:vlans "1780-1783" .
+
+geant:geant-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias pionier:geant-pionier;
+    nmleth:vlans "1780-1783" .
+
+geant:pionier-geant a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias pionier:pionier-geant;
+    nmleth:vlans "1780-1783" .
+
+gloriad:gloriad-krlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias krlight:gloriad-krlight;
+    nmleth:vlans "1780-1783" .
+
+gloriad:gloriad-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias starlight:gloriad-starlight;
+    nmleth:vlans "1780-1783" .
+
+gloriad:krlight-gloriad a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias krlight:krlight-gloriad;
+    nmleth:vlans "1780-1783" .
+
+gloriad:starlight-gloriad a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias starlight:starlight-gloriad;
+    nmleth:vlans "1780-1783" .
+
+jgnx:aist-jgnx a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias aist:aist-jgnx;
+    nmleth:vlans "1780-1783" .
+
+jgnx:jgnx-aist a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias aist:jgnx-aist;
+    nmleth:vlans "1780-1783" .
+
+jgnx:jgnx-kddi-labs a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias kddi-labs:jgnx-kddi-labs;
+    nmleth:vlans "1780-1783" .
+
+jgnx:jgnx-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias starlight:jgnx-starlight;
+    nmleth:vlans "1780-1783" .
+
+jgnx:kddi-labs-jgnx a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias kddi-labs:kddi-labs-jgnx;
+    nmleth:vlans "1780-1783" .
+
+jgnx:starlight-jgnx a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias starlight:starlight-jgnx;
+    nmleth:vlans "1780-1783" .
+
+kddi-labs:jgnx-kddi-labs a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias jgnx:jgnx-kddi-labs;
+    nmleth:vlans "1780-1783" .
+
+kddi-labs:kddi-labs-jgnx a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias jgnx:kddi-labs-jgnx;
+    nmleth:vlans "1780-1783" .
+
+krlight:gloriad-krlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias gloriad:gloriad-krlight;
+    nmleth:vlans "1780-1783" .
+
+krlight:krlight-gloriad a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias gloriad:krlight-gloriad;
+    nmleth:vlans "1780-1783" .
+
+max:max-northernlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias northernlight:max-northernlight;
+    nmleth:vlans "1780-1783" .
+
+max:max-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias starlight:max-starlight;
+    nmleth:vlans "1780-1783" .
+
+max:northernlight-max a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias northernlight:northernlight-max;
+    nmleth:vlans "1780-1783" .
+
+max:starlight-max a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias starlight:starlight-max;
+    nmleth:vlans "1780-1783" .
+
+netherlight:czechlight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias czechlight:czechlight-netherlight;
+    nmleth:vlans "1780-1783" .
+
+netherlight:netherlight-czechlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias czechlight:netherlight-czechlight;
+    nmleth:vlans "1780-1783" .
+
+netherlight:netherlight-northernlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias northernlight:netherlight-northernlight;
+    nmleth:vlans "1780-1783" .
+
+netherlight:netherlight-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias pionier:netherlight-pionier;
+    nmleth:vlans "1780-1783" .
+
+netherlight:netherlight-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias starlight:netherlight-starlight;
+    nmleth:vlans "1780-1783" .
+
+netherlight:netherlight-uvalight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias uvalight:netherlight-uvalight;
+    nmleth:vlans "1780-1783" .
+
+netherlight:northernlight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias northernlight:northernlight-netherlight;
+    nmleth:vlans "1780-1783" .
+
+netherlight:pionier-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias pionier:pionier-netherlight;
+    nmleth:vlans "1780-1783" .
+
+netherlight:starlight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias starlight:starlight-netherlight;
+    nmleth:vlans "1780-1783" .
+
+netherlight:uvalight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias uvalight:uvalight-netherlight;
+    nmleth:vlans "1780-1783" .
+
+northernlight:max-northernlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias max:max-northernlight;
+    nmleth:vlans "1780-1783" .
+
+northernlight:netherlight-northernlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias netherlight:netherlight-northernlight;
+    nmleth:vlans "1780-1783" .
+
+northernlight:northernlight-max a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias max:northernlight-max;
+    nmleth:vlans "1780-1783" .
+
+northernlight:northernlight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias netherlight:northernlight-netherlight;
+    nmleth:vlans "1780-1783" .
+
+northernlight:northernlight-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias pionier:northernlight-pionier;
+    nmleth:vlans "1780-1783" .
+
+northernlight:northernlight-uvalight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias uvalight:northernlight-uvalight;
+    nmleth:vlans "1780-1783" .
+
+northernlight:pionier-northernlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias pionier:pionier-northernlight;
+    nmleth:vlans "1780-1783" .
+
+northernlight:uvalight-northernlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias uvalight:uvalight-northernlight;
+    nmleth:vlans "1780-1783" .
+
+pionier:geant-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias geant:geant-pionier;
+    nmleth:vlans "1780-1783" .
+
+pionier:netherlight-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias netherlight:netherlight-pionier;
+    nmleth:vlans "1780-1783" .
+
+pionier:northernlight-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias northernlight:northernlight-pionier;
+    nmleth:vlans "1780-1783" .
+
+pionier:pionier-geant a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias geant:pionier-geant;
+    nmleth:vlans "1780-1783" .
+
+pionier:pionier-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias netherlight:pionier-netherlight;
+    nmleth:vlans "1780-1783" .
+
+pionier:pionier-northernlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias northernlight:pionier-northernlight;
+    nmleth:vlans "1780-1783" .
+
+starlight:esnet-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias esnet:esnet-starlight;
+    nmleth:vlans "1780-1783" .
+
+starlight:gloriad-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias gloriad:gloriad-starlight;
+    nmleth:vlans "1780-1783" .
+
+starlight:jgnx-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias jgnx:jgnx-starlight;
+    nmleth:vlans "1780-1783" .
+
+starlight:max-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias max:max-starlight;
+    nmleth:vlans "1780-1783" .
+
+starlight:netherlight-starlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias netherlight:netherlight-starlight;
+    nmleth:vlans "1780-1783" .
+
+starlight:starlight-esnet a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias esnet:starlight-esnet;
+    nmleth:vlans "1780-1783" .
+
+starlight:starlight-gloriad a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias gloriad:starlight-gloriad;
+    nmleth:vlans "1780-1783" .
+
+starlight:starlight-jgnx a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias jgnx:starlight-jgnx;
+    nmleth:vlans "1780-1783" .
+
+starlight:starlight-max a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias max:starlight-max;
+    nmleth:vlans "1780-1783" .
+
+starlight:starlight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias netherlight:starlight-netherlight;
+    nmleth:vlans "1780-1783" .
+
+uvalight:netherlight-uvalight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias netherlight:netherlight-uvalight;
+    nmleth:vlans "1780-1783" .
+
+uvalight:northernlight-uvalight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias northernlight:northernlight-uvalight;
+    nmleth:vlans "1780-1783" .
+
+uvalight:uvalight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias netherlight:uvalight-netherlight;
+    nmleth:vlans "1780-1783" .
+
+uvalight:uvalight-northernlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias northernlight:uvalight-northernlight;
+    nmleth:vlans "1780-1783" .
+

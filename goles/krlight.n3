@@ -4,15 +4,21 @@
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-krlight:gloriad-krlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:gloriad.net:2012:gloriad-krlight>;
-    nmleth:vlans "1780-1783" .
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-krlight:krlight-gloriad a nml:PortGroup,
+<urn:ogf:network:gloriad.net:2012:topology> a nml:Topology,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:gloriad.net:2012:krlight-gloriad>;
-    nmleth:vlans "1780-1783" .
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.n3" .
+
+krlight:bi-krlight-None a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort krlight:ps-in,
+        krlight:ps-out .
+
+krlight:bi-krlight-gloriad a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort krlight:gloriad-krlight,
+        krlight:krlight-gloriad .
 
 krlight:location a nml:Location,
         owl:NamedIndividual;
@@ -44,14 +50,6 @@ krlight:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing krlight:topology .
 
-krlight:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-krlight:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
 krlight:topology a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort krlight:gloriad-krlight,
@@ -60,4 +58,22 @@ krlight:topology a nml:Topology,
         krlight:ps-out;
     nml:locatedAt krlight:location;
     nsi:managedBy krlight:nsa .
+
+krlight:gloriad-krlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:gloriad.net:2012:gloriad-krlight>;
+    nmleth:vlans "1780-1783" .
+
+krlight:krlight-gloriad a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:gloriad.net:2012:krlight-gloriad>;
+    nmleth:vlans "1780-1783" .
+
+krlight:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+krlight:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
 

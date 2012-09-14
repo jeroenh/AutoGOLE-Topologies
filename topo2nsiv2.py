@@ -27,6 +27,8 @@ class AGTopology:
         self.storev2.bind("nml",NML)
         self.storev2.bind("nsi",NSI)
         self.storev2.bind("nmleth",NMLETH)
+        self.storev2.bind("owl",OWL)
+        
         
     def addTopo(self,oldtopo):
         topo = rdflib.term.URIRef(self.prefix+"topology")
@@ -65,6 +67,11 @@ class AGTopology:
                                                  (target,self.netname,target))
             self.storev2.add((outPort,NML.isAlias,inTarget))
             self.storev2.add((inPort,NML.isAlias,outTarget))
+            targettopo = rdflib.term.URIRef("urn:ogf:network:%s.net:2012:topology" % target)
+            self.storev2.add((targettopo,RDF.type,NML.Topology))
+            self.storev2.add((targettopo,RDF.type,OWL.NamedIndividual))
+            self.storev2.add((targettopo,NML.isReference,
+                rdflib.Literal("https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/%s.n3" % target)))
         else:
             outPort = rdflib.term.URIRef(self.prefix+stp+"-out")
             inPort = rdflib.term.URIRef(self.prefix+stp+"-in")
@@ -72,15 +79,21 @@ class AGTopology:
             self.storev2.add((p,RDF.type,OWL.NamedIndividual))
             self.storev2.add((p,RDF.type,NML.PortGroup))
             self.storev2.add((p,NMLETH.vlans,rdflib.term.Literal("1780-1783")))
+            self.storev2.add((NMLETH.vlans, OWL.subPropertyOf, NML.hasLabelGroup))
         self.storev2.add((topo,NML.hasOutboundPort,outPort))
         self.storev2.add((topo,NML.hasInboundPort,inPort))
+        biport = rdflib.term.URIRef("urn:ogf:network:%s.net:2012:bi-%s-%s" %
+                                                (self.netname,self.netname,target))
+        self.storev2.add((biport,RDF.type,OWL.NamedIndividual))
+        self.storev2.add((biport,RDF.type,NML.BidirectionalPort))
+        self.storev2.add((biport,NML.hasPort,outPort))
+        self.storev2.add((biport,NML.hasPort,inPort))
         
     def convert(self):
         topo = self.storev1.value(predicate=RDF.type, object=DTOX.NSNetwork)
         toponame = topo.split(":")[-1]
         self.netname = toponame[:-4]
         self.prefix = rdflib.Namespace("urn:ogf:network:%s.net:2012:" % self.netname)
-        self.storev2.bind("owl",OWL)
         self.storev2.bind(self.netname,self.prefix)
         # Convert the Topology and its basic attributes
         topov2 = self.addTopo(topo)
@@ -99,10 +112,22 @@ class AGTopology:
         return self.storev2
 
 def main():
+    master = rdflib.Graph()
+    master.bind("nml",NML)
+    master.bind("nsi",NSI)
+    master.bind("nmleth",NMLETH)
+    master.bind("owl",OWL)
+    
     for name in ["aist","czechlight","esnet","geant","gloriad","jgnx","kddi-labs","krlight","max","netherlight","northernlight","pionier","starlight","uvalight"]:
         topo = AGTopology("golesv1/%s.owl" % name)
         graph = topo.convert()
         graph.serialize("goles/%s.owl"%name,format="pretty-xml")
         graph.serialize("goles/%s.n3"%name,format="n3")
+        master.bind(name,topo.prefix)
+        master += graph
+    for s,o in master.subject_objects(NML.isReference):
+        master.remove((s,NML.isReference,o))
+    master.serialize("master.owl",format="pretty-xml")
+    master.serialize("master.n3",format="n3")
 if __name__ == '__main__':
     main()

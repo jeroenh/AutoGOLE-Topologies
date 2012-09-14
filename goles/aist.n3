@@ -4,15 +4,21 @@
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-aist:aist-jgnx a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx.net:2012:aist-jgnx>;
-    nmleth:vlans "1780-1783" .
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-aist:jgnx-aist a nml:PortGroup,
+aist:bi-aist-None a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx.net:2012:jgnx-aist>;
-    nmleth:vlans "1780-1783" .
+    nml:hasPort aist:ps-in,
+        aist:ps-out .
+
+aist:bi-aist-jgnx a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort aist:aist-jgnx,
+        aist:jgnx-aist .
+
+<urn:ogf:network:jgnx.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3" .
 
 aist:location a nml:Location,
         owl:NamedIndividual;
@@ -37,14 +43,6 @@ aist:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing aist:topology .
 
-aist:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-aist:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
 aist:topology a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort aist:jgnx-aist,
@@ -53,4 +51,22 @@ aist:topology a nml:Topology,
         aist:ps-out;
     nml:locatedAt aist:location;
     nsi:managedBy aist:nsa .
+
+aist:aist-jgnx a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:jgnx.net:2012:aist-jgnx>;
+    nmleth:vlans "1780-1783" .
+
+aist:jgnx-aist a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:jgnx.net:2012:jgnx-aist>;
+    nmleth:vlans "1780-1783" .
+
+aist:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+aist:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
 
