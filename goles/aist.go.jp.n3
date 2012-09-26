@@ -1,4 +1,4 @@
-@prefix aist: <urn:ogf:network:aist.net:2012:> .
+@prefix aist: <urn:ogf:network:aist.go.jp2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -6,19 +6,19 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-aist:bi-aist-None a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort aist:ps-in,
-        aist:ps-out .
-
-aist:bi-aist-jgnx a nml:BidirectionalPort,
+<urn:ogf:network:aist:2012:bi-aist-jgnx> a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort aist:aist-jgnx,
         aist:jgnx-aist .
 
-<urn:ogf:network:jgnx.net:2012:topology> a nml:Topology,
+<urn:ogf:network:aist:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3" .
+    nml:hasPort aist:ps-in,
+        aist:ps-out .
+
+<urn:ogf:network:jgnx:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3" .
 
 aist:location a nml:Location,
         owl:NamedIndividual;
@@ -41,9 +41,9 @@ aist:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://163.220.30.174:8090/nsi_gl_proxy/services/ConnectionServiceProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing aist:topology .
+    nsi:managing <urn:ogf:network:aist.go.jp:2012:ets> .
 
-aist:topology a nml:Topology,
+<urn:ogf:network:aist.go.jp:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort aist:jgnx-aist,
         aist:ps-in;
@@ -54,12 +54,12 @@ aist:topology a nml:Topology,
 
 aist:aist-jgnx a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx.net:2012:aist-jgnx>;
+    nml:isAlias <urn:ogf:network:jgnx:2012:aist-jgnx>;
     nmleth:vlans "1780-1783" .
 
 aist:jgnx-aist a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx.net:2012:jgnx-aist>;
+    nml:isAlias <urn:ogf:network:jgnx:2012:jgnx-aist>;
     nmleth:vlans "1780-1783" .
 
 aist:ps-in a nml:PortGroup,

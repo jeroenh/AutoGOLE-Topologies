@@ -1,4 +1,4 @@
-@prefix max: <urn:ogf:network:max.net:2012:> .
+@prefix max: <urn:ogf:network:max2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -6,28 +6,28 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-max:bi-max-None a nml:BidirectionalPort,
+<urn:ogf:network:max:2012:bi-max-nordu> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort max:max-nordu,
+        max:nordu-max .
+
+<urn:ogf:network:max:2012:bi-max-startap> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort max:max-startap,
+        max:startap-max .
+
+<urn:ogf:network:max:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort max:ps-in,
         max:ps-out .
 
-max:bi-max-northernlight a nml:BidirectionalPort,
+<urn:ogf:network:nordu:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasPort max:max-northernlight,
-        max:northernlight-max .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.n3" .
 
-max:bi-max-starlight a nml:BidirectionalPort,
+<urn:ogf:network:startap:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasPort max:max-starlight,
-        max:starlight-max .
-
-<urn:ogf:network:northernlight.net:2012:topology> a nml:Topology,
-        owl:NamedIndividual;
-    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/northernlight.n3" .
-
-<urn:ogf:network:starlight.net:2012:topology> a nml:Topology,
-        owl:NamedIndividual;
-    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/starlight.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.n3" .
 
 max:location a nml:Location,
         owl:NamedIndividual;
@@ -54,32 +54,32 @@ max:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://nsa.maxgigapop.net:9080/NSI/services/ConnectionService/
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing max:topology .
+    nsi:managing <urn:ogf:network:max:2012:ets> .
 
-max:topology a nml:Topology,
+<urn:ogf:network:max:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasInboundPort max:northernlight-max,
+    nml:hasInboundPort max:nordu-max,
         max:ps-in,
-        max:starlight-max;
-    nml:hasOutboundPort max:max-northernlight,
-        max:max-starlight,
+        max:startap-max;
+    nml:hasOutboundPort max:max-nordu,
+        max:max-startap,
         max:ps-out;
     nml:locatedAt max:location;
     nsi:managedBy max:nsa .
 
-max:max-northernlight a nml:PortGroup,
+max:max-nordu a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:northernlight.net:2012:max-northernlight>;
+    nml:isAlias <urn:ogf:network:nordu:2012:max-nordu>;
     nmleth:vlans "1780-1783" .
 
-max:max-starlight a nml:PortGroup,
+max:max-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:starlight.net:2012:max-starlight>;
+    nml:isAlias <urn:ogf:network:startap:2012:max-startap>;
     nmleth:vlans "1780-1783" .
 
-max:northernlight-max a nml:PortGroup,
+max:nordu-max a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:northernlight.net:2012:northernlight-max>;
+    nml:isAlias <urn:ogf:network:nordu:2012:nordu-max>;
     nmleth:vlans "1780-1783" .
 
 max:ps-in a nml:PortGroup,
@@ -90,8 +90,8 @@ max:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-max:starlight-max a nml:PortGroup,
+max:startap-max a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:starlight.net:2012:starlight-max>;
+    nml:isAlias <urn:ogf:network:startap:2012:startap-max>;
     nmleth:vlans "1780-1783" .
 

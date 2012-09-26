@@ -1,24 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
   xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
-  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <owl:NamedIndividual rdf:about="urn:ogf:network:max.net:2012:bi-max-starlight">
+  <owl:NamedIndividual rdf:about="urn:ogf:network:max:2012:bi-max-startap">
     <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:max.net:2012:starlight-max">
-        <nml:isAlias rdf:resource="urn:ogf:network:starlight.net:2012:starlight-max"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:max2012:max-startap">
+        <nml:isAlias rdf:resource="urn:ogf:network:startap:2012:max-startap"/>
         <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
       </owl:NamedIndividual>
     </nml:hasPort>
     <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:max.net:2012:max-starlight">
-        <nml:isAlias rdf:resource="urn:ogf:network:starlight.net:2012:max-starlight"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:max2012:startap-max">
+        <nml:isAlias rdf:resource="urn:ogf:network:startap:2012:startap-max"/>
         <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasPort>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:max:2012:bi-max-nordu">
+    <nml:hasPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:max2012:max-nordu">
+        <nml:isAlias rdf:resource="urn:ogf:network:nordu:2012:max-nordu"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasPort>
+    <nml:hasPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:max2012:nordu-max">
+        <nml:isAlias rdf:resource="urn:ogf:network:nordu:2012:nordu-max"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasPort>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu:2012:ets">
+    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.n3</nsi:isReference>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:max:2012:bi-ps">
+    <nml:hasPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:max2012:ps-in">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasPort>
+    <nml:hasPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:max2012:ps-out">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
       </owl:NamedIndividual>
     </nml:hasPort>
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
@@ -26,65 +62,25 @@
   <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
     <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
   </rdf:Description>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:max.net:2012:bi-max-None">
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:max.net:2012:ps-out">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:max.net:2012:ps-in">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:max.net:2012:bi-max-northernlight">
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:max.net:2012:max-northernlight">
-        <nml:isAlias rdf:resource="urn:ogf:network:northernlight.net:2012:max-northernlight"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:max.net:2012:northernlight-max">
-        <nml:isAlias rdf:resource="urn:ogf:network:northernlight.net:2012:northernlight-max"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:northernlight.net:2012:topology">
-    <nml:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/northernlight.n3</nml:isReference>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:startap:2012:ets">
+    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.n3</nsi:isReference>
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:starlight.net:2012:topology">
-    <nml:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/starlight.n3</nml:isReference>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:max.net:2012:nsa">
-    <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+  <owl:NamedIndividual rdf:about="urn:ogf:network:max:2012:ets">
+    <nml:locatedAt>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:max2012:location">
+        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">38.995</nml:lat>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
+        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-76.933</nml:long>
+      </owl:NamedIndividual>
+    </nml:locatedAt>
+    <nsi:managedBy>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:max2012:nsa">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
+        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             http://nsa.maxgigapop.net:9080/NSI/services/ConnectionService/
         </nsi:csProviderEndpoint>
-    <nsi:managing>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:max.net:2012:topology">
-        <nsi:managedBy rdf:resource="urn:ogf:network:max.net:2012:nsa"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:max.net:2012:max-northernlight"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:max.net:2012:ps-out"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:max.net:2012:max-starlight"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:max.net:2012:northernlight-max"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:max.net:2012:starlight-max"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:max.net:2012:ps-in"/>
-        <nml:locatedAt rdf:resource="urn:ogf:network:max.net:2012:location"/>
-      </owl:NamedIndividual>
-    </nsi:managing>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
-    <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: OpenNSA
             Project manager:
             email:
@@ -99,10 +95,15 @@
             email:
             skype:
         </nsi:adminContact>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:max.net:2012:location">
-    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-76.933</nml:long>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
-    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">38.995</nml:lat>
+        <nsi:managing rdf:resource="urn:ogf:network:max:2012:ets"/>
+      </owl:NamedIndividual>
+    </nsi:managedBy>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:max2012:max-startap"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:max2012:ps-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:max2012:max-nordu"/>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:max2012:ps-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:max2012:startap-max"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:max2012:nordu-max"/>
   </owl:NamedIndividual>
 </rdf:RDF>

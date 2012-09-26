@@ -1,4 +1,4 @@
-@prefix gloriad: <urn:ogf:network:gloriad.net:2012:> .
+@prefix gloriad: <urn:ogf:network:gloriad2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -6,28 +6,28 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-gloriad:bi-gloriad-None a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort gloriad:ps-in,
-        gloriad:ps-out .
-
-gloriad:bi-gloriad-krlight a nml:BidirectionalPort,
+<urn:ogf:network:gloriad:2012:bi-gloriad-krlight> a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort gloriad:gloriad-krlight,
         gloriad:krlight-gloriad .
 
-gloriad:bi-gloriad-starlight a nml:BidirectionalPort,
+<urn:ogf:network:gloriad:2012:bi-gloriad-startap> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort gloriad:gloriad-starlight,
-        gloriad:starlight-gloriad .
+    nml:hasPort gloriad:gloriad-startap,
+        gloriad:startap-gloriad .
 
-<urn:ogf:network:krlight.net:2012:topology> a nml:Topology,
+<urn:ogf:network:gloriad:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/krlight.n3" .
+    nml:hasPort gloriad:ps-in,
+        gloriad:ps-out .
 
-<urn:ogf:network:starlight.net:2012:topology> a nml:Topology,
+<urn:ogf:network:krlight:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/starlight.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/krlight.n3" .
+
+<urn:ogf:network:startap:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.n3" .
 
 gloriad:location a nml:Location,
         owl:NamedIndividual;
@@ -46,32 +46,32 @@ gloriad:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://nsa.gloriad.org:9080/NSI/services/ConnectionService
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing gloriad:topology .
+    nsi:managing <urn:ogf:network:gloriad:2012:ets> .
 
-gloriad:topology a nml:Topology,
+<urn:ogf:network:gloriad:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort gloriad:krlight-gloriad,
         gloriad:ps-in,
-        gloriad:starlight-gloriad;
+        gloriad:startap-gloriad;
     nml:hasOutboundPort gloriad:gloriad-krlight,
-        gloriad:gloriad-starlight,
+        gloriad:gloriad-startap,
         gloriad:ps-out;
     nml:locatedAt gloriad:location;
     nsi:managedBy gloriad:nsa .
 
 gloriad:gloriad-krlight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:krlight.net:2012:gloriad-krlight>;
+    nml:isAlias <urn:ogf:network:krlight:2012:gloriad-krlight>;
     nmleth:vlans "1780-1783" .
 
-gloriad:gloriad-starlight a nml:PortGroup,
+gloriad:gloriad-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:starlight.net:2012:gloriad-starlight>;
+    nml:isAlias <urn:ogf:network:startap:2012:gloriad-startap>;
     nmleth:vlans "1780-1783" .
 
 gloriad:krlight-gloriad a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:krlight.net:2012:krlight-gloriad>;
+    nml:isAlias <urn:ogf:network:krlight:2012:krlight-gloriad>;
     nmleth:vlans "1780-1783" .
 
 gloriad:ps-in a nml:PortGroup,
@@ -82,8 +82,8 @@ gloriad:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-gloriad:starlight-gloriad a nml:PortGroup,
+gloriad:startap-gloriad a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:starlight.net:2012:starlight-gloriad>;
+    nml:isAlias <urn:ogf:network:startap:2012:startap-gloriad>;
     nmleth:vlans "1780-1783" .
 

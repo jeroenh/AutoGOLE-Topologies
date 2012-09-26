@@ -1,262 +1,297 @@
-@prefix aist: <urn:ogf:network:aist.net:2012:> .
-@prefix czechlight: <urn:ogf:network:czechlight.net:2012:> .
-@prefix esnet: <urn:ogf:network:esnet.net:2012:> .
-@prefix geant: <urn:ogf:network:geant.net:2012:> .
-@prefix gloriad: <urn:ogf:network:gloriad.net:2012:> .
-@prefix jgnx: <urn:ogf:network:jgnx.net:2012:> .
-@prefix kddi-labs: <urn:ogf:network:kddi-labs.net:2012:> .
-@prefix krlight: <urn:ogf:network:krlight.net:2012:> .
-@prefix max: <urn:ogf:network:max.net:2012:> .
-@prefix netherlight: <urn:ogf:network:netherlight.net:2012:> .
+@prefix aist.go.jp: <urn:ogf:network:aist.go.jp2012:> .
+@prefix czechlight: <urn:ogf:network:czechlight2012:> .
+@prefix esnet: <urn:ogf:network:esnet2012:> .
+@prefix geant.net: <urn:ogf:network:geant.net2012:> .
+@prefix gloriad: <urn:ogf:network:gloriad2012:> .
+@prefix jgnx: <urn:ogf:network:jgnx2012:> .
+@prefix kddi-labs: <urn:ogf:network:kddi-labs2012:> .
+@prefix krlight.net: <urn:ogf:network:krlight.net2012:> .
+@prefix max: <urn:ogf:network:max2012:> .
+@prefix netherlight.net: <urn:ogf:network:netherlight.net2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
-@prefix northernlight: <urn:ogf:network:northernlight.net:2012:> .
+@prefix nordu.net: <urn:ogf:network:nordu.net2012:> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix pionier: <urn:ogf:network:pionier.net:2012:> .
-@prefix starlight: <urn:ogf:network:starlight.net:2012:> .
-@prefix uvalight: <urn:ogf:network:uvalight.net:2012:> .
+@prefix pionier.net: <urn:ogf:network:pionier.net2012:> .
+@prefix startap.net: <urn:ogf:network:startap.net2012:> .
+@prefix uvalight.net: <urn:ogf:network:uvalight.net2012:> .
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-aist:bi-aist-None a nml:BidirectionalPort,
+<urn:ogf:network:aist:2012:bi-aist-jgnx> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort aist:ps-in,
-        aist:ps-out .
+    nml:hasPort aist.go.jp:aist-jgnx,
+        aist.go.jp:jgnx-aist .
 
-aist:bi-aist-jgnx a nml:BidirectionalPort,
+<urn:ogf:network:aist:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort aist:aist-jgnx,
-        aist:jgnx-aist .
+    nml:hasPort aist.go.jp:ps-in,
+        aist.go.jp:ps-out .
 
-czechlight:bi-czechlight-None a nml:BidirectionalPort,
+<urn:ogf:network:aist:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasPort czechlight:ps-in,
-        czechlight:ps-out .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/aist.n3" .
 
-czechlight:bi-czechlight-netherlight a nml:BidirectionalPort,
+<urn:ogf:network:czechlight:2012:bi-czechlight-netherlight> a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort czechlight:czechlight-netherlight,
         czechlight:netherlight-czechlight .
 
-esnet:bi-esnet-None a nml:BidirectionalPort,
+<urn:ogf:network:czechlight:2012:bi-ps> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort czechlight:ps-in,
+        czechlight:ps-out .
+
+<urn:ogf:network:esnet:2012:bi-esnet-startap> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort esnet:esnet-startap,
+        esnet:startap-esnet .
+
+<urn:ogf:network:esnet:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort esnet:ps-in,
         esnet:ps-out .
 
-esnet:bi-esnet-starlight a nml:BidirectionalPort,
+<urn:ogf:network:geant:2012:bi-geant-pionier> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort esnet:esnet-starlight,
-        esnet:starlight-esnet .
+    nml:hasPort geant.net:geant-pionier,
+        geant.net:pionier-geant .
 
-geant:bi-geant-None a nml:BidirectionalPort,
+<urn:ogf:network:geant:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort geant:ps-in,
-        geant:ps-out .
+    nml:hasPort geant.net:ps-in,
+        geant.net:ps-out .
 
-geant:bi-geant-pionier a nml:BidirectionalPort,
+<urn:ogf:network:geant:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasPort geant:geant-pionier,
-        geant:pionier-geant .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/geant.n3" .
 
-gloriad:bi-gloriad-None a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort gloriad:ps-in,
-        gloriad:ps-out .
-
-gloriad:bi-gloriad-krlight a nml:BidirectionalPort,
+<urn:ogf:network:gloriad:2012:bi-gloriad-krlight> a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort gloriad:gloriad-krlight,
         gloriad:krlight-gloriad .
 
-gloriad:bi-gloriad-starlight a nml:BidirectionalPort,
+<urn:ogf:network:gloriad:2012:bi-gloriad-startap> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort gloriad:gloriad-starlight,
-        gloriad:starlight-gloriad .
+    nml:hasPort gloriad:gloriad-startap,
+        gloriad:startap-gloriad .
 
-jgnx:bi-jgnx-None a nml:BidirectionalPort,
+<urn:ogf:network:gloriad:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort jgnx:ps-in,
-        jgnx:ps-out .
+    nml:hasPort gloriad:ps-in,
+        gloriad:ps-out .
 
-jgnx:bi-jgnx-aist a nml:BidirectionalPort,
+<urn:ogf:network:jgnx:2012:bi-jgnx-aist> a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort jgnx:aist-jgnx,
         jgnx:jgnx-aist .
 
-jgnx:bi-jgnx-kddi-labs a nml:BidirectionalPort,
+<urn:ogf:network:jgnx:2012:bi-jgnx-kddi-labs> a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort jgnx:jgnx-kddi-labs,
         jgnx:kddi-labs-jgnx .
 
-jgnx:bi-jgnx-starlight a nml:BidirectionalPort,
+<urn:ogf:network:jgnx:2012:bi-jgnx-startap> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort jgnx:jgnx-starlight,
-        jgnx:starlight-jgnx .
+    nml:hasPort jgnx:jgnx-startap,
+        jgnx:startap-jgnx .
 
-kddi-labs:bi-kddi-labs-None a nml:BidirectionalPort,
+<urn:ogf:network:jgnx:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort kddi-labs:ps-in,
-        kddi-labs:ps-out .
+    nml:hasPort jgnx:ps-in,
+        jgnx:ps-out .
 
-kddi-labs:bi-kddi-labs-jgnx a nml:BidirectionalPort,
+<urn:ogf:network:kddi-labs:2012:bi-kddi-labs-jgnx> a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort kddi-labs:jgnx-kddi-labs,
         kddi-labs:kddi-labs-jgnx .
 
-krlight:bi-krlight-None a nml:BidirectionalPort,
+<urn:ogf:network:kddi-labs:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort krlight:ps-in,
-        krlight:ps-out .
+    nml:hasPort kddi-labs:ps-in,
+        kddi-labs:ps-out .
 
-krlight:bi-krlight-gloriad a nml:BidirectionalPort,
+<urn:ogf:network:krlight:2012:bi-krlight-gloriad> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort krlight:gloriad-krlight,
-        krlight:krlight-gloriad .
+    nml:hasPort krlight.net:gloriad-krlight,
+        krlight.net:krlight-gloriad .
 
-max:bi-max-None a nml:BidirectionalPort,
+<urn:ogf:network:krlight:2012:bi-ps> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort krlight.net:ps-in,
+        krlight.net:ps-out .
+
+<urn:ogf:network:krlight:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/krlight.n3" .
+
+<urn:ogf:network:max:2012:bi-max-nordu> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort max:max-nordu,
+        max:nordu-max .
+
+<urn:ogf:network:max:2012:bi-max-startap> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort max:max-startap,
+        max:startap-max .
+
+<urn:ogf:network:max:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort max:ps-in,
         max:ps-out .
 
-max:bi-max-northernlight a nml:BidirectionalPort,
+<urn:ogf:network:netherlight:2012:bi-netherlight-czechlight> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort max:max-northernlight,
-        max:northernlight-max .
+    nml:hasPort netherlight.net:czechlight-netherlight,
+        netherlight.net:netherlight-czechlight .
 
-max:bi-max-starlight a nml:BidirectionalPort,
+<urn:ogf:network:netherlight:2012:bi-netherlight-nordu> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort max:max-starlight,
-        max:starlight-max .
+    nml:hasPort netherlight.net:netherlight-nordu,
+        netherlight.net:nordu-netherlight .
 
-netherlight:bi-netherlight-None a nml:BidirectionalPort,
+<urn:ogf:network:netherlight:2012:bi-netherlight-pionier> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort netherlight:ps-in,
-        netherlight:ps-out .
+    nml:hasPort netherlight.net:netherlight-pionier,
+        netherlight.net:pionier-netherlight .
 
-netherlight:bi-netherlight-czechlight a nml:BidirectionalPort,
+<urn:ogf:network:netherlight:2012:bi-netherlight-startap> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort netherlight:czechlight-netherlight,
-        netherlight:netherlight-czechlight .
+    nml:hasPort netherlight.net:netherlight-startap,
+        netherlight.net:startap-netherlight .
 
-netherlight:bi-netherlight-northernlight a nml:BidirectionalPort,
+<urn:ogf:network:netherlight:2012:bi-netherlight-uvalight> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort netherlight:netherlight-northernlight,
-        netherlight:northernlight-netherlight .
+    nml:hasPort netherlight.net:netherlight-uvalight,
+        netherlight.net:uvalight-netherlight .
 
-netherlight:bi-netherlight-pionier a nml:BidirectionalPort,
+<urn:ogf:network:netherlight:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort netherlight:netherlight-pionier,
-        netherlight:pionier-netherlight .
+    nml:hasPort netherlight.net:ps-in,
+        netherlight.net:ps-out .
 
-netherlight:bi-netherlight-starlight a nml:BidirectionalPort,
+<urn:ogf:network:netherlight:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasPort netherlight:netherlight-starlight,
-        netherlight:starlight-netherlight .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3" .
 
-netherlight:bi-netherlight-uvalight a nml:BidirectionalPort,
+<urn:ogf:network:nordu:2012:bi-nordu-max> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort netherlight:netherlight-uvalight,
-        netherlight:uvalight-netherlight .
+    nml:hasPort nordu.net:max-nordu,
+        nordu.net:nordu-max .
 
-northernlight:bi-northernlight-None a nml:BidirectionalPort,
+<urn:ogf:network:nordu:2012:bi-nordu-netherlight> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort northernlight:onsala-in,
-        northernlight:onsala-out,
-        northernlight:ps-in,
-        northernlight:ps-out .
+    nml:hasPort nordu.net:netherlight-nordu,
+        nordu.net:nordu-netherlight .
 
-northernlight:bi-northernlight-max a nml:BidirectionalPort,
+<urn:ogf:network:nordu:2012:bi-nordu-pionier> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort northernlight:max-northernlight,
-        northernlight:northernlight-max .
+    nml:hasPort nordu.net:nordu-pionier,
+        nordu.net:pionier-nordu .
 
-northernlight:bi-northernlight-netherlight a nml:BidirectionalPort,
+<urn:ogf:network:nordu:2012:bi-nordu-uvalight> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort northernlight:netherlight-northernlight,
-        northernlight:northernlight-netherlight .
+    nml:hasPort nordu.net:nordu-uvalight,
+        nordu.net:uvalight-nordu .
 
-northernlight:bi-northernlight-pionier a nml:BidirectionalPort,
+<urn:ogf:network:nordu:2012:bi-onsala> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort northernlight:northernlight-pionier,
-        northernlight:pionier-northernlight .
+    nml:hasPort nordu.net:onsala-in,
+        nordu.net:onsala-out .
 
-northernlight:bi-northernlight-uvalight a nml:BidirectionalPort,
+<urn:ogf:network:nordu:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort northernlight:northernlight-uvalight,
-        northernlight:uvalight-northernlight .
+    nml:hasPort nordu.net:ps-in,
+        nordu.net:ps-out .
 
-pionier:bi-pionier-None a nml:BidirectionalPort,
+<urn:ogf:network:nordu:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasPort pionier:ps-in,
-        pionier:ps-out .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.n3" .
 
-pionier:bi-pionier-geant a nml:BidirectionalPort,
+<urn:ogf:network:pionier:2012:bi-pionier-geant> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort pionier:geant-pionier,
-        pionier:pionier-geant .
+    nml:hasPort pionier.net:geant-pionier,
+        pionier.net:pionier-geant .
 
-pionier:bi-pionier-netherlight a nml:BidirectionalPort,
+<urn:ogf:network:pionier:2012:bi-pionier-netherlight> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort pionier:netherlight-pionier,
-        pionier:pionier-netherlight .
+    nml:hasPort pionier.net:netherlight-pionier,
+        pionier.net:pionier-netherlight .
 
-pionier:bi-pionier-northernlight a nml:BidirectionalPort,
+<urn:ogf:network:pionier:2012:bi-pionier-nordu> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort pionier:northernlight-pionier,
-        pionier:pionier-northernlight .
+    nml:hasPort pionier.net:nordu-pionier,
+        pionier.net:pionier-nordu .
 
-starlight:bi-starlight-None a nml:BidirectionalPort,
+<urn:ogf:network:pionier:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort starlight:ps-in,
-        starlight:ps-out .
+    nml:hasPort pionier.net:ps-in,
+        pionier.net:ps-out .
 
-starlight:bi-starlight-esnet a nml:BidirectionalPort,
+<urn:ogf:network:pionier:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasPort starlight:esnet-starlight,
-        starlight:starlight-esnet .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.n3" .
 
-starlight:bi-starlight-gloriad a nml:BidirectionalPort,
+<urn:ogf:network:startap:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort starlight:gloriad-starlight,
-        starlight:starlight-gloriad .
+    nml:hasPort startap.net:ps-in,
+        startap.net:ps-out .
 
-starlight:bi-starlight-jgnx a nml:BidirectionalPort,
+<urn:ogf:network:startap:2012:bi-startap-esnet> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort starlight:jgnx-starlight,
-        starlight:starlight-jgnx .
+    nml:hasPort startap.net:esnet-startap,
+        startap.net:startap-esnet .
 
-starlight:bi-starlight-max a nml:BidirectionalPort,
+<urn:ogf:network:startap:2012:bi-startap-gloriad> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort starlight:max-starlight,
-        starlight:starlight-max .
+    nml:hasPort startap.net:gloriad-startap,
+        startap.net:startap-gloriad .
 
-starlight:bi-starlight-netherlight a nml:BidirectionalPort,
+<urn:ogf:network:startap:2012:bi-startap-jgnx> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort starlight:netherlight-starlight,
-        starlight:starlight-netherlight .
+    nml:hasPort startap.net:jgnx-startap,
+        startap.net:startap-jgnx .
 
-uvalight:bi-uvalight-None a nml:BidirectionalPort,
+<urn:ogf:network:startap:2012:bi-startap-max> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort uvalight:ps-in,
-        uvalight:ps-out .
+    nml:hasPort startap.net:max-startap,
+        startap.net:startap-max .
 
-uvalight:bi-uvalight-netherlight a nml:BidirectionalPort,
+<urn:ogf:network:startap:2012:bi-startap-netherlight> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort uvalight:netherlight-uvalight,
-        uvalight:uvalight-netherlight .
+    nml:hasPort startap.net:netherlight-startap,
+        startap.net:startap-netherlight .
 
-uvalight:bi-uvalight-northernlight a nml:BidirectionalPort,
+<urn:ogf:network:startap:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasPort uvalight:northernlight-uvalight,
-        uvalight:uvalight-northernlight .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.n3" .
 
-aist:location a nml:Location,
+<urn:ogf:network:uvalight:2012:bi-ps> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort uvalight.net:ps-in,
+        uvalight.net:ps-out .
+
+<urn:ogf:network:uvalight:2012:bi-uvalight-netherlight> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort uvalight.net:netherlight-uvalight,
+        uvalight.net:uvalight-netherlight .
+
+<urn:ogf:network:uvalight:2012:bi-uvalight-nordu> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort uvalight.net:nordu-uvalight,
+        uvalight.net:uvalight-nordu .
+
+<urn:ogf:network:uvalight:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.n3" .
+
+aist.go.jp:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "36.060"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "140.133"^^<http://www.w3.org/2001/XMLSchema#float> .
 
-aist:nsa a nsi:NSA,
+aist.go.jp:nsa a nsi:NSA,
         owl:NamedIndividual;
     nsi:adminContact """
             NSA:  G-Lambda/AIST  (AIST)
@@ -272,16 +307,16 @@ aist:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://163.220.30.174:8090/nsi_gl_proxy/services/ConnectionServiceProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing aist:topology .
+    nsi:managing <urn:ogf:network:aist.go.jp:2012:ets> .
 
-aist:topology a nml:Topology,
+<urn:ogf:network:aist.go.jp:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasInboundPort aist:jgnx-aist,
-        aist:ps-in;
-    nml:hasOutboundPort aist:aist-jgnx,
-        aist:ps-out;
-    nml:locatedAt aist:location;
-    nsi:managedBy aist:nsa .
+    nml:hasInboundPort aist.go.jp:jgnx-aist,
+        aist.go.jp:ps-in;
+    nml:hasOutboundPort aist.go.jp:aist-jgnx,
+        aist.go.jp:ps-out;
+    nml:locatedAt aist.go.jp:location;
+    nsi:managedBy aist.go.jp:nsa .
 
 czechlight:location a nml:Location,
         owl:NamedIndividual;
@@ -304,15 +339,16 @@ czechlight:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing czechlight:topology .
+    nsi:managing <urn:ogf:network:czechlight:2012:ets> .
 
-czechlight:topology a nml:Topology,
+<urn:ogf:network:czechlight:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort czechlight:netherlight-czechlight,
         czechlight:ps-in;
     nml:hasOutboundPort czechlight:czechlight-netherlight,
         czechlight:ps-out;
     nml:locatedAt czechlight:location;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/czechlight.n3";
     nsi:managedBy czechlight:nsa .
 
 esnet:location a nml:Location,
@@ -332,23 +368,24 @@ esnet:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://jupiter.es.net:8288/ConnectionService
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing esnet:topology .
+    nsi:managing <urn:ogf:network:esnet:2012:ets> .
 
-esnet:topology a nml:Topology,
+<urn:ogf:network:esnet:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort esnet:ps-in,
-        esnet:starlight-esnet;
-    nml:hasOutboundPort esnet:esnet-starlight,
+        esnet:startap-esnet;
+    nml:hasOutboundPort esnet:esnet-startap,
         esnet:ps-out;
     nml:locatedAt esnet:location;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/esnet.n3";
     nsi:managedBy esnet:nsa .
 
-geant:location a nml:Location,
+geant.net:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "48.859"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "2.295"^^<http://www.w3.org/2001/XMLSchema#float> .
 
-geant:nsa a nsi:NSA,
+geant.net:nsa a nsi:NSA,
         owl:NamedIndividual;
     nsi:adminContact """
             NSA: AutoBAHN  (GEANT)
@@ -363,16 +400,16 @@ geant:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://194.132.53.174:9082/nsi/ConnectionProviderPort
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing geant:topology .
+    nsi:managing <urn:ogf:network:geant.net:2012:ets> .
 
-geant:topology a nml:Topology,
+<urn:ogf:network:geant.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasInboundPort geant:pionier-geant,
-        geant:ps-in;
-    nml:hasOutboundPort geant:geant-pionier,
-        geant:ps-out;
-    nml:locatedAt geant:location;
-    nsi:managedBy geant:nsa .
+    nml:hasInboundPort geant.net:pionier-geant,
+        geant.net:ps-in;
+    nml:hasOutboundPort geant.net:geant-pionier,
+        geant.net:ps-out;
+    nml:locatedAt geant.net:location;
+    nsi:managedBy geant.net:nsa .
 
 gloriad:location a nml:Location,
         owl:NamedIndividual;
@@ -391,17 +428,18 @@ gloriad:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://nsa.gloriad.org:9080/NSI/services/ConnectionService
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing gloriad:topology .
+    nsi:managing <urn:ogf:network:gloriad:2012:ets> .
 
-gloriad:topology a nml:Topology,
+<urn:ogf:network:gloriad:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort gloriad:krlight-gloriad,
         gloriad:ps-in,
-        gloriad:starlight-gloriad;
+        gloriad:startap-gloriad;
     nml:hasOutboundPort gloriad:gloriad-krlight,
-        gloriad:gloriad-starlight,
+        gloriad:gloriad-startap,
         gloriad:ps-out;
     nml:locatedAt gloriad:location;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.n3";
     nsi:managedBy gloriad:nsa .
 
 jgnx:location a nml:Location,
@@ -425,19 +463,20 @@ jgnx:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://202.180.38.130:8080/connectionprovider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing jgnx:topology .
+    nsi:managing <urn:ogf:network:jgnx:2012:ets> .
 
-jgnx:topology a nml:Topology,
+<urn:ogf:network:jgnx:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort jgnx:aist-jgnx,
         jgnx:kddi-labs-jgnx,
         jgnx:ps-in,
-        jgnx:starlight-jgnx;
+        jgnx:startap-jgnx;
     nml:hasOutboundPort jgnx:jgnx-aist,
         jgnx:jgnx-kddi-labs,
-        jgnx:jgnx-starlight,
+        jgnx:jgnx-startap,
         jgnx:ps-out;
     nml:locatedAt jgnx:location;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3";
     nsi:managedBy jgnx:nsa .
 
 kddi-labs:location a nml:Location,
@@ -461,23 +500,24 @@ kddi-labs:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://210.196.65.114:9352/connectionprovider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing kddi-labs:topology .
+    nsi:managing <urn:ogf:network:kddi-labs:2012:ets> .
 
-kddi-labs:topology a nml:Topology,
+<urn:ogf:network:kddi-labs:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort kddi-labs:jgnx-kddi-labs,
         kddi-labs:ps-in;
     nml:hasOutboundPort kddi-labs:kddi-labs-jgnx,
         kddi-labs:ps-out;
     nml:locatedAt kddi-labs:location;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/kddi-labs.n3";
     nsi:managedBy kddi-labs:nsa .
 
-krlight:location a nml:Location,
+krlight.net:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "36.366"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "127.359"^^<http://www.w3.org/2001/XMLSchema#float> .
 
-krlight:nsa a nsi:NSA,
+krlight.net:nsa a nsi:NSA,
         owl:NamedIndividual;
     nsi:adminContact """
             DynamicKL  (KISTI) 
@@ -500,16 +540,16 @@ krlight:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://203.230.116.202:8090/nsi/ConnectionServiceProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing krlight:topology .
+    nsi:managing <urn:ogf:network:krlight.net:2012:ets> .
 
-krlight:topology a nml:Topology,
+<urn:ogf:network:krlight.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasInboundPort krlight:gloriad-krlight,
-        krlight:ps-in;
-    nml:hasOutboundPort krlight:krlight-gloriad,
-        krlight:ps-out;
-    nml:locatedAt krlight:location;
-    nsi:managedBy krlight:nsa .
+    nml:hasInboundPort krlight.net:gloriad-krlight,
+        krlight.net:ps-in;
+    nml:hasOutboundPort krlight.net:krlight-gloriad,
+        krlight.net:ps-out;
+    nml:locatedAt krlight.net:location;
+    nsi:managedBy krlight.net:nsa .
 
 max:location a nml:Location,
         owl:NamedIndividual;
@@ -536,25 +576,26 @@ max:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://nsa.maxgigapop.net:9080/NSI/services/ConnectionService/
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing max:topology .
+    nsi:managing <urn:ogf:network:max:2012:ets> .
 
-max:topology a nml:Topology,
+<urn:ogf:network:max:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasInboundPort max:northernlight-max,
+    nml:hasInboundPort max:nordu-max,
         max:ps-in,
-        max:starlight-max;
-    nml:hasOutboundPort max:max-northernlight,
-        max:max-starlight,
+        max:startap-max;
+    nml:hasOutboundPort max:max-nordu,
+        max:max-startap,
         max:ps-out;
     nml:locatedAt max:location;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/max.n3";
     nsi:managedBy max:nsa .
 
-netherlight:location a nml:Location,
+netherlight.net:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
 
-netherlight:nsa a nsi:NSA,
+netherlight.net:nsa a nsi:NSA,
         owl:NamedIndividual;
     nsi:adminContact """
             OpenDRAC (SURFnet) 
@@ -570,31 +611,31 @@ netherlight:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing netherlight:topology .
+    nsi:managing <urn:ogf:network:netherlight.net:2012:ets> .
 
-netherlight:topology a nml:Topology,
+<urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasInboundPort netherlight:czechlight-netherlight,
-        netherlight:northernlight-netherlight,
-        netherlight:pionier-netherlight,
-        netherlight:ps-in,
-        netherlight:starlight-netherlight,
-        netherlight:uvalight-netherlight;
-    nml:hasOutboundPort netherlight:netherlight-czechlight,
-        netherlight:netherlight-northernlight,
-        netherlight:netherlight-pionier,
-        netherlight:netherlight-starlight,
-        netherlight:netherlight-uvalight,
-        netherlight:ps-out;
-    nml:locatedAt netherlight:location;
-    nsi:managedBy netherlight:nsa .
+    nml:hasInboundPort netherlight.net:czechlight-netherlight,
+        netherlight.net:nordu-netherlight,
+        netherlight.net:pionier-netherlight,
+        netherlight.net:ps-in,
+        netherlight.net:startap-netherlight,
+        netherlight.net:uvalight-netherlight;
+    nml:hasOutboundPort netherlight.net:netherlight-czechlight,
+        netherlight.net:netherlight-nordu,
+        netherlight.net:netherlight-pionier,
+        netherlight.net:netherlight-startap,
+        netherlight.net:netherlight-uvalight,
+        netherlight.net:ps-out;
+    nml:locatedAt netherlight.net:location;
+    nsi:managedBy netherlight.net:nsa .
 
-northernlight:location a nml:Location,
+nordu.net:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "55.637"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "12.641"^^<http://www.w3.org/2001/XMLSchema#float> .
 
-northernlight:nsa a nsi:NSA,
+nordu.net:nsa a nsi:NSA,
         owl:NamedIndividual;
     nsi:adminContact """
             NSA: OpenNSA (NORDUnet)
@@ -607,31 +648,31 @@ northernlight:nsa a nsi:NSA,
             skype: henrik.thostrup.jensen
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:csProviderEndpoint "https://orval.grid.aau.dk:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing northernlight:topology .
+    nsi:managing <urn:ogf:network:nordu.net:2012:ets> .
 
-northernlight:topology a nml:Topology,
+<urn:ogf:network:nordu.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasInboundPort northernlight:max-northernlight,
-        northernlight:netherlight-northernlight,
-        northernlight:onsala-in,
-        northernlight:pionier-northernlight,
-        northernlight:ps-in,
-        northernlight:uvalight-northernlight;
-    nml:hasOutboundPort northernlight:northernlight-max,
-        northernlight:northernlight-netherlight,
-        northernlight:northernlight-pionier,
-        northernlight:northernlight-uvalight,
-        northernlight:onsala-out,
-        northernlight:ps-out;
-    nml:locatedAt northernlight:location;
-    nsi:managedBy northernlight:nsa .
+    nml:hasInboundPort nordu.net:max-nordu,
+        nordu.net:netherlight-nordu,
+        nordu.net:onsala-in,
+        nordu.net:pionier-nordu,
+        nordu.net:ps-in,
+        nordu.net:uvalight-nordu;
+    nml:hasOutboundPort nordu.net:nordu-max,
+        nordu.net:nordu-netherlight,
+        nordu.net:nordu-pionier,
+        nordu.net:nordu-uvalight,
+        nordu.net:onsala-out,
+        nordu.net:ps-out;
+    nml:locatedAt nordu.net:location;
+    nsi:managedBy nordu.net:nsa .
 
-pionier:location a nml:Location,
+pionier.net:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "16.916"^^<http://www.w3.org/2001/XMLSchema#float> .
 
-pionier:nsa a nsi:NSA,
+pionier.net:nsa a nsi:NSA,
         owl:NamedIndividual;
     nsi:adminContact """
             NSA: AutoBAHN  (GEANT) 
@@ -645,27 +686,27 @@ pionier:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://194.132.53.174:9080/nsi/ConnectionProviderPort
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing pionier:topology .
+    nsi:managing <urn:ogf:network:pionier.net:2012:ets> .
 
-pionier:topology a nml:Topology,
+<urn:ogf:network:pionier.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasInboundPort pionier:geant-pionier,
-        pionier:netherlight-pionier,
-        pionier:northernlight-pionier,
-        pionier:ps-in;
-    nml:hasOutboundPort pionier:pionier-geant,
-        pionier:pionier-netherlight,
-        pionier:pionier-northernlight,
-        pionier:ps-out;
-    nml:locatedAt pionier:location;
-    nsi:managedBy pionier:nsa .
+    nml:hasInboundPort pionier.net:geant-pionier,
+        pionier.net:netherlight-pionier,
+        pionier.net:nordu-pionier,
+        pionier.net:ps-in;
+    nml:hasOutboundPort pionier.net:pionier-geant,
+        pionier.net:pionier-netherlight,
+        pionier.net:pionier-nordu,
+        pionier.net:ps-out;
+    nml:locatedAt pionier.net:location;
+    nsi:managedBy pionier.net:nsa .
 
-starlight:location a nml:Location,
+startap.net:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "41.947906"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "-87.655791"^^<http://www.w3.org/2001/XMLSchema#float> .
 
-starlight:nsa a nsi:NSA,
+startap.net:nsa a nsi:NSA,
         owl:NamedIndividual;
     nsi:adminContact """
              NSA: OpenNSA (NORDUnet) over Argia 
@@ -680,31 +721,31 @@ starlight:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
              http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
          """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing starlight:topology .
+    nsi:managing <urn:ogf:network:startap.net:2012:ets> .
 
-starlight:topology a nml:Topology,
+<urn:ogf:network:startap.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasInboundPort starlight:esnet-starlight,
-        starlight:gloriad-starlight,
-        starlight:jgnx-starlight,
-        starlight:max-starlight,
-        starlight:netherlight-starlight,
-        starlight:ps-in;
-    nml:hasOutboundPort starlight:ps-out,
-        starlight:starlight-esnet,
-        starlight:starlight-gloriad,
-        starlight:starlight-jgnx,
-        starlight:starlight-max,
-        starlight:starlight-netherlight;
-    nml:locatedAt starlight:location;
-    nsi:managedBy starlight:nsa .
+    nml:hasInboundPort startap.net:esnet-startap,
+        startap.net:gloriad-startap,
+        startap.net:jgnx-startap,
+        startap.net:max-startap,
+        startap.net:netherlight-startap,
+        startap.net:ps-in;
+    nml:hasOutboundPort startap.net:ps-out,
+        startap.net:startap-esnet,
+        startap.net:startap-gloriad,
+        startap.net:startap-jgnx,
+        startap.net:startap-max,
+        startap.net:startap-netherlight;
+    nml:locatedAt startap.net:location;
+    nsi:managedBy startap.net:nsa .
 
-uvalight:location a nml:Location,
+uvalight.net:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
 
-uvalight:nsa a nsi:NSA,
+uvalight.net:nsa a nsi:NSA,
         owl:NamedIndividual;
     nsi:adminContact """
             NSA: OpenNSA   
@@ -721,25 +762,45 @@ uvalight:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://nsa.uvalight.nl:9080/NSI/services/ConnectionService/        
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing uvalight:topology .
+    nsi:managing <urn:ogf:network:uvalight.net:2012:topology> .
 
-uvalight:topology a nml:Topology,
+<urn:ogf:network:uvalight.net:2012:topology> a nml:Topology,
         owl:NamedIndividual;
-    nml:hasInboundPort uvalight:netherlight-uvalight,
-        uvalight:northernlight-uvalight,
-        uvalight:ps-in;
-    nml:hasOutboundPort uvalight:ps-out,
-        uvalight:uvalight-netherlight,
-        uvalight:uvalight-northernlight;
-    nml:locatedAt uvalight:location;
-    nsi:managedBy uvalight:nsa .
+    nml:hasInboundPort uvalight.net:netherlight-uvalight,
+        uvalight.net:nordu-uvalight,
+        uvalight.net:ps-in;
+    nml:hasOutboundPort uvalight.net:ps-out,
+        uvalight.net:uvalight-netherlight,
+        uvalight.net:uvalight-nordu;
+    nml:locatedAt uvalight.net:location;
+    nsi:managedBy uvalight.net:nsa .
 
-aist:ps-in a nml:PortGroup,
+aist.go.jp:aist-jgnx a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:jgnx:2012:aist-jgnx>;
+    nmleth:vlans "1780-1783" .
+
+aist.go.jp:jgnx-aist a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:jgnx:2012:jgnx-aist>;
+    nmleth:vlans "1780-1783" .
+
+aist.go.jp:ps-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-aist:ps-out a nml:PortGroup,
+aist.go.jp:ps-out a nml:PortGroup,
         owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+czechlight:czechlight-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:netherlight:2012:czechlight-netherlight>;
+    nmleth:vlans "1780-1783" .
+
+czechlight:netherlight-czechlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:netherlight:2012:netherlight-czechlight>;
     nmleth:vlans "1780-1783" .
 
 czechlight:ps-in a nml:PortGroup,
@@ -750,6 +811,11 @@ czechlight:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
+esnet:esnet-startap a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap:2012:esnet-startap>;
+    nmleth:vlans "1780-1783" .
+
 esnet:ps-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
@@ -758,12 +824,42 @@ esnet:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-geant:ps-in a nml:PortGroup,
+esnet:startap-esnet a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap:2012:startap-esnet>;
+    nmleth:vlans "1780-1783" .
+
+geant.net:geant-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:pionier:2012:geant-pionier>;
+    nmleth:vlans "1780-1783" .
+
+geant.net:pionier-geant a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:pionier:2012:pionier-geant>;
+    nmleth:vlans "1780-1783" .
+
+geant.net:ps-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-geant:ps-out a nml:PortGroup,
+geant.net:ps-out a nml:PortGroup,
         owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+gloriad:gloriad-krlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:krlight:2012:gloriad-krlight>;
+    nmleth:vlans "1780-1783" .
+
+gloriad:gloriad-startap a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap:2012:gloriad-startap>;
+    nmleth:vlans "1780-1783" .
+
+gloriad:krlight-gloriad a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:krlight:2012:krlight-gloriad>;
     nmleth:vlans "1780-1783" .
 
 gloriad:ps-in a nml:PortGroup,
@@ -774,12 +870,57 @@ gloriad:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
+gloriad:startap-gloriad a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap:2012:startap-gloriad>;
+    nmleth:vlans "1780-1783" .
+
+jgnx:aist-jgnx a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:aist:2012:aist-jgnx>;
+    nmleth:vlans "1780-1783" .
+
+jgnx:jgnx-aist a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:aist:2012:jgnx-aist>;
+    nmleth:vlans "1780-1783" .
+
+jgnx:jgnx-kddi-labs a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:kddi-labs:2012:jgnx-kddi-labs>;
+    nmleth:vlans "1780-1783" .
+
+jgnx:jgnx-startap a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap:2012:jgnx-startap>;
+    nmleth:vlans "1780-1783" .
+
+jgnx:kddi-labs-jgnx a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:kddi-labs:2012:kddi-labs-jgnx>;
+    nmleth:vlans "1780-1783" .
+
 jgnx:ps-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
 jgnx:ps-out a nml:PortGroup,
         owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+jgnx:startap-jgnx a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap:2012:startap-jgnx>;
+    nmleth:vlans "1780-1783" .
+
+kddi-labs:jgnx-kddi-labs a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:jgnx:2012:jgnx-kddi-labs>;
+    nmleth:vlans "1780-1783" .
+
+kddi-labs:kddi-labs-jgnx a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:jgnx:2012:kddi-labs-jgnx>;
     nmleth:vlans "1780-1783" .
 
 kddi-labs:ps-in a nml:PortGroup,
@@ -790,12 +931,37 @@ kddi-labs:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-krlight:ps-in a nml:PortGroup,
+krlight.net:gloriad-krlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:gloriad:2012:gloriad-krlight>;
+    nmleth:vlans "1780-1783" .
+
+krlight.net:krlight-gloriad a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:gloriad:2012:krlight-gloriad>;
+    nmleth:vlans "1780-1783" .
+
+krlight.net:ps-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-krlight:ps-out a nml:PortGroup,
+krlight.net:ps-out a nml:PortGroup,
         owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+max:max-nordu a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:nordu:2012:max-nordu>;
+    nmleth:vlans "1780-1783" .
+
+max:max-startap a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap:2012:max-startap>;
+    nmleth:vlans "1780-1783" .
+
+max:nordu-max a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:nordu:2012:nordu-max>;
     nmleth:vlans "1780-1783" .
 
 max:ps-in a nml:PortGroup,
@@ -806,371 +972,246 @@ max:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-netherlight:ps-in a nml:PortGroup,
+max:startap-max a nml:PortGroup,
         owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap:2012:startap-max>;
     nmleth:vlans "1780-1783" .
 
-netherlight:ps-out a nml:PortGroup,
+netherlight.net:czechlight-netherlight a nml:PortGroup,
         owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:czechlight:2012:czechlight-netherlight>;
     nmleth:vlans "1780-1783" .
 
-northernlight:onsala-in a nml:PortGroup,
+netherlight.net:netherlight-czechlight a nml:PortGroup,
         owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:czechlight:2012:netherlight-czechlight>;
     nmleth:vlans "1780-1783" .
 
-northernlight:onsala-out a nml:PortGroup,
+netherlight.net:netherlight-nordu a nml:PortGroup,
         owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:nordu:2012:netherlight-nordu>;
     nmleth:vlans "1780-1783" .
 
-northernlight:ps-in a nml:PortGroup,
+netherlight.net:netherlight-pionier a nml:PortGroup,
         owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:pionier:2012:netherlight-pionier>;
     nmleth:vlans "1780-1783" .
 
-northernlight:ps-out a nml:PortGroup,
+netherlight.net:netherlight-startap a nml:PortGroup,
         owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap:2012:netherlight-startap>;
     nmleth:vlans "1780-1783" .
 
-pionier:ps-in a nml:PortGroup,
+netherlight.net:netherlight-uvalight a nml:PortGroup,
         owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:uvalight:2012:netherlight-uvalight>;
     nmleth:vlans "1780-1783" .
 
-pionier:ps-out a nml:PortGroup,
+netherlight.net:nordu-netherlight a nml:PortGroup,
         owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:nordu:2012:nordu-netherlight>;
     nmleth:vlans "1780-1783" .
 
-starlight:ps-in a nml:PortGroup,
+netherlight.net:pionier-netherlight a nml:PortGroup,
         owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:pionier:2012:pionier-netherlight>;
     nmleth:vlans "1780-1783" .
 
-starlight:ps-out a nml:PortGroup,
+netherlight.net:ps-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-uvalight:ps-in a nml:PortGroup,
+netherlight.net:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-uvalight:ps-out a nml:PortGroup,
+netherlight.net:startap-netherlight a nml:PortGroup,
         owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap:2012:startap-netherlight>;
     nmleth:vlans "1780-1783" .
 
-aist:aist-jgnx a nml:PortGroup,
+netherlight.net:uvalight-netherlight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias jgnx:aist-jgnx;
+    nml:isAlias <urn:ogf:network:uvalight:2012:uvalight-netherlight>;
     nmleth:vlans "1780-1783" .
 
-aist:jgnx-aist a nml:PortGroup,
+nordu.net:max-nordu a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias jgnx:jgnx-aist;
+    nml:isAlias <urn:ogf:network:max:2012:max-nordu>;
     nmleth:vlans "1780-1783" .
 
-czechlight:czechlight-netherlight a nml:PortGroup,
+nordu.net:netherlight-nordu a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias netherlight:czechlight-netherlight;
+    nml:isAlias <urn:ogf:network:netherlight:2012:netherlight-nordu>;
     nmleth:vlans "1780-1783" .
 
-czechlight:netherlight-czechlight a nml:PortGroup,
+nordu.net:nordu-max a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias netherlight:netherlight-czechlight;
+    nml:isAlias <urn:ogf:network:max:2012:nordu-max>;
     nmleth:vlans "1780-1783" .
 
-esnet:esnet-starlight a nml:PortGroup,
+nordu.net:nordu-netherlight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias starlight:esnet-starlight;
+    nml:isAlias <urn:ogf:network:netherlight:2012:nordu-netherlight>;
     nmleth:vlans "1780-1783" .
 
-esnet:starlight-esnet a nml:PortGroup,
+nordu.net:nordu-pionier a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias starlight:starlight-esnet;
+    nml:isAlias <urn:ogf:network:pionier:2012:nordu-pionier>;
     nmleth:vlans "1780-1783" .
 
-geant:geant-pionier a nml:PortGroup,
+nordu.net:nordu-uvalight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias pionier:geant-pionier;
+    nml:isAlias <urn:ogf:network:uvalight:2012:nordu-uvalight>;
     nmleth:vlans "1780-1783" .
 
-geant:pionier-geant a nml:PortGroup,
+nordu.net:onsala-in a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias pionier:pionier-geant;
     nmleth:vlans "1780-1783" .
 
-gloriad:gloriad-krlight a nml:PortGroup,
+nordu.net:onsala-out a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias krlight:gloriad-krlight;
     nmleth:vlans "1780-1783" .
 
-gloriad:gloriad-starlight a nml:PortGroup,
+nordu.net:pionier-nordu a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias starlight:gloriad-starlight;
+    nml:isAlias <urn:ogf:network:pionier:2012:pionier-nordu>;
     nmleth:vlans "1780-1783" .
 
-gloriad:krlight-gloriad a nml:PortGroup,
+nordu.net:ps-in a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias krlight:krlight-gloriad;
     nmleth:vlans "1780-1783" .
 
-gloriad:starlight-gloriad a nml:PortGroup,
+nordu.net:ps-out a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias starlight:starlight-gloriad;
     nmleth:vlans "1780-1783" .
 
-jgnx:aist-jgnx a nml:PortGroup,
+nordu.net:uvalight-nordu a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias aist:aist-jgnx;
+    nml:isAlias <urn:ogf:network:uvalight:2012:uvalight-nordu>;
     nmleth:vlans "1780-1783" .
 
-jgnx:jgnx-aist a nml:PortGroup,
+pionier.net:geant-pionier a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias aist:jgnx-aist;
+    nml:isAlias <urn:ogf:network:geant:2012:geant-pionier>;
     nmleth:vlans "1780-1783" .
 
-jgnx:jgnx-kddi-labs a nml:PortGroup,
+pionier.net:netherlight-pionier a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias kddi-labs:jgnx-kddi-labs;
+    nml:isAlias <urn:ogf:network:netherlight:2012:netherlight-pionier>;
     nmleth:vlans "1780-1783" .
 
-jgnx:jgnx-starlight a nml:PortGroup,
+pionier.net:nordu-pionier a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias starlight:jgnx-starlight;
+    nml:isAlias <urn:ogf:network:nordu:2012:nordu-pionier>;
     nmleth:vlans "1780-1783" .
 
-jgnx:kddi-labs-jgnx a nml:PortGroup,
+pionier.net:pionier-geant a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias kddi-labs:kddi-labs-jgnx;
+    nml:isAlias <urn:ogf:network:geant:2012:pionier-geant>;
     nmleth:vlans "1780-1783" .
 
-jgnx:starlight-jgnx a nml:PortGroup,
+pionier.net:pionier-netherlight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias starlight:starlight-jgnx;
+    nml:isAlias <urn:ogf:network:netherlight:2012:pionier-netherlight>;
     nmleth:vlans "1780-1783" .
 
-kddi-labs:jgnx-kddi-labs a nml:PortGroup,
+pionier.net:pionier-nordu a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias jgnx:jgnx-kddi-labs;
+    nml:isAlias <urn:ogf:network:nordu:2012:pionier-nordu>;
     nmleth:vlans "1780-1783" .
 
-kddi-labs:kddi-labs-jgnx a nml:PortGroup,
+pionier.net:ps-in a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias jgnx:kddi-labs-jgnx;
     nmleth:vlans "1780-1783" .
 
-krlight:gloriad-krlight a nml:PortGroup,
+pionier.net:ps-out a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias gloriad:gloriad-krlight;
     nmleth:vlans "1780-1783" .
 
-krlight:krlight-gloriad a nml:PortGroup,
+startap.net:esnet-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias gloriad:krlight-gloriad;
+    nml:isAlias <urn:ogf:network:esnet:2012:esnet-startap>;
     nmleth:vlans "1780-1783" .
 
-max:max-northernlight a nml:PortGroup,
+startap.net:gloriad-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias northernlight:max-northernlight;
+    nml:isAlias <urn:ogf:network:gloriad:2012:gloriad-startap>;
     nmleth:vlans "1780-1783" .
 
-max:max-starlight a nml:PortGroup,
+startap.net:jgnx-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias starlight:max-starlight;
+    nml:isAlias <urn:ogf:network:jgnx:2012:jgnx-startap>;
     nmleth:vlans "1780-1783" .
 
-max:northernlight-max a nml:PortGroup,
+startap.net:max-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias northernlight:northernlight-max;
+    nml:isAlias <urn:ogf:network:max:2012:max-startap>;
     nmleth:vlans "1780-1783" .
 
-max:starlight-max a nml:PortGroup,
+startap.net:netherlight-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias starlight:starlight-max;
+    nml:isAlias <urn:ogf:network:netherlight:2012:netherlight-startap>;
     nmleth:vlans "1780-1783" .
 
-netherlight:czechlight-netherlight a nml:PortGroup,
+startap.net:ps-in a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias czechlight:czechlight-netherlight;
     nmleth:vlans "1780-1783" .
 
-netherlight:netherlight-czechlight a nml:PortGroup,
+startap.net:ps-out a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias czechlight:netherlight-czechlight;
     nmleth:vlans "1780-1783" .
 
-netherlight:netherlight-northernlight a nml:PortGroup,
+startap.net:startap-esnet a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias northernlight:netherlight-northernlight;
+    nml:isAlias <urn:ogf:network:esnet:2012:startap-esnet>;
     nmleth:vlans "1780-1783" .
 
-netherlight:netherlight-pionier a nml:PortGroup,
+startap.net:startap-gloriad a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias pionier:netherlight-pionier;
+    nml:isAlias <urn:ogf:network:gloriad:2012:startap-gloriad>;
     nmleth:vlans "1780-1783" .
 
-netherlight:netherlight-starlight a nml:PortGroup,
+startap.net:startap-jgnx a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias starlight:netherlight-starlight;
+    nml:isAlias <urn:ogf:network:jgnx:2012:startap-jgnx>;
     nmleth:vlans "1780-1783" .
 
-netherlight:netherlight-uvalight a nml:PortGroup,
+startap.net:startap-max a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias uvalight:netherlight-uvalight;
+    nml:isAlias <urn:ogf:network:max:2012:startap-max>;
     nmleth:vlans "1780-1783" .
 
-netherlight:northernlight-netherlight a nml:PortGroup,
+startap.net:startap-netherlight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias northernlight:northernlight-netherlight;
+    nml:isAlias <urn:ogf:network:netherlight:2012:startap-netherlight>;
     nmleth:vlans "1780-1783" .
 
-netherlight:pionier-netherlight a nml:PortGroup,
+uvalight.net:netherlight-uvalight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias pionier:pionier-netherlight;
+    nml:isAlias <urn:ogf:network:netherlight:2012:netherlight-uvalight>;
     nmleth:vlans "1780-1783" .
 
-netherlight:starlight-netherlight a nml:PortGroup,
+uvalight.net:nordu-uvalight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias starlight:starlight-netherlight;
+    nml:isAlias <urn:ogf:network:nordu:2012:nordu-uvalight>;
     nmleth:vlans "1780-1783" .
 
-netherlight:uvalight-netherlight a nml:PortGroup,
+uvalight.net:ps-in a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias uvalight:uvalight-netherlight;
     nmleth:vlans "1780-1783" .
 
-northernlight:max-northernlight a nml:PortGroup,
+uvalight.net:ps-out a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias max:max-northernlight;
     nmleth:vlans "1780-1783" .
 
-northernlight:netherlight-northernlight a nml:PortGroup,
+uvalight.net:uvalight-netherlight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias netherlight:netherlight-northernlight;
+    nml:isAlias <urn:ogf:network:netherlight:2012:uvalight-netherlight>;
     nmleth:vlans "1780-1783" .
 
-northernlight:northernlight-max a nml:PortGroup,
+uvalight.net:uvalight-nordu a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias max:northernlight-max;
-    nmleth:vlans "1780-1783" .
-
-northernlight:northernlight-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight:northernlight-netherlight;
-    nmleth:vlans "1780-1783" .
-
-northernlight:northernlight-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias pionier:northernlight-pionier;
-    nmleth:vlans "1780-1783" .
-
-northernlight:northernlight-uvalight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias uvalight:northernlight-uvalight;
-    nmleth:vlans "1780-1783" .
-
-northernlight:pionier-northernlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias pionier:pionier-northernlight;
-    nmleth:vlans "1780-1783" .
-
-northernlight:uvalight-northernlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias uvalight:uvalight-northernlight;
-    nmleth:vlans "1780-1783" .
-
-pionier:geant-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias geant:geant-pionier;
-    nmleth:vlans "1780-1783" .
-
-pionier:netherlight-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight:netherlight-pionier;
-    nmleth:vlans "1780-1783" .
-
-pionier:northernlight-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias northernlight:northernlight-pionier;
-    nmleth:vlans "1780-1783" .
-
-pionier:pionier-geant a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias geant:pionier-geant;
-    nmleth:vlans "1780-1783" .
-
-pionier:pionier-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight:pionier-netherlight;
-    nmleth:vlans "1780-1783" .
-
-pionier:pionier-northernlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias northernlight:pionier-northernlight;
-    nmleth:vlans "1780-1783" .
-
-starlight:esnet-starlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias esnet:esnet-starlight;
-    nmleth:vlans "1780-1783" .
-
-starlight:gloriad-starlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias gloriad:gloriad-starlight;
-    nmleth:vlans "1780-1783" .
-
-starlight:jgnx-starlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias jgnx:jgnx-starlight;
-    nmleth:vlans "1780-1783" .
-
-starlight:max-starlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias max:max-starlight;
-    nmleth:vlans "1780-1783" .
-
-starlight:netherlight-starlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight:netherlight-starlight;
-    nmleth:vlans "1780-1783" .
-
-starlight:starlight-esnet a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias esnet:starlight-esnet;
-    nmleth:vlans "1780-1783" .
-
-starlight:starlight-gloriad a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias gloriad:starlight-gloriad;
-    nmleth:vlans "1780-1783" .
-
-starlight:starlight-jgnx a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias jgnx:starlight-jgnx;
-    nmleth:vlans "1780-1783" .
-
-starlight:starlight-max a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias max:starlight-max;
-    nmleth:vlans "1780-1783" .
-
-starlight:starlight-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight:starlight-netherlight;
-    nmleth:vlans "1780-1783" .
-
-uvalight:netherlight-uvalight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight:netherlight-uvalight;
-    nmleth:vlans "1780-1783" .
-
-uvalight:northernlight-uvalight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias northernlight:northernlight-uvalight;
-    nmleth:vlans "1780-1783" .
-
-uvalight:uvalight-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight:uvalight-netherlight;
-    nmleth:vlans "1780-1783" .
-
-uvalight:uvalight-northernlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias northernlight:uvalight-northernlight;
+    nml:isAlias <urn:ogf:network:nordu:2012:uvalight-nordu>;
     nmleth:vlans "1780-1783" .
 

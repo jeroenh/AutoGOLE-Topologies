@@ -1,4 +1,4 @@
-@prefix geant: <urn:ogf:network:geant.net:2012:> .
+@prefix geant: <urn:ogf:network:geant.net2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -6,19 +6,19 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-geant:bi-geant-None a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort geant:ps-in,
-        geant:ps-out .
-
-geant:bi-geant-pionier a nml:BidirectionalPort,
+<urn:ogf:network:geant:2012:bi-geant-pionier> a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort geant:geant-pionier,
         geant:pionier-geant .
 
-<urn:ogf:network:pionier.net:2012:topology> a nml:Topology,
+<urn:ogf:network:geant:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.n3" .
+    nml:hasPort geant:ps-in,
+        geant:ps-out .
+
+<urn:ogf:network:pionier:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.n3" .
 
 geant:location a nml:Location,
         owl:NamedIndividual;
@@ -40,9 +40,9 @@ geant:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://194.132.53.174:9082/nsi/ConnectionProviderPort
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing geant:topology .
+    nsi:managing <urn:ogf:network:geant.net:2012:ets> .
 
-geant:topology a nml:Topology,
+<urn:ogf:network:geant.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort geant:pionier-geant,
         geant:ps-in;
@@ -53,12 +53,12 @@ geant:topology a nml:Topology,
 
 geant:geant-pionier a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier.net:2012:geant-pionier>;
+    nml:isAlias <urn:ogf:network:pionier:2012:geant-pionier>;
     nmleth:vlans "1780-1783" .
 
 geant:pionier-geant a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier.net:2012:pionier-geant>;
+    nml:isAlias <urn:ogf:network:pionier:2012:pionier-geant>;
     nmleth:vlans "1780-1783" .
 
 geant:ps-in a nml:PortGroup,

@@ -12,6 +12,34 @@ NSI = rdflib.Namespace("http://schemas.ogf.org/nsi/2012/10/topology#")
 DTOX = rdflib.Namespace("http://www.glif.is/working-groups/tech/dtox#")
 OWL = rdflib.Namespace("http://www.w3.org/2002/07/owl#")
 
+golenames = {
+    "netherlight": "netherlight.net",
+    "starlight": "startap.net",
+    "northernlight": "nordu.net",
+    "uvalight": "uvalight.net",
+    "pionier": "pionier.net",
+    "aist": "aist.go.jp",
+    "kddi": "kddilabs.jp",
+    "geant": "geant.net",
+    "krlight": "krlight.net"
+}
+def getUrlName(name):
+    if name in golenames:
+        return golenames[name]
+    else:
+        return name
+def getNetName(name):
+    return getUrlName(name).split(".")[0]
+def getTargetTopo(target):
+    # First catch things that don't have a target:
+    if not target:
+        return target
+    # UvA believes there is more to GOLEs than just Ethernet.
+    if "uva" in target:
+        return rdflib.term.URIRef("urn:ogf:network:%s:2012:topology" % target)
+    else:
+        return rdflib.term.URIRef("urn:ogf:network:%s:2012:ets" % target)
+
 class AGTopology:
     def __init__(self, url):
         self.url = url
@@ -21,6 +49,11 @@ class AGTopology:
             self.storev1.parse(url)
         except Exception as e:
             print e
+        self.topo = self.storev1.value(predicate=RDF.type, object=DTOX.NSNetwork)
+        self.urlname = getUrlName(self.topo.split(":")[-1][:-4])
+        self.netname = getNetName(self.topo.split(":")[-1][:-4])
+        self.prefix = rdflib.Namespace("urn:ogf:network:%s2012:" % self.urlname)
+        self.storev2.bind(self.netname,self.prefix)
         self.init_v2()
     
     def init_v2(self):
@@ -30,8 +63,9 @@ class AGTopology:
         self.storev2.bind("owl",OWL)
         
         
+        
     def addTopo(self,oldtopo):
-        topo = rdflib.term.URIRef(self.prefix+"topology")
+        topo = getTargetTopo(self.urlname)
         self.storev2.add((topo,RDF.type,OWL.NamedIndividual))
         self.storev2.add((topo,RDF.type,NML.Topology))
         # NSA
@@ -61,16 +95,16 @@ class AGTopology:
         if target:
             outPort = rdflib.term.URIRef(self.prefix+self.netname+"-"+target)
             inPort = rdflib.term.URIRef(self.prefix+target+"-"+self.netname)
-            outTarget = rdflib.term.URIRef("urn:ogf:network:%s.net:2012:%s-%s" %
+            outTarget = rdflib.term.URIRef("urn:ogf:network:%s:2012:%s-%s" %
                                                  (target,target,self.netname))
-            inTarget = rdflib.term.URIRef("urn:ogf:network:%s.net:2012:%s-%s" %
+            inTarget = rdflib.term.URIRef("urn:ogf:network:%s:2012:%s-%s" %
                                                  (target,self.netname,target))
             self.storev2.add((outPort,NML.isAlias,inTarget))
             self.storev2.add((inPort,NML.isAlias,outTarget))
-            targettopo = rdflib.term.URIRef("urn:ogf:network:%s.net:2012:topology" % target)
+            targettopo = getTargetTopo(target)
             self.storev2.add((targettopo,RDF.type,NML.Topology))
             self.storev2.add((targettopo,RDF.type,OWL.NamedIndividual))
-            self.storev2.add((targettopo,NML.isReference,
+            self.storev2.add((targettopo,NSI.isReference,
                 rdflib.Literal("https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/%s.n3" % target)))
         else:
             outPort = rdflib.term.URIRef(self.prefix+stp+"-out")
@@ -82,23 +116,22 @@ class AGTopology:
             self.storev2.add((NMLETH.vlans, OWL.subPropertyOf, NML.hasLabelGroup))
         self.storev2.add((topo,NML.hasOutboundPort,outPort))
         self.storev2.add((topo,NML.hasInboundPort,inPort))
-        biport = rdflib.term.URIRef("urn:ogf:network:%s.net:2012:bi-%s-%s" %
-                                                (self.netname,self.netname,target))
+        if target:
+            biport = rdflib.term.URIRef("urn:ogf:network:%s:2012:bi-%s-%s" %
+                                            (self.netname,self.netname,target))
+        else:
+            biport = rdflib.term.URIRef("urn:ogf:network:%s:2012:bi-%s" %
+                                            (self.netname,stp))
         self.storev2.add((biport,RDF.type,OWL.NamedIndividual))
         self.storev2.add((biport,RDF.type,NML.BidirectionalPort))
         self.storev2.add((biport,NML.hasPort,outPort))
         self.storev2.add((biport,NML.hasPort,inPort))
         
     def convert(self):
-        topo = self.storev1.value(predicate=RDF.type, object=DTOX.NSNetwork)
-        toponame = topo.split(":")[-1]
-        self.netname = toponame[:-4]
-        self.prefix = rdflib.Namespace("urn:ogf:network:%s.net:2012:" % self.netname)
-        self.storev2.bind(self.netname,self.prefix)
         # Convert the Topology and its basic attributes
-        topov2 = self.addTopo(topo)
+        topov2 = self.addTopo(self.topo)
         # Convert the STPs
-        for stp in self.storev1.objects(topo,DTOX.hasSTP):
+        for stp in self.storev1.objects(self.topo,DTOX.hasSTP):
             target = self.storev1.value(subject=stp,predicate=DTOX.connectedTo)
             # We take off the invalid network urn prefix
             stp = stp.split(":")[-1]
@@ -107,7 +140,7 @@ class AGTopology:
             stp = stp.split("-")[0]
             if target:
                 # We take out the network name of the other end to pass as target
-                target = target.split(":")[4][:-4]
+                target = getNetName(target.split(":")[4][:-4])
             self.addUniPorts(stp,topov2,target)
         return self.storev2
 
@@ -119,11 +152,12 @@ def main():
     master.bind("owl",OWL)
     
     for name in ["aist","czechlight","esnet","geant","gloriad","jgnx","kddi-labs","krlight","max","netherlight","northernlight","pionier","starlight","uvalight"]:
+        newname = getUrlName(name)
         topo = AGTopology("golesv1/%s.owl" % name)
         graph = topo.convert()
-        graph.serialize("goles/%s.owl"%name,format="pretty-xml")
-        graph.serialize("goles/%s.n3"%name,format="n3")
-        master.bind(name,topo.prefix)
+        graph.serialize("goles/%s.owl"%newname,format="pretty-xml")
+        graph.serialize("goles/%s.n3"%newname,format="n3")
+        master.bind(newname,topo.prefix)
         master += graph
     for s,o in master.subject_objects(NML.isReference):
         master.remove((s,NML.isReference,o))

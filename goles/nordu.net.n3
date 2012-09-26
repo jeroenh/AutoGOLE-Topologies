@@ -1,0 +1,147 @@
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nordu: <urn:ogf:network:nordu.net2012:> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+<urn:ogf:network:max:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/max.n3" .
+
+<urn:ogf:network:netherlight:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3" .
+
+<urn:ogf:network:nordu:2012:bi-nordu-max> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort nordu:max-nordu,
+        nordu:nordu-max .
+
+<urn:ogf:network:nordu:2012:bi-nordu-netherlight> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort nordu:netherlight-nordu,
+        nordu:nordu-netherlight .
+
+<urn:ogf:network:nordu:2012:bi-nordu-pionier> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort nordu:nordu-pionier,
+        nordu:pionier-nordu .
+
+<urn:ogf:network:nordu:2012:bi-nordu-uvalight> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort nordu:nordu-uvalight,
+        nordu:uvalight-nordu .
+
+<urn:ogf:network:nordu:2012:bi-onsala> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort nordu:onsala-in,
+        nordu:onsala-out .
+
+<urn:ogf:network:nordu:2012:bi-ps> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort nordu:ps-in,
+        nordu:ps-out .
+
+<urn:ogf:network:pionier:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.n3" .
+
+<urn:ogf:network:uvalight:2012:topology> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.n3" .
+
+nordu:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "55.637"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "12.641"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+nordu:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OpenNSA (NORDUnet)
+            Project Management: Jerry Sobieski
+            email: jerry@nordu.net
+            mobile:  1-301-346-1849
+            skype: jerry.sobieski
+            Software Development: Henrik Thostrup-Jensen
+            email: htj@nordu.net
+            skype: henrik.thostrup.jensen
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint "https://orval.grid.aau.dk:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing <urn:ogf:network:nordu.net:2012:ets> .
+
+<urn:ogf:network:nordu.net:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort nordu:max-nordu,
+        nordu:netherlight-nordu,
+        nordu:onsala-in,
+        nordu:pionier-nordu,
+        nordu:ps-in,
+        nordu:uvalight-nordu;
+    nml:hasOutboundPort nordu:nordu-max,
+        nordu:nordu-netherlight,
+        nordu:nordu-pionier,
+        nordu:nordu-uvalight,
+        nordu:onsala-out,
+        nordu:ps-out;
+    nml:locatedAt nordu:location;
+    nsi:managedBy nordu:nsa .
+
+nordu:max-nordu a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:max:2012:max-nordu>;
+    nmleth:vlans "1780-1783" .
+
+nordu:netherlight-nordu a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:netherlight:2012:netherlight-nordu>;
+    nmleth:vlans "1780-1783" .
+
+nordu:nordu-max a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:max:2012:nordu-max>;
+    nmleth:vlans "1780-1783" .
+
+nordu:nordu-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:netherlight:2012:nordu-netherlight>;
+    nmleth:vlans "1780-1783" .
+
+nordu:nordu-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:pionier:2012:nordu-pionier>;
+    nmleth:vlans "1780-1783" .
+
+nordu:nordu-uvalight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:uvalight:2012:nordu-uvalight>;
+    nmleth:vlans "1780-1783" .
+
+nordu:onsala-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+nordu:onsala-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+nordu:pionier-nordu a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:pionier:2012:pionier-nordu>;
+    nmleth:vlans "1780-1783" .
+
+nordu:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+nordu:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+nordu:uvalight-nordu a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:uvalight:2012:uvalight-nordu>;
+    nmleth:vlans "1780-1783" .
+

@@ -2,32 +2,32 @@
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix uvalight: <urn:ogf:network:uvalight.net:2012:> .
+@prefix uvalight: <urn:ogf:network:uvalight.net2012:> .
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:netherlight.net:2012:topology> a nml:Topology,
+<urn:ogf:network:netherlight:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3" .
 
-<urn:ogf:network:northernlight.net:2012:topology> a nml:Topology,
+<urn:ogf:network:nordu:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/northernlight.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.n3" .
 
-uvalight:bi-uvalight-None a nml:BidirectionalPort,
+<urn:ogf:network:uvalight:2012:bi-ps> a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort uvalight:ps-in,
         uvalight:ps-out .
 
-uvalight:bi-uvalight-netherlight a nml:BidirectionalPort,
+<urn:ogf:network:uvalight:2012:bi-uvalight-netherlight> a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort uvalight:netherlight-uvalight,
         uvalight:uvalight-netherlight .
 
-uvalight:bi-uvalight-northernlight a nml:BidirectionalPort,
+<urn:ogf:network:uvalight:2012:bi-uvalight-nordu> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort uvalight:northernlight-uvalight,
-        uvalight:uvalight-northernlight .
+    nml:hasPort uvalight:nordu-uvalight,
+        uvalight:uvalight-nordu .
 
 uvalight:location a nml:Location,
         owl:NamedIndividual;
@@ -51,27 +51,27 @@ uvalight:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://nsa.uvalight.nl:9080/NSI/services/ConnectionService/        
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing uvalight:topology .
+    nsi:managing <urn:ogf:network:uvalight.net:2012:topology> .
 
-uvalight:topology a nml:Topology,
+<urn:ogf:network:uvalight.net:2012:topology> a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort uvalight:netherlight-uvalight,
-        uvalight:northernlight-uvalight,
+        uvalight:nordu-uvalight,
         uvalight:ps-in;
     nml:hasOutboundPort uvalight:ps-out,
         uvalight:uvalight-netherlight,
-        uvalight:uvalight-northernlight;
+        uvalight:uvalight-nordu;
     nml:locatedAt uvalight:location;
     nsi:managedBy uvalight:nsa .
 
 uvalight:netherlight-uvalight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-uvalight>;
+    nml:isAlias <urn:ogf:network:netherlight:2012:netherlight-uvalight>;
     nmleth:vlans "1780-1783" .
 
-uvalight:northernlight-uvalight a nml:PortGroup,
+uvalight:nordu-uvalight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:northernlight.net:2012:northernlight-uvalight>;
+    nml:isAlias <urn:ogf:network:nordu:2012:nordu-uvalight>;
     nmleth:vlans "1780-1783" .
 
 uvalight:ps-in a nml:PortGroup,
@@ -84,11 +84,11 @@ uvalight:ps-out a nml:PortGroup,
 
 uvalight:uvalight-netherlight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:uvalight-netherlight>;
+    nml:isAlias <urn:ogf:network:netherlight:2012:uvalight-netherlight>;
     nmleth:vlans "1780-1783" .
 
-uvalight:uvalight-northernlight a nml:PortGroup,
+uvalight:uvalight-nordu a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:northernlight.net:2012:uvalight-northernlight>;
+    nml:isAlias <urn:ogf:network:nordu:2012:uvalight-nordu>;
     nmleth:vlans "1780-1783" .
 

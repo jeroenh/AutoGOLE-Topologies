@@ -1,4 +1,4 @@
-@prefix krlight: <urn:ogf:network:krlight.net:2012:> .
+@prefix krlight: <urn:ogf:network:krlight.net2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -6,19 +6,19 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:gloriad.net:2012:topology> a nml:Topology,
+<urn:ogf:network:gloriad:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nml:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.n3" .
 
-krlight:bi-krlight-None a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort krlight:ps-in,
-        krlight:ps-out .
-
-krlight:bi-krlight-gloriad a nml:BidirectionalPort,
+<urn:ogf:network:krlight:2012:bi-krlight-gloriad> a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort krlight:gloriad-krlight,
         krlight:krlight-gloriad .
+
+<urn:ogf:network:krlight:2012:bi-ps> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort krlight:ps-in,
+        krlight:ps-out .
 
 krlight:location a nml:Location,
         owl:NamedIndividual;
@@ -48,9 +48,9 @@ krlight:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://203.230.116.202:8090/nsi/ConnectionServiceProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing krlight:topology .
+    nsi:managing <urn:ogf:network:krlight.net:2012:ets> .
 
-krlight:topology a nml:Topology,
+<urn:ogf:network:krlight.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort krlight:gloriad-krlight,
         krlight:ps-in;
@@ -61,12 +61,12 @@ krlight:topology a nml:Topology,
 
 krlight:gloriad-krlight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:gloriad.net:2012:gloriad-krlight>;
+    nml:isAlias <urn:ogf:network:gloriad:2012:gloriad-krlight>;
     nmleth:vlans "1780-1783" .
 
 krlight:krlight-gloriad a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:gloriad.net:2012:krlight-gloriad>;
+    nml:isAlias <urn:ogf:network:gloriad:2012:krlight-gloriad>;
     nmleth:vlans "1780-1783" .
 
 krlight:ps-in a nml:PortGroup,

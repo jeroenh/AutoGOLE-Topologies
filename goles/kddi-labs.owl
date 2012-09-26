@@ -1,53 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
   xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
-  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <owl:NamedIndividual rdf:about="urn:ogf:network:kddi-labs.net:2012:bi-kddi-labs-jgnx">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:kddi-labs.net:2012:jgnx-kddi-labs">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <nml:isAlias rdf:resource="urn:ogf:network:jgnx.net:2012:jgnx-kddi-labs"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:kddi-labs.net:2012:kddi-labs-jgnx">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <nml:isAlias rdf:resource="urn:ogf:network:jgnx.net:2012:kddi-labs-jgnx"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:jgnx.net:2012:topology">
+  <owl:NamedIndividual rdf:about="urn:ogf:network:jgnx:2012:ets">
+    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3</nsi:isReference>
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-    <nml:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3</nml:isReference>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:kddi-labs.net:2012:bi-kddi-labs-None">
+  <owl:NamedIndividual rdf:about="urn:ogf:network:kddi-labs:2012:bi-kddi-labs-jgnx">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:kddi-labs2012:kddi-labs-jgnx">
+        <nml:isAlias rdf:resource="urn:ogf:network:jgnx:2012:kddi-labs-jgnx"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:kddi-labs2012:jgnx-kddi-labs">
+        <nml:isAlias rdf:resource="urn:ogf:network:jgnx:2012:jgnx-kddi-labs"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasPort>
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:kddi-labs.net:2012:ps-in">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:kddi-labs.net:2012:ps-out">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </owl:NamedIndividual>
-    </nml:hasPort>
   </owl:NamedIndividual>
   <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
     <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
   </rdf:Description>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:kddi-labs.net:2012:nsa">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
-    <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+  <owl:NamedIndividual rdf:about="urn:ogf:network:kddi-labs:2012:bi-ps">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:kddi-labs2012:ps-in">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:kddi-labs2012:ps-out">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:kddi-labs:2012:ets">
+    <nsi:managedBy>
+      <nsi:NSA rdf:about="urn:ogf:network:kddi-labs2012:nsa">
+        <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: G-Lambda/KDDILabs (KDDI Labs) 
             Project manager: Takahiro Miyamoto  
             email: tk-miyamoto@kddilabs.jp 
@@ -58,24 +59,24 @@
             mobile:  81-90-1966-5153  
             skype: takahiro.miyamoto 
         </nsi:adminContact>
-    <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             http://210.196.65.114:9352/connectionprovider
         </nsi:csProviderEndpoint>
-    <nsi:managing>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:kddi-labs.net:2012:topology">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-        <nml:locatedAt rdf:resource="urn:ogf:network:kddi-labs.net:2012:location"/>
-        <nsi:managedBy rdf:resource="urn:ogf:network:kddi-labs.net:2012:nsa"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:kddi-labs.net:2012:jgnx-kddi-labs"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:kddi-labs.net:2012:ps-in"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:kddi-labs.net:2012:kddi-labs-jgnx"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:kddi-labs.net:2012:ps-out"/>
-      </owl:NamedIndividual>
-    </nsi:managing>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:kddi-labs.net:2012:location">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
-    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35.879</nml:lat>
-    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">139.517</nml:long>
+        <nsi:managing rdf:resource="urn:ogf:network:kddi-labs:2012:ets"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nsi:NSA>
+    </nsi:managedBy>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:kddi-labs2012:kddi-labs-jgnx"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:kddi-labs2012:ps-out"/>
+    <nml:locatedAt>
+      <nml:Location rdf:about="urn:ogf:network:kddi-labs2012:location">
+        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">139.517</nml:long>
+        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35.879</nml:lat>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:Location>
+    </nml:locatedAt>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:kddi-labs2012:jgnx-kddi-labs"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:kddi-labs2012:ps-in"/>
   </owl:NamedIndividual>
 </rdf:RDF>
