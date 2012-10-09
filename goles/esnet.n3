@@ -1,4 +1,4 @@
-@prefix esnet: <urn:ogf:network:esnet2012:> .
+@prefix esnet: <urn:ogf:network:esnet:2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -6,12 +6,12 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:esnet:2012:bi-esnet-startap> a nml:BidirectionalPort,
+esnet:bi-esnet-startap a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort esnet:esnet-startap,
         esnet:startap-esnet .
 
-<urn:ogf:network:esnet:2012:bi-ps> a nml:BidirectionalPort,
+esnet:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort esnet:ps-in,
         esnet:ps-out .
@@ -19,6 +19,15 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 <urn:ogf:network:startap:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.n3" .
+
+esnet:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort esnet:ps-in,
+        esnet:startap-esnet;
+    nml:hasOutboundPort esnet:esnet-startap,
+        esnet:ps-out;
+    nml:locatedAt esnet:location;
+    nsi:managedBy esnet:nsa .
 
 esnet:location a nml:Location,
         owl:NamedIndividual;
@@ -37,16 +46,7 @@ esnet:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://jupiter.es.net:8288/ConnectionService
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing <urn:ogf:network:esnet:2012:ets> .
-
-<urn:ogf:network:esnet:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort esnet:ps-in,
-        esnet:startap-esnet;
-    nml:hasOutboundPort esnet:esnet-startap,
-        esnet:ps-out;
-    nml:locatedAt esnet:location;
-    nsi:managedBy esnet:nsa .
+    nsi:managing esnet:ets .
 
 esnet:esnet-startap a nml:PortGroup,
         owl:NamedIndividual;

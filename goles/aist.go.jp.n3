@@ -1,4 +1,4 @@
-@prefix aist: <urn:ogf:network:aist.go.jp2012:> .
+@prefix aist: <urn:ogf:network:aist.go.jp:2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -19,6 +19,15 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 <urn:ogf:network:jgnx:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3" .
+
+aist:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort aist:jgnx-aist,
+        aist:ps-in;
+    nml:hasOutboundPort aist:aist-jgnx,
+        aist:ps-out;
+    nml:locatedAt aist:location;
+    nsi:managedBy aist:nsa .
 
 aist:location a nml:Location,
         owl:NamedIndividual;
@@ -41,16 +50,7 @@ aist:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://163.220.30.174:8090/nsi_gl_proxy/services/ConnectionServiceProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing <urn:ogf:network:aist.go.jp:2012:ets> .
-
-<urn:ogf:network:aist.go.jp:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort aist:jgnx-aist,
-        aist:ps-in;
-    nml:hasOutboundPort aist:aist-jgnx,
-        aist:ps-out;
-    nml:locatedAt aist:location;
-    nsi:managedBy aist:nsa .
+    nsi:managing aist:ets .
 
 aist:aist-jgnx a nml:PortGroup,
         owl:NamedIndividual;

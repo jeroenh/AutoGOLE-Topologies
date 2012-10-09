@@ -1,6 +1,6 @@
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
-@prefix nordu: <urn:ogf:network:nordu.net2012:> .
+@prefix nordu: <urn:ogf:network:nordu.net:2012:> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
@@ -52,6 +52,23 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.n3" .
 
+nordu:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort nordu:max-nordu,
+        nordu:netherlight-nordu,
+        nordu:onsala-in,
+        nordu:pionier-nordu,
+        nordu:ps-in,
+        nordu:uvalight-nordu;
+    nml:hasOutboundPort nordu:nordu-max,
+        nordu:nordu-netherlight,
+        nordu:nordu-pionier,
+        nordu:nordu-uvalight,
+        nordu:onsala-out,
+        nordu:ps-out;
+    nml:locatedAt nordu:location;
+    nsi:managedBy nordu:nsa .
+
 nordu:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "55.637"^^<http://www.w3.org/2001/XMLSchema#float>;
@@ -70,24 +87,7 @@ nordu:nsa a nsi:NSA,
             skype: henrik.thostrup.jensen
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:csProviderEndpoint "https://orval.grid.aau.dk:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing <urn:ogf:network:nordu.net:2012:ets> .
-
-<urn:ogf:network:nordu.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort nordu:max-nordu,
-        nordu:netherlight-nordu,
-        nordu:onsala-in,
-        nordu:pionier-nordu,
-        nordu:ps-in,
-        nordu:uvalight-nordu;
-    nml:hasOutboundPort nordu:nordu-max,
-        nordu:nordu-netherlight,
-        nordu:nordu-pionier,
-        nordu:nordu-uvalight,
-        nordu:onsala-out,
-        nordu:ps-out;
-    nml:locatedAt nordu:location;
-    nsi:managedBy nordu:nsa .
+    nsi:managing nordu:ets .
 
 nordu:max-nordu a nml:PortGroup,
         owl:NamedIndividual;

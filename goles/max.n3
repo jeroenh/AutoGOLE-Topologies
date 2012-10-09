@@ -1,4 +1,4 @@
-@prefix max: <urn:ogf:network:max2012:> .
+@prefix max: <urn:ogf:network:max:2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -6,17 +6,17 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:max:2012:bi-max-nordu> a nml:BidirectionalPort,
+max:bi-max-nordu a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort max:max-nordu,
         max:nordu-max .
 
-<urn:ogf:network:max:2012:bi-max-startap> a nml:BidirectionalPort,
+max:bi-max-startap a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort max:max-startap,
         max:startap-max .
 
-<urn:ogf:network:max:2012:bi-ps> a nml:BidirectionalPort,
+max:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort max:ps-in,
         max:ps-out .
@@ -28,6 +28,17 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 <urn:ogf:network:startap:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.n3" .
+
+max:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort max:nordu-max,
+        max:ps-in,
+        max:startap-max;
+    nml:hasOutboundPort max:max-nordu,
+        max:max-startap,
+        max:ps-out;
+    nml:locatedAt max:location;
+    nsi:managedBy max:nsa .
 
 max:location a nml:Location,
         owl:NamedIndividual;
@@ -54,18 +65,7 @@ max:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://nsa.maxgigapop.net:9080/NSI/services/ConnectionService/
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing <urn:ogf:network:max:2012:ets> .
-
-<urn:ogf:network:max:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort max:nordu-max,
-        max:ps-in,
-        max:startap-max;
-    nml:hasOutboundPort max:max-nordu,
-        max:max-startap,
-        max:ps-out;
-    nml:locatedAt max:location;
-    nsi:managedBy max:nsa .
+    nsi:managing max:ets .
 
 max:max-nordu a nml:PortGroup,
         owl:NamedIndividual;

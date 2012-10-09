@@ -1,4 +1,4 @@
-@prefix netherlight: <urn:ogf:network:netherlight.net2012:> .
+@prefix netherlight: <urn:ogf:network:netherlight.net:2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -56,6 +56,23 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.n3" .
 
+netherlight:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort netherlight:czechlight-netherlight,
+        netherlight:nordu-netherlight,
+        netherlight:pionier-netherlight,
+        netherlight:ps-in,
+        netherlight:startap-netherlight,
+        netherlight:uvalight-netherlight;
+    nml:hasOutboundPort netherlight:netherlight-czechlight,
+        netherlight:netherlight-nordu,
+        netherlight:netherlight-pionier,
+        netherlight:netherlight-startap,
+        netherlight:netherlight-uvalight,
+        netherlight:ps-out;
+    nml:locatedAt netherlight:location;
+    nsi:managedBy netherlight:nsa .
+
 netherlight:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float>;
@@ -77,24 +94,7 @@ netherlight:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing <urn:ogf:network:netherlight.net:2012:ets> .
-
-<urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort netherlight:czechlight-netherlight,
-        netherlight:nordu-netherlight,
-        netherlight:pionier-netherlight,
-        netherlight:ps-in,
-        netherlight:startap-netherlight,
-        netherlight:uvalight-netherlight;
-    nml:hasOutboundPort netherlight:netherlight-czechlight,
-        netherlight:netherlight-nordu,
-        netherlight:netherlight-pionier,
-        netherlight:netherlight-startap,
-        netherlight:netherlight-uvalight,
-        netherlight:ps-out;
-    nml:locatedAt netherlight:location;
-    nsi:managedBy netherlight:nsa .
+    nsi:managing netherlight:ets .
 
 netherlight:czechlight-netherlight a nml:PortGroup,
         owl:NamedIndividual;

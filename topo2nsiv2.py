@@ -52,7 +52,7 @@ class AGTopology:
         self.topo = self.storev1.value(predicate=RDF.type, object=DTOX.NSNetwork)
         self.urlname = getUrlName(self.topo.split(":")[-1][:-4])
         self.netname = getNetName(self.topo.split(":")[-1][:-4])
-        self.prefix = rdflib.Namespace("urn:ogf:network:%s2012:" % self.urlname)
+        self.prefix = rdflib.Namespace("urn:ogf:network:%s:2012:" % self.urlname)
         self.storev2.bind(self.netname,self.prefix)
         self.init_v2()
     

@@ -1,4 +1,4 @@
-@prefix krlight: <urn:ogf:network:krlight.net2012:> .
+@prefix krlight: <urn:ogf:network:krlight.net:2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -19,6 +19,15 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nml:hasPort krlight:ps-in,
         krlight:ps-out .
+
+krlight:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort krlight:gloriad-krlight,
+        krlight:ps-in;
+    nml:hasOutboundPort krlight:krlight-gloriad,
+        krlight:ps-out;
+    nml:locatedAt krlight:location;
+    nsi:managedBy krlight:nsa .
 
 krlight:location a nml:Location,
         owl:NamedIndividual;
@@ -48,16 +57,7 @@ krlight:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://203.230.116.202:8090/nsi/ConnectionServiceProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing <urn:ogf:network:krlight.net:2012:ets> .
-
-<urn:ogf:network:krlight.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort krlight:gloriad-krlight,
-        krlight:ps-in;
-    nml:hasOutboundPort krlight:krlight-gloriad,
-        krlight:ps-out;
-    nml:locatedAt krlight:location;
-    nsi:managedBy krlight:nsa .
+    nsi:managing krlight:ets .
 
 krlight:gloriad-krlight a nml:PortGroup,
         owl:NamedIndividual;

@@ -1,4 +1,4 @@
-@prefix gloriad: <urn:ogf:network:gloriad2012:> .
+@prefix gloriad: <urn:ogf:network:gloriad:2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -6,17 +6,17 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:gloriad:2012:bi-gloriad-krlight> a nml:BidirectionalPort,
+gloriad:bi-gloriad-krlight a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort gloriad:gloriad-krlight,
         gloriad:krlight-gloriad .
 
-<urn:ogf:network:gloriad:2012:bi-gloriad-startap> a nml:BidirectionalPort,
+gloriad:bi-gloriad-startap a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort gloriad:gloriad-startap,
         gloriad:startap-gloriad .
 
-<urn:ogf:network:gloriad:2012:bi-ps> a nml:BidirectionalPort,
+gloriad:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort gloriad:ps-in,
         gloriad:ps-out .
@@ -28,6 +28,17 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 <urn:ogf:network:startap:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.n3" .
+
+gloriad:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort gloriad:krlight-gloriad,
+        gloriad:ps-in,
+        gloriad:startap-gloriad;
+    nml:hasOutboundPort gloriad:gloriad-krlight,
+        gloriad:gloriad-startap,
+        gloriad:ps-out;
+    nml:locatedAt gloriad:location;
+    nsi:managedBy gloriad:nsa .
 
 gloriad:location a nml:Location,
         owl:NamedIndividual;
@@ -46,18 +57,7 @@ gloriad:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://nsa.gloriad.org:9080/NSI/services/ConnectionService
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing <urn:ogf:network:gloriad:2012:ets> .
-
-<urn:ogf:network:gloriad:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort gloriad:krlight-gloriad,
-        gloriad:ps-in,
-        gloriad:startap-gloriad;
-    nml:hasOutboundPort gloriad:gloriad-krlight,
-        gloriad:gloriad-startap,
-        gloriad:ps-out;
-    nml:locatedAt gloriad:location;
-    nsi:managedBy gloriad:nsa .
+    nsi:managing gloriad:ets .
 
 gloriad:gloriad-krlight a nml:PortGroup,
         owl:NamedIndividual;

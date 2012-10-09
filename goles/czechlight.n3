@@ -1,4 +1,4 @@
-@prefix czechlight: <urn:ogf:network:czechlight2012:> .
+@prefix czechlight: <urn:ogf:network:czechlight:2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -6,12 +6,12 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:czechlight:2012:bi-czechlight-netherlight> a nml:BidirectionalPort,
+czechlight:bi-czechlight-netherlight a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort czechlight:czechlight-netherlight,
         czechlight:netherlight-czechlight .
 
-<urn:ogf:network:czechlight:2012:bi-ps> a nml:BidirectionalPort,
+czechlight:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort czechlight:ps-in,
         czechlight:ps-out .
@@ -19,6 +19,15 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 <urn:ogf:network:netherlight:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3" .
+
+czechlight:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort czechlight:netherlight-czechlight,
+        czechlight:ps-in;
+    nml:hasOutboundPort czechlight:czechlight-netherlight,
+        czechlight:ps-out;
+    nml:locatedAt czechlight:location;
+    nsi:managedBy czechlight:nsa .
 
 czechlight:location a nml:Location,
         owl:NamedIndividual;
@@ -41,16 +50,7 @@ czechlight:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing <urn:ogf:network:czechlight:2012:ets> .
-
-<urn:ogf:network:czechlight:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort czechlight:netherlight-czechlight,
-        czechlight:ps-in;
-    nml:hasOutboundPort czechlight:czechlight-netherlight,
-        czechlight:ps-out;
-    nml:locatedAt czechlight:location;
-    nsi:managedBy czechlight:nsa .
+    nsi:managing czechlight:ets .
 
 czechlight:czechlight-netherlight a nml:PortGroup,
         owl:NamedIndividual;

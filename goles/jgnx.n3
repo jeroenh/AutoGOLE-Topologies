@@ -1,4 +1,4 @@
-@prefix jgnx: <urn:ogf:network:jgnx2012:> .
+@prefix jgnx: <urn:ogf:network:jgnx:2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -10,22 +10,22 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/aist.n3" .
 
-<urn:ogf:network:jgnx:2012:bi-jgnx-aist> a nml:BidirectionalPort,
+jgnx:bi-jgnx-aist a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort jgnx:aist-jgnx,
         jgnx:jgnx-aist .
 
-<urn:ogf:network:jgnx:2012:bi-jgnx-kddi-labs> a nml:BidirectionalPort,
+jgnx:bi-jgnx-kddi-labs a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort jgnx:jgnx-kddi-labs,
         jgnx:kddi-labs-jgnx .
 
-<urn:ogf:network:jgnx:2012:bi-jgnx-startap> a nml:BidirectionalPort,
+jgnx:bi-jgnx-startap a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort jgnx:jgnx-startap,
         jgnx:startap-jgnx .
 
-<urn:ogf:network:jgnx:2012:bi-ps> a nml:BidirectionalPort,
+jgnx:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort jgnx:ps-in,
         jgnx:ps-out .
@@ -37,6 +37,19 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 <urn:ogf:network:startap:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.n3" .
+
+jgnx:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort jgnx:aist-jgnx,
+        jgnx:kddi-labs-jgnx,
+        jgnx:ps-in,
+        jgnx:startap-jgnx;
+    nml:hasOutboundPort jgnx:jgnx-aist,
+        jgnx:jgnx-kddi-labs,
+        jgnx:jgnx-startap,
+        jgnx:ps-out;
+    nml:locatedAt jgnx:location;
+    nsi:managedBy jgnx:nsa .
 
 jgnx:location a nml:Location,
         owl:NamedIndividual;
@@ -59,20 +72,7 @@ jgnx:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://202.180.38.130:8080/connectionprovider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing <urn:ogf:network:jgnx:2012:ets> .
-
-<urn:ogf:network:jgnx:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort jgnx:aist-jgnx,
-        jgnx:kddi-labs-jgnx,
-        jgnx:ps-in,
-        jgnx:startap-jgnx;
-    nml:hasOutboundPort jgnx:jgnx-aist,
-        jgnx:jgnx-kddi-labs,
-        jgnx:jgnx-startap,
-        jgnx:ps-out;
-    nml:locatedAt jgnx:location;
-    nsi:managedBy jgnx:nsa .
+    nsi:managing jgnx:ets .
 
 jgnx:aist-jgnx a nml:PortGroup,
         owl:NamedIndividual;

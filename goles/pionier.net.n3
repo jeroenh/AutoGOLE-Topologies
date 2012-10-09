@@ -2,7 +2,7 @@
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix pionier: <urn:ogf:network:pionier.net2012:> .
+@prefix pionier: <urn:ogf:network:pionier.net:2012:> .
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
@@ -38,6 +38,19 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
     nml:hasPort pionier:ps-in,
         pionier:ps-out .
 
+pionier:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort pionier:geant-pionier,
+        pionier:netherlight-pionier,
+        pionier:nordu-pionier,
+        pionier:ps-in;
+    nml:hasOutboundPort pionier:pionier-geant,
+        pionier:pionier-netherlight,
+        pionier:pionier-nordu,
+        pionier:ps-out;
+    nml:locatedAt pionier:location;
+    nsi:managedBy pionier:nsa .
+
 pionier:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float>;
@@ -57,20 +70,7 @@ pionier:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://194.132.53.174:9080/nsi/ConnectionProviderPort
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing <urn:ogf:network:pionier.net:2012:ets> .
-
-<urn:ogf:network:pionier.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort pionier:geant-pionier,
-        pionier:netherlight-pionier,
-        pionier:nordu-pionier,
-        pionier:ps-in;
-    nml:hasOutboundPort pionier:pionier-geant,
-        pionier:pionier-netherlight,
-        pionier:pionier-nordu,
-        pionier:ps-out;
-    nml:locatedAt pionier:location;
-    nsi:managedBy pionier:nsa .
+    nsi:managing pionier:ets .
 
 pionier:geant-pionier a nml:PortGroup,
         owl:NamedIndividual;

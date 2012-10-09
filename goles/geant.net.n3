@@ -1,4 +1,4 @@
-@prefix geant: <urn:ogf:network:geant.net2012:> .
+@prefix geant: <urn:ogf:network:geant.net:2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -20,6 +20,15 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.n3" .
 
+geant:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort geant:pionier-geant,
+        geant:ps-in;
+    nml:hasOutboundPort geant:geant-pionier,
+        geant:ps-out;
+    nml:locatedAt geant:location;
+    nsi:managedBy geant:nsa .
+
 geant:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "48.859"^^<http://www.w3.org/2001/XMLSchema#float>;
@@ -40,16 +49,7 @@ geant:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://194.132.53.174:9082/nsi/ConnectionProviderPort
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing <urn:ogf:network:geant.net:2012:ets> .
-
-<urn:ogf:network:geant.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort geant:pionier-geant,
-        geant:ps-in;
-    nml:hasOutboundPort geant:geant-pionier,
-        geant:ps-out;
-    nml:locatedAt geant:location;
-    nsi:managedBy geant:nsa .
+    nsi:managing geant:ets .
 
 geant:geant-pionier a nml:PortGroup,
         owl:NamedIndividual;

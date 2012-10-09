@@ -2,7 +2,7 @@
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix startap: <urn:ogf:network:startap.net2012:> .
+@prefix startap: <urn:ogf:network:startap.net:2012:> .
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
@@ -56,6 +56,23 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
     nml:hasPort startap:netherlight-startap,
         startap:startap-netherlight .
 
+startap:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasInboundPort startap:esnet-startap,
+        startap:gloriad-startap,
+        startap:jgnx-startap,
+        startap:max-startap,
+        startap:netherlight-startap,
+        startap:ps-in;
+    nml:hasOutboundPort startap:ps-out,
+        startap:startap-esnet,
+        startap:startap-gloriad,
+        startap:startap-jgnx,
+        startap:startap-max,
+        startap:startap-netherlight;
+    nml:locatedAt startap:location;
+    nsi:managedBy startap:nsa .
+
 startap:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "41.947906"^^<http://www.w3.org/2001/XMLSchema#float>;
@@ -76,24 +93,7 @@ startap:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
              http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
          """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing <urn:ogf:network:startap.net:2012:ets> .
-
-<urn:ogf:network:startap.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasInboundPort startap:esnet-startap,
-        startap:gloriad-startap,
-        startap:jgnx-startap,
-        startap:max-startap,
-        startap:netherlight-startap,
-        startap:ps-in;
-    nml:hasOutboundPort startap:ps-out,
-        startap:startap-esnet,
-        startap:startap-gloriad,
-        startap:startap-jgnx,
-        startap:startap-max,
-        startap:startap-netherlight;
-    nml:locatedAt startap:location;
-    nsi:managedBy startap:nsa .
+    nsi:managing startap:ets .
 
 startap:esnet-startap a nml:PortGroup,
         owl:NamedIndividual;

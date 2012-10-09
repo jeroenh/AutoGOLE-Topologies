@@ -2,7 +2,7 @@
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix uvalight: <urn:ogf:network:uvalight.net2012:> .
+@prefix uvalight: <urn:ogf:network:uvalight.net:2012:> .
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
@@ -51,9 +51,9 @@ uvalight:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://nsa.uvalight.nl:9080/NSI/services/ConnectionService/        
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing <urn:ogf:network:uvalight.net:2012:topology> .
+    nsi:managing uvalight:topology .
 
-<urn:ogf:network:uvalight.net:2012:topology> a nml:Topology,
+uvalight:topology a nml:Topology,
         owl:NamedIndividual;
     nml:hasInboundPort uvalight:netherlight-uvalight,
         uvalight:nordu-uvalight,
