@@ -53,7 +53,7 @@ class AGTopology:
         self.urlname = getUrlName(self.topo.split(":")[-1][:-4])
         self.netname = getNetName(self.topo.split(":")[-1][:-4])
         self.prefix = rdflib.Namespace("urn:ogf:network:%s:2012:" % self.urlname)
-        self.storev2.bind(self.netname,self.prefix)
+        self.storev2.bind(self.netname.replace(".","-"),self.prefix)
         self.init_v2()
     
     def init_v2(self):
@@ -157,7 +157,7 @@ def main():
         graph = topo.convert()
         graph.serialize("goles/%s.owl"%newname,format="pretty-xml")
         graph.serialize("goles/%s.n3"%newname,format="n3")
-        master.bind(newname,topo.prefix)
+        master.bind(newname.replace(".","_"),topo.prefix)
         master += graph
     for s,o in master.subject_objects(NML.isReference):
         master.remove((s,NML.isReference,o))
