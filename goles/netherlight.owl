@@ -87,6 +87,27 @@
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
         <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:ams-83"/>
     </owl:NamedIndividual>
+    
+    <!-- urn:ogf:network:stp:netherlight.ets:chi-80  IRNC -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:netherlight.ets:man-80">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:ams2-80"/>
+    </owl:NamedIndividual> 
+    <!-- urn:ogf:network:stp:netherlight.ets:chi-81  IRNC --> 
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:netherlight.ets:man-81">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:ams2-81"/>
+    </owl:NamedIndividual> 
+    <!-- urn:ogf:network:stp:netherlight.ets:chi-82  IRNC -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:netherlight.ets:man-82">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:ams2-82"/>
+    </owl:NamedIndividual> 
+    <!-- urn:ogf:network:stp:netherlight.ets:chi-83  IRNC -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:netherlight.ets:man-83">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:ams2-83"/>
+    </owl:NamedIndividual>
  
     <!-- urn:ogf:network:stp:netherlight.ets:poz-80 -->
     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:netherlight.ets:poz-80">
@@ -165,6 +186,10 @@
         <hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-81"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-82"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-83"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:man-80"/> 
+        <hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:man-81"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:man-82"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:man-83"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-80"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-81"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-82"/>

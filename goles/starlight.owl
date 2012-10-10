@@ -147,6 +147,27 @@
          <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:sl-83"/>
      </owl:NamedIndividual>
 
+     <!-- urn:ogf:network:stp:starlight.ets:ams2-80     -->    
+        <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:ams2-80">
+            <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+            <connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:man-80"/>
+        </owl:NamedIndividual>                   
+        <!-- urn:ogf:network:stp:starlight.ets:ams2-81    -->
+        <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:ams2-81">
+            <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+            <connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:man-81"/>
+        </owl:NamedIndividual>
+        <!-- urn:ogf:network:stp:starlight.ets:ams2-82    -->
+        <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:ams2-82">
+            <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+            <connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:man-82"/>
+        </owl:NamedIndividual>
+        <!-- urn:ogf:network:stp:starlight.ets:ams2-83    -->
+        <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:ams2-83">
+            <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+            <connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:man-83"/>
+        </owl:NamedIndividual>
+
      <!-- urn:ogf:network:nsnetwork:starlight.ets -->
 
      <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:starlight.ets">
@@ -160,6 +181,10 @@
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-81"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-82"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-83"/>
+         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams2-80"/> 
+         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams2-81"/>
+         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams2-82"/>
+         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams2-83"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:esn-80"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:esn-81"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:esn-82"/>
