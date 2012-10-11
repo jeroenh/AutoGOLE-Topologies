@@ -30,9 +30,9 @@
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:krlight.ets">
         <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/krlight.owl"/>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:max.ets">
+    <!-- <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:max.ets">
         <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/max.owl"/>
-    </owl:NamedIndividual>
+    </owl:NamedIndividual> -->
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:netherlight.ets">
         <rdfs:seeAlso rdf:resource="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/netherlight.owl"/>
     </owl:NamedIndividual>
