@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import rdflib
+import collections
 
 # This file implements an extremely limited converter for DTOX to NSI topology files
 # It expects a certain format, and only converts those parts it knows about.
@@ -23,6 +24,7 @@ golenames = {
     "geant": "geant.net",
     "krlight": "krlight.net"
 }
+MAPPING = collections.defaultdict(list)
 def getUrlName(name):
     if name in golenames:
         return golenames[name]
@@ -75,6 +77,7 @@ class AGTopology:
         self.storev2.add((topo,NSI.managedBy,nsa))
         self.storev2.add((nsa,NSI.managing,topo))
         oldnsa = self.storev1.value(subject=oldtopo,predicate=DTOX.managedBy)
+        MAPPING[nsa] = oldnsa
         adminContact = self.storev1.value(subject=oldnsa,predicate=DTOX.adminContact)
         self.storev2.add((nsa,NSI.adminContact,adminContact))
         csProviderEndpoint = self.storev1.value(subject=oldnsa,predicate=DTOX.csProviderEndpoint)
@@ -91,7 +94,7 @@ class AGTopology:
         self.storev2.add((location,NML.long,long))
         return topo
     
-    def addUniPorts(self,stp,topo,target=None):
+    def addPorts(self,stp,topo,target=None):
         if target:
             outPort = rdflib.term.URIRef(self.prefix+self.netname+"-"+target)
             inPort = rdflib.term.URIRef(self.prefix+target+"-"+self.netname)
@@ -126,6 +129,7 @@ class AGTopology:
         self.storev2.add((biport,RDF.type,NML.BidirectionalPort))
         self.storev2.add((biport,NML.hasPort,outPort))
         self.storev2.add((biport,NML.hasPort,inPort))
+        return biport
         
     def convert(self):
         # Convert the Topology and its basic attributes
@@ -134,14 +138,15 @@ class AGTopology:
         for stp in self.storev1.objects(self.topo,DTOX.hasSTP):
             target = self.storev1.value(subject=stp,predicate=DTOX.connectedTo)
             # We take off the invalid network urn prefix
-            stp = stp.split(":")[-1]
+            localstp = stp.split(":")[-1]
             # and then we take off the label suffix
             # This means we'll add each port 4 times. Fortunately rdflib is robust to that.
-            stp = stp.split("-")[0]
+            localstp = localstp.split("-")[0]
             if target:
                 # We take out the network name of the other end to pass as target
                 target = getNetName(target.split(":")[4][:-4])
-            self.addUniPorts(stp,topov2,target)
+            biport = self.addPorts(localstp,topov2,target)
+            MAPPING[biport].append(str(stp))
         return self.storev2
 
 def main():
@@ -159,9 +164,15 @@ def main():
         graph.serialize("goles/%s.n3"%newname,format="n3")
         master.bind(newname.replace(".","_"),topo.prefix)
         master += graph
+    # Remove the isReference functions from the master topology,
+    # since it has resolved all references already.
     for s,o in master.subject_objects(NML.isReference):
         master.remove((s,NML.isReference,o))
     master.serialize("master.owl",format="pretty-xml")
     master.serialize("master.n3",format="n3")
+    f = open("mapping.txt",'w')
+    for x in MAPPING:
+        f.write("%s: %s\n" % (x,MAPPING[x]))
+    f.close()
 if __name__ == '__main__':
     main()
