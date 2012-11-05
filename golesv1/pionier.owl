@@ -95,17 +95,17 @@
         <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-80"/>
     </owl:NamedIndividual>
     <!-- urn:ogf:network:stp:pionier.ets:cph-80 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cph-80">
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cph-81">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
         <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-81"/>
     </owl:NamedIndividual>
     <!-- urn:ogf:network:stp:pionier.ets:cph-80 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cph-80">
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cph-82">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
         <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-82"/>
     </owl:NamedIndividual>
     <!-- urn:ogf:network:stp:pionier.ets:cph-80 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cph-80">
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cph-83">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
         <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-83"/>
     </owl:NamedIndividual>
@@ -128,9 +128,9 @@
         <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-82"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-83"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cph-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cph-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cph-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cph-80"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cph-81"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cph-82"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cph-83"/>
         <managedBy rdf:resource="urn:ogf:network:nsa:pionier"/>
         <locatedAt rdf:resource="urn:ogf:network:nsnetwork:pionier.ets:location"/>
     </owl:NamedIndividual> 
