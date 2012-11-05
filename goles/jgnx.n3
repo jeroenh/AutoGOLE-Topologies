@@ -10,6 +10,14 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/aist.n3" .
 
+<urn:ogf:network:kddi-labs:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/kddi-labs.n3" .
+
+<urn:ogf:network:startap:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.n3" .
+
 jgnx:bi-jgnx-aist a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort jgnx:aist-jgnx,
@@ -30,16 +38,12 @@ jgnx:bi-ps a nml:BidirectionalPort,
     nml:hasPort jgnx:ps-in,
         jgnx:ps-out .
 
-<urn:ogf:network:kddi-labs:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/kddi-labs.n3" .
-
-<urn:ogf:network:startap:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.n3" .
-
 jgnx:ets a nml:Topology,
         owl:NamedIndividual;
+    nml:hasBidirectionalPort jgnx:bi-jgnx-aist,
+        jgnx:bi-jgnx-kddi-labs,
+        jgnx:bi-jgnx-startap,
+        jgnx:bi-ps;
     nml:hasInboundPort jgnx:aist-jgnx,
         jgnx:kddi-labs-jgnx,
         jgnx:ps-in,

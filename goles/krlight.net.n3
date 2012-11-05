@@ -10,18 +10,10 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.n3" .
 
-<urn:ogf:network:krlight:2012:bi-krlight-gloriad> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort krlight:gloriad-krlight,
-        krlight:krlight-gloriad .
-
-<urn:ogf:network:krlight:2012:bi-ps> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort krlight:ps-in,
-        krlight:ps-out .
-
 krlight:ets a nml:Topology,
         owl:NamedIndividual;
+    nml:hasBidirectionalPort <urn:ogf:network:krlight:2012:bi-krlight-gloriad>,
+        <urn:ogf:network:krlight:2012:bi-ps>;
     nml:hasInboundPort krlight:gloriad-krlight,
         krlight:ps-in;
     nml:hasOutboundPort krlight:krlight-gloriad,
@@ -58,6 +50,16 @@ krlight:nsa a nsi:NSA,
             http://203.230.116.202:8090/nsi/ConnectionServiceProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing krlight:ets .
+
+<urn:ogf:network:krlight:2012:bi-krlight-gloriad> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort krlight:gloriad-krlight,
+        krlight:krlight-gloriad .
+
+<urn:ogf:network:krlight:2012:bi-ps> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort krlight:ps-in,
+        krlight:ps-out .
 
 krlight:gloriad-krlight a nml:PortGroup,
         owl:NamedIndividual;

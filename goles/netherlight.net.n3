@@ -10,36 +10,6 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/czechlight.n3" .
 
-<urn:ogf:network:netherlight:2012:bi-netherlight-czechlight> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort netherlight:czechlight-netherlight,
-        netherlight:netherlight-czechlight .
-
-<urn:ogf:network:netherlight:2012:bi-netherlight-nordu> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort netherlight:netherlight-nordu,
-        netherlight:nordu-netherlight .
-
-<urn:ogf:network:netherlight:2012:bi-netherlight-pionier> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort netherlight:netherlight-pionier,
-        netherlight:pionier-netherlight .
-
-<urn:ogf:network:netherlight:2012:bi-netherlight-startap> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort netherlight:netherlight-startap,
-        netherlight:startap-netherlight .
-
-<urn:ogf:network:netherlight:2012:bi-netherlight-uvalight> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort netherlight:netherlight-uvalight,
-        netherlight:uvalight-netherlight .
-
-<urn:ogf:network:netherlight:2012:bi-ps> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort netherlight:ps-in,
-        netherlight:ps-out .
-
 <urn:ogf:network:nordu:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.n3" .
@@ -58,6 +28,12 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 netherlight:ets a nml:Topology,
         owl:NamedIndividual;
+    nml:hasBidirectionalPort <urn:ogf:network:netherlight:2012:bi-netherlight-czechlight>,
+        <urn:ogf:network:netherlight:2012:bi-netherlight-nordu>,
+        <urn:ogf:network:netherlight:2012:bi-netherlight-pionier>,
+        <urn:ogf:network:netherlight:2012:bi-netherlight-startap>,
+        <urn:ogf:network:netherlight:2012:bi-netherlight-uvalight>,
+        <urn:ogf:network:netherlight:2012:bi-ps>;
     nml:hasInboundPort netherlight:czechlight-netherlight,
         netherlight:nordu-netherlight,
         netherlight:pionier-netherlight,
@@ -95,6 +71,36 @@ netherlight:nsa a nsi:NSA,
             http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing netherlight:ets .
+
+<urn:ogf:network:netherlight:2012:bi-netherlight-czechlight> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:czechlight-netherlight,
+        netherlight:netherlight-czechlight .
+
+<urn:ogf:network:netherlight:2012:bi-netherlight-nordu> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:netherlight-nordu,
+        netherlight:nordu-netherlight .
+
+<urn:ogf:network:netherlight:2012:bi-netherlight-pionier> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:netherlight-pionier,
+        netherlight:pionier-netherlight .
+
+<urn:ogf:network:netherlight:2012:bi-netherlight-startap> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:netherlight-startap,
+        netherlight:startap-netherlight .
+
+<urn:ogf:network:netherlight:2012:bi-netherlight-uvalight> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:netherlight-uvalight,
+        netherlight:uvalight-netherlight .
+
+<urn:ogf:network:netherlight:2012:bi-ps> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:ps-in,
+        netherlight:ps-out .
 
 netherlight:czechlight-netherlight a nml:PortGroup,
         owl:NamedIndividual;

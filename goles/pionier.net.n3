@@ -18,28 +18,12 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.n3" .
 
-<urn:ogf:network:pionier:2012:bi-pionier-geant> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort pionier:geant-pionier,
-        pionier:pionier-geant .
-
-<urn:ogf:network:pionier:2012:bi-pionier-netherlight> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort pionier:netherlight-pionier,
-        pionier:pionier-netherlight .
-
-<urn:ogf:network:pionier:2012:bi-pionier-nordu> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort pionier:nordu-pionier,
-        pionier:pionier-nordu .
-
-<urn:ogf:network:pionier:2012:bi-ps> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort pionier:ps-in,
-        pionier:ps-out .
-
 pionier:ets a nml:Topology,
         owl:NamedIndividual;
+    nml:hasBidirectionalPort <urn:ogf:network:pionier:2012:bi-pionier-geant>,
+        <urn:ogf:network:pionier:2012:bi-pionier-netherlight>,
+        <urn:ogf:network:pionier:2012:bi-pionier-nordu>,
+        <urn:ogf:network:pionier:2012:bi-ps>;
     nml:hasInboundPort pionier:geant-pionier,
         pionier:netherlight-pionier,
         pionier:nordu-pionier,
@@ -71,6 +55,26 @@ pionier:nsa a nsi:NSA,
             http://194.132.53.174:9080/nsi/ConnectionProviderPort
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing pionier:ets .
+
+<urn:ogf:network:pionier:2012:bi-pionier-geant> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier:geant-pionier,
+        pionier:pionier-geant .
+
+<urn:ogf:network:pionier:2012:bi-pionier-netherlight> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier:netherlight-pionier,
+        pionier:pionier-netherlight .
+
+<urn:ogf:network:pionier:2012:bi-pionier-nordu> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier:nordu-pionier,
+        pionier:pionier-nordu .
+
+<urn:ogf:network:pionier:2012:bi-ps> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier:ps-in,
+        pionier:ps-out .
 
 pionier:geant-pionier a nml:PortGroup,
         owl:NamedIndividual;

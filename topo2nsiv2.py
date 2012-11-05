@@ -129,6 +129,7 @@ class AGTopology:
         self.storev2.add((biport,RDF.type,NML.BidirectionalPort))
         self.storev2.add((biport,NML.hasPort,outPort))
         self.storev2.add((biport,NML.hasPort,inPort))
+        self.storev2.add((topo,NML.hasBidirectionalPort,biport))
         return biport
         
     def convert(self):

@@ -22,6 +22,8 @@ kddi-labs:bi-ps a nml:BidirectionalPort,
 
 kddi-labs:ets a nml:Topology,
         owl:NamedIndividual;
+    nml:hasBidirectionalPort kddi-labs:bi-kddi-labs-jgnx,
+        kddi-labs:bi-ps;
     nml:hasInboundPort kddi-labs:jgnx-kddi-labs,
         kddi-labs:ps-in;
     nml:hasOutboundPort kddi-labs:kddi-labs-jgnx,
