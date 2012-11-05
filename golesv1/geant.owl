@@ -108,7 +108,7 @@
             skype= michalb.psnc
         </adminContact>
         <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://194.132.53.174:9082/nsi/ConnectionProviderPort
+           http://gnscdemo.geant.net:8080/nsi/ConnectionProvider
         </csProviderEndpoint>
         <rdfs:comment xml:lang="en">Position : [2800,100]</rdfs:comment>
     </owl:NamedIndividual>

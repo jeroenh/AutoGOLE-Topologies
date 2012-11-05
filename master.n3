@@ -210,7 +210,7 @@ geant_net:nsa a nsi:NSA,
             skype= michalb.psnc
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:csProviderEndpoint """
-            http://194.132.53.174:9082/nsi/ConnectionProviderPort
+           http://gnscdemo.geant.net:8080/nsi/ConnectionProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing geant_net:ets .
 
@@ -670,7 +670,7 @@ pionier_net:nsa a nsi:NSA,
             skype= michalb.psnc
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:csProviderEndpoint """
-            http://194.132.53.174:9080/nsi/ConnectionProviderPort
+            http://194.132.53.174:9280/nsi/ConnectionProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing pionier_net:ets .
 

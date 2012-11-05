@@ -171,11 +171,12 @@ def main():
         master.remove((s,NML.isReference,o))
     master.serialize("master.owl",format="pretty-xml")
     master.serialize("master.n3",format="n3")
-    f = open("mapping.txt",'w')
-    for x in MAPPING:
-        if type(MAPPING[x]) is list:
-            MAPPING[x].sort()
-        f.write("%s: %s\n" % (x,MAPPING[x]))
-    f.close()
+    # Write the mapping file. Remember to undo the jerrification:
+    # f = open("mapping.txt",'w')
+    # for x in MAPPING:
+    #     if type(MAPPING[x]) is list:
+    #         MAPPING[x].sort()
+    #     f.write("%s: %s\n" % (x,MAPPING[x]))
+    # f.close()
 if __name__ == '__main__':
     main()

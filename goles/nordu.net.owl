@@ -1,82 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
 >
-  <owl:NamedIndividual rdf:about="urn:ogf:network:max:2012:ets">
-    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/max.n3</nsi:isReference>
+  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
+    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
+  </rdf:Description>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:netherlight:2012:ets">
+    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3</nsi:isReference>
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
   </owl:NamedIndividual>
   <owl:NamedIndividual rdf:about="urn:ogf:network:uvalight:2012:topology">
     <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.n3</nsi:isReference>
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:netherlight:2012:ets">
-    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3</nsi:isReference>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-  </owl:NamedIndividual>
-  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
-    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
-  </rdf:Description>
   <owl:NamedIndividual rdf:about="urn:ogf:network:pionier:2012:ets">
     <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.n3</nsi:isReference>
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:max-nordu">
+  <owl:NamedIndividual rdf:about="urn:ogf:network:max:2012:ets">
+    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/max.n3</nsi:isReference>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:nordu-uvalight">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nml:isAlias rdf:resource="urn:ogf:network:uvalight:2012:nordu-uvalight"/>
     <nmleth:vlans>1780-1783</nmleth:vlans>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:nordu-pionier">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nml:isAlias rdf:resource="urn:ogf:network:pionier:2012:nordu-pionier"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:max-nordu">
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
     <nml:isAlias rdf:resource="urn:ogf:network:max:2012:max-nordu"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu:2012:bi-nordu-uvalight">
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:uvalight-nordu">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nml:isAlias rdf:resource="urn:ogf:network:uvalight:2012:uvalight-nordu"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:nordu-uvalight">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nml:isAlias rdf:resource="urn:ogf:network:uvalight:2012:nordu-uvalight"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:nordu-netherlight">
     <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-    <nml:isAlias rdf:resource="urn:ogf:network:netherlight:2012:nordu-netherlight"/>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu:2012:bi-nordu-pionier">
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:pionier-nordu">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nml:isAlias rdf:resource="urn:ogf:network:pionier:2012:pionier-nordu"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:nordu-pionier">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nml:isAlias rdf:resource="urn:ogf:network:pionier:2012:nordu-pionier"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu:2012:bi-ps">
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+    <nml:hasPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:ps-out">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasPort>
+    <nml:hasPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:ps-in">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasPort>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:nordu-max">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
+  <nml:Location rdf:about="urn:ogf:network:nordu.net:2012:location">
+    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">55.637</nml:lat>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.641</nml:long>
+  </nml:Location>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:onsala-out">
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-    <nml:isAlias rdf:resource="urn:ogf:network:max:2012:nordu-max"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
   </owl:NamedIndividual>
   <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:onsala-in">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:nordu-max">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nml:isAlias rdf:resource="urn:ogf:network:max:2012:nordu-max"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
   </owl:NamedIndividual>
   <nsi:NSA rdf:about="urn:ogf:network:nordu.net:2012:nsa">
     <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -89,75 +84,80 @@
             email: htj@nordu.net
             skype: henrik.thostrup.jensen
         </nsi:adminContact>
+    <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orval.grid.aau.dk:9443/NSI/services/ConnectionService</nsi:csProviderEndpoint>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <nsi:managing>
       <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:ets">
-        <nml:locatedAt rdf:resource="urn:ogf:network:nordu.net:2012:location"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:nordu.net:2012:max-nordu"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:nordu.net:2012:ps-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:nordu.net:2012:uvalight-nordu"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:nordu.net:2012:netherlight-nordu"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:nordu.net:2012:pionier-nordu"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:nordu.net:2012:onsala-in"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:nordu:2012:bi-nordu-netherlight"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:nordu:2012:bi-ps"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:nordu:2012:bi-nordu-uvalight"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:nordu:2012:bi-onsala"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:nordu:2012:bi-nordu-pionier"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:nordu:2012:bi-nordu-max"/>
         <nsi:managedBy rdf:resource="urn:ogf:network:nordu.net:2012:nsa"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:nordu.net:2012:onsala-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:nordu.net:2012:nordu-pionier"/>
         <nml:hasOutboundPort rdf:resource="urn:ogf:network:nordu.net:2012:ps-out"/>
         <nml:hasOutboundPort rdf:resource="urn:ogf:network:nordu.net:2012:nordu-netherlight"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:nordu.net:2012:nordu-pionier"/>
         <nml:hasOutboundPort rdf:resource="urn:ogf:network:nordu.net:2012:nordu-uvalight"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:nordu.net:2012:onsala-out"/>
         <nml:hasOutboundPort rdf:resource="urn:ogf:network:nordu.net:2012:nordu-max"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:nordu.net:2012:onsala-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:nordu.net:2012:max-nordu"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:nordu.net:2012:pionier-nordu"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:nordu.net:2012:netherlight-nordu"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:nordu.net:2012:uvalight-nordu"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:nordu.net:2012:ps-in"/>
+        <nml:locatedAt rdf:resource="urn:ogf:network:nordu.net:2012:location"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:nordu:2012:bi-nordu-netherlight"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:nordu:2012:bi-ps"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:nordu:2012:bi-onsala"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:nordu:2012:bi-nordu-uvalight"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:nordu:2012:bi-nordu-pionier"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:nordu:2012:bi-nordu-max"/>
         <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
       </owl:NamedIndividual>
     </nsi:managing>
-    <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orval.grid.aau.dk:9443/NSI/services/ConnectionService</nsi:csProviderEndpoint>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </nsi:NSA>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:ps-in">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu:2012:bi-ps">
-    <nml:hasPort rdf:resource="urn:ogf:network:nordu.net:2012:ps-in"/>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu:2012:bi-nordu-netherlight">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
     <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:ps-out">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:nordu-netherlight">
         <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nml:isAlias rdf:resource="urn:ogf:network:netherlight:2012:nordu-netherlight"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
       </owl:NamedIndividual>
     </nml:hasPort>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+    <nml:hasPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:netherlight-nordu">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nml:isAlias rdf:resource="urn:ogf:network:netherlight:2012:netherlight-nordu"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasPort>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:netherlight-nordu">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:pionier-nordu">
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-    <nml:isAlias rdf:resource="urn:ogf:network:netherlight:2012:netherlight-nordu"/>
+    <nml:isAlias rdf:resource="urn:ogf:network:pionier:2012:pionier-nordu"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
   </owl:NamedIndividual>
-  <nml:Location rdf:about="urn:ogf:network:nordu.net:2012:location">
-    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">55.637</nml:lat>
-    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.641</nml:long>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:Location>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu:2012:bi-nordu-pionier">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:nordu.net:2012:nordu-pionier"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:nordu.net:2012:pionier-nordu"/>
+  </owl:NamedIndividual>
   <owl:NamedIndividual rdf:about="urn:ogf:network:nordu:2012:bi-nordu-max">
-    <nml:hasPort rdf:resource="urn:ogf:network:nordu.net:2012:max-nordu"/>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
     <nml:hasPort rdf:resource="urn:ogf:network:nordu.net:2012:nordu-max"/>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu:2012:bi-nordu-netherlight">
-    <nml:hasPort rdf:resource="urn:ogf:network:nordu.net:2012:nordu-netherlight"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:nordu.net:2012:netherlight-nordu"/>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:onsala-out">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:nordu.net:2012:max-nordu"/>
   </owl:NamedIndividual>
   <owl:NamedIndividual rdf:about="urn:ogf:network:nordu:2012:bi-onsala">
-    <nml:hasPort rdf:resource="urn:ogf:network:nordu.net:2012:onsala-in"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:nordu.net:2012:onsala-out"/>
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:nordu.net:2012:onsala-out"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:nordu.net:2012:onsala-in"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu:2012:bi-nordu-uvalight">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+    <nml:hasPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:uvalight-nordu">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nml:isAlias rdf:resource="urn:ogf:network:uvalight:2012:uvalight-nordu"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasPort>
+    <nml:hasPort rdf:resource="urn:ogf:network:nordu.net:2012:nordu-uvalight"/>
   </owl:NamedIndividual>
 </rdf:RDF>
