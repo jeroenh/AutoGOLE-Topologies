@@ -22,14 +22,44 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.net.n3" .
 
+nordu:bi-nordu-max a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort nordu:max-nordu,
+        nordu:nordu-max .
+
+nordu:bi-nordu-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort nordu:netherlight-nordu,
+        nordu:nordu-netherlight .
+
+nordu:bi-nordu-pionier a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort nordu:nordu-pionier,
+        nordu:pionier-nordu .
+
+nordu:bi-nordu-uvalight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort nordu:nordu-uvalight,
+        nordu:uvalight-nordu .
+
+nordu:bi-onsala a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort nordu:onsala-in,
+        nordu:onsala-out .
+
+nordu:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort nordu:ps-in,
+        nordu:ps-out .
+
 nordu:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort <urn:ogf:network:nordu:2012:bi-nordu-max>,
-        <urn:ogf:network:nordu:2012:bi-nordu-netherlight>,
-        <urn:ogf:network:nordu:2012:bi-nordu-pionier>,
-        <urn:ogf:network:nordu:2012:bi-nordu-uvalight>,
-        <urn:ogf:network:nordu:2012:bi-onsala>,
-        <urn:ogf:network:nordu:2012:bi-ps>;
+    nml:hasBidirectionalPort nordu:bi-nordu-max,
+        nordu:bi-nordu-netherlight,
+        nordu:bi-nordu-pionier,
+        nordu:bi-nordu-uvalight,
+        nordu:bi-onsala,
+        nordu:bi-ps;
     nml:hasInboundPort nordu:max-nordu,
         nordu:netherlight-nordu,
         nordu:onsala-in,
@@ -64,36 +94,6 @@ nordu:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:csProviderEndpoint "https://orval.grid.aau.dk:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing nordu:ets .
-
-<urn:ogf:network:nordu:2012:bi-nordu-max> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu:max-nordu,
-        nordu:nordu-max .
-
-<urn:ogf:network:nordu:2012:bi-nordu-netherlight> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu:netherlight-nordu,
-        nordu:nordu-netherlight .
-
-<urn:ogf:network:nordu:2012:bi-nordu-pionier> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu:nordu-pionier,
-        nordu:pionier-nordu .
-
-<urn:ogf:network:nordu:2012:bi-nordu-uvalight> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu:nordu-uvalight,
-        nordu:uvalight-nordu .
-
-<urn:ogf:network:nordu:2012:bi-onsala> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu:onsala-in,
-        nordu:onsala-out .
-
-<urn:ogf:network:nordu:2012:bi-ps> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu:ps-in,
-        nordu:ps-out .
 
 nordu:max-nordu a nml:PortGroup,
         owl:NamedIndividual;

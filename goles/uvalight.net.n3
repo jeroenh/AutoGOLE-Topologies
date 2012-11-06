@@ -14,6 +14,21 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3" .
 
+uvalight:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort uvalight:ps-in,
+        uvalight:ps-out .
+
+uvalight:bi-uvalight-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort uvalight:netherlight-uvalight,
+        uvalight:uvalight-netherlight .
+
+uvalight:bi-uvalight-nordu a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort uvalight:nordu-uvalight,
+        uvalight:uvalight-nordu .
+
 uvalight:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float>;
@@ -40,9 +55,9 @@ uvalight:nsa a nsi:NSA,
 
 uvalight:topology a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort <urn:ogf:network:uvalight:2012:bi-ps>,
-        <urn:ogf:network:uvalight:2012:bi-uvalight-netherlight>,
-        <urn:ogf:network:uvalight:2012:bi-uvalight-nordu>;
+    nml:hasBidirectionalPort uvalight:bi-ps,
+        uvalight:bi-uvalight-netherlight,
+        uvalight:bi-uvalight-nordu;
     nml:hasInboundPort uvalight:netherlight-uvalight,
         uvalight:nordu-uvalight,
         uvalight:ps-in;
@@ -51,21 +66,6 @@ uvalight:topology a nml:Topology,
         uvalight:uvalight-nordu;
     nml:locatedAt uvalight:location;
     nsi:managedBy uvalight:nsa .
-
-<urn:ogf:network:uvalight:2012:bi-ps> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort uvalight:ps-in,
-        uvalight:ps-out .
-
-<urn:ogf:network:uvalight:2012:bi-uvalight-netherlight> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort uvalight:netherlight-uvalight,
-        uvalight:uvalight-netherlight .
-
-<urn:ogf:network:uvalight:2012:bi-uvalight-nordu> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort uvalight:nordu-uvalight,
-        uvalight:uvalight-nordu .
 
 uvalight:netherlight-uvalight a nml:PortGroup,
         owl:NamedIndividual;

@@ -118,11 +118,9 @@ class AGTopology:
         self.storev2.add((topo,NML.hasOutboundPort,outPort))
         self.storev2.add((topo,NML.hasInboundPort,inPort))
         if targetUrl and targetNet:
-            biport = rdflib.term.URIRef("urn:ogf:network:%s:2012:bi-%s-%s" %
-                                            (self.netname,self.netname,targetNet))
+            biport = self.prefix["bi-%s-%s" % (self.netname,targetNet)]
         else:
-            biport = rdflib.term.URIRef("urn:ogf:network:%s:2012:bi-%s" %
-                                            (self.netname,stp))
+            biport = self.prefix["bi-%s" % (stp)]
         self.storev2.add((biport,RDF.type,OWL.NamedIndividual))
         self.storev2.add((biport,RDF.type,NML.BidirectionalPort))
         self.storev2.add((biport,NML.hasPort,outPort))

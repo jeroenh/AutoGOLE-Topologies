@@ -10,10 +10,20 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.n3" .
 
+geant:bi-geant-pionier a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort geant:geant-pionier,
+        geant:pionier-geant .
+
+geant:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort geant:ps-in,
+        geant:ps-out .
+
 geant:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort <urn:ogf:network:geant:2012:bi-geant-pionier>,
-        <urn:ogf:network:geant:2012:bi-ps>;
+    nml:hasBidirectionalPort geant:bi-geant-pionier,
+        geant:bi-ps;
     nml:hasInboundPort geant:pionier-geant,
         geant:ps-in;
     nml:hasOutboundPort geant:geant-pionier,
@@ -42,16 +52,6 @@ geant:nsa a nsi:NSA,
            http://gnscdemo.geant.net:8080/nsi/ConnectionProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing geant:ets .
-
-<urn:ogf:network:geant:2012:bi-geant-pionier> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort geant:geant-pionier,
-        geant:pionier-geant .
-
-<urn:ogf:network:geant:2012:bi-ps> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort geant:ps-in,
-        geant:ps-out .
 
 geant:geant-pionier a nml:PortGroup,
         owl:NamedIndividual;

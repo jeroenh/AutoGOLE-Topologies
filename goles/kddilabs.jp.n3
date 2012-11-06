@@ -10,10 +10,20 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3" .
 
+kddilabs:bi-kddilabs-jgnx a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort kddilabs:jgnx-kddilabs,
+        kddilabs:kddilabs-jgnx .
+
+kddilabs:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort kddilabs:ps-in,
+        kddilabs:ps-out .
+
 kddilabs:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort <urn:ogf:network:kddilabs:2012:bi-kddilabs-jgnx>,
-        <urn:ogf:network:kddilabs:2012:bi-ps>;
+    nml:hasBidirectionalPort kddilabs:bi-kddilabs-jgnx,
+        kddilabs:bi-ps;
     nml:hasInboundPort kddilabs:jgnx-kddilabs,
         kddilabs:ps-in;
     nml:hasOutboundPort kddilabs:kddilabs-jgnx,
@@ -43,16 +53,6 @@ kddilabs:nsa a nsi:NSA,
             http://210.196.65.114:9352/connectionprovider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing kddilabs:ets .
-
-<urn:ogf:network:kddilabs:2012:bi-kddilabs-jgnx> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort kddilabs:jgnx-kddilabs,
-        kddilabs:kddilabs-jgnx .
-
-<urn:ogf:network:kddilabs:2012:bi-ps> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort kddilabs:ps-in,
-        kddilabs:ps-out .
 
 kddilabs:jgnx-kddilabs a nml:PortGroup,
         owl:NamedIndividual;

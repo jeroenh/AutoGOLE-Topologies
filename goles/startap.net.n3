@@ -26,14 +26,44 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3" .
 
+startap:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort startap:ps-in,
+        startap:ps-out .
+
+startap:bi-startap-esnet a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort startap:esnet-startap,
+        startap:startap-esnet .
+
+startap:bi-startap-gloriad a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort startap:gloriad-startap,
+        startap:startap-gloriad .
+
+startap:bi-startap-jgnx a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort startap:jgnx-startap,
+        startap:startap-jgnx .
+
+startap:bi-startap-max a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort startap:max-startap,
+        startap:startap-max .
+
+startap:bi-startap-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort startap:netherlight-startap,
+        startap:startap-netherlight .
+
 startap:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort <urn:ogf:network:startap:2012:bi-ps>,
-        <urn:ogf:network:startap:2012:bi-startap-esnet>,
-        <urn:ogf:network:startap:2012:bi-startap-gloriad>,
-        <urn:ogf:network:startap:2012:bi-startap-jgnx>,
-        <urn:ogf:network:startap:2012:bi-startap-max>,
-        <urn:ogf:network:startap:2012:bi-startap-netherlight>;
+    nml:hasBidirectionalPort startap:bi-ps,
+        startap:bi-startap-esnet,
+        startap:bi-startap-gloriad,
+        startap:bi-startap-jgnx,
+        startap:bi-startap-max,
+        startap:bi-startap-netherlight;
     nml:hasInboundPort startap:esnet-startap,
         startap:gloriad-startap,
         startap:jgnx-startap,
@@ -70,36 +100,6 @@ startap:nsa a nsi:NSA,
              http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
          """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing startap:ets .
-
-<urn:ogf:network:startap:2012:bi-ps> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort startap:ps-in,
-        startap:ps-out .
-
-<urn:ogf:network:startap:2012:bi-startap-esnet> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort startap:esnet-startap,
-        startap:startap-esnet .
-
-<urn:ogf:network:startap:2012:bi-startap-gloriad> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort startap:gloriad-startap,
-        startap:startap-gloriad .
-
-<urn:ogf:network:startap:2012:bi-startap-jgnx> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort startap:jgnx-startap,
-        startap:startap-jgnx .
-
-<urn:ogf:network:startap:2012:bi-startap-max> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort startap:max-startap,
-        startap:startap-max .
-
-<urn:ogf:network:startap:2012:bi-startap-netherlight> a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort startap:netherlight-startap,
-        startap:startap-netherlight .
 
 startap:esnet-startap a nml:PortGroup,
         owl:NamedIndividual;
