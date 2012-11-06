@@ -1,4 +1,4 @@
-@prefix kddi-labs: <urn:ogf:network:kddi-labs:2012:> .
+@prefix kddilabs: <urn:ogf:network:kddilabs.jp:2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -10,33 +10,23 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3" .
 
-kddi-labs:bi-kddi-labs-jgnx a nml:BidirectionalPort,
+kddilabs:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasPort kddi-labs:jgnx-kddi-labs,
-        kddi-labs:kddi-labs-jgnx .
+    nml:hasBidirectionalPort <urn:ogf:network:kddilabs:2012:bi-kddilabs-jgnx>,
+        <urn:ogf:network:kddilabs:2012:bi-ps>;
+    nml:hasInboundPort kddilabs:jgnx-kddilabs,
+        kddilabs:ps-in;
+    nml:hasOutboundPort kddilabs:kddilabs-jgnx,
+        kddilabs:ps-out;
+    nml:locatedAt kddilabs:location;
+    nsi:managedBy kddilabs:nsa .
 
-kddi-labs:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort kddi-labs:ps-in,
-        kddi-labs:ps-out .
-
-kddi-labs:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort kddi-labs:bi-kddi-labs-jgnx,
-        kddi-labs:bi-ps;
-    nml:hasInboundPort kddi-labs:jgnx-kddi-labs,
-        kddi-labs:ps-in;
-    nml:hasOutboundPort kddi-labs:kddi-labs-jgnx,
-        kddi-labs:ps-out;
-    nml:locatedAt kddi-labs:location;
-    nsi:managedBy kddi-labs:nsa .
-
-kddi-labs:location a nml:Location,
+kddilabs:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "35.879"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "139.517"^^<http://www.w3.org/2001/XMLSchema#float> .
 
-kddi-labs:nsa a nsi:NSA,
+kddilabs:nsa a nsi:NSA,
         owl:NamedIndividual;
     nsi:adminContact """
             NSA: G-Lambda/KDDILabs (KDDI Labs) 
@@ -52,23 +42,33 @@ kddi-labs:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://210.196.65.114:9352/connectionprovider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing kddi-labs:ets .
+    nsi:managing kddilabs:ets .
 
-kddi-labs:jgnx-kddi-labs a nml:PortGroup,
+<urn:ogf:network:kddilabs:2012:bi-kddilabs-jgnx> a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx:2012:jgnx-kddi-labs>;
+    nml:hasPort kddilabs:jgnx-kddilabs,
+        kddilabs:kddilabs-jgnx .
+
+<urn:ogf:network:kddilabs:2012:bi-ps> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort kddilabs:ps-in,
+        kddilabs:ps-out .
+
+kddilabs:jgnx-kddilabs a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:jgnx:2012:jgnx-kddilabs>;
     nmleth:vlans "1780-1783" .
 
-kddi-labs:kddi-labs-jgnx a nml:PortGroup,
+kddilabs:kddilabs-jgnx a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx:2012:kddi-labs-jgnx>;
+    nml:isAlias <urn:ogf:network:jgnx:2012:kddilabs-jgnx>;
     nmleth:vlans "1780-1783" .
 
-kddi-labs:ps-in a nml:PortGroup,
+kddilabs:ps-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-kddi-labs:ps-out a nml:PortGroup,
+kddilabs:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 

@@ -10,9 +10,9 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/aist.go.jp.n3" .
 
-<urn:ogf:network:kddi-labs:2012:ets> a nml:Topology,
+<urn:ogf:network:kddilabs.jp:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/kddi-labs.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/kddilabs.jp.n3" .
 
 <urn:ogf:network:startap.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
@@ -23,10 +23,10 @@ jgnx:bi-jgnx-aist a nml:BidirectionalPort,
     nml:hasPort jgnx:aist-jgnx,
         jgnx:jgnx-aist .
 
-jgnx:bi-jgnx-kddi-labs a nml:BidirectionalPort,
+jgnx:bi-jgnx-kddilabs a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort jgnx:jgnx-kddi-labs,
-        jgnx:kddi-labs-jgnx .
+    nml:hasPort jgnx:jgnx-kddilabs,
+        jgnx:kddilabs-jgnx .
 
 jgnx:bi-jgnx-startap a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -41,15 +41,15 @@ jgnx:bi-ps a nml:BidirectionalPort,
 jgnx:ets a nml:Topology,
         owl:NamedIndividual;
     nml:hasBidirectionalPort jgnx:bi-jgnx-aist,
-        jgnx:bi-jgnx-kddi-labs,
+        jgnx:bi-jgnx-kddilabs,
         jgnx:bi-jgnx-startap,
         jgnx:bi-ps;
     nml:hasInboundPort jgnx:aist-jgnx,
-        jgnx:kddi-labs-jgnx,
+        jgnx:kddilabs-jgnx,
         jgnx:ps-in,
         jgnx:startap-jgnx;
     nml:hasOutboundPort jgnx:jgnx-aist,
-        jgnx:jgnx-kddi-labs,
+        jgnx:jgnx-kddilabs,
         jgnx:jgnx-startap,
         jgnx:ps-out;
     nml:locatedAt jgnx:location;
@@ -88,9 +88,9 @@ jgnx:jgnx-aist a nml:PortGroup,
     nml:isAlias <urn:ogf:network:aist.go.jp:2012:jgnx-aist>;
     nmleth:vlans "1780-1783" .
 
-jgnx:jgnx-kddi-labs a nml:PortGroup,
+jgnx:jgnx-kddilabs a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:kddi-labs:2012:jgnx-kddi-labs>;
+    nml:isAlias <urn:ogf:network:kddilabs.jp:2012:jgnx-kddilabs>;
     nmleth:vlans "1780-1783" .
 
 jgnx:jgnx-startap a nml:PortGroup,
@@ -98,9 +98,9 @@ jgnx:jgnx-startap a nml:PortGroup,
     nml:isAlias <urn:ogf:network:startap.net:2012:jgnx-startap>;
     nmleth:vlans "1780-1783" .
 
-jgnx:kddi-labs-jgnx a nml:PortGroup,
+jgnx:kddilabs-jgnx a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:kddi-labs:2012:kddi-labs-jgnx>;
+    nml:isAlias <urn:ogf:network:kddilabs.jp:2012:kddilabs-jgnx>;
     nmleth:vlans "1780-1783" .
 
 jgnx:ps-in a nml:PortGroup,

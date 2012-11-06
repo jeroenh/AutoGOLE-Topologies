@@ -21,6 +21,7 @@ golenames = {
     "pionier": "pionier.net",
     "aist": "aist.go.jp",
     "kddi": "kddilabs.jp",
+    "kddi-labs": "kddilabs.jp",
     "geant": "geant.net",
     "krlight": "krlight.net"
 }

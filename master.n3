@@ -4,7 +4,7 @@
 @prefix geant_net: <urn:ogf:network:geant.net:2012:> .
 @prefix gloriad: <urn:ogf:network:gloriad:2012:> .
 @prefix jgnx: <urn:ogf:network:jgnx:2012:> .
-@prefix kddi-labs: <urn:ogf:network:kddi-labs:2012:> .
+@prefix kddilabs_jp: <urn:ogf:network:kddilabs.jp:2012:> .
 @prefix krlight_net: <urn:ogf:network:krlight.net:2012:> .
 @prefix max: <urn:ogf:network:max:2012:> .
 @prefix netherlight_net: <urn:ogf:network:netherlight.net:2012:> .
@@ -248,10 +248,10 @@ jgnx:bi-jgnx-aist a nml:BidirectionalPort,
     nml:hasPort jgnx:aist-jgnx,
         jgnx:jgnx-aist .
 
-jgnx:bi-jgnx-kddi-labs a nml:BidirectionalPort,
+jgnx:bi-jgnx-kddilabs a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort jgnx:jgnx-kddi-labs,
-        jgnx:kddi-labs-jgnx .
+    nml:hasPort jgnx:jgnx-kddilabs,
+        jgnx:kddilabs-jgnx .
 
 jgnx:bi-jgnx-startap a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -266,15 +266,15 @@ jgnx:bi-ps a nml:BidirectionalPort,
 jgnx:ets a nml:Topology,
         owl:NamedIndividual;
     nml:hasBidirectionalPort jgnx:bi-jgnx-aist,
-        jgnx:bi-jgnx-kddi-labs,
+        jgnx:bi-jgnx-kddilabs,
         jgnx:bi-jgnx-startap,
         jgnx:bi-ps;
     nml:hasInboundPort jgnx:aist-jgnx,
-        jgnx:kddi-labs-jgnx,
+        jgnx:kddilabs-jgnx,
         jgnx:ps-in,
         jgnx:startap-jgnx;
     nml:hasOutboundPort jgnx:jgnx-aist,
-        jgnx:jgnx-kddi-labs,
+        jgnx:jgnx-kddilabs,
         jgnx:jgnx-startap,
         jgnx:ps-out;
     nml:locatedAt jgnx:location;
@@ -304,34 +304,24 @@ jgnx:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing jgnx:ets .
 
-kddi-labs:bi-kddi-labs-jgnx a nml:BidirectionalPort,
+kddilabs_jp:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasPort kddi-labs:jgnx-kddi-labs,
-        kddi-labs:kddi-labs-jgnx .
+    nml:hasBidirectionalPort <urn:ogf:network:kddilabs:2012:bi-kddilabs-jgnx>,
+        <urn:ogf:network:kddilabs:2012:bi-ps>;
+    nml:hasInboundPort kddilabs_jp:jgnx-kddilabs,
+        kddilabs_jp:ps-in;
+    nml:hasOutboundPort kddilabs_jp:kddilabs-jgnx,
+        kddilabs_jp:ps-out;
+    nml:locatedAt kddilabs_jp:location;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/kddilabs.jp.n3";
+    nsi:managedBy kddilabs_jp:nsa .
 
-kddi-labs:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort kddi-labs:ps-in,
-        kddi-labs:ps-out .
-
-kddi-labs:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort kddi-labs:bi-kddi-labs-jgnx,
-        kddi-labs:bi-ps;
-    nml:hasInboundPort kddi-labs:jgnx-kddi-labs,
-        kddi-labs:ps-in;
-    nml:hasOutboundPort kddi-labs:kddi-labs-jgnx,
-        kddi-labs:ps-out;
-    nml:locatedAt kddi-labs:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/kddi-labs.n3";
-    nsi:managedBy kddi-labs:nsa .
-
-kddi-labs:location a nml:Location,
+kddilabs_jp:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "35.879"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "139.517"^^<http://www.w3.org/2001/XMLSchema#float> .
 
-kddi-labs:nsa a nsi:NSA,
+kddilabs_jp:nsa a nsi:NSA,
         owl:NamedIndividual;
     nsi:adminContact """
             NSA: G-Lambda/KDDILabs (KDDI Labs) 
@@ -347,7 +337,17 @@ kddi-labs:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://210.196.65.114:9352/connectionprovider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing kddi-labs:ets .
+    nsi:managing kddilabs_jp:ets .
+
+<urn:ogf:network:kddilabs:2012:bi-kddilabs-jgnx> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort kddilabs_jp:jgnx-kddilabs,
+        kddilabs_jp:kddilabs-jgnx .
+
+<urn:ogf:network:kddilabs:2012:bi-ps> a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort kddilabs_jp:ps-in,
+        kddilabs_jp:ps-out .
 
 krlight_net:ets a nml:Topology,
         owl:NamedIndividual;
@@ -846,11 +846,11 @@ jgnx:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-kddi-labs:ps-in a nml:PortGroup,
+kddilabs_jp:ps-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-kddi-labs:ps-out a nml:PortGroup,
+kddilabs_jp:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
@@ -988,9 +988,9 @@ jgnx:jgnx-aist a nml:PortGroup,
     nml:isAlias aist_go_jp:jgnx-aist;
     nmleth:vlans "1780-1783" .
 
-jgnx:jgnx-kddi-labs a nml:PortGroup,
+jgnx:jgnx-kddilabs a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias kddi-labs:jgnx-kddi-labs;
+    nml:isAlias kddilabs_jp:jgnx-kddilabs;
     nmleth:vlans "1780-1783" .
 
 jgnx:jgnx-startap a nml:PortGroup,
@@ -998,9 +998,9 @@ jgnx:jgnx-startap a nml:PortGroup,
     nml:isAlias startap_net:jgnx-startap;
     nmleth:vlans "1780-1783" .
 
-jgnx:kddi-labs-jgnx a nml:PortGroup,
+jgnx:kddilabs-jgnx a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias kddi-labs:kddi-labs-jgnx;
+    nml:isAlias kddilabs_jp:kddilabs-jgnx;
     nmleth:vlans "1780-1783" .
 
 jgnx:startap-jgnx a nml:PortGroup,
@@ -1008,14 +1008,14 @@ jgnx:startap-jgnx a nml:PortGroup,
     nml:isAlias startap_net:startap-jgnx;
     nmleth:vlans "1780-1783" .
 
-kddi-labs:jgnx-kddi-labs a nml:PortGroup,
+kddilabs_jp:jgnx-kddilabs a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias jgnx:jgnx-kddi-labs;
+    nml:isAlias jgnx:jgnx-kddilabs;
     nmleth:vlans "1780-1783" .
 
-kddi-labs:kddi-labs-jgnx a nml:PortGroup,
+kddilabs_jp:kddilabs-jgnx a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias jgnx:kddi-labs-jgnx;
+    nml:isAlias jgnx:kddilabs-jgnx;
     nmleth:vlans "1780-1783" .
 
 krlight_net:gloriad-krlight a nml:PortGroup,
