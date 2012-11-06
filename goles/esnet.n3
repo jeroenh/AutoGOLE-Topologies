@@ -6,9 +6,9 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:startap:2012:ets> a nml:Topology,
+<urn:ogf:network:startap.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3" .
 
 esnet:bi-esnet-startap a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -52,7 +52,7 @@ esnet:nsa a nsi:NSA,
 
 esnet:esnet-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:startap:2012:esnet-startap>;
+    nml:isAlias <urn:ogf:network:startap.net:2012:esnet-startap>;
     nmleth:vlans "1780-1783" .
 
 esnet:ps-in a nml:PortGroup,
@@ -65,6 +65,6 @@ esnet:ps-out a nml:PortGroup,
 
 esnet:startap-esnet a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:startap:2012:startap-esnet>;
+    nml:isAlias <urn:ogf:network:startap.net:2012:startap-esnet>;
     nmleth:vlans "1780-1783" .
 

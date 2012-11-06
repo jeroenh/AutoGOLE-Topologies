@@ -6,13 +6,13 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:nordu:2012:ets> a nml:Topology,
+<urn:ogf:network:nordu.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3" .
 
-<urn:ogf:network:startap:2012:ets> a nml:Topology,
+<urn:ogf:network:startap.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3" .
 
 max:bi-max-nordu a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -72,17 +72,17 @@ max:nsa a nsi:NSA,
 
 max:max-nordu a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:nordu:2012:max-nordu>;
+    nml:isAlias <urn:ogf:network:nordu.net:2012:max-nordu>;
     nmleth:vlans "1780-1783" .
 
 max:max-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:startap:2012:max-startap>;
+    nml:isAlias <urn:ogf:network:startap.net:2012:max-startap>;
     nmleth:vlans "1780-1783" .
 
 max:nordu-max a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:nordu:2012:nordu-max>;
+    nml:isAlias <urn:ogf:network:nordu.net:2012:nordu-max>;
     nmleth:vlans "1780-1783" .
 
 max:ps-in a nml:PortGroup,
@@ -95,6 +95,6 @@ max:ps-out a nml:PortGroup,
 
 max:startap-max a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:startap:2012:startap-max>;
+    nml:isAlias <urn:ogf:network:startap.net:2012:startap-max>;
     nmleth:vlans "1780-1783" .
 

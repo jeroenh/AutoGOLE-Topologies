@@ -26,16 +26,13 @@ golenames = {
 }
 MAPPING = collections.defaultdict(list)
 def getUrlName(name):
-    if name in golenames:
+    if name in golenames.keys():
         return golenames[name]
     else:
         return name
 def getNetName(name):
     return getUrlName(name).split(".")[0]
 def getTargetTopo(target):
-    # First catch things that don't have a target:
-    if not target:
-        return target
     # UvA believes there is more to GOLEs than just Ethernet.
     if "uva" in target:
         return rdflib.term.URIRef("urn:ogf:network:%s:2012:topology" % target)
@@ -94,21 +91,21 @@ class AGTopology:
         self.storev2.add((location,NML.long,long))
         return topo
     
-    def addPorts(self,stp,topo,target=None):
-        if target:
-            outPort = rdflib.term.URIRef(self.prefix+self.netname+"-"+target)
-            inPort = rdflib.term.URIRef(self.prefix+target+"-"+self.netname)
+    def addPorts(self,stp,topo,targetUrl=None,targetNet=None):
+        if targetUrl and targetNet:
+            outPort = rdflib.term.URIRef(self.prefix+self.netname+"-"+targetNet)
+            inPort = rdflib.term.URIRef(self.prefix+targetNet+"-"+self.netname)
             outTarget = rdflib.term.URIRef("urn:ogf:network:%s:2012:%s-%s" %
-                                                 (target,target,self.netname))
+                                                 (targetUrl,targetNet,self.netname))
             inTarget = rdflib.term.URIRef("urn:ogf:network:%s:2012:%s-%s" %
-                                                 (target,self.netname,target))
+                                                 (targetUrl,self.netname,targetNet))
             self.storev2.add((outPort,NML.isAlias,inTarget))
             self.storev2.add((inPort,NML.isAlias,outTarget))
-            targettopo = getTargetTopo(target)
+            targettopo = getTargetTopo(targetUrl)
             self.storev2.add((targettopo,RDF.type,NML.Topology))
             self.storev2.add((targettopo,RDF.type,OWL.NamedIndividual))
             self.storev2.add((targettopo,NSI.isReference,
-                rdflib.Literal("https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/%s.n3" % target)))
+                rdflib.Literal("https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/%s.n3" % targetUrl)))
         else:
             outPort = rdflib.term.URIRef(self.prefix+stp+"-out")
             inPort = rdflib.term.URIRef(self.prefix+stp+"-in")
@@ -119,9 +116,9 @@ class AGTopology:
             self.storev2.add((NMLETH.vlans, OWL.subPropertyOf, NML.hasLabelGroup))
         self.storev2.add((topo,NML.hasOutboundPort,outPort))
         self.storev2.add((topo,NML.hasInboundPort,inPort))
-        if target:
+        if targetUrl and targetNet:
             biport = rdflib.term.URIRef("urn:ogf:network:%s:2012:bi-%s-%s" %
-                                            (self.netname,self.netname,target))
+                                            (self.netname,self.netname,targetNet))
         else:
             biport = rdflib.term.URIRef("urn:ogf:network:%s:2012:bi-%s" %
                                             (self.netname,stp))
@@ -145,8 +142,12 @@ class AGTopology:
             localstp = localstp.split("-")[0]
             if target:
                 # We take out the network name of the other end to pass as target
-                target = getNetName(target.split(":")[4][:-4])
-            biport = self.addPorts(localstp,topov2,target)
+                # We need both the URL name for the right prefix, and the netname for nicer postfixes
+                targetUrl = getUrlName(target.split(":")[4][:-4])
+                targetNet = getNetName(target.split(":")[4][:-4])
+                biport = self.addPorts(localstp,topov2,targetUrl,targetNet)
+            else:
+                biport = self.addPorts(localstp,topov2)
             MAPPING[biport].append(str(stp))
         return self.storev2
 

@@ -1,61 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
   xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
-  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <nml:Topology rdf:about="urn:ogf:network:netherlight:2012:ets">
-    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3</nsi:isReference>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:Topology>
-  <nml:Topology rdf:about="urn:ogf:network:jgnx:2012:ets">
-    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3</nsi:isReference>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:Topology>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:max:2012:ets">
+    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/max.n3</nsi:isReference>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
+  </owl:NamedIndividual>
   <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
     <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
   </rdf:Description>
-  <nml:Topology rdf:about="urn:ogf:network:max:2012:ets">
-    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/max.n3</nsi:isReference>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:Topology>
-  <nml:Topology rdf:about="urn:ogf:network:esnet:2012:ets">
-    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/esnet.n3</nsi:isReference>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:Topology>
-  <nml:Topology rdf:about="urn:ogf:network:gloriad:2012:ets">
+  <owl:NamedIndividual rdf:about="urn:ogf:network:jgnx:2012:ets">
+    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3</nsi:isReference>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:gloriad:2012:ets">
     <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.n3</nsi:isReference>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:Topology>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:startap-esnet">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-    <nml:isAlias rdf:resource="urn:ogf:network:esnet:2012:startap-esnet"/>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:esnet-startap">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-    <nml:isAlias rdf:resource="urn:ogf:network:esnet:2012:esnet-startap"/>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:esnet:2012:ets">
+    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/esnet.n3</nsi:isReference>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:startap:2012:bi-ps">
+  <owl:NamedIndividual rdf:about="urn:ogf:network:netherlight.net:2012:ets">
+    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3</nsi:isReference>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:ps-out">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:max-startap">
+    <nml:isAlias rdf:resource="urn:ogf:network:max:2012:max-startap"/>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:startap-gloriad">
+    <nml:isAlias rdf:resource="urn:ogf:network:gloriad:2012:startap-gloriad"/>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:startap:2012:bi-startap-gloriad">
+    <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:startap-gloriad"/>
+    <nml:hasPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:gloriad-startap">
+        <nml:isAlias rdf:resource="urn:ogf:network:gloriad:2012:gloriad-startap"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasPort>
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:ps-in">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:ps-out">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
   </owl:NamedIndividual>
-  <nsi:NSA rdf:about="urn:ogf:network:startap.net:2012:nsa">
-    <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+  <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:jgnx-startap">
+    <nml:isAlias rdf:resource="urn:ogf:network:jgnx:2012:jgnx-startap"/>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:location">
+    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.947906</nml:lat>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
+    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.655791</nml:long>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:ets">
+    <nml:locatedAt rdf:resource="urn:ogf:network:startap.net:2012:location"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:startap.net:2012:ps-out"/>
+    <nml:hasOutboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:startap-max">
+        <nml:isAlias rdf:resource="urn:ogf:network:max:2012:startap-max"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:startap-netherlight">
+        <nml:isAlias rdf:resource="urn:ogf:network:netherlight.net:2012:startap-netherlight"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:startap.net:2012:startap-gloriad"/>
+    <nml:hasOutboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:startap-esnet">
+        <nml:isAlias rdf:resource="urn:ogf:network:esnet:2012:startap-esnet"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:startap-jgnx">
+        <nml:isAlias rdf:resource="urn:ogf:network:jgnx:2012:startap-jgnx"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasOutboundPort>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
+    <nml:hasInboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:esnet-startap">
+        <nml:isAlias rdf:resource="urn:ogf:network:esnet:2012:esnet-startap"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:startap.net:2012:gloriad-startap"/>
+    <nml:hasInboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:ps-in">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:startap.net:2012:max-startap"/>
+    <nml:hasInboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:netherlight-startap">
+        <nml:isAlias rdf:resource="urn:ogf:network:netherlight.net:2012:netherlight-startap"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:startap.net:2012:jgnx-startap"/>
+    <nsi:managedBy>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:nsa">
+        <nsi:managing rdf:resource="urn:ogf:network:startap.net:2012:ets"/>
+        <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
              NSA: OpenNSA (NORDUnet) over Argia 
              Project manager: Scott Campbell 
              email: scott.campbell@crc.gc.ca  
@@ -65,108 +133,47 @@
              email: htj@nordu.net 
              skype: henrik.thostrup.jensen
          </nsi:adminContact>
-    <nsi:managing>
-      <nml:Topology rdf:about="urn:ogf:network:startap.net:2012:ets">
-        <nml:locatedAt rdf:resource="urn:ogf:network:startap.net:2012:location"/>
-        <nsi:managedBy rdf:resource="urn:ogf:network:startap.net:2012:nsa"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:startap.net:2012:startap-netherlight"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:startap.net:2012:startap-esnet"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:startap.net:2012:ps-out"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:startap.net:2012:startap-gloriad"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:startap.net:2012:startap-max"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:startap.net:2012:startap-jgnx"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:startap.net:2012:esnet-startap"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:startap.net:2012:gloriad-startap"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:startap.net:2012:ps-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:startap.net:2012:max-startap"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:startap.net:2012:jgnx-startap"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:startap.net:2012:netherlight-startap"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:startap:2012:bi-startap-jgnx"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:startap:2012:bi-startap-max"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:startap:2012:bi-startap-gloriad"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:startap:2012:bi-ps"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:startap:2012:bi-startap-netherlight"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:startap:2012:bi-startap-esnet"/>
-      </nml:Topology>
-    </nsi:managing>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
+        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
              http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
          </nsi:csProviderEndpoint>
-  </nsi:NSA>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:startap:2012:bi-startap-max">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:startap-max">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nml:isAlias rdf:resource="urn:ogf:network:max:2012:startap-max"/>
       </owl:NamedIndividual>
-    </nml:hasPort>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:max-startap">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nml:isAlias rdf:resource="urn:ogf:network:max:2012:max-startap"/>
+    </nsi:managedBy>
+    <nml:hasBidirectionalPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:startap:2012:bi-ps">
+        <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:ps-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:ps-in"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
       </owl:NamedIndividual>
-    </nml:hasPort>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:jgnx-startap">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-    <nml:isAlias rdf:resource="urn:ogf:network:jgnx:2012:jgnx-startap"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:gloriad-startap">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-    <nml:isAlias rdf:resource="urn:ogf:network:gloriad:2012:gloriad-startap"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:startap-jgnx">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-    <nml:isAlias rdf:resource="urn:ogf:network:jgnx:2012:startap-jgnx"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:startap:2012:bi-startap-esnet">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:startap-esnet"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:esnet-startap"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:startap-gloriad">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-    <nml:isAlias rdf:resource="urn:ogf:network:gloriad:2012:startap-gloriad"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:startap:2012:bi-startap-netherlight">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:startap-netherlight">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nml:isAlias rdf:resource="urn:ogf:network:netherlight:2012:startap-netherlight"/>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:startap:2012:bi-startap-gloriad"/>
+    <nml:hasBidirectionalPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:startap:2012:bi-startap-jgnx">
+        <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:jgnx-startap"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:startap-jgnx"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
       </owl:NamedIndividual>
-    </nml:hasPort>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:netherlight-startap">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nml:isAlias rdf:resource="urn:ogf:network:netherlight:2012:netherlight-startap"/>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:startap:2012:bi-startap-max">
+        <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:max-startap"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:startap-max"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
       </owl:NamedIndividual>
-    </nml:hasPort>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:startap:2012:bi-startap-jgnx">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:startap-jgnx"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:jgnx-startap"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:startap.net:2012:location">
-    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.947906</nml:lat>
-    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.655791</nml:long>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:startap:2012:bi-startap-gloriad">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:startap-gloriad"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:gloriad-startap"/>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:startap:2012:bi-startap-esnet">
+        <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:esnet-startap"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:startap-esnet"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+      </owl:NamedIndividual>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:startap:2012:bi-startap-netherlight">
+        <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:netherlight-startap"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:startap.net:2012:startap-netherlight"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+      </owl:NamedIndividual>
+    </nml:hasBidirectionalPort>
   </owl:NamedIndividual>
 </rdf:RDF>

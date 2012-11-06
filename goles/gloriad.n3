@@ -6,13 +6,13 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:krlight:2012:ets> a nml:Topology,
+<urn:ogf:network:krlight.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/krlight.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/krlight.net.n3" .
 
-<urn:ogf:network:startap:2012:ets> a nml:Topology,
+<urn:ogf:network:startap.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3" .
 
 gloriad:bi-gloriad-krlight a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -64,17 +64,17 @@ gloriad:nsa a nsi:NSA,
 
 gloriad:gloriad-krlight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:krlight:2012:gloriad-krlight>;
+    nml:isAlias <urn:ogf:network:krlight.net:2012:gloriad-krlight>;
     nmleth:vlans "1780-1783" .
 
 gloriad:gloriad-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:startap:2012:gloriad-startap>;
+    nml:isAlias <urn:ogf:network:startap.net:2012:gloriad-startap>;
     nmleth:vlans "1780-1783" .
 
 gloriad:krlight-gloriad a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:krlight:2012:krlight-gloriad>;
+    nml:isAlias <urn:ogf:network:krlight.net:2012:krlight-gloriad>;
     nmleth:vlans "1780-1783" .
 
 gloriad:ps-in a nml:PortGroup,
@@ -87,6 +87,6 @@ gloriad:ps-out a nml:PortGroup,
 
 gloriad:startap-gloriad a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:startap:2012:startap-gloriad>;
+    nml:isAlias <urn:ogf:network:startap.net:2012:startap-gloriad>;
     nmleth:vlans "1780-1783" .
 

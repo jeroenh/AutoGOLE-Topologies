@@ -6,9 +6,9 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:pionier:2012:ets> a nml:Topology,
+<urn:ogf:network:pionier.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.n3" .
 
 geant:ets a nml:Topology,
         owl:NamedIndividual;
@@ -55,12 +55,12 @@ geant:nsa a nsi:NSA,
 
 geant:geant-pionier a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier:2012:geant-pionier>;
+    nml:isAlias <urn:ogf:network:pionier.net:2012:geant-pionier>;
     nmleth:vlans "1780-1783" .
 
 geant:pionier-geant a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier:2012:pionier-geant>;
+    nml:isAlias <urn:ogf:network:pionier.net:2012:pionier-geant>;
     nmleth:vlans "1780-1783" .
 
 geant:ps-in a nml:PortGroup,

@@ -6,17 +6,17 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:geant:2012:ets> a nml:Topology,
+<urn:ogf:network:geant.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/geant.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/geant.net.n3" .
 
-<urn:ogf:network:netherlight:2012:ets> a nml:Topology,
+<urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3" .
 
-<urn:ogf:network:nordu:2012:ets> a nml:Topology,
+<urn:ogf:network:nordu.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3" .
 
 pionier:ets a nml:Topology,
         owl:NamedIndividual;
@@ -78,32 +78,32 @@ pionier:nsa a nsi:NSA,
 
 pionier:geant-pionier a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:geant:2012:geant-pionier>;
+    nml:isAlias <urn:ogf:network:geant.net:2012:geant-pionier>;
     nmleth:vlans "1780-1783" .
 
 pionier:netherlight-pionier a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight:2012:netherlight-pionier>;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-pionier>;
     nmleth:vlans "1780-1783" .
 
 pionier:nordu-pionier a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:nordu:2012:nordu-pionier>;
+    nml:isAlias <urn:ogf:network:nordu.net:2012:nordu-pionier>;
     nmleth:vlans "1780-1783" .
 
 pionier:pionier-geant a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:geant:2012:pionier-geant>;
+    nml:isAlias <urn:ogf:network:geant.net:2012:pionier-geant>;
     nmleth:vlans "1780-1783" .
 
 pionier:pionier-netherlight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight:2012:pionier-netherlight>;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:pionier-netherlight>;
     nmleth:vlans "1780-1783" .
 
 pionier:pionier-nordu a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:nordu:2012:pionier-nordu>;
+    nml:isAlias <urn:ogf:network:nordu.net:2012:pionier-nordu>;
     nmleth:vlans "1780-1783" .
 
 pionier:ps-in a nml:PortGroup,

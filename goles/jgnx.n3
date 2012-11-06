@@ -6,17 +6,17 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:aist:2012:ets> a nml:Topology,
+<urn:ogf:network:aist.go.jp:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/aist.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/aist.go.jp.n3" .
 
 <urn:ogf:network:kddi-labs:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/kddi-labs.n3" .
 
-<urn:ogf:network:startap:2012:ets> a nml:Topology,
+<urn:ogf:network:startap.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3" .
 
 jgnx:bi-jgnx-aist a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -80,12 +80,12 @@ jgnx:nsa a nsi:NSA,
 
 jgnx:aist-jgnx a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:aist:2012:aist-jgnx>;
+    nml:isAlias <urn:ogf:network:aist.go.jp:2012:aist-jgnx>;
     nmleth:vlans "1780-1783" .
 
 jgnx:jgnx-aist a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:aist:2012:jgnx-aist>;
+    nml:isAlias <urn:ogf:network:aist.go.jp:2012:jgnx-aist>;
     nmleth:vlans "1780-1783" .
 
 jgnx:jgnx-kddi-labs a nml:PortGroup,
@@ -95,7 +95,7 @@ jgnx:jgnx-kddi-labs a nml:PortGroup,
 
 jgnx:jgnx-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:startap:2012:jgnx-startap>;
+    nml:isAlias <urn:ogf:network:startap.net:2012:jgnx-startap>;
     nmleth:vlans "1780-1783" .
 
 jgnx:kddi-labs-jgnx a nml:PortGroup,
@@ -113,6 +113,6 @@ jgnx:ps-out a nml:PortGroup,
 
 jgnx:startap-jgnx a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:startap:2012:startap-jgnx>;
+    nml:isAlias <urn:ogf:network:startap.net:2012:startap-jgnx>;
     nmleth:vlans "1780-1783" .
 

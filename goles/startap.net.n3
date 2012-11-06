@@ -22,9 +22,9 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/max.n3" .
 
-<urn:ogf:network:netherlight:2012:ets> a nml:Topology,
+<urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3" .
 
 startap:ets a nml:Topology,
         owl:NamedIndividual;
@@ -123,7 +123,7 @@ startap:max-startap a nml:PortGroup,
 
 startap:netherlight-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight:2012:netherlight-startap>;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-startap>;
     nmleth:vlans "1780-1783" .
 
 startap:ps-in a nml:PortGroup,
@@ -156,6 +156,6 @@ startap:startap-max a nml:PortGroup,
 
 startap:startap-netherlight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight:2012:startap-netherlight>;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:startap-netherlight>;
     nmleth:vlans "1780-1783" .
 
