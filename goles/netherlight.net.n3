@@ -10,6 +10,10 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/czechlight.n3" .
 
+<urn:ogf:network:geant.net:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/geant.net.n3" .
+
 <urn:ogf:network:nordu.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3" .
@@ -30,6 +34,11 @@ netherlight:bi-netherlight-czechlight a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort netherlight:czechlight-netherlight,
         netherlight:netherlight-czechlight .
+
+netherlight:bi-netherlight-geant a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight:geant-netherlight,
+        netherlight:netherlight-geant .
 
 netherlight:bi-netherlight-nordu a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -59,18 +68,21 @@ netherlight:bi-ps a nml:BidirectionalPort,
 netherlight:ets a nml:Topology,
         owl:NamedIndividual;
     nml:hasBidirectionalPort netherlight:bi-netherlight-czechlight,
+        netherlight:bi-netherlight-geant,
         netherlight:bi-netherlight-nordu,
         netherlight:bi-netherlight-pionier,
         netherlight:bi-netherlight-startap,
         netherlight:bi-netherlight-uvalight,
         netherlight:bi-ps;
     nml:hasInboundPort netherlight:czechlight-netherlight,
+        netherlight:geant-netherlight,
         netherlight:nordu-netherlight,
         netherlight:pionier-netherlight,
         netherlight:ps-in,
         netherlight:startap-netherlight,
         netherlight:uvalight-netherlight;
     nml:hasOutboundPort netherlight:netherlight-czechlight,
+        netherlight:netherlight-geant,
         netherlight:netherlight-nordu,
         netherlight:netherlight-pionier,
         netherlight:netherlight-startap,
@@ -107,9 +119,19 @@ netherlight:czechlight-netherlight a nml:PortGroup,
     nml:isAlias <urn:ogf:network:czechlight:2012:czechlight-netherlight>;
     nmleth:vlans "1780-1783" .
 
+netherlight:geant-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:geant.net:2012:geant-netherlight>;
+    nmleth:vlans "1780-1783" .
+
 netherlight:netherlight-czechlight a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias <urn:ogf:network:czechlight:2012:netherlight-czechlight>;
+    nmleth:vlans "1780-1783" .
+
+netherlight:netherlight-geant a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:geant.net:2012:netherlight-geant>;
     nmleth:vlans "1780-1783" .
 
 netherlight:netherlight-nordu a nml:PortGroup,

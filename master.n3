@@ -151,6 +151,11 @@ es_net:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing es_net:ets .
 
+geant_net:bi-geant-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort geant_net:geant-netherlight,
+        geant_net:netherlight-geant .
+
 geant_net:bi-geant-pionier a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort geant_net:geant-pionier,
@@ -163,11 +168,14 @@ geant_net:bi-ps a nml:BidirectionalPort,
 
 geant_net:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort geant_net:bi-geant-pionier,
+    nml:hasBidirectionalPort geant_net:bi-geant-netherlight,
+        geant_net:bi-geant-pionier,
         geant_net:bi-ps;
-    nml:hasInboundPort geant_net:pionier-geant,
+    nml:hasInboundPort geant_net:netherlight-geant,
+        geant_net:pionier-geant,
         geant_net:ps-in;
-    nml:hasOutboundPort geant_net:geant-pionier,
+    nml:hasOutboundPort geant_net:geant-netherlight,
+        geant_net:geant-pionier,
         geant_net:ps-out;
     nml:locatedAt geant_net:location;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/geant.net.n3";
@@ -464,6 +472,11 @@ netherlight_net:bi-netherlight-czechlight a nml:BidirectionalPort,
     nml:hasPort netherlight_net:czechlight-netherlight,
         netherlight_net:netherlight-czechlight .
 
+netherlight_net:bi-netherlight-geant a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort netherlight_net:geant-netherlight,
+        netherlight_net:netherlight-geant .
+
 netherlight_net:bi-netherlight-nordu a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort netherlight_net:netherlight-nordu,
@@ -492,18 +505,21 @@ netherlight_net:bi-ps a nml:BidirectionalPort,
 netherlight_net:ets a nml:Topology,
         owl:NamedIndividual;
     nml:hasBidirectionalPort netherlight_net:bi-netherlight-czechlight,
+        netherlight_net:bi-netherlight-geant,
         netherlight_net:bi-netherlight-nordu,
         netherlight_net:bi-netherlight-pionier,
         netherlight_net:bi-netherlight-startap,
         netherlight_net:bi-netherlight-uvalight,
         netherlight_net:bi-ps;
     nml:hasInboundPort netherlight_net:czechlight-netherlight,
+        netherlight_net:geant-netherlight,
         netherlight_net:nordu-netherlight,
         netherlight_net:pionier-netherlight,
         netherlight_net:ps-in,
         netherlight_net:startap-netherlight,
         netherlight_net:uvalight-netherlight;
     nml:hasOutboundPort netherlight_net:netherlight-czechlight,
+        netherlight_net:netherlight-geant,
         netherlight_net:netherlight-nordu,
         netherlight_net:netherlight-pionier,
         netherlight_net:netherlight-startap,
@@ -1006,9 +1022,19 @@ es_net:startap-es a nml:PortGroup,
     nml:isAlias startap_net:startap-es;
     nmleth:vlans "1780-1783" .
 
+geant_net:geant-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias netherlight_net:geant-netherlight;
+    nmleth:vlans "1780-1783" .
+
 geant_net:geant-pionier a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias pionier_net:geant-pionier;
+    nmleth:vlans "1780-1783" .
+
+geant_net:netherlight-geant a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias netherlight_net:netherlight-geant;
     nmleth:vlans "1780-1783" .
 
 geant_net:pionier-geant a nml:PortGroup,
@@ -1111,9 +1137,19 @@ netherlight_net:czechlight-netherlight a nml:PortGroup,
     nml:isAlias czechlight:czechlight-netherlight;
     nmleth:vlans "1780-1783" .
 
+netherlight_net:geant-netherlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias geant_net:geant-netherlight;
+    nmleth:vlans "1780-1783" .
+
 netherlight_net:netherlight-czechlight a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias czechlight:netherlight-czechlight;
+    nmleth:vlans "1780-1783" .
+
+netherlight_net:netherlight-geant a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias geant_net:netherlight-geant;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:netherlight-nordu a nml:PortGroup,

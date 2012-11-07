@@ -1,79 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
 >
+  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
+    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
+  </rdf:Description>
   <nml:Topology rdf:about="urn:ogf:network:startap.net:2012:ets">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3</nsi:isReference>
   </nml:Topology>
-  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
-    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
-  </rdf:Description>
-  <nml:BidirectionalPort rdf:about="urn:ogf:network:es.net:2012:bi-ps">
-    <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:es.net:2012:ps-in">
+  <nml:PortGroup rdf:about="urn:ogf:network:es.net:2012:ps-in">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:es.net:2012:startap-es">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <nml:isAlias rdf:resource="urn:ogf:network:startap.net:2012:startap-es"/>
+  </nml:PortGroup>
+  <nml:Topology rdf:about="urn:ogf:network:es.net:2012:ets">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nml:locatedAt>
+      <nml:Location rdf:about="urn:ogf:network:es.net:2012:location">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.703516</nml:lat>
+        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.988120</nml:long>
+      </nml:Location>
+    </nml:locatedAt>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:es.net:2012:ps-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:es.net:2012:startap-es"/>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:es.net:2012:es-startap">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <nmleth:vlans>1780-1783</nmleth:vlans>
+        <nml:isAlias rdf:resource="urn:ogf:network:startap.net:2012:es-startap"/>
       </nml:PortGroup>
-    </nml:hasPort>
-    <nml:hasPort>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
       <nml:PortGroup rdf:about="urn:ogf:network:es.net:2012:ps-out">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <nmleth:vlans>1780-1783</nmleth:vlans>
       </nml:PortGroup>
-    </nml:hasPort>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:BidirectionalPort>
-  <nml:BidirectionalPort rdf:about="urn:ogf:network:es.net:2012:bi-es-startap">
-    <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:es.net:2012:es-startap">
-        <nml:isAlias rdf:resource="urn:ogf:network:startap.net:2012:es-startap"/>
+    </nml:hasOutboundPort>
+    <nsi:managedBy>
+      <nsi:NSA rdf:about="urn:ogf:network:es.net:2012:nsa">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasPort>
-    <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:es.net:2012:startap-es">
-        <nml:isAlias rdf:resource="urn:ogf:network:startap.net:2012:startap-es"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasPort>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:BidirectionalPort>
-  <nsi:NSA rdf:about="urn:ogf:network:es.net:2012:nsa">
-    <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://jupiter.es.net:8288/ConnectionService
+        </nsi:csProviderEndpoint>
+        <nsi:managing rdf:resource="urn:ogf:network:es.net:2012:ets"/>
+        <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: OSCARS 
             Project Manager: Inder Monga 
             Email: imonga@es.net 
             Software development engineer: Evangelos Chaniotakis 
             Email:  haniotak@es.net
         </nsi:adminContact>
-    <nsi:managing>
-      <nml:Topology rdf:about="urn:ogf:network:es.net:2012:ets">
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:es.net:2012:bi-ps"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:es.net:2012:bi-es-startap"/>
-        <nml:locatedAt rdf:resource="urn:ogf:network:es.net:2012:location"/>
-        <nsi:managedBy rdf:resource="urn:ogf:network:es.net:2012:nsa"/>
+      </nsi:NSA>
+    </nsi:managedBy>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:es.net:2012:bi-ps">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:es.net:2012:es-startap"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:es.net:2012:ps-out"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:es.net:2012:ps-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:es.net:2012:startap-es"/>
-      </nml:Topology>
-    </nsi:managing>
-    <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://jupiter.es.net:8288/ConnectionService
-        </nsi:csProviderEndpoint>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nsi:NSA>
-  <nml:Location rdf:about="urn:ogf:network:es.net:2012:location">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.988120</nml:long>
-    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.703516</nml:lat>
-  </nml:Location>
+        <nml:hasPort rdf:resource="urn:ogf:network:es.net:2012:ps-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:es.net:2012:ps-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:es.net:2012:bi-es-startap">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:es.net:2012:es-startap"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:es.net:2012:startap-es"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+  </nml:Topology>
 </rdf:RDF>
