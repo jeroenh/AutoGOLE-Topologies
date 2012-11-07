@@ -1,0 +1,100 @@
+@prefix maxgigapop: <urn:ogf:network:maxgigapop.net:2012:> .
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+<urn:ogf:network:nordu.net:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3" .
+
+<urn:ogf:network:startap.net:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3" .
+
+maxgigapop:bi-maxgigapop-nordu a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort maxgigapop:maxgigapop-nordu,
+        maxgigapop:nordu-maxgigapop .
+
+maxgigapop:bi-maxgigapop-startap a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort maxgigapop:maxgigapop-startap,
+        maxgigapop:startap-maxgigapop .
+
+maxgigapop:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort maxgigapop:ps-in,
+        maxgigapop:ps-out .
+
+maxgigapop:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasBidirectionalPort maxgigapop:bi-maxgigapop-nordu,
+        maxgigapop:bi-maxgigapop-startap,
+        maxgigapop:bi-ps;
+    nml:hasInboundPort maxgigapop:nordu-maxgigapop,
+        maxgigapop:ps-in,
+        maxgigapop:startap-maxgigapop;
+    nml:hasOutboundPort maxgigapop:maxgigapop-nordu,
+        maxgigapop:maxgigapop-startap,
+        maxgigapop:ps-out;
+    nml:locatedAt maxgigapop:location;
+    nsi:managedBy maxgigapop:nsa .
+
+maxgigapop:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "38.995"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "-76.933"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+maxgigapop:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OpenNSA
+            Project manager:
+            email:
+            mobile:
+            skype: 
+
+            Network Engineer: Balasubramania Pillai
+            email: bpillai@maxgigapop.net
+            skype: b_pillai
+
+            Key software engineer:
+            email:
+            skype:
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://nsa.maxgigapop.net:9080/NSI/services/ConnectionService/
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing maxgigapop:ets .
+
+maxgigapop:maxgigapop-nordu a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:nordu.net:2012:maxgigapop-nordu>;
+    nmleth:vlans "1780-1783" .
+
+maxgigapop:maxgigapop-startap a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap.net:2012:maxgigapop-startap>;
+    nmleth:vlans "1780-1783" .
+
+maxgigapop:nordu-maxgigapop a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:nordu.net:2012:nordu-maxgigapop>;
+    nmleth:vlans "1780-1783" .
+
+maxgigapop:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+maxgigapop:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+maxgigapop:startap-maxgigapop a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap.net:2012:startap-maxgigapop>;
+    nmleth:vlans "1780-1783" .
+

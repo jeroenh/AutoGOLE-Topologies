@@ -1,0 +1,92 @@
+@prefix gloriad: <urn:ogf:network:gloriad.org:2012:> .
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+<urn:ogf:network:krlight.net:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/krlight.net.n3" .
+
+<urn:ogf:network:startap.net:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3" .
+
+gloriad:bi-gloriad-krlight a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort gloriad:gloriad-krlight,
+        gloriad:krlight-gloriad .
+
+gloriad:bi-gloriad-startap a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort gloriad:gloriad-startap,
+        gloriad:startap-gloriad .
+
+gloriad:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort gloriad:ps-in,
+        gloriad:ps-out .
+
+gloriad:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasBidirectionalPort gloriad:bi-gloriad-krlight,
+        gloriad:bi-gloriad-startap,
+        gloriad:bi-ps;
+    nml:hasInboundPort gloriad:krlight-gloriad,
+        gloriad:ps-in,
+        gloriad:startap-gloriad;
+    nml:hasOutboundPort gloriad:gloriad-krlight,
+        gloriad:gloriad-startap,
+        gloriad:ps-out;
+    nml:locatedAt gloriad:location;
+    nsi:managedBy gloriad:nsa .
+
+gloriad:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "41.866342"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "-87.607777"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+gloriad:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OpenNSA 
+            Project Manager: Predrag Redulovic 
+            Email: predrag@gloriad.net
+            Software development engineer: Henrik Thostrup.Jensen 
+            Email:  htj@nordu.net
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://nsa.gloriad.org:9080/NSI/services/ConnectionService
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing gloriad:ets .
+
+gloriad:gloriad-krlight a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:krlight.net:2012:gloriad-krlight>;
+    nmleth:vlans "1780-1783" .
+
+gloriad:gloriad-startap a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap.net:2012:gloriad-startap>;
+    nmleth:vlans "1780-1783" .
+
+gloriad:krlight-gloriad a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:krlight.net:2012:krlight-gloriad>;
+    nmleth:vlans "1780-1783" .
+
+gloriad:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+gloriad:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+gloriad:startap-gloriad a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap.net:2012:startap-gloriad>;
+    nmleth:vlans "1780-1783" .
+

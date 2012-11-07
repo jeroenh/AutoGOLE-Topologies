@@ -1,0 +1,70 @@
+@prefix es: <urn:ogf:network:es.net:2012:> .
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+<urn:ogf:network:startap.net:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3" .
+
+es:bi-es-startap a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort es:es-startap,
+        es:startap-es .
+
+es:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort es:ps-in,
+        es:ps-out .
+
+es:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasBidirectionalPort es:bi-es-startap,
+        es:bi-ps;
+    nml:hasInboundPort es:ps-in,
+        es:startap-es;
+    nml:hasOutboundPort es:es-startap,
+        es:ps-out;
+    nml:locatedAt es:location;
+    nsi:managedBy es:nsa .
+
+es:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "41.703516"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "-87.988120"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+es:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: OSCARS 
+            Project Manager: Inder Monga 
+            Email: imonga@es.net 
+            Software development engineer: Evangelos Chaniotakis 
+            Email:  haniotak@es.net
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+            http://jupiter.es.net:8288/ConnectionService
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing es:ets .
+
+es:es-startap a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap.net:2012:es-startap>;
+    nmleth:vlans "1780-1783" .
+
+es:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+es:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+es:startap-es a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:startap.net:2012:startap-es>;
+    nmleth:vlans "1780-1783" .
+
