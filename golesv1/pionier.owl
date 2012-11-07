@@ -89,6 +89,7 @@
         <connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:poz-83"/>
     </owl:NamedIndividual>
     
+    
     <!-- urn:ogf:network:stp:pionier.ets:cph-80 -->
     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:cph-80">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
@@ -110,6 +111,27 @@
         <connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-83"/>
     </owl:NamedIndividual>
     
+    <!-- urn:ogf:network:stp:pionier.ets:psnc-80 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:psnc-80">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:psnc.ets:poz-80"/>
+    </owl:NamedIndividual>
+    <!-- urn:ogf:network:stp:pionier.ets:psnc-81 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:psnc-81">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:psnc.ets:poz-81"/>
+    </owl:NamedIndividual>
+    <!-- urn:ogf:network:stp:pionier.ets:psnc-82 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:psnc-82">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:psnc.ets:poz-82"/>
+    </owl:NamedIndividual>
+    <!-- urn:ogf:network:stp:pionier.ets:psnc-83 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:pionier.ets:psnc-83">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:psnc.ets:poz-83"/>
+    </owl:NamedIndividual>
+
     <!-- urn:ogf:network:nsnetwork:pionier.ets -->
     
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:pionier.ets">
@@ -127,6 +149,10 @@
         <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-81"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-82"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-83"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-80"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-81"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-82"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-83"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cph-80"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cph-81"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:cph-82"/>
@@ -158,7 +184,7 @@
             skype= michalb.psnc
         </adminContact>
         <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://194.132.53.174:9280/nsi/ConnectionProvider
+            http://194.132.53.174:9080/nsi/ConnectionProviderPort
         </csProviderEndpoint>
     </owl:NamedIndividual>
     </rdf:RDF>
