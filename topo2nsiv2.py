@@ -38,6 +38,8 @@ def getUrlName(name):
     else:
         return name
 def getNetName(name):
+    if "pionier.junos.exp.net" in name:
+        return "pionier-exp"
     return getUrlName(name).split(".")[0]
 def getTargetTopo(target):
     # UvA believes there is more to GOLEs than just Ethernet.
