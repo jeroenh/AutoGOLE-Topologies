@@ -18,6 +18,10 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3" .
 
+<urn:ogf:network:pionier.junos.exp.net:2012:ets> a nml:Topology,
+        owl:NamedIndividual;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.junos.exp.net.n3" .
+
 pionier:bi-pionier-geant a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort pionier:geant-pionier,
@@ -33,6 +37,10 @@ pionier:bi-pionier-nordu a nml:BidirectionalPort,
     nml:hasPort pionier:nordu-pionier,
         pionier:pionier-nordu .
 
+pionier:bi-pionier-pionier a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier:pionier-pionier .
+
 pionier:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort pionier:ps-in,
@@ -43,14 +51,17 @@ pionier:ets a nml:Topology,
     nml:hasBidirectionalPort pionier:bi-pionier-geant,
         pionier:bi-pionier-netherlight,
         pionier:bi-pionier-nordu,
+        pionier:bi-pionier-pionier,
         pionier:bi-ps;
     nml:hasInboundPort pionier:geant-pionier,
         pionier:netherlight-pionier,
         pionier:nordu-pionier,
+        pionier:pionier-pionier,
         pionier:ps-in;
     nml:hasOutboundPort pionier:pionier-geant,
         pionier:pionier-netherlight,
         pionier:pionier-nordu,
+        pionier:pionier-pionier,
         pionier:ps-out;
     nml:locatedAt pionier:location;
     nsi:managedBy pionier:nsa .
@@ -72,7 +83,7 @@ pionier:nsa a nsi:NSA,
             skype= michalb.psnc
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:csProviderEndpoint """
-            http://194.132.53.174:9280/nsi/ConnectionProvider
+            http://194.132.53.174:9080/nsi/ConnectionProviderPort
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing pionier:ets .
 
@@ -112,5 +123,10 @@ pionier:ps-in a nml:PortGroup,
 
 pionier:ps-out a nml:PortGroup,
         owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+pionier:pionier-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:pionier.junos.exp.net:2012:pionier-pionier>;
     nmleth:vlans "1780-1783" .
 

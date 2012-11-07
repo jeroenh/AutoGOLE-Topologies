@@ -13,6 +13,7 @@
 @prefix nordu_net: <urn:ogf:network:nordu.net:2012:> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pionier_junos_exp_net: <urn:ogf:network:pionier.junos.exp.net:2012:> .
 @prefix pionier_net: <urn:ogf:network:pionier.net:2012:> .
 @prefix startap_net: <urn:ogf:network:startap.net:2012:> .
 @prefix uvalight_net: <urn:ogf:network:uvalight.net:2012:> .
@@ -609,6 +610,48 @@ nordu_net:nsa a nsi:NSA,
     nsi:csProviderEndpoint "https://orval.grid.aau.dk:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing nordu_net:ets .
 
+pionier_junos_exp_net:bi-pionier-pionier a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier_junos_exp_net:pionier-pionier .
+
+pionier_junos_exp_net:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier_junos_exp_net:ps-in,
+        pionier_junos_exp_net:ps-out .
+
+pionier_junos_exp_net:ets a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasBidirectionalPort pionier_junos_exp_net:bi-pionier-pionier,
+        pionier_junos_exp_net:bi-ps;
+    nml:hasInboundPort pionier_junos_exp_net:pionier-pionier,
+        pionier_junos_exp_net:ps-in;
+    nml:hasOutboundPort pionier_junos_exp_net:pionier-pionier,
+        pionier_junos_exp_net:ps-out;
+    nml:locatedAt pionier_junos_exp_net:location;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.junos.exp.net.n3";
+    nsi:managedBy pionier_junos_exp_net:nsa .
+
+pionier_junos_exp_net:location a nml:Location,
+        owl:NamedIndividual;
+    nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float>;
+    nml:long "16.916"^^<http://www.w3.org/2001/XMLSchema#float> .
+
+pionier_junos_exp_net:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:adminContact """
+            NSA: PSNC 
+            Project manager: Radek Krzywania  
+            email: radek.krzywania@man.poznan.pl  
+            skype: Radoslaw.krzywania 
+            Software development: Michal Balcerkiewicz  
+            email: michalb@man.poznan.pl  
+            skype= michalb.psnc
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint """
+             http://194.132.53.174:9282/nsi/ConnectionProvider 
+        """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:managing pionier_junos_exp_net:ets .
+
 pionier_net:bi-pionier-geant a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort pionier_net:geant-pionier,
@@ -624,6 +667,10 @@ pionier_net:bi-pionier-nordu a nml:BidirectionalPort,
     nml:hasPort pionier_net:nordu-pionier,
         pionier_net:pionier-nordu .
 
+pionier_net:bi-pionier-pionier a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort pionier_net:pionier-pionier .
+
 pionier_net:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort pionier_net:ps-in,
@@ -634,14 +681,17 @@ pionier_net:ets a nml:Topology,
     nml:hasBidirectionalPort pionier_net:bi-pionier-geant,
         pionier_net:bi-pionier-netherlight,
         pionier_net:bi-pionier-nordu,
+        pionier_net:bi-pionier-pionier,
         pionier_net:bi-ps;
     nml:hasInboundPort pionier_net:geant-pionier,
         pionier_net:netherlight-pionier,
         pionier_net:nordu-pionier,
+        pionier_net:pionier-pionier,
         pionier_net:ps-in;
     nml:hasOutboundPort pionier_net:pionier-geant,
         pionier_net:pionier-netherlight,
         pionier_net:pionier-nordu,
+        pionier_net:pionier-pionier,
         pionier_net:ps-out;
     nml:locatedAt pionier_net:location;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.n3";
@@ -664,7 +714,7 @@ pionier_net:nsa a nsi:NSA,
             skype= michalb.psnc
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:csProviderEndpoint """
-            http://194.132.53.174:9280/nsi/ConnectionProvider
+            http://194.132.53.174:9080/nsi/ConnectionProviderPort
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing pionier_net:ets .
 
@@ -891,6 +941,14 @@ nordu_net:ps-in a nml:PortGroup,
     nmleth:vlans "1780-1783" .
 
 nordu_net:ps-out a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+pionier_junos_exp_net:ps-in a nml:PortGroup,
+        owl:NamedIndividual;
+    nmleth:vlans "1780-1783" .
+
+pionier_junos_exp_net:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
@@ -1236,5 +1294,15 @@ uvalight_net:uvalight-netherlight a nml:PortGroup,
 uvalight_net:uvalight-nordu a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias nordu_net:uvalight-nordu;
+    nmleth:vlans "1780-1783" .
+
+pionier_junos_exp_net:pionier-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias pionier_net:pionier-pionier;
+    nmleth:vlans "1780-1783" .
+
+pionier_net:pionier-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias pionier_junos_exp_net:pionier-pionier;
     nmleth:vlans "1780-1783" .
 

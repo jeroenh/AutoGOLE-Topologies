@@ -28,6 +28,7 @@ golenames = {
     "jgnx": "jgn.nict.go.jp",
     "gloriad": "gloriad.org",
     "esnet": "es.net",
+    "psnc": "pionier.junos.exp.net",
 
 }
 MAPPING = collections.defaultdict(list)
@@ -162,7 +163,7 @@ def main():
     master.bind("nmleth",NMLETH)
     master.bind("owl",OWL)
     
-    for name in ["aist","czechlight","esnet","geant","gloriad","jgnx","kddi-labs","krlight","max","netherlight","northernlight","pionier","starlight","uvalight"]:
+    for name in ["aist","czechlight","esnet","geant","gloriad","jgnx","kddi-labs","krlight","max","netherlight","northernlight","pionier","starlight","uvalight","psnc"]:
         newname = getUrlName(name)
         topo = AGTopology("golesv1/%s.owl" % name)
         graph = topo.convert()
