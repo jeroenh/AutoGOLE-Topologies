@@ -6,14 +6,14 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:jgnx:2012:ets> a nml:Topology,
+<urn:ogf:network:jgn.nict.go.jp:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn.nict.go.jp.n3" .
 
-aist:bi-aist-jgnx a nml:BidirectionalPort,
+aist:bi-aist-jgn a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort aist:aist-jgnx,
-        aist:jgnx-aist .
+    nml:hasPort aist:aist-jgn,
+        aist:jgn-aist .
 
 aist:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -22,11 +22,11 @@ aist:bi-ps a nml:BidirectionalPort,
 
 aist:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort aist:bi-aist-jgnx,
+    nml:hasBidirectionalPort aist:bi-aist-jgn,
         aist:bi-ps;
-    nml:hasInboundPort aist:jgnx-aist,
+    nml:hasInboundPort aist:jgn-aist,
         aist:ps-in;
-    nml:hasOutboundPort aist:aist-jgnx,
+    nml:hasOutboundPort aist:aist-jgn,
         aist:ps-out;
     nml:locatedAt aist:location;
     nsi:managedBy aist:nsa .
@@ -54,14 +54,14 @@ aist:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing aist:ets .
 
-aist:aist-jgnx a nml:PortGroup,
+aist:aist-jgn a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx:2012:aist-jgnx>;
+    nml:isAlias <urn:ogf:network:jgn.nict.go.jp:2012:aist-jgn>;
     nmleth:vlans "1780-1783" .
 
-aist:jgnx-aist a nml:PortGroup,
+aist:jgn-aist a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx:2012:jgnx-aist>;
+    nml:isAlias <urn:ogf:network:jgn.nict.go.jp:2012:jgn-aist>;
     nmleth:vlans "1780-1783" .
 
 aist:ps-in a nml:PortGroup,

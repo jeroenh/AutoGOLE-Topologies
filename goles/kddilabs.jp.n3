@@ -6,14 +6,14 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:jgnx:2012:ets> a nml:Topology,
+<urn:ogf:network:jgn.nict.go.jp:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn.nict.go.jp.n3" .
 
-kddilabs:bi-kddilabs-jgnx a nml:BidirectionalPort,
+kddilabs:bi-kddilabs-jgn a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort kddilabs:jgnx-kddilabs,
-        kddilabs:kddilabs-jgnx .
+    nml:hasPort kddilabs:jgn-kddilabs,
+        kddilabs:kddilabs-jgn .
 
 kddilabs:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -22,11 +22,11 @@ kddilabs:bi-ps a nml:BidirectionalPort,
 
 kddilabs:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort kddilabs:bi-kddilabs-jgnx,
+    nml:hasBidirectionalPort kddilabs:bi-kddilabs-jgn,
         kddilabs:bi-ps;
-    nml:hasInboundPort kddilabs:jgnx-kddilabs,
+    nml:hasInboundPort kddilabs:jgn-kddilabs,
         kddilabs:ps-in;
-    nml:hasOutboundPort kddilabs:kddilabs-jgnx,
+    nml:hasOutboundPort kddilabs:kddilabs-jgn,
         kddilabs:ps-out;
     nml:locatedAt kddilabs:location;
     nsi:managedBy kddilabs:nsa .
@@ -54,14 +54,14 @@ kddilabs:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing kddilabs:ets .
 
-kddilabs:jgnx-kddilabs a nml:PortGroup,
+kddilabs:jgn-kddilabs a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx:2012:jgnx-kddilabs>;
+    nml:isAlias <urn:ogf:network:jgn.nict.go.jp:2012:jgn-kddilabs>;
     nmleth:vlans "1780-1783" .
 
-kddilabs:kddilabs-jgnx a nml:PortGroup,
+kddilabs:kddilabs-jgn a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx:2012:kddilabs-jgnx>;
+    nml:isAlias <urn:ogf:network:jgn.nict.go.jp:2012:kddilabs-jgn>;
     nmleth:vlans "1780-1783" .
 
 kddilabs:ps-in a nml:PortGroup,

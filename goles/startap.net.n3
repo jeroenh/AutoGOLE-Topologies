@@ -6,21 +6,21 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:esnet:2012:ets> a nml:Topology,
+<urn:ogf:network:es.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/esnet.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/es.net.n3" .
 
-<urn:ogf:network:gloriad:2012:ets> a nml:Topology,
+<urn:ogf:network:gloriad.org:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.org.n3" .
 
-<urn:ogf:network:jgnx:2012:ets> a nml:Topology,
+<urn:ogf:network:jgn.nict.go.jp:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgnx.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn.nict.go.jp.n3" .
 
-<urn:ogf:network:max:2012:ets> a nml:Topology,
+<urn:ogf:network:maxgigapop.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/max.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/maxgigapop.net.n3" .
 
 <urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
@@ -31,25 +31,25 @@ startap:bi-ps a nml:BidirectionalPort,
     nml:hasPort startap:ps-in,
         startap:ps-out .
 
-startap:bi-startap-esnet a nml:BidirectionalPort,
+startap:bi-startap-es a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort startap:esnet-startap,
-        startap:startap-esnet .
+    nml:hasPort startap:es-startap,
+        startap:startap-es .
 
 startap:bi-startap-gloriad a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort startap:gloriad-startap,
         startap:startap-gloriad .
 
-startap:bi-startap-jgnx a nml:BidirectionalPort,
+startap:bi-startap-jgn a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort startap:jgnx-startap,
-        startap:startap-jgnx .
+    nml:hasPort startap:jgn-startap,
+        startap:startap-jgn .
 
-startap:bi-startap-max a nml:BidirectionalPort,
+startap:bi-startap-maxgigapop a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort startap:max-startap,
-        startap:startap-max .
+    nml:hasPort startap:maxgigapop-startap,
+        startap:startap-maxgigapop .
 
 startap:bi-startap-netherlight a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -59,22 +59,22 @@ startap:bi-startap-netherlight a nml:BidirectionalPort,
 startap:ets a nml:Topology,
         owl:NamedIndividual;
     nml:hasBidirectionalPort startap:bi-ps,
-        startap:bi-startap-esnet,
+        startap:bi-startap-es,
         startap:bi-startap-gloriad,
-        startap:bi-startap-jgnx,
-        startap:bi-startap-max,
+        startap:bi-startap-jgn,
+        startap:bi-startap-maxgigapop,
         startap:bi-startap-netherlight;
-    nml:hasInboundPort startap:esnet-startap,
+    nml:hasInboundPort startap:es-startap,
         startap:gloriad-startap,
-        startap:jgnx-startap,
-        startap:max-startap,
+        startap:jgn-startap,
+        startap:maxgigapop-startap,
         startap:netherlight-startap,
         startap:ps-in;
     nml:hasOutboundPort startap:ps-out,
-        startap:startap-esnet,
+        startap:startap-es,
         startap:startap-gloriad,
-        startap:startap-jgnx,
-        startap:startap-max,
+        startap:startap-jgn,
+        startap:startap-maxgigapop,
         startap:startap-netherlight;
     nml:locatedAt startap:location;
     nsi:managedBy startap:nsa .
@@ -101,24 +101,24 @@ startap:nsa a nsi:NSA,
          """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing startap:ets .
 
-startap:esnet-startap a nml:PortGroup,
+startap:es-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:esnet:2012:esnet-startap>;
+    nml:isAlias <urn:ogf:network:es.net:2012:es-startap>;
     nmleth:vlans "1780-1783" .
 
 startap:gloriad-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:gloriad:2012:gloriad-startap>;
+    nml:isAlias <urn:ogf:network:gloriad.org:2012:gloriad-startap>;
     nmleth:vlans "1780-1783" .
 
-startap:jgnx-startap a nml:PortGroup,
+startap:jgn-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx:2012:jgnx-startap>;
+    nml:isAlias <urn:ogf:network:jgn.nict.go.jp:2012:jgn-startap>;
     nmleth:vlans "1780-1783" .
 
-startap:max-startap a nml:PortGroup,
+startap:maxgigapop-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:max:2012:max-startap>;
+    nml:isAlias <urn:ogf:network:maxgigapop.net:2012:maxgigapop-startap>;
     nmleth:vlans "1780-1783" .
 
 startap:netherlight-startap a nml:PortGroup,
@@ -134,24 +134,24 @@ startap:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-startap:startap-esnet a nml:PortGroup,
+startap:startap-es a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:esnet:2012:startap-esnet>;
+    nml:isAlias <urn:ogf:network:es.net:2012:startap-es>;
     nmleth:vlans "1780-1783" .
 
 startap:startap-gloriad a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:gloriad:2012:startap-gloriad>;
+    nml:isAlias <urn:ogf:network:gloriad.org:2012:startap-gloriad>;
     nmleth:vlans "1780-1783" .
 
-startap:startap-jgnx a nml:PortGroup,
+startap:startap-jgn a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgnx:2012:startap-jgnx>;
+    nml:isAlias <urn:ogf:network:jgn.nict.go.jp:2012:startap-jgn>;
     nmleth:vlans "1780-1783" .
 
-startap:startap-max a nml:PortGroup,
+startap:startap-maxgigapop a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:max:2012:startap-max>;
+    nml:isAlias <urn:ogf:network:maxgigapop.net:2012:startap-maxgigapop>;
     nmleth:vlans "1780-1783" .
 
 startap:startap-netherlight a nml:PortGroup,

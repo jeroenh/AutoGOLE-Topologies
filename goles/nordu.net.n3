@@ -6,9 +6,9 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:max:2012:ets> a nml:Topology,
+<urn:ogf:network:maxgigapop.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/max.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/maxgigapop.net.n3" .
 
 <urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
@@ -22,10 +22,10 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.net.n3" .
 
-nordu:bi-nordu-max a nml:BidirectionalPort,
+nordu:bi-nordu-maxgigapop a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort nordu:max-nordu,
-        nordu:nordu-max .
+    nml:hasPort nordu:maxgigapop-nordu,
+        nordu:nordu-maxgigapop .
 
 nordu:bi-nordu-netherlight a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -54,19 +54,19 @@ nordu:bi-ps a nml:BidirectionalPort,
 
 nordu:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort nordu:bi-nordu-max,
+    nml:hasBidirectionalPort nordu:bi-nordu-maxgigapop,
         nordu:bi-nordu-netherlight,
         nordu:bi-nordu-pionier,
         nordu:bi-nordu-uvalight,
         nordu:bi-onsala,
         nordu:bi-ps;
-    nml:hasInboundPort nordu:max-nordu,
+    nml:hasInboundPort nordu:maxgigapop-nordu,
         nordu:netherlight-nordu,
         nordu:onsala-in,
         nordu:pionier-nordu,
         nordu:ps-in,
         nordu:uvalight-nordu;
-    nml:hasOutboundPort nordu:nordu-max,
+    nml:hasOutboundPort nordu:nordu-maxgigapop,
         nordu:nordu-netherlight,
         nordu:nordu-pionier,
         nordu:nordu-uvalight,
@@ -95,9 +95,9 @@ nordu:nsa a nsi:NSA,
     nsi:csProviderEndpoint "https://orval.grid.aau.dk:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing nordu:ets .
 
-nordu:max-nordu a nml:PortGroup,
+nordu:maxgigapop-nordu a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:max:2012:max-nordu>;
+    nml:isAlias <urn:ogf:network:maxgigapop.net:2012:maxgigapop-nordu>;
     nmleth:vlans "1780-1783" .
 
 nordu:netherlight-nordu a nml:PortGroup,
@@ -105,9 +105,9 @@ nordu:netherlight-nordu a nml:PortGroup,
     nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-nordu>;
     nmleth:vlans "1780-1783" .
 
-nordu:nordu-max a nml:PortGroup,
+nordu:nordu-maxgigapop a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:max:2012:nordu-max>;
+    nml:isAlias <urn:ogf:network:maxgigapop.net:2012:nordu-maxgigapop>;
     nmleth:vlans "1780-1783" .
 
 nordu:nordu-netherlight a nml:PortGroup,

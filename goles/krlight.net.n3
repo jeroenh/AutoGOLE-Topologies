@@ -6,9 +6,9 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:gloriad:2012:ets> a nml:Topology,
+<urn:ogf:network:gloriad.org:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.org.n3" .
 
 krlight:bi-krlight-gloriad a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -63,12 +63,12 @@ krlight:nsa a nsi:NSA,
 
 krlight:gloriad-krlight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:gloriad:2012:gloriad-krlight>;
+    nml:isAlias <urn:ogf:network:gloriad.org:2012:gloriad-krlight>;
     nmleth:vlans "1780-1783" .
 
 krlight:krlight-gloriad a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:gloriad:2012:krlight-gloriad>;
+    nml:isAlias <urn:ogf:network:gloriad.org:2012:krlight-gloriad>;
     nmleth:vlans "1780-1783" .
 
 krlight:ps-in a nml:PortGroup,

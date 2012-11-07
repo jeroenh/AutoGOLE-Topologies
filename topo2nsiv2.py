@@ -23,7 +23,12 @@ golenames = {
     "kddi": "kddilabs.jp",
     "kddi-labs": "kddilabs.jp",
     "geant": "geant.net",
-    "krlight": "krlight.net"
+    "krlight": "krlight.net",
+    "max": "maxgigapop.net",
+    "jgnx": "jgn.nict.go.jp",
+    "gloriad": "gloriad.org",
+    "esnet": "es.net",
+
 }
 MAPPING = collections.defaultdict(list)
 def getUrlName(name):
