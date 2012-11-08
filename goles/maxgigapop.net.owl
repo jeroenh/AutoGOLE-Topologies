@@ -1,49 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
   xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
-  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <nml:Topology rdf:about="urn:ogf:network:nordu.net:2012:ets">
-    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3</nsi:isReference>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:Topology>
+  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
+    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
+  </rdf:Description>
   <nml:Topology rdf:about="urn:ogf:network:startap.net:2012:ets">
     <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3</nsi:isReference>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </nml:Topology>
-  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
-    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
-  </rdf:Description>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:maxgigapop.net:2012:location">
-    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-76.933</nml:long>
-    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">38.995</nml:lat>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
-  </owl:NamedIndividual>
-  <nml:PortGroup rdf:about="urn:ogf:network:maxgigapop.net:2012:ps-in">
-    <nmleth:vlans>1780-1783</nmleth:vlans>
+  <nml:Topology rdf:about="urn:ogf:network:nordu.net:2012:ets">
+    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3</nsi:isReference>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:maxgigapop.net:2012:nordu-maxgigapop">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:isAlias rdf:resource="urn:ogf:network:nordu.net:2012:nordu-maxgigapop"/>
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:maxgigapop.net:2012:maxgigapop-nordu">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:isAlias rdf:resource="urn:ogf:network:nordu.net:2012:maxgigapop-nordu"/>
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-  </nml:PortGroup>
-  <nml:Topology rdf:about="urn:ogf:network:maxgigapop.net:2012:ets">
+  </nml:Topology>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:maxgigapop.net:2012:ets">
     <nsi:managedBy>
-      <nsi:NSA rdf:about="urn:ogf:network:maxgigapop.net:2012:nsa">
-        <nsi:managing rdf:resource="urn:ogf:network:maxgigapop.net:2012:ets"/>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:maxgigapop.net:2012:nsa">
         <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             http://nsa.maxgigapop.net:9080/NSI/services/ConnectionService/
         </nsi:csProviderEndpoint>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nsi:managing rdf:resource="urn:ogf:network:maxgigapop.net:2012:ets"/>
         <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: OpenNSA
             Project manager:
@@ -59,53 +39,77 @@
             email:
             skype:
         </nsi:adminContact>
-      </nsi:NSA>
-    </nsi:managedBy>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:hasInboundPort rdf:resource="urn:ogf:network:maxgigapop.net:2012:nordu-maxgigapop"/>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:maxgigapop.net:2012:startap-maxgigapop">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nml:isAlias rdf:resource="urn:ogf:network:startap.net:2012:startap-maxgigapop"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort rdf:resource="urn:ogf:network:maxgigapop.net:2012:ps-in"/>
-    <nml:hasBidirectionalPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:maxgigapop.net:2012:bi-maxgigapop-nordu">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:maxgigapop.net:2012:nordu-maxgigapop"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:maxgigapop.net:2012:maxgigapop-nordu"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
       </owl:NamedIndividual>
-    </nml:hasBidirectionalPort>
+    </nsi:managedBy>
     <nml:hasBidirectionalPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:maxgigapop.net:2012:bi-maxgigapop-startap">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:maxgigapop.net:2012:bi-maxgigapop-startap">
         <nml:hasPort rdf:resource="urn:ogf:network:maxgigapop.net:2012:startap-maxgigapop"/>
         <nml:hasPort rdf:resource="urn:ogf:network:maxgigapop.net:2012:maxgigapop-startap"/>
-      </owl:NamedIndividual>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:BidirectionalPort>
     </nml:hasBidirectionalPort>
     <nml:hasBidirectionalPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:maxgigapop.net:2012:bi-ps">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:maxgigapop.net:2012:ps-in"/>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:maxgigapop.net:2012:bi-maxgigapop-nordu">
+        <nml:hasPort rdf:resource="urn:ogf:network:maxgigapop.net:2012:maxgigapop-nordu"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:maxgigapop.net:2012:nordu-maxgigapop"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:maxgigapop.net:2012:bi-ps">
         <nml:hasPort rdf:resource="urn:ogf:network:maxgigapop.net:2012:ps-out"/>
-      </owl:NamedIndividual>
+        <nml:hasPort rdf:resource="urn:ogf:network:maxgigapop.net:2012:ps-in"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:BidirectionalPort>
     </nml:hasBidirectionalPort>
     <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:maxgigapop.net:2012:ps-out">
+      <owl:NamedIndividual rdf:about="urn:ogf:network:maxgigapop.net:2012:maxgigapop-nordu">
+        <nml:isAlias rdf:resource="urn:ogf:network:nordu.net:2012:maxgigapop-nordu"/>
         <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </nml:PortGroup>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+      </owl:NamedIndividual>
     </nml:hasOutboundPort>
     <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:maxgigapop.net:2012:maxgigapop-startap">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:maxgigapop.net:2012:ps-out">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+      </owl:NamedIndividual>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:maxgigapop.net:2012:maxgigapop-startap">
         <nml:isAlias rdf:resource="urn:ogf:network:startap.net:2012:maxgigapop-startap"/>
         <nmleth:vlans>1780-1783</nmleth:vlans>
-      </nml:PortGroup>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+      </owl:NamedIndividual>
     </nml:hasOutboundPort>
-    <nml:hasOutboundPort rdf:resource="urn:ogf:network:maxgigapop.net:2012:maxgigapop-nordu"/>
-    <nml:locatedAt rdf:resource="urn:ogf:network:maxgigapop.net:2012:location"/>
-  </nml:Topology>
+    <nml:hasInboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:maxgigapop.net:2012:nordu-maxgigapop">
+        <nml:isAlias rdf:resource="urn:ogf:network:nordu.net:2012:nordu-maxgigapop"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+      </owl:NamedIndividual>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:maxgigapop.net:2012:startap-maxgigapop">
+        <nml:isAlias rdf:resource="urn:ogf:network:startap.net:2012:startap-maxgigapop"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+      </owl:NamedIndividual>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:maxgigapop.net:2012:ps-in">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+      </owl:NamedIndividual>
+    </nml:hasInboundPort>
+    <nml:locatedAt>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:maxgigapop.net:2012:location">
+        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-76.933</nml:long>
+        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">38.995</nml:lat>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
+      </owl:NamedIndividual>
+    </nml:locatedAt>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
+  </owl:NamedIndividual>
 </rdf:RDF>

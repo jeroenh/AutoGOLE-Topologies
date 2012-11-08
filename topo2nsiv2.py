@@ -157,6 +157,14 @@ class AGTopology:
                 biport = self.addPorts(localstp,topov2)
             MAPPING[biport].append(str(stp))
         return self.storev2
+def jerrify(mapping):
+    mapping['urn:ogf:network:gloriad.org:2012:bi-gloriad-krlight']= ['urn:ogf:network:stp:gloriad.ets:krl.0', 'urn:ogf:network:stp:gloriad.ets:krl.1', 'urn:ogf:network:stp:gloriad.ets:krl.2', 'urn:ogf:network:stp:gloriad.ets:krl.3']
+    mapping['urn:ogf:network:gloriad.org:2012:bi-gloriad-startap']= ['urn:ogf:network:stp:gloriad.ets:sl.0', 'urn:ogf:network:stp:gloriad.ets:sl.1', 'urn:ogf:network:stp:gloriad.ets:sl.2', 'urn:ogf:network:stp:gloriad.ets:sl.3']
+    mapping['urn:ogf:network:nordu.net:2012:bi-nordu-pionier']= ['urn:ogf:network:stp:northernlight.ets:poz-0', 'urn:ogf:network:stp:northernlight.ets:poz-1', 'urn:ogf:network:stp:northernlight.ets:poz-2', 'urn:ogf:network:stp:northernlight.ets:poz-3']
+    mapping['urn:ogf:network:nordu.net:2012:bi-nordu-uvalight']= ['urn:ogf:network:stp:northernlight.ets:uva-1780', 'urn:ogf:network:stp:northernlight.ets:uva-1781', 'urn:ogf:network:stp:northernlight.ets:uva-1782', 'urn:ogf:network:stp:northernlight.ets:uva-1783']
+    mapping['urn:ogf:network:pionier.net.pl:2012:bi-pionier-nordu']= ['urn:ogf:network:stp:pionier.ets:cpha','urn:ogf:network:stp:pionier.ets:cphb','urn:ogf:network:stp:pionier.ets:cphc','urn:ogf:network:stp:pionier.ets:cphd']
+    mapping['urn:ogf:network:startap.net:2012:bi-startap-gloriad']= ['urn:ogf:network:stp:starlight.ets:glo-06f4', 'urn:ogf:network:stp:starlight.ets:glo-06f5', 'urn:ogf:network:stp:starlight.ets:glo-o6f6', 'urn:ogf:network:stp:starlight.ets:glo-06f7']
+    mapping['urn:ogf:network:uvalight.net:2012:bi-uvalight-nordu']= ['urn:ogf:network:stp:uvalight.ets:ndn-0', 'urn:ogf:network:stp:uvalight.ets:ndn-1', 'urn:ogf:network:stp:uvalight.ets:ndn-2', 'urn:ogf:network:stp:uvalight.ets:ndn-3']
 
 def main():
     master = rdflib.Graph()
@@ -189,6 +197,7 @@ def main():
     
     # Write the mapping file. Remember to undo the jerrification:
     f = open("mapping.txt",'w')
+    jerrify(MAPPING)
     for x in MAPPING:
         if type(MAPPING[x]) is list:
             MAPPING[x].sort()

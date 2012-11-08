@@ -615,11 +615,6 @@ nordu_net:bi-nordu-uvalight a nml:BidirectionalPort,
     nml:hasPort nordu_net:nordu-uvalight,
         nordu_net:uvalight-nordu .
 
-nordu_net:bi-onsala a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu_net:onsala-in,
-        nordu_net:onsala-out .
-
 nordu_net:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort nordu_net:ps-in,
@@ -631,11 +626,9 @@ nordu_net:ets a nml:Topology,
         nordu_net:bi-nordu-netherlight,
         nordu_net:bi-nordu-pionier,
         nordu_net:bi-nordu-uvalight,
-        nordu_net:bi-onsala,
         nordu_net:bi-ps;
     nml:hasInboundPort nordu_net:maxgigapop-nordu,
         nordu_net:netherlight-nordu,
-        nordu_net:onsala-in,
         nordu_net:pionier-nordu,
         nordu_net:ps-in,
         nordu_net:uvalight-nordu;
@@ -643,7 +636,6 @@ nordu_net:ets a nml:Topology,
         nordu_net:nordu-netherlight,
         nordu_net:nordu-pionier,
         nordu_net:nordu-uvalight,
-        nordu_net:onsala-out,
         nordu_net:ps-out;
     nml:locatedAt nordu_net:location;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3";
@@ -951,14 +943,6 @@ netherlight_net:ps-in a nml:PortGroup,
     nmleth:vlans "1780-1783" .
 
 netherlight_net:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-nordu_net:onsala-in a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-nordu_net:onsala-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 

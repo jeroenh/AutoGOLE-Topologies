@@ -42,11 +42,6 @@ nordu:bi-nordu-uvalight a nml:BidirectionalPort,
     nml:hasPort nordu:nordu-uvalight,
         nordu:uvalight-nordu .
 
-nordu:bi-onsala a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu:onsala-in,
-        nordu:onsala-out .
-
 nordu:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort nordu:ps-in,
@@ -58,11 +53,9 @@ nordu:ets a nml:Topology,
         nordu:bi-nordu-netherlight,
         nordu:bi-nordu-pionier,
         nordu:bi-nordu-uvalight,
-        nordu:bi-onsala,
         nordu:bi-ps;
     nml:hasInboundPort nordu:maxgigapop-nordu,
         nordu:netherlight-nordu,
-        nordu:onsala-in,
         nordu:pionier-nordu,
         nordu:ps-in,
         nordu:uvalight-nordu;
@@ -70,7 +63,6 @@ nordu:ets a nml:Topology,
         nordu:nordu-netherlight,
         nordu:nordu-pionier,
         nordu:nordu-uvalight,
-        nordu:onsala-out,
         nordu:ps-out;
     nml:locatedAt nordu:location;
     nsi:managedBy nordu:nsa .
@@ -123,14 +115,6 @@ nordu:nordu-pionier a nml:PortGroup,
 nordu:nordu-uvalight a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias <urn:ogf:network:uvalight.net:2012:nordu-uvalight>;
-    nmleth:vlans "1780-1783" .
-
-nordu:onsala-in a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-nordu:onsala-out a nml:PortGroup,
-        owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
 nordu:pionier-nordu a nml:PortGroup,

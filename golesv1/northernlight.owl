@@ -126,15 +126,6 @@
         <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:ndn-83"/>
     </owl:NamedIndividual>
 
-    <!-- urn:ogf:network:stp:northernlight.ets:nl-jive-01 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:nl-jive-01">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:jive5-01"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:northernlight.ets:richard-01 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:onsala-01">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
 
     <!-- urn:ogf:network:nsnetwork:northernlight.ets -->
 
@@ -161,8 +152,6 @@
         <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:max-81"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:max-82"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:max-83"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:nl-jive-01"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:onsala-01"/>
         <managedBy rdf:resource="urn:ogf:network:nsa:northernlight"/>
         <locatedAt rdf:resource="urn:ogf:network:nsnetwork:northernlight.ets:location"/>
     </owl:NamedIndividual>
