@@ -184,7 +184,7 @@
             skype= michalb.psnc
         </adminContact>
         <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://194.132.53.174:9080/nsi/ConnectionProviderPort
+            http://194.132.53.174:9280/nsi/ConnectionProviderPort
         </csProviderEndpoint>
     </owl:NamedIndividual>
     </rdf:RDF>

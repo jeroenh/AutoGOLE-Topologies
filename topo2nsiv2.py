@@ -193,7 +193,7 @@ def main():
         master.remove((s,NML.isReference,o))
     master.serialize("master.owl",format="pretty-xml")
     master.serialize("master.n3",format="n3")
-    master1.serialize("AutoGOLE-Topo.owl",format="pretty-xml")
+    master1.serialize("AutoGOLE-Topo.owl",format="xml")
     
     # Write the mapping file. Remember to undo the jerrification:
     f = open("mapping.txt",'w')
