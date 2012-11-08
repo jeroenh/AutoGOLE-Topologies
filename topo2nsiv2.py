@@ -18,7 +18,7 @@ golenames = {
     "starlight": "startap.net",
     "northernlight": "nordu.net",
     "uvalight": "uvalight.net",
-    "pionier": "pionier.net",
+    "pionier": "pionier.net.pl",
     "aist": "aist.go.jp",
     "kddi": "kddilabs.jp",
     "kddi-labs": "kddilabs.jp",
@@ -28,7 +28,7 @@ golenames = {
     "jgnx": "jgn.nict.go.jp",
     "gloriad": "gloriad.org",
     "esnet": "es.net",
-    "psnc": "pionier.junos.exp.net",
+    "psnc": "exp.pionier.net.pl",
 
 }
 MAPPING = collections.defaultdict(list)
@@ -164,10 +164,16 @@ def main():
     master.bind("nsi",NSI)
     master.bind("nmleth",NMLETH)
     master.bind("owl",OWL)
+    master1 = rdflib.Graph()
+    master1.bind("nml",NML)
+    master1.bind("nsi",NSI)
+    master1.bind("nmleth",NMLETH)
+    master1.bind("owl",OWL)
     
     for name in ["aist","czechlight","esnet","geant","gloriad","jgnx","kddi-labs","krlight","max","netherlight","northernlight","pionier","starlight","uvalight","psnc"]:
         newname = getUrlName(name)
         topo = AGTopology("golesv1/%s.owl" % name)
+        master1 += topo.storev1
         graph = topo.convert()
         graph.serialize("goles/%s.owl"%newname,format="pretty-xml")
         graph.serialize("goles/%s.n3"%newname,format="n3")
@@ -179,6 +185,8 @@ def main():
         master.remove((s,NML.isReference,o))
     master.serialize("master.owl",format="pretty-xml")
     master.serialize("master.n3",format="n3")
+    master1.serialize("AutoGOLE-Topo.owl",format="pretty-xml")
+    
     # Write the mapping file. Remember to undo the jerrification:
     # f = open("mapping.txt",'w')
     # for x in MAPPING:
