@@ -14,9 +14,9 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3" .
 
-<urn:ogf:network:pionier.net:2012:ets> a nml:Topology,
+<urn:ogf:network:pionier.net.pl:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3" .
 
 <urn:ogf:network:uvalight.net:2012:topology> a nml:Topology,
         owl:NamedIndividual;
@@ -117,7 +117,7 @@ nordu:nordu-netherlight a nml:PortGroup,
 
 nordu:nordu-pionier a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier.net:2012:nordu-pionier>;
+    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:nordu-pionier>;
     nmleth:vlans "1780-1783" .
 
 nordu:nordu-uvalight a nml:PortGroup,
@@ -135,7 +135,7 @@ nordu:onsala-out a nml:PortGroup,
 
 nordu:pionier-nordu a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier.net:2012:pionier-nordu>;
+    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:pionier-nordu>;
     nmleth:vlans "1780-1783" .
 
 nordu:ps-in a nml:PortGroup,

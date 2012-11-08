@@ -6,68 +6,62 @@
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <nml:Topology rdf:about="urn:ogf:network:netherlight.net:2012:ets">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:pionier.net.pl:2012:ets">
+    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3</nsi:isReference>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:netherlight.net:2012:ets">
     <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3</nsi:isReference>
-  </nml:Topology>
-  <nml:Topology rdf:about="urn:ogf:network:pionier.net:2012:ets">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.n3</nsi:isReference>
-  </nml:Topology>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
+  </owl:NamedIndividual>
   <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
     <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
   </rdf:Description>
-  <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:netherlight-geant">
-    <nml:isAlias rdf:resource="urn:ogf:network:netherlight.net:2012:netherlight-geant"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-  </nml:PortGroup>
-  <nml:BidirectionalPort rdf:about="urn:ogf:network:geant.net:2012:bi-geant-pionier">
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:geant.net:2012:bi-geant-netherlight">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:geant-pionier">
-        <nml:isAlias rdf:resource="urn:ogf:network:pionier.net:2012:geant-pionier"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasPort>
-    <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:pionier-geant">
-        <nml:isAlias rdf:resource="urn:ogf:network:pionier.net:2012:pionier-geant"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasPort>
-  </nml:BidirectionalPort>
-  <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:ps-in">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nmleth:vlans>1780-1783</nmleth:vlans>
-  </nml:PortGroup>
-  <nml:Topology rdf:about="urn:ogf:network:geant.net:2012:ets">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:locatedAt>
-      <nml:Location rdf:about="urn:ogf:network:geant.net:2012:location">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48.859</nml:lat>
-        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.295</nml:long>
-      </nml:Location>
-    </nml:locatedAt>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:ps-out">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasOutboundPort>
-    <nml:hasOutboundPort rdf:resource="urn:ogf:network:geant.net:2012:geant-pionier"/>
-    <nml:hasOutboundPort>
       <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:geant-netherlight">
         <nml:isAlias rdf:resource="urn:ogf:network:netherlight.net:2012:geant-netherlight"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <nmleth:vlans>1780-1783</nmleth:vlans>
       </nml:PortGroup>
-    </nml:hasOutboundPort>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:netherlight-geant">
+        <nml:isAlias rdf:resource="urn:ogf:network:netherlight.net:2012:netherlight-geant"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:geant.net:2012:bi-ps">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:ps-in">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:ps-out">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:geant.net:2012:ets">
+    <nml:locatedAt>
+      <nml:Location rdf:about="urn:ogf:network:geant.net:2012:location">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.295</nml:long>
+        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48.859</nml:lat>
+      </nml:Location>
+    </nml:locatedAt>
     <nsi:managedBy>
-      <nsi:NSA rdf:about="urn:ogf:network:geant.net:2012:nsa">
+      <owl:NamedIndividual rdf:about="urn:ogf:network:geant.net:2012:nsa">
+        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+           http://gnscdemo.geant.net:8080/nsi/ConnectionProvider
+        </nsi:csProviderEndpoint>
         <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: AutoBAHN  (GEANT)
             Project manager: 
@@ -78,30 +72,37 @@
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
         </nsi:adminContact>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-           http://gnscdemo.geant.net:8080/nsi/ConnectionProvider
-        </nsi:csProviderEndpoint>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
         <nsi:managing rdf:resource="urn:ogf:network:geant.net:2012:ets"/>
-      </nsi:NSA>
+      </owl:NamedIndividual>
     </nsi:managedBy>
-    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:geant.net:2012:bi-geant-pionier"/>
-    <nml:hasBidirectionalPort>
-      <nml:BidirectionalPort rdf:about="urn:ogf:network:geant.net:2012:bi-ps">
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:geant.net:2012:geant-netherlight"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:geant.net:2012:ps-out"/>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:geant-pionier">
+        <nml:isAlias rdf:resource="urn:ogf:network:pionier.net.pl:2012:geant-pionier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:geant.net:2012:ps-out"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:geant.net:2012:ps-in"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:geant.net:2012:bi-geant-netherlight"/>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:geant.net:2012:bi-geant-pionier">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:geant.net:2012:pionier-geant"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:geant.net:2012:geant-pionier"/>
       </nml:BidirectionalPort>
     </nml:hasBidirectionalPort>
-    <nml:hasBidirectionalPort>
-      <nml:BidirectionalPort rdf:about="urn:ogf:network:geant.net:2012:bi-geant-netherlight">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:geant.net:2012:netherlight-geant"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:geant.net:2012:geant-netherlight"/>
-      </nml:BidirectionalPort>
-    </nml:hasBidirectionalPort>
-    <nml:hasInboundPort rdf:resource="urn:ogf:network:geant.net:2012:pionier-geant"/>
-    <nml:hasInboundPort rdf:resource="urn:ogf:network:geant.net:2012:netherlight-geant"/>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:geant.net:2012:bi-ps"/>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
     <nml:hasInboundPort rdf:resource="urn:ogf:network:geant.net:2012:ps-in"/>
-  </nml:Topology>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:geant.net:2012:pionier-geant">
+        <nml:isAlias rdf:resource="urn:ogf:network:pionier.net.pl:2012:pionier-geant"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:geant.net:2012:netherlight-geant"/>
+  </owl:NamedIndividual>
 </rdf:RDF>

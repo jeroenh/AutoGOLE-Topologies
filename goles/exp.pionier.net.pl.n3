@@ -1,41 +1,42 @@
+@prefix exp: <urn:ogf:network:exp.pionier.net.pl:2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix pionier: <urn:ogf:network:pionier.junos.exp.net:2012:> .
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:pionier.net:2012:ets> a nml:Topology,
+<urn:ogf:network:pionier.net.pl:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3" .
 
-pionier:bi-pionier-pionier a nml:BidirectionalPort,
+exp:bi-exp-pionier a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort pionier:pionier-pionier .
+    nml:hasPort exp:exp-pionier,
+        exp:pionier-exp .
 
-pionier:bi-ps a nml:BidirectionalPort,
+exp:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort pionier:ps-in,
-        pionier:ps-out .
+    nml:hasPort exp:ps-in,
+        exp:ps-out .
 
-pionier:ets a nml:Topology,
+exp:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort pionier:bi-pionier-pionier,
-        pionier:bi-ps;
-    nml:hasInboundPort pionier:pionier-pionier,
-        pionier:ps-in;
-    nml:hasOutboundPort pionier:pionier-pionier,
-        pionier:ps-out;
-    nml:locatedAt pionier:location;
-    nsi:managedBy pionier:nsa .
+    nml:hasBidirectionalPort exp:bi-exp-pionier,
+        exp:bi-ps;
+    nml:hasInboundPort exp:pionier-exp,
+        exp:ps-in;
+    nml:hasOutboundPort exp:exp-pionier,
+        exp:ps-out;
+    nml:locatedAt exp:location;
+    nsi:managedBy exp:nsa .
 
-pionier:location a nml:Location,
+exp:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "16.916"^^<http://www.w3.org/2001/XMLSchema#float> .
 
-pionier:nsa a nsi:NSA,
+exp:nsa a nsi:NSA,
         owl:NamedIndividual;
     nsi:adminContact """
             NSA: PSNC 
@@ -49,18 +50,23 @@ pionier:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
              http://194.132.53.174:9282/nsi/ConnectionProvider 
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing pionier:ets .
+    nsi:managing exp:ets .
 
-pionier:ps-in a nml:PortGroup,
+exp:exp-pionier a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:exp-pionier>;
+    nmleth:vlans "1780-1783" .
+
+exp:pionier-exp a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:pionier-exp>;
+    nmleth:vlans "1780-1783" .
+
+exp:ps-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-pionier:ps-out a nml:PortGroup,
+exp:ps-out a nml:PortGroup,
         owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-pionier:pionier-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier.net:2012:pionier-pionier>;
     nmleth:vlans "1780-1783" .
 
