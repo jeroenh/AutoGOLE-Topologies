@@ -188,11 +188,11 @@ def main():
     master1.serialize("AutoGOLE-Topo.owl",format="pretty-xml")
     
     # Write the mapping file. Remember to undo the jerrification:
-    # f = open("mapping.txt",'w')
-    # for x in MAPPING:
-    #     if type(MAPPING[x]) is list:
-    #         MAPPING[x].sort()
-    #     f.write("%s: %s\n" % (x,MAPPING[x]))
-    # f.close()
+    f = open("mapping.txt",'w')
+    for x in MAPPING:
+        if type(MAPPING[x]) is list:
+            MAPPING[x].sort()
+        f.write("%s: %s\n" % (x,MAPPING[x]))
+    f.close()
 if __name__ == '__main__':
     main()
