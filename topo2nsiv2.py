@@ -15,6 +15,7 @@ OWL = rdflib.Namespace("http://www.w3.org/2002/07/owl#")
 
 golenames = {
     "netherlight": "netherlight.net",
+    "czechlight": "czechlight.cesnet.cz",
     "starlight": "startap.net",
     "northernlight": "nordu.net",
     "uvalight": "uvalight.net",

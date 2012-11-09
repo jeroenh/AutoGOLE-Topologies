@@ -1,5 +1,5 @@
 @prefix aist_go_jp: <urn:ogf:network:aist.go.jp:2012:> .
-@prefix czechlight: <urn:ogf:network:czechlight:2012:> .
+@prefix czechlight_cesnet_cz: <urn:ogf:network:czechlight.cesnet.cz:2012:> .
 @prefix es_net: <urn:ogf:network:es.net:2012:> .
 @prefix exp_pionier_net_pl: <urn:ogf:network:exp.pionier.net.pl:2012:> .
 @prefix geant_net: <urn:ogf:network:geant.net:2012:> .
@@ -65,34 +65,34 @@ aist_go_jp:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing aist_go_jp:ets .
 
-czechlight:bi-czechlight-netherlight a nml:BidirectionalPort,
+czechlight_cesnet_cz:bi-czechlight-netherlight a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort czechlight:czechlight-netherlight,
-        czechlight:netherlight-czechlight .
+    nml:hasPort czechlight_cesnet_cz:czechlight-netherlight,
+        czechlight_cesnet_cz:netherlight-czechlight .
 
-czechlight:bi-ps a nml:BidirectionalPort,
+czechlight_cesnet_cz:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort czechlight:ps-in,
-        czechlight:ps-out .
+    nml:hasPort czechlight_cesnet_cz:ps-in,
+        czechlight_cesnet_cz:ps-out .
 
-czechlight:ets a nml:Topology,
+czechlight_cesnet_cz:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort czechlight:bi-czechlight-netherlight,
-        czechlight:bi-ps;
-    nml:hasInboundPort czechlight:netherlight-czechlight,
-        czechlight:ps-in;
-    nml:hasOutboundPort czechlight:czechlight-netherlight,
-        czechlight:ps-out;
-    nml:locatedAt czechlight:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/czechlight.n3";
-    nsi:managedBy czechlight:nsa .
+    nml:hasBidirectionalPort czechlight_cesnet_cz:bi-czechlight-netherlight,
+        czechlight_cesnet_cz:bi-ps;
+    nml:hasInboundPort czechlight_cesnet_cz:netherlight-czechlight,
+        czechlight_cesnet_cz:ps-in;
+    nml:hasOutboundPort czechlight_cesnet_cz:czechlight-netherlight,
+        czechlight_cesnet_cz:ps-out;
+    nml:locatedAt czechlight_cesnet_cz:location;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/czechlight.cesnet.cz.n3";
+    nsi:managedBy czechlight_cesnet_cz:nsa .
 
-czechlight:location a nml:Location,
+czechlight_cesnet_cz:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "50.088"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "14.421"^^<http://www.w3.org/2001/XMLSchema#float> .
 
-czechlight:nsa a nsi:NSA,
+czechlight_cesnet_cz:nsa a nsi:NSA,
         owl:NamedIndividual;
     nsi:adminContact """
             NSA: OpenDRAC (SURFnet) 
@@ -108,7 +108,7 @@ czechlight:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing czechlight:ets .
+    nsi:managing czechlight_cesnet_cz:ets .
 
 es_net:bi-es-startap a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -866,11 +866,11 @@ aist_go_jp:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-czechlight:ps-in a nml:PortGroup,
+czechlight_cesnet_cz:ps-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-czechlight:ps-out a nml:PortGroup,
+czechlight_cesnet_cz:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
@@ -988,12 +988,12 @@ aist_go_jp:jgn-aist a nml:PortGroup,
     nml:isAlias jgn_nict_go_jp:jgn-aist;
     nmleth:vlans "1780-1783" .
 
-czechlight:czechlight-netherlight a nml:PortGroup,
+czechlight_cesnet_cz:czechlight-netherlight a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias netherlight_net:czechlight-netherlight;
     nmleth:vlans "1780-1783" .
 
-czechlight:netherlight-czechlight a nml:PortGroup,
+czechlight_cesnet_cz:netherlight-czechlight a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias netherlight_net:netherlight-czechlight;
     nmleth:vlans "1780-1783" .
@@ -1130,7 +1130,7 @@ maxgigapop_net:startap-maxgigapop a nml:PortGroup,
 
 netherlight_net:czechlight-netherlight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias czechlight:czechlight-netherlight;
+    nml:isAlias czechlight_cesnet_cz:czechlight-netherlight;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:geant-netherlight a nml:PortGroup,
@@ -1140,7 +1140,7 @@ netherlight_net:geant-netherlight a nml:PortGroup,
 
 netherlight_net:netherlight-czechlight a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias czechlight:netherlight-czechlight;
+    nml:isAlias czechlight_cesnet_cz:netherlight-czechlight;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:netherlight-geant a nml:PortGroup,
