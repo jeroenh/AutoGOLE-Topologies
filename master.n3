@@ -352,7 +352,7 @@ jgn-x_jp:nsa a nsi:NSA,
             skype: takahiro.miyamoto 
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:csProviderEndpoint """
-            http://202.180.38.130:8080/connectionprovider
+            http://202.180.38.130:8080/2012/03/connectionprovider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing jgn-x_jp:ets .
 
@@ -397,7 +397,7 @@ kddilabs_jp:nsa a nsi:NSA,
             skype: takahiro.miyamoto 
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:csProviderEndpoint """
-            http://210.196.65.114:9352/connectionprovider
+            http://210.196.65.114:9352/2012/03/connectionprovider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing kddilabs_jp:ets .
 

@@ -50,7 +50,7 @@ kddilabs:nsa a nsi:NSA,
             skype: takahiro.miyamoto 
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:csProviderEndpoint """
-            http://210.196.65.114:9352/connectionprovider
+            http://210.196.65.114:9352/2012/03/connectionprovider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing kddilabs:ets .
 

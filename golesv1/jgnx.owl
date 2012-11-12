@@ -159,7 +159,7 @@
             skype: takahiro.miyamoto 
         </adminContact>
         <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://202.180.38.130:8080/connectionprovider
+            http://202.180.38.130:8080/2012/03/connectionprovider
         </csProviderEndpoint>
     </owl:NamedIndividual>
 </rdf:RDF>
