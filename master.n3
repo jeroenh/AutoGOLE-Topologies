@@ -724,7 +724,7 @@ pionier_net_pl:nsa a nsi:NSA,
             skype= michalb.psnc
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:csProviderEndpoint """
-            http://194.132.53.174:9280/nsi/ConnectionProviderPort
+            http://194.132.53.174:9280/nsi/ConnectionProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing pionier_net_pl:ets .
 
