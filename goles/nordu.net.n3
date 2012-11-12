@@ -84,7 +84,7 @@ nordu:nsa a nsi:NSA,
             email: htj@nordu.net
             skype: henrik.thostrup.jensen
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:csProviderEndpoint "https://orval.grid.aau.dk:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:csProviderEndpoint "https://nsi.nordu.net:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing nordu:ets .
 
 nordu:maxgigapop-nordu a nml:PortGroup,
