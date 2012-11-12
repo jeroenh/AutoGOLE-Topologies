@@ -4,7 +4,7 @@
 @prefix exp_pionier_net_pl: <urn:ogf:network:exp.pionier.net.pl:2012:> .
 @prefix geant_net: <urn:ogf:network:geant.net:2012:> .
 @prefix gloriad_org: <urn:ogf:network:gloriad.org:2012:> .
-@prefix jgn_nict_go_jp: <urn:ogf:network:jgn.nict.go.jp:2012:> .
+@prefix jgn-x_jp: <urn:ogf:network:jgn-x.jp:2012:> .
 @prefix kddilabs_jp: <urn:ogf:network:kddilabs.jp:2012:> .
 @prefix krlight_net: <urn:ogf:network:krlight.net:2012:> .
 @prefix maxgigapop_net: <urn:ogf:network:maxgigapop.net:2012:> .
@@ -20,10 +20,10 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-aist_go_jp:bi-aist-jgn a nml:BidirectionalPort,
+aist_go_jp:bi-aist-jgn-x a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort aist_go_jp:aist-jgn,
-        aist_go_jp:jgn-aist .
+    nml:hasPort aist_go_jp:aist-jgn-x,
+        aist_go_jp:jgn-x-aist .
 
 aist_go_jp:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -32,11 +32,11 @@ aist_go_jp:bi-ps a nml:BidirectionalPort,
 
 aist_go_jp:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort aist_go_jp:bi-aist-jgn,
+    nml:hasBidirectionalPort aist_go_jp:bi-aist-jgn-x,
         aist_go_jp:bi-ps;
-    nml:hasInboundPort aist_go_jp:jgn-aist,
+    nml:hasInboundPort aist_go_jp:jgn-x-aist,
         aist_go_jp:ps-in;
-    nml:hasOutboundPort aist_go_jp:aist-jgn,
+    nml:hasOutboundPort aist_go_jp:aist-jgn-x,
         aist_go_jp:ps-out;
     nml:locatedAt aist_go_jp:location;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/aist.go.jp.n3";
@@ -295,50 +295,50 @@ gloriad_org:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing gloriad_org:ets .
 
-jgn_nict_go_jp:bi-jgn-aist a nml:BidirectionalPort,
+jgn-x_jp:bi-jgn-x-aist a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort jgn_nict_go_jp:aist-jgn,
-        jgn_nict_go_jp:jgn-aist .
+    nml:hasPort jgn-x_jp:aist-jgn-x,
+        jgn-x_jp:jgn-x-aist .
 
-jgn_nict_go_jp:bi-jgn-kddilabs a nml:BidirectionalPort,
+jgn-x_jp:bi-jgn-x-kddilabs a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort jgn_nict_go_jp:jgn-kddilabs,
-        jgn_nict_go_jp:kddilabs-jgn .
+    nml:hasPort jgn-x_jp:jgn-x-kddilabs,
+        jgn-x_jp:kddilabs-jgn-x .
 
-jgn_nict_go_jp:bi-jgn-startap a nml:BidirectionalPort,
+jgn-x_jp:bi-jgn-x-startap a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort jgn_nict_go_jp:jgn-startap,
-        jgn_nict_go_jp:startap-jgn .
+    nml:hasPort jgn-x_jp:jgn-x-startap,
+        jgn-x_jp:startap-jgn-x .
 
-jgn_nict_go_jp:bi-ps a nml:BidirectionalPort,
+jgn-x_jp:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort jgn_nict_go_jp:ps-in,
-        jgn_nict_go_jp:ps-out .
+    nml:hasPort jgn-x_jp:ps-in,
+        jgn-x_jp:ps-out .
 
-jgn_nict_go_jp:ets a nml:Topology,
+jgn-x_jp:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort jgn_nict_go_jp:bi-jgn-aist,
-        jgn_nict_go_jp:bi-jgn-kddilabs,
-        jgn_nict_go_jp:bi-jgn-startap,
-        jgn_nict_go_jp:bi-ps;
-    nml:hasInboundPort jgn_nict_go_jp:aist-jgn,
-        jgn_nict_go_jp:kddilabs-jgn,
-        jgn_nict_go_jp:ps-in,
-        jgn_nict_go_jp:startap-jgn;
-    nml:hasOutboundPort jgn_nict_go_jp:jgn-aist,
-        jgn_nict_go_jp:jgn-kddilabs,
-        jgn_nict_go_jp:jgn-startap,
-        jgn_nict_go_jp:ps-out;
-    nml:locatedAt jgn_nict_go_jp:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn.nict.go.jp.n3";
-    nsi:managedBy jgn_nict_go_jp:nsa .
+    nml:hasBidirectionalPort jgn-x_jp:bi-jgn-x-aist,
+        jgn-x_jp:bi-jgn-x-kddilabs,
+        jgn-x_jp:bi-jgn-x-startap,
+        jgn-x_jp:bi-ps;
+    nml:hasInboundPort jgn-x_jp:aist-jgn-x,
+        jgn-x_jp:kddilabs-jgn-x,
+        jgn-x_jp:ps-in,
+        jgn-x_jp:startap-jgn-x;
+    nml:hasOutboundPort jgn-x_jp:jgn-x-aist,
+        jgn-x_jp:jgn-x-kddilabs,
+        jgn-x_jp:jgn-x-startap,
+        jgn-x_jp:ps-out;
+    nml:locatedAt jgn-x_jp:location;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn-x.jp.n3";
+    nsi:managedBy jgn-x_jp:nsa .
 
-jgn_nict_go_jp:location a nml:Location,
+jgn-x_jp:location a nml:Location,
         owl:NamedIndividual;
     nml:lat "35.688"^^<http://www.w3.org/2001/XMLSchema#float>;
     nml:long "139.764"^^<http://www.w3.org/2001/XMLSchema#float> .
 
-jgn_nict_go_jp:nsa a nsi:NSA,
+jgn-x_jp:nsa a nsi:NSA,
         owl:NamedIndividual;
     nsi:adminContact """
             NSA: G-Lambda/KDDILabs (KDDI Labs) 
@@ -354,12 +354,12 @@ jgn_nict_go_jp:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://202.180.38.130:8080/connectionprovider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing jgn_nict_go_jp:ets .
+    nsi:managing jgn-x_jp:ets .
 
-kddilabs_jp:bi-kddilabs-jgn a nml:BidirectionalPort,
+kddilabs_jp:bi-kddilabs-jgn-x a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort kddilabs_jp:jgn-kddilabs,
-        kddilabs_jp:kddilabs-jgn .
+    nml:hasPort kddilabs_jp:jgn-x-kddilabs,
+        kddilabs_jp:kddilabs-jgn-x .
 
 kddilabs_jp:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -368,11 +368,11 @@ kddilabs_jp:bi-ps a nml:BidirectionalPort,
 
 kddilabs_jp:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort kddilabs_jp:bi-kddilabs-jgn,
+    nml:hasBidirectionalPort kddilabs_jp:bi-kddilabs-jgn-x,
         kddilabs_jp:bi-ps;
-    nml:hasInboundPort kddilabs_jp:jgn-kddilabs,
+    nml:hasInboundPort kddilabs_jp:jgn-x-kddilabs,
         kddilabs_jp:ps-in;
-    nml:hasOutboundPort kddilabs_jp:kddilabs-jgn,
+    nml:hasOutboundPort kddilabs_jp:kddilabs-jgn-x,
         kddilabs_jp:ps-out;
     nml:locatedAt kddilabs_jp:location;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/kddilabs.jp.n3";
@@ -743,10 +743,10 @@ startap_net:bi-startap-gloriad a nml:BidirectionalPort,
     nml:hasPort startap_net:gloriad-startap,
         startap_net:startap-gloriad .
 
-startap_net:bi-startap-jgn a nml:BidirectionalPort,
+startap_net:bi-startap-jgn-x a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort startap_net:jgn-startap,
-        startap_net:startap-jgn .
+    nml:hasPort startap_net:jgn-x-startap,
+        startap_net:startap-jgn-x .
 
 startap_net:bi-startap-maxgigapop a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -763,19 +763,19 @@ startap_net:ets a nml:Topology,
     nml:hasBidirectionalPort startap_net:bi-ps,
         startap_net:bi-startap-es,
         startap_net:bi-startap-gloriad,
-        startap_net:bi-startap-jgn,
+        startap_net:bi-startap-jgn-x,
         startap_net:bi-startap-maxgigapop,
         startap_net:bi-startap-netherlight;
     nml:hasInboundPort startap_net:es-startap,
         startap_net:gloriad-startap,
-        startap_net:jgn-startap,
+        startap_net:jgn-x-startap,
         startap_net:maxgigapop-startap,
         startap_net:netherlight-startap,
         startap_net:ps-in;
     nml:hasOutboundPort startap_net:ps-out,
         startap_net:startap-es,
         startap_net:startap-gloriad,
-        startap_net:startap-jgn,
+        startap_net:startap-jgn-x,
         startap_net:startap-maxgigapop,
         startap_net:startap-netherlight;
     nml:locatedAt startap_net:location;
@@ -906,11 +906,11 @@ gloriad_org:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-jgn_nict_go_jp:ps-in a nml:PortGroup,
+jgn-x_jp:ps-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-jgn_nict_go_jp:ps-out a nml:PortGroup,
+jgn-x_jp:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
@@ -978,14 +978,14 @@ uvalight_net:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-aist_go_jp:aist-jgn a nml:PortGroup,
+aist_go_jp:aist-jgn-x a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias jgn_nict_go_jp:aist-jgn;
+    nml:isAlias jgn-x_jp:aist-jgn-x;
     nmleth:vlans "1780-1783" .
 
-aist_go_jp:jgn-aist a nml:PortGroup,
+aist_go_jp:jgn-x-aist a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias jgn_nict_go_jp:jgn-aist;
+    nml:isAlias jgn-x_jp:jgn-x-aist;
     nmleth:vlans "1780-1783" .
 
 czechlight_cesnet_cz:czechlight-netherlight a nml:PortGroup,
@@ -1058,44 +1058,44 @@ gloriad_org:startap-gloriad a nml:PortGroup,
     nml:isAlias startap_net:startap-gloriad;
     nmleth:vlans "1780-1783" .
 
-jgn_nict_go_jp:aist-jgn a nml:PortGroup,
+jgn-x_jp:aist-jgn-x a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias aist_go_jp:aist-jgn;
+    nml:isAlias aist_go_jp:aist-jgn-x;
     nmleth:vlans "1780-1783" .
 
-jgn_nict_go_jp:jgn-aist a nml:PortGroup,
+jgn-x_jp:jgn-x-aist a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias aist_go_jp:jgn-aist;
+    nml:isAlias aist_go_jp:jgn-x-aist;
     nmleth:vlans "1780-1783" .
 
-jgn_nict_go_jp:jgn-kddilabs a nml:PortGroup,
+jgn-x_jp:jgn-x-kddilabs a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias kddilabs_jp:jgn-kddilabs;
+    nml:isAlias kddilabs_jp:jgn-x-kddilabs;
     nmleth:vlans "1780-1783" .
 
-jgn_nict_go_jp:jgn-startap a nml:PortGroup,
+jgn-x_jp:jgn-x-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias startap_net:jgn-startap;
+    nml:isAlias startap_net:jgn-x-startap;
     nmleth:vlans "1780-1783" .
 
-jgn_nict_go_jp:kddilabs-jgn a nml:PortGroup,
+jgn-x_jp:kddilabs-jgn-x a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias kddilabs_jp:kddilabs-jgn;
+    nml:isAlias kddilabs_jp:kddilabs-jgn-x;
     nmleth:vlans "1780-1783" .
 
-jgn_nict_go_jp:startap-jgn a nml:PortGroup,
+jgn-x_jp:startap-jgn-x a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias startap_net:startap-jgn;
+    nml:isAlias startap_net:startap-jgn-x;
     nmleth:vlans "1780-1783" .
 
-kddilabs_jp:jgn-kddilabs a nml:PortGroup,
+kddilabs_jp:jgn-x-kddilabs a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias jgn_nict_go_jp:jgn-kddilabs;
+    nml:isAlias jgn-x_jp:jgn-x-kddilabs;
     nmleth:vlans "1780-1783" .
 
-kddilabs_jp:kddilabs-jgn a nml:PortGroup,
+kddilabs_jp:kddilabs-jgn-x a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias jgn_nict_go_jp:kddilabs-jgn;
+    nml:isAlias jgn-x_jp:kddilabs-jgn-x;
     nmleth:vlans "1780-1783" .
 
 krlight_net:gloriad-krlight a nml:PortGroup,
@@ -1278,9 +1278,9 @@ startap_net:gloriad-startap a nml:PortGroup,
     nml:isAlias gloriad_org:gloriad-startap;
     nmleth:vlans "1780-1783" .
 
-startap_net:jgn-startap a nml:PortGroup,
+startap_net:jgn-x-startap a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias jgn_nict_go_jp:jgn-startap;
+    nml:isAlias jgn-x_jp:jgn-x-startap;
     nmleth:vlans "1780-1783" .
 
 startap_net:maxgigapop-startap a nml:PortGroup,
@@ -1303,9 +1303,9 @@ startap_net:startap-gloriad a nml:PortGroup,
     nml:isAlias gloriad_org:startap-gloriad;
     nmleth:vlans "1780-1783" .
 
-startap_net:startap-jgn a nml:PortGroup,
+startap_net:startap-jgn-x a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias jgn_nict_go_jp:startap-jgn;
+    nml:isAlias jgn-x_jp:startap-jgn-x;
     nmleth:vlans "1780-1783" .
 
 startap_net:startap-maxgigapop a nml:PortGroup,

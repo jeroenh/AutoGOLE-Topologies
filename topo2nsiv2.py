@@ -26,7 +26,7 @@ golenames = {
     "geant": "geant.net",
     "krlight": "krlight.net",
     "max": "maxgigapop.net",
-    "jgnx": "jgn.nict.go.jp",
+    "jgnx": "jgn-x.jp",
     "gloriad": "gloriad.org",
     "esnet": "es.net",
     "psnc": "exp.pionier.net.pl",

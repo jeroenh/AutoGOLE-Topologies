@@ -6,14 +6,14 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:jgn.nict.go.jp:2012:ets> a nml:Topology,
+<urn:ogf:network:jgn-x.jp:2012:ets> a nml:Topology,
         owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn.nict.go.jp.n3" .
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn-x.jp.n3" .
 
-kddilabs:bi-kddilabs-jgn a nml:BidirectionalPort,
+kddilabs:bi-kddilabs-jgn-x a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort kddilabs:jgn-kddilabs,
-        kddilabs:kddilabs-jgn .
+    nml:hasPort kddilabs:jgn-x-kddilabs,
+        kddilabs:kddilabs-jgn-x .
 
 kddilabs:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -22,11 +22,11 @@ kddilabs:bi-ps a nml:BidirectionalPort,
 
 kddilabs:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort kddilabs:bi-kddilabs-jgn,
+    nml:hasBidirectionalPort kddilabs:bi-kddilabs-jgn-x,
         kddilabs:bi-ps;
-    nml:hasInboundPort kddilabs:jgn-kddilabs,
+    nml:hasInboundPort kddilabs:jgn-x-kddilabs,
         kddilabs:ps-in;
-    nml:hasOutboundPort kddilabs:kddilabs-jgn,
+    nml:hasOutboundPort kddilabs:kddilabs-jgn-x,
         kddilabs:ps-out;
     nml:locatedAt kddilabs:location;
     nsi:managedBy kddilabs:nsa .
@@ -54,14 +54,14 @@ kddilabs:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing kddilabs:ets .
 
-kddilabs:jgn-kddilabs a nml:PortGroup,
+kddilabs:jgn-x-kddilabs a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgn.nict.go.jp:2012:jgn-kddilabs>;
+    nml:isAlias <urn:ogf:network:jgn-x.jp:2012:jgn-x-kddilabs>;
     nmleth:vlans "1780-1783" .
 
-kddilabs:kddilabs-jgn a nml:PortGroup,
+kddilabs:kddilabs-jgn-x a nml:PortGroup,
         owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgn.nict.go.jp:2012:kddilabs-jgn>;
+    nml:isAlias <urn:ogf:network:jgn-x.jp:2012:kddilabs-jgn-x>;
     nmleth:vlans "1780-1783" .
 
 kddilabs:ps-in a nml:PortGroup,
