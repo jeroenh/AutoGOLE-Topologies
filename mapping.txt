@@ -8,7 +8,7 @@ urn:ogf:network:uvalight.net:2012:bi-ps: ['urn:ogf:network:stp:uvalight.ets:ps-8
 urn:ogf:network:nordu.net:2012:bi-nordu-uvalight: ['urn:ogf:network:stp:northernlight.ets:uva-1780', 'urn:ogf:network:stp:northernlight.ets:uva-1781', 'urn:ogf:network:stp:northernlight.ets:uva-1782', 'urn:ogf:network:stp:northernlight.ets:uva-1783']
 urn:ogf:network:uvalight.net:2012:bi-uvalight-netherlight: ['urn:ogf:network:stp:uvalight.ets:ams-80', 'urn:ogf:network:stp:uvalight.ets:ams-81', 'urn:ogf:network:stp:uvalight.ets:ams-82', 'urn:ogf:network:stp:uvalight.ets:ams-83']
 urn:ogf:network:czechlight.cesnet.cz:2012:nsa: urn:ogf:network:nsa:czechlight
-urn:ogf:network:aist.go.jp:2012:bi-aist-jgn-x: ['urn:ogf:network:stp:aist.ets:tok-80', 'urn:ogf:network:stp:aist.ets:tok-81', 'urn:ogf:network:stp:aist.ets:tok-82', 'urn:ogf:network:stp:aist.ets:tok-83']
+urn:ogf:network:jgn-x.jp:2012:bi-jgn-x-startap: ['urn:ogf:network:stp:jgnx.ets:chi-80', 'urn:ogf:network:stp:jgnx.ets:chi-81', 'urn:ogf:network:stp:jgnx.ets:chi-82', 'urn:ogf:network:stp:jgnx.ets:chi-83']
 urn:ogf:network:gloriad.org:2012:bi-gloriad-krlight: ['urn:ogf:network:stp:gloriad.ets:krl.0', 'urn:ogf:network:stp:gloriad.ets:krl.1', 'urn:ogf:network:stp:gloriad.ets:krl.2', 'urn:ogf:network:stp:gloriad.ets:krl.3']
 urn:ogf:network:aist.go.jp:2012:nsa: urn:ogf:network:nsa:aist
 urn:ogf:network:nordu.net:2012:bi-nordu-uvalight: ['urn:ogf:network:stp:northernlight.ets:uva-1780', 'urn:ogf:network:stp:northernlight.ets:uva-1781', 'urn:ogf:network:stp:northernlight.ets:uva-1782', 'urn:ogf:network:stp:northernlight.ets:uva-1783']
@@ -50,7 +50,7 @@ urn:ogf:network:pionier.net.pl:2012:bi-pionier-nordu: ['urn:ogf:network:stp:pion
 urn:ogf:network:czechlight.cesnet.cz:2012:bi-ps: ['urn:ogf:network:stp:czechlight.ets:ps-80', 'urn:ogf:network:stp:czechlight.ets:ps-81', 'urn:ogf:network:stp:czechlight.ets:ps-82', 'urn:ogf:network:stp:czechlight.ets:ps-83']
 urn:ogf:network:pionier.net.pl:2012:bi-pionier-geant: ['urn:ogf:network:stp:pionier.ets:gn3-80', 'urn:ogf:network:stp:pionier.ets:gn3-81', 'urn:ogf:network:stp:pionier.ets:gn3-82', 'urn:ogf:network:stp:pionier.ets:gn3-83']
 urn:ogf:network:uvalight.net:2012:nsa: urn:ogf:network:nsa:uvalight
-urn:ogf:network:jgn-x.jp:2012:bi-jgn-x-startap: ['urn:ogf:network:stp:jgnx.ets:chi-80', 'urn:ogf:network:stp:jgnx.ets:chi-81', 'urn:ogf:network:stp:jgnx.ets:chi-82', 'urn:ogf:network:stp:jgnx.ets:chi-83']
+urn:ogf:network:aist.go.jp:2012:bi-aist-jgn-x: ['urn:ogf:network:stp:aist.ets:tok-80', 'urn:ogf:network:stp:aist.ets:tok-81', 'urn:ogf:network:stp:aist.ets:tok-82', 'urn:ogf:network:stp:aist.ets:tok-83']
 urn:ogf:network:nordu.net:2012:bi-ps: ['urn:ogf:network:stp:northernlight.ets:ps-80', 'urn:ogf:network:stp:northernlight.ets:ps-81', 'urn:ogf:network:stp:northernlight.ets:ps-82', 'urn:ogf:network:stp:northernlight.ets:ps-83']
 urn:ogf:network:nordu.net:2012:bi-nordu-netherlight: ['urn:ogf:network:stp:northernlight.ets:ams-80', 'urn:ogf:network:stp:northernlight.ets:ams-81', 'urn:ogf:network:stp:northernlight.ets:ams-82', 'urn:ogf:network:stp:northernlight.ets:ams-83']
 urn:ogf:network:exp.pionier.net.pl:2012:bi-ps: ['urn:ogf:network:stp:psnc.ets:ps-80', 'urn:ogf:network:stp:psnc.ets:ps-81', 'urn:ogf:network:stp:psnc.ets:ps-82', 'urn:ogf:network:stp:psnc.ets:ps-83']

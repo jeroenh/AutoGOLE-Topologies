@@ -192,7 +192,7 @@ def main():
     # since it has resolved all references already.
     for s,o in master.subject_objects(NML.isReference):
         master.remove((s,NML.isReference,o))
-    master.serialize("master.owl",format="pretty-xml")
+    master.serialize("master.owl",format="xml")
     master.serialize("master.n3",format="n3")
     master1.serialize("AutoGOLE-Topo.owl",format="xml")
     
