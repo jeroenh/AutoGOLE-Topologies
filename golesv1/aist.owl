@@ -107,7 +107,7 @@
             skype: taketake320
         </adminContact>
         <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://163.220.30.174:8090/nsi_gl_proxy/services/ConnectionServiceProvider
+            http://163.220.30.174:28080/nsi2/services/ConnectionProvider
         </csProviderEndpoint>
     </owl:NamedIndividual>
 

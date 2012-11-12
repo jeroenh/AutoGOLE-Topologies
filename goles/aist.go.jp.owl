@@ -6,14 +6,45 @@
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
-    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
-  </rdf:Description>
   <owl:NamedIndividual rdf:about="urn:ogf:network:jgn-x.jp:2012:ets">
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
     <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn-x.jp.n3</nsi:isReference>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:aist.go.jp:2012:nsa">
+  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
+    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
+  </rdf:Description>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:aist.go.jp:2012:ps-in">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+  </owl:NamedIndividual>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:aist.go.jp:2012:bi-ps">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:aist.go.jp:2012:ps-in"/>
+    <nml:hasPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:aist.go.jp:2012:ps-out">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nsi:NSA rdf:about="urn:ogf:network:aist.go.jp:2012:nsa">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nsi:managing>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:aist.go.jp:2012:ets">
+        <nml:locatedAt rdf:resource="urn:ogf:network:aist.go.jp:2012:location"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:aist.go.jp:2012:bi-ps"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:aist.go.jp:2012:bi-aist-jgn-x"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:aist.go.jp:2012:aist-jgn-x"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:aist.go.jp:2012:ps-out"/>
+        <nsi:managedBy rdf:resource="urn:ogf:network:aist.go.jp:2012:nsa"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:aist.go.jp:2012:ps-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:aist.go.jp:2012:jgn-x-aist"/>
+      </owl:NamedIndividual>
+    </nsi:managing>
+    <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://163.220.30.174:28080/nsi2/services/ConnectionProvider
+        </nsi:csProviderEndpoint>
     <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA:  G-Lambda/AIST  (AIST)
             Project manager: Tomohiro Kudoh 
@@ -25,59 +56,25 @@
             mobile:  81-29-861-3091 
             skype: taketake320
         </nsi:adminContact>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
-    <nsi:managing>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:aist.go.jp:2012:ets">
-        <nml:locatedAt rdf:resource="urn:ogf:network:aist.go.jp:2012:location"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:aist.go.jp:2012:bi-ps"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:aist.go.jp:2012:bi-aist-jgn-x"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:aist.go.jp:2012:aist-jgn-x"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:aist.go.jp:2012:ps-out"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-        <nsi:managedBy rdf:resource="urn:ogf:network:aist.go.jp:2012:nsa"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:aist.go.jp:2012:ps-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:aist.go.jp:2012:jgn-x-aist"/>
-      </owl:NamedIndividual>
-    </nsi:managing>
-    <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://163.220.30.174:8090/nsi_gl_proxy/services/ConnectionServiceProvider
-        </nsi:csProviderEndpoint>
+  </nsi:NSA>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:aist.go.jp:2012:aist-jgn-x">
+    <nml:isAlias rdf:resource="urn:ogf:network:jgn-x.jp:2012:aist-jgn-x"/>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:aist.go.jp:2012:bi-aist-jgn-x">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:aist.go.jp:2012:aist-jgn-x">
-        <nml:isAlias rdf:resource="urn:ogf:network:jgn-x.jp:2012:aist-jgn-x"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:aist.go.jp:2012:jgn-x-aist">
-        <nml:isAlias rdf:resource="urn:ogf:network:jgn-x.jp:2012:jgn-x-aist"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:aist.go.jp:2012:bi-ps">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:aist.go.jp:2012:ps-in">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:aist.go.jp:2012:ps-out">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:aist.go.jp:2012:location">
+  <nml:Location rdf:about="urn:ogf:network:aist.go.jp:2012:location">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">140.133</nml:long>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
     <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.060</nml:lat>
+  </nml:Location>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:aist.go.jp:2012:jgn-x-aist">
+    <nml:isAlias rdf:resource="urn:ogf:network:jgn-x.jp:2012:jgn-x-aist"/>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
   </owl:NamedIndividual>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:aist.go.jp:2012:bi-aist-jgn-x">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:aist.go.jp:2012:jgn-x-aist"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:aist.go.jp:2012:aist-jgn-x"/>
+  </nml:BidirectionalPort>
 </rdf:RDF>

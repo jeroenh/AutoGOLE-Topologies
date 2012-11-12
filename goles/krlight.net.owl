@@ -6,55 +6,16 @@
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
-    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
-  </rdf:Description>
   <owl:NamedIndividual rdf:about="urn:ogf:network:gloriad.org:2012:ets">
     <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.org.n3</nsi:isReference>
     <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:bi-krlight-gloriad">
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:gloriad-krlight">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nml:isAlias rdf:resource="urn:ogf:network:gloriad.org:2012:gloriad-krlight"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:krlight-gloriad">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nml:isAlias rdf:resource="urn:ogf:network:gloriad.org:2012:krlight-gloriad"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:bi-ps">
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:ps-in">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:ps-out">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-  </owl:NamedIndividual>
+  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
+    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
+  </rdf:Description>
   <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:ets">
-    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:krlight.net:2012:bi-krlight-gloriad"/>
-    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:krlight.net:2012:bi-ps"/>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-    <nml:hasInboundPort rdf:resource="urn:ogf:network:krlight.net:2012:ps-in"/>
-    <nml:hasInboundPort rdf:resource="urn:ogf:network:krlight.net:2012:gloriad-krlight"/>
-    <nml:hasOutboundPort rdf:resource="urn:ogf:network:krlight.net:2012:ps-out"/>
-    <nml:hasOutboundPort rdf:resource="urn:ogf:network:krlight.net:2012:krlight-gloriad"/>
     <nsi:managedBy>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:nsa">
+      <nsi:NSA rdf:about="urn:ogf:network:krlight.net:2012:nsa">
         <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             DynamicKL  (KISTI) 
             Project Mgmt: 
@@ -73,19 +34,60 @@
             - Kwangjong Cho, +82-10-4192-8992, kjcho@kisti.re.kr, kwangjong cho
             : SC2011 booth#  656  KISTI
         </nsi:adminContact>
-        <nsi:managing rdf:resource="urn:ogf:network:krlight.net:2012:ets"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
         <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             http://203.230.116.202:8090/nsi/ConnectionServiceProvider
         </nsi:csProviderEndpoint>
-      </owl:NamedIndividual>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nsi:managing rdf:resource="urn:ogf:network:krlight.net:2012:ets"/>
+      </nsi:NSA>
     </nsi:managedBy>
     <nml:locatedAt>
       <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:location">
-        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.366</nml:lat>
         <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">127.359</nml:long>
         <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
+        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.366</nml:lat>
       </owl:NamedIndividual>
     </nml:locatedAt>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
+    <nml:hasOutboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:krlight-gloriad">
+        <nml:isAlias rdf:resource="urn:ogf:network:gloriad.org:2012:krlight-gloriad"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:ps-out">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasOutboundPort>
+    <nml:hasInboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:ps-in">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:gloriad-krlight">
+        <nml:isAlias rdf:resource="urn:ogf:network:gloriad.org:2012:gloriad-krlight"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </owl:NamedIndividual>
+    </nml:hasInboundPort>
+    <nml:hasBidirectionalPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:bi-krlight-gloriad">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:krlight.net:2012:krlight-gloriad"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:krlight.net:2012:gloriad-krlight"/>
+      </owl:NamedIndividual>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:krlight.net:2012:bi-ps">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:krlight.net:2012:ps-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:krlight.net:2012:ps-out"/>
+      </owl:NamedIndividual>
+    </nml:hasBidirectionalPort>
   </owl:NamedIndividual>
 </rdf:RDF>
