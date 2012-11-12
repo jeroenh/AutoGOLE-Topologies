@@ -129,24 +129,6 @@
          <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-83"/>
      </owl:NamedIndividual>
 
-     <!-- MAX -->
-     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:max-80">
-         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-         <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:sl-80"/>
-     </owl:NamedIndividual>
-     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:max-81">
-         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-         <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:sl-81"/>
-     </owl:NamedIndividual>
-     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:max-82">
-         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-         <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:sl-82"/>
-     </owl:NamedIndividual>
-     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:starlight.ets:max-83">
-         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-         <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:sl-83"/>
-     </owl:NamedIndividual>
-
      <!-- urn:ogf:network:nsnetwork:starlight.ets -->
 
      <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:starlight.ets">
@@ -168,10 +150,6 @@
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:tok-81"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:tok-82"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:tok-83"/>
-         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:max-80"/>
-         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:max-81"/>
-         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:max-82"/>
-         <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:max-83"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-84"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-85"/>
          <hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-86"/>

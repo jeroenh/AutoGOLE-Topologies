@@ -179,7 +179,7 @@ def main():
     master1.bind("nmleth",NMLETH)
     master1.bind("owl",OWL)
     
-    for name in ["aist","czechlight","esnet","geant","gloriad","jgnx","kddi-labs","krlight","max","netherlight","northernlight","pionier","starlight","uvalight","psnc"]:
+    for name in ["aist","czechlight","esnet","geant","gloriad","jgnx","kddi-labs","krlight","netherlight","northernlight","pionier","starlight","uvalight","psnc"]:
         newname = getUrlName(name)
         topo = AGTopology("golesv1/%s.owl" % name)
         master1 += topo.storev1

@@ -6,36 +6,18 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:maxgigapop.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/maxgigapop.net.n3" .
-
 <urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3" .
-
-<urn:ogf:network:pionier.net.pl:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3" .
 
 <urn:ogf:network:uvalight.net:2012:topology> a nml:Topology,
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.net.n3" .
 
-nordu:bi-nordu-maxgigapop a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu:maxgigapop-nordu,
-        nordu:nordu-maxgigapop .
-
 nordu:bi-nordu-netherlight a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort nordu:netherlight-nordu,
         nordu:nordu-netherlight .
-
-nordu:bi-nordu-pionier a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu:nordu-pionier,
-        nordu:pionier-nordu .
 
 nordu:bi-nordu-uvalight a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -49,19 +31,13 @@ nordu:bi-ps a nml:BidirectionalPort,
 
 nordu:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort nordu:bi-nordu-maxgigapop,
-        nordu:bi-nordu-netherlight,
-        nordu:bi-nordu-pionier,
+    nml:hasBidirectionalPort nordu:bi-nordu-netherlight,
         nordu:bi-nordu-uvalight,
         nordu:bi-ps;
-    nml:hasInboundPort nordu:maxgigapop-nordu,
-        nordu:netherlight-nordu,
-        nordu:pionier-nordu,
+    nml:hasInboundPort nordu:netherlight-nordu,
         nordu:ps-in,
         nordu:uvalight-nordu;
-    nml:hasOutboundPort nordu:nordu-maxgigapop,
-        nordu:nordu-netherlight,
-        nordu:nordu-pionier,
+    nml:hasOutboundPort nordu:nordu-netherlight,
         nordu:nordu-uvalight,
         nordu:ps-out;
     nml:locatedAt nordu:location;
@@ -87,19 +63,9 @@ nordu:nsa a nsi:NSA,
     nsi:csProviderEndpoint "https://nsi.nordu.net:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing nordu:ets .
 
-nordu:maxgigapop-nordu a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:maxgigapop.net:2012:maxgigapop-nordu>;
-    nmleth:vlans "1780-1783" .
-
 nordu:netherlight-nordu a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-nordu>;
-    nmleth:vlans "1780-1783" .
-
-nordu:nordu-maxgigapop a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:maxgigapop.net:2012:nordu-maxgigapop>;
     nmleth:vlans "1780-1783" .
 
 nordu:nordu-netherlight a nml:PortGroup,
@@ -107,19 +73,9 @@ nordu:nordu-netherlight a nml:PortGroup,
     nml:isAlias <urn:ogf:network:netherlight.net:2012:nordu-netherlight>;
     nmleth:vlans "1780-1783" .
 
-nordu:nordu-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:nordu-pionier>;
-    nmleth:vlans "1780-1783" .
-
 nordu:nordu-uvalight a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias <urn:ogf:network:uvalight.net:2012:nordu-uvalight>;
-    nmleth:vlans "1780-1783" .
-
-nordu:pionier-nordu a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:pionier-nordu>;
     nmleth:vlans "1780-1783" .
 
 nordu:ps-in a nml:PortGroup,

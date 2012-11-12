@@ -18,10 +18,6 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn-x.jp.n3" .
 
-<urn:ogf:network:maxgigapop.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/maxgigapop.net.n3" .
-
 <urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
         owl:NamedIndividual;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3" .
@@ -46,11 +42,6 @@ startap:bi-startap-jgn-x a nml:BidirectionalPort,
     nml:hasPort startap:jgn-x-startap,
         startap:startap-jgn-x .
 
-startap:bi-startap-maxgigapop a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort startap:maxgigapop-startap,
-        startap:startap-maxgigapop .
-
 startap:bi-startap-netherlight a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort startap:netherlight-startap,
@@ -62,19 +53,16 @@ startap:ets a nml:Topology,
         startap:bi-startap-es,
         startap:bi-startap-gloriad,
         startap:bi-startap-jgn-x,
-        startap:bi-startap-maxgigapop,
         startap:bi-startap-netherlight;
     nml:hasInboundPort startap:es-startap,
         startap:gloriad-startap,
         startap:jgn-x-startap,
-        startap:maxgigapop-startap,
         startap:netherlight-startap,
         startap:ps-in;
     nml:hasOutboundPort startap:ps-out,
         startap:startap-es,
         startap:startap-gloriad,
         startap:startap-jgn-x,
-        startap:startap-maxgigapop,
         startap:startap-netherlight;
     nml:locatedAt startap:location;
     nsi:managedBy startap:nsa .
@@ -116,11 +104,6 @@ startap:jgn-x-startap a nml:PortGroup,
     nml:isAlias <urn:ogf:network:jgn-x.jp:2012:jgn-x-startap>;
     nmleth:vlans "1780-1783" .
 
-startap:maxgigapop-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:maxgigapop.net:2012:maxgigapop-startap>;
-    nmleth:vlans "1780-1783" .
-
 startap:netherlight-startap a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-startap>;
@@ -147,11 +130,6 @@ startap:startap-gloriad a nml:PortGroup,
 startap:startap-jgn-x a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias <urn:ogf:network:jgn-x.jp:2012:startap-jgn-x>;
-    nmleth:vlans "1780-1783" .
-
-startap:startap-maxgigapop a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:maxgigapop.net:2012:startap-maxgigapop>;
     nmleth:vlans "1780-1783" .
 
 startap:startap-netherlight a nml:PortGroup,

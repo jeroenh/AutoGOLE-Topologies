@@ -7,7 +7,6 @@
 @prefix jgn-x_jp: <urn:ogf:network:jgn-x.jp:2012:> .
 @prefix kddilabs_jp: <urn:ogf:network:kddilabs.jp:2012:> .
 @prefix krlight_net: <urn:ogf:network:krlight.net:2012:> .
-@prefix maxgigapop_net: <urn:ogf:network:maxgigapop.net:2012:> .
 @prefix netherlight_net: <urn:ogf:network:netherlight.net:2012:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
@@ -453,63 +452,6 @@ krlight_net:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing krlight_net:ets .
 
-maxgigapop_net:bi-maxgigapop-nordu a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort maxgigapop_net:maxgigapop-nordu,
-        maxgigapop_net:nordu-maxgigapop .
-
-maxgigapop_net:bi-maxgigapop-startap a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort maxgigapop_net:maxgigapop-startap,
-        maxgigapop_net:startap-maxgigapop .
-
-maxgigapop_net:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort maxgigapop_net:ps-in,
-        maxgigapop_net:ps-out .
-
-maxgigapop_net:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort maxgigapop_net:bi-maxgigapop-nordu,
-        maxgigapop_net:bi-maxgigapop-startap,
-        maxgigapop_net:bi-ps;
-    nml:hasInboundPort maxgigapop_net:nordu-maxgigapop,
-        maxgigapop_net:ps-in,
-        maxgigapop_net:startap-maxgigapop;
-    nml:hasOutboundPort maxgigapop_net:maxgigapop-nordu,
-        maxgigapop_net:maxgigapop-startap,
-        maxgigapop_net:ps-out;
-    nml:locatedAt maxgigapop_net:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/maxgigapop.net.n3";
-    nsi:managedBy maxgigapop_net:nsa .
-
-maxgigapop_net:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "38.995"^^<http://www.w3.org/2001/XMLSchema#float>;
-    nml:long "-76.933"^^<http://www.w3.org/2001/XMLSchema#float> .
-
-maxgigapop_net:nsa a nsi:NSA,
-        owl:NamedIndividual;
-    nsi:adminContact """
-            NSA: OpenNSA
-            Project manager:
-            email:
-            mobile:
-            skype: 
-
-            Network Engineer: Balasubramania Pillai
-            email: bpillai@maxgigapop.net
-            skype: b_pillai
-
-            Key software engineer:
-            email:
-            skype:
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:csProviderEndpoint """
-            http://nsa.maxgigapop.net:9080/NSI/services/ConnectionService/
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing maxgigapop_net:ets .
-
 netherlight_net:bi-netherlight-czechlight a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort netherlight_net:czechlight-netherlight,
@@ -595,20 +537,10 @@ netherlight_net:nsa a nsi:NSA,
         """^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:managing netherlight_net:ets .
 
-nordu_net:bi-nordu-maxgigapop a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu_net:maxgigapop-nordu,
-        nordu_net:nordu-maxgigapop .
-
 nordu_net:bi-nordu-netherlight a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort nordu_net:netherlight-nordu,
         nordu_net:nordu-netherlight .
-
-nordu_net:bi-nordu-pionier a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu_net:nordu-pionier,
-        nordu_net:pionier-nordu .
 
 nordu_net:bi-nordu-uvalight a nml:BidirectionalPort,
         owl:NamedIndividual;
@@ -622,19 +554,13 @@ nordu_net:bi-ps a nml:BidirectionalPort,
 
 nordu_net:ets a nml:Topology,
         owl:NamedIndividual;
-    nml:hasBidirectionalPort nordu_net:bi-nordu-maxgigapop,
-        nordu_net:bi-nordu-netherlight,
-        nordu_net:bi-nordu-pionier,
+    nml:hasBidirectionalPort nordu_net:bi-nordu-netherlight,
         nordu_net:bi-nordu-uvalight,
         nordu_net:bi-ps;
-    nml:hasInboundPort nordu_net:maxgigapop-nordu,
-        nordu_net:netherlight-nordu,
-        nordu_net:pionier-nordu,
+    nml:hasInboundPort nordu_net:netherlight-nordu,
         nordu_net:ps-in,
         nordu_net:uvalight-nordu;
-    nml:hasOutboundPort nordu_net:nordu-maxgigapop,
-        nordu_net:nordu-netherlight,
-        nordu_net:nordu-pionier,
+    nml:hasOutboundPort nordu_net:nordu-netherlight,
         nordu_net:nordu-uvalight,
         nordu_net:ps-out;
     nml:locatedAt nordu_net:location;
@@ -676,11 +602,6 @@ pionier_net_pl:bi-pionier-netherlight a nml:BidirectionalPort,
     nml:hasPort pionier_net_pl:netherlight-pionier,
         pionier_net_pl:pionier-netherlight .
 
-pionier_net_pl:bi-pionier-nordu a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort pionier_net_pl:nordu-pionier,
-        pionier_net_pl:pionier-nordu .
-
 pionier_net_pl:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort pionier_net_pl:ps-in,
@@ -691,17 +612,14 @@ pionier_net_pl:ets a nml:Topology,
     nml:hasBidirectionalPort pionier_net_pl:bi-pionier-exp,
         pionier_net_pl:bi-pionier-geant,
         pionier_net_pl:bi-pionier-netherlight,
-        pionier_net_pl:bi-pionier-nordu,
         pionier_net_pl:bi-ps;
     nml:hasInboundPort pionier_net_pl:exp-pionier,
         pionier_net_pl:geant-pionier,
         pionier_net_pl:netherlight-pionier,
-        pionier_net_pl:nordu-pionier,
         pionier_net_pl:ps-in;
     nml:hasOutboundPort pionier_net_pl:pionier-exp,
         pionier_net_pl:pionier-geant,
         pionier_net_pl:pionier-netherlight,
-        pionier_net_pl:pionier-nordu,
         pionier_net_pl:ps-out;
     nml:locatedAt pionier_net_pl:location;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3";
@@ -748,11 +666,6 @@ startap_net:bi-startap-jgn-x a nml:BidirectionalPort,
     nml:hasPort startap_net:jgn-x-startap,
         startap_net:startap-jgn-x .
 
-startap_net:bi-startap-maxgigapop a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort startap_net:maxgigapop-startap,
-        startap_net:startap-maxgigapop .
-
 startap_net:bi-startap-netherlight a nml:BidirectionalPort,
         owl:NamedIndividual;
     nml:hasPort startap_net:netherlight-startap,
@@ -764,19 +677,16 @@ startap_net:ets a nml:Topology,
         startap_net:bi-startap-es,
         startap_net:bi-startap-gloriad,
         startap_net:bi-startap-jgn-x,
-        startap_net:bi-startap-maxgigapop,
         startap_net:bi-startap-netherlight;
     nml:hasInboundPort startap_net:es-startap,
         startap_net:gloriad-startap,
         startap_net:jgn-x-startap,
-        startap_net:maxgigapop-startap,
         startap_net:netherlight-startap,
         startap_net:ps-in;
     nml:hasOutboundPort startap_net:ps-out,
         startap_net:startap-es,
         startap_net:startap-gloriad,
         startap_net:startap-jgn-x,
-        startap_net:startap-maxgigapop,
         startap_net:startap-netherlight;
     nml:locatedAt startap_net:location;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3";
@@ -927,14 +837,6 @@ krlight_net:ps-in a nml:PortGroup,
     nmleth:vlans "1780-1783" .
 
 krlight_net:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-maxgigapop_net:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-maxgigapop_net:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
@@ -1108,26 +1010,6 @@ krlight_net:krlight-gloriad a nml:PortGroup,
     nml:isAlias gloriad_org:krlight-gloriad;
     nmleth:vlans "1780-1783" .
 
-maxgigapop_net:maxgigapop-nordu a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias nordu_net:maxgigapop-nordu;
-    nmleth:vlans "1780-1783" .
-
-maxgigapop_net:maxgigapop-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias startap_net:maxgigapop-startap;
-    nmleth:vlans "1780-1783" .
-
-maxgigapop_net:nordu-maxgigapop a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias nordu_net:nordu-maxgigapop;
-    nmleth:vlans "1780-1783" .
-
-maxgigapop_net:startap-maxgigapop a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias startap_net:startap-maxgigapop;
-    nmleth:vlans "1780-1783" .
-
 netherlight_net:czechlight-netherlight a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias czechlight_cesnet_cz:czechlight-netherlight;
@@ -1188,19 +1070,9 @@ netherlight_net:uvalight-netherlight a nml:PortGroup,
     nml:isAlias uvalight_net:uvalight-netherlight;
     nmleth:vlans "1780-1783" .
 
-nordu_net:maxgigapop-nordu a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias maxgigapop_net:maxgigapop-nordu;
-    nmleth:vlans "1780-1783" .
-
 nordu_net:netherlight-nordu a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias netherlight_net:netherlight-nordu;
-    nmleth:vlans "1780-1783" .
-
-nordu_net:nordu-maxgigapop a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias maxgigapop_net:nordu-maxgigapop;
     nmleth:vlans "1780-1783" .
 
 nordu_net:nordu-netherlight a nml:PortGroup,
@@ -1208,19 +1080,9 @@ nordu_net:nordu-netherlight a nml:PortGroup,
     nml:isAlias netherlight_net:nordu-netherlight;
     nmleth:vlans "1780-1783" .
 
-nordu_net:nordu-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias pionier_net_pl:nordu-pionier;
-    nmleth:vlans "1780-1783" .
-
 nordu_net:nordu-uvalight a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias uvalight_net:nordu-uvalight;
-    nmleth:vlans "1780-1783" .
-
-nordu_net:pionier-nordu a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias pionier_net_pl:pionier-nordu;
     nmleth:vlans "1780-1783" .
 
 nordu_net:uvalight-nordu a nml:PortGroup,
@@ -1243,11 +1105,6 @@ pionier_net_pl:netherlight-pionier a nml:PortGroup,
     nml:isAlias netherlight_net:netherlight-pionier;
     nmleth:vlans "1780-1783" .
 
-pionier_net_pl:nordu-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias nordu_net:nordu-pionier;
-    nmleth:vlans "1780-1783" .
-
 pionier_net_pl:pionier-exp a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias exp_pionier_net_pl:pionier-exp;
@@ -1263,11 +1120,6 @@ pionier_net_pl:pionier-netherlight a nml:PortGroup,
     nml:isAlias netherlight_net:pionier-netherlight;
     nmleth:vlans "1780-1783" .
 
-pionier_net_pl:pionier-nordu a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias nordu_net:pionier-nordu;
-    nmleth:vlans "1780-1783" .
-
 startap_net:es-startap a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias es_net:es-startap;
@@ -1281,11 +1133,6 @@ startap_net:gloriad-startap a nml:PortGroup,
 startap_net:jgn-x-startap a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias jgn-x_jp:jgn-x-startap;
-    nmleth:vlans "1780-1783" .
-
-startap_net:maxgigapop-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias maxgigapop_net:maxgigapop-startap;
     nmleth:vlans "1780-1783" .
 
 startap_net:netherlight-startap a nml:PortGroup,
@@ -1306,11 +1153,6 @@ startap_net:startap-gloriad a nml:PortGroup,
 startap_net:startap-jgn-x a nml:PortGroup,
         owl:NamedIndividual;
     nml:isAlias jgn-x_jp:startap-jgn-x;
-    nmleth:vlans "1780-1783" .
-
-startap_net:startap-maxgigapop a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias maxgigapop_net:startap-maxgigapop;
     nmleth:vlans "1780-1783" .
 
 startap_net:startap-netherlight a nml:PortGroup,
