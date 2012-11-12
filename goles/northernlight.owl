@@ -178,7 +178,7 @@
             email: htj@nordu.net
             skype: henrik.thostrup.jensen
         </adminContact>
-        <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orval.grid.aau.dk:9443/NSI/services/ConnectionService</csProviderEndpoint>
+        <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://nsi.nordu.net:9443/NSI/services/ConnectionService</csProviderEndpoint>
     </owl:NamedIndividual>
 
 </rdf:RDF>
