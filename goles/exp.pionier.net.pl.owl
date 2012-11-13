@@ -13,15 +13,45 @@
     <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3</nsi:isReference>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </nml:Topology>
-  <nml:Location rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:location">
-    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.916</nml:long>
-    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.412</nml:lat>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:Location>
   <nml:Topology rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:ets">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nml:locatedAt>
+      <nml:Location rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:location">
+        <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.412</nml:lat>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.916</nml:long>
+      </nml:Location>
+    </nml:locatedAt>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:pionier-exp">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <nml:isAlias rdf:resource="urn:ogf:network:pionier.net.pl:2012:pionier-exp"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:ps-in">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:exp-pionier">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <nml:isAlias rdf:resource="urn:ogf:network:pionier.net.pl:2012:exp-pionier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:ps-out">
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
     <nsi:managedBy>
       <nsi:NSA rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:nsa">
+        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+             http://194.132.53.174:9282/nsi/ConnectionProvider 
+        </nsi:csProviderEndpoint>
         <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: PSNC 
             Project manager: Radek Krzywania  
@@ -33,51 +63,22 @@
         </nsi:adminContact>
         <nsi:managing rdf:resource="urn:ogf:network:exp.pionier.net.pl:2012:ets"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-             http://194.132.53.174:9282/nsi/ConnectionProvider 
-        </nsi:csProviderEndpoint>
       </nsi:NSA>
     </nsi:managedBy>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:pionier-exp">
-        <nml:isAlias rdf:resource="urn:ogf:network:pionier.net.pl:2012:pionier-exp"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:ps-in">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasBidirectionalPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:bi-ps">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:exp.pionier.net.pl:2012:ps-in"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:exp.pionier.net.pl:2012:ps-out"/>
-      </owl:NamedIndividual>
-    </nml:hasBidirectionalPort>
     <nml:hasBidirectionalPort>
       <owl:NamedIndividual rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:bi-exp-pionier">
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:exp.pionier.net.pl:2012:pionier-exp"/>
         <nml:hasPort rdf:resource="urn:ogf:network:exp.pionier.net.pl:2012:exp-pionier"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:exp.pionier.net.pl:2012:pionier-exp"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
       </owl:NamedIndividual>
     </nml:hasBidirectionalPort>
-    <nml:locatedAt rdf:resource="urn:ogf:network:exp.pionier.net.pl:2012:location"/>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:ps-out">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </nml:PortGroup>
-    </nml:hasOutboundPort>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:exp-pionier">
-        <nml:isAlias rdf:resource="urn:ogf:network:pionier.net.pl:2012:exp-pionier"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </nml:PortGroup>
-    </nml:hasOutboundPort>
+    <nml:hasBidirectionalPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:exp.pionier.net.pl:2012:bi-ps">
+        <nml:hasPort rdf:resource="urn:ogf:network:exp.pionier.net.pl:2012:ps-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:exp.pionier.net.pl:2012:ps-in"/>
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+      </owl:NamedIndividual>
+    </nml:hasBidirectionalPort>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </nml:Topology>
 </rdf:RDF>

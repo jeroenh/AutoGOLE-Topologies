@@ -178,6 +178,7 @@ def main():
     master1.bind("nsi",NSI)
     master1.bind("nmleth",NMLETH)
     master1.bind("owl",OWL)
+    master1.bind("dtox",DTOX)
     
     for name in ["aist","czechlight","esnet","geant","gloriad","jgnx","kddi-labs","krlight","netherlight","northernlight","pionier","starlight","uvalight","psnc"]:
         newname = getUrlName(name)
