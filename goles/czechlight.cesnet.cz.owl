@@ -9,13 +9,27 @@
   <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
     <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
   </rdf:Description>
-  <nml:Topology rdf:about="urn:ogf:network:netherlight.net:2012:ets">
+  <owl:NamedIndividual rdf:about="urn:ogf:network:netherlight.net:2012:ets">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
     <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3</nsi:isReference>
+  </owl:NamedIndividual>
+  <nml:PortGroup rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:ps-out">
+    <nmleth:vlans>1780-1783</nmleth:vlans>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:Topology>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:netherlight-czechlight">
+    <nml:isAlias rdf:resource="urn:ogf:network:netherlight.net:2012:netherlight-czechlight"/>
+    <nmleth:vlans>1780-1783</nmleth:vlans>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
   <nml:Topology rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:ets">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <nsi:managedBy>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:nsa">
+      <nsi:NSA rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:nsa">
+        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
+        </nsi:csProviderEndpoint>
+        <nsi:managing rdf:resource="urn:ogf:network:czechlight.cesnet.cz:2012:ets"/>
         <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: OpenDRAC (SURFnet) 
             Proj Manager: Michal Altmann  
@@ -27,60 +41,44 @@
             phone:  1-613-220-6817 
             skype: john.macauley
         </nsi:adminContact>
-        <nsi:managing rdf:resource="urn:ogf:network:czechlight.cesnet.cz:2012:ets"/>
-        <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
-        </nsi:csProviderEndpoint>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
-      </owl:NamedIndividual>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nsi:NSA>
     </nsi:managedBy>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:czechlight.cesnet.cz:2012:ps-out"/>
     <nml:hasOutboundPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:czechlight-netherlight">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
+      <nml:PortGroup rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:czechlight-netherlight">
         <nml:isAlias rdf:resource="urn:ogf:network:netherlight.net:2012:czechlight-netherlight"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasOutboundPort>
-    <nml:hasOutboundPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:ps-out">
         <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
     </nml:hasOutboundPort>
-    <nml:hasBidirectionalPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:bi-czechlight-netherlight">
-        <nml:hasPort rdf:resource="urn:ogf:network:czechlight.cesnet.cz:2012:czechlight-netherlight"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:czechlight.cesnet.cz:2012:netherlight-czechlight"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-      </owl:NamedIndividual>
-    </nml:hasBidirectionalPort>
-    <nml:hasBidirectionalPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:bi-ps">
-        <nml:hasPort rdf:resource="urn:ogf:network:czechlight.cesnet.cz:2012:ps-in"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:czechlight.cesnet.cz:2012:ps-out"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
-      </owl:NamedIndividual>
-    </nml:hasBidirectionalPort>
     <nml:locatedAt>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:location">
+      <nml:Location rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:location">
         <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.088</nml:lat>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">14.421</nml:long>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Location"/>
-      </owl:NamedIndividual>
+      </nml:Location>
     </nml:locatedAt>
     <nml:hasInboundPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:ps-in">
+      <nml:PortGroup rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:ps-in">
         <nmleth:vlans>1780-1783</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
     </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:netherlight-czechlight">
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-        <nml:isAlias rdf:resource="urn:ogf:network:netherlight.net:2012:netherlight-czechlight"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasInboundPort>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:czechlight.cesnet.cz:2012:netherlight-czechlight"/>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:bi-ps">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:czechlight.cesnet.cz:2012:ps-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:czechlight.cesnet.cz:2012:ps-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:czechlight.cesnet.cz:2012:bi-czechlight-netherlight">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:czechlight.cesnet.cz:2012:netherlight-czechlight"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:czechlight.cesnet.cz:2012:czechlight-netherlight"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
   </nml:Topology>
 </rdf:RDF>
