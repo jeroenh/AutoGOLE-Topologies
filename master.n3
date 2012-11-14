@@ -255,29 +255,22 @@ gloriad_org:bi-gloriad-startap a nml:BidirectionalPort,
     nml:hasPort gloriad_org:gloriad-startap,
         gloriad_org:startap-gloriad .
 
-gloriad_org:bi-ps-chi a nml:BidirectionalPort,
+gloriad_org:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual;
-    nml:hasPort gloriad_org:ps-in-chi,
-        gloriad_org:ps-out-chi .
-gloriad_org:bi-ps-sea a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort gloriad_org:ps-in-sea,
-        gloriad_org:ps-out-sea .
+    nml:hasPort gloriad_org:ps-in,
+        gloriad_org:ps-out .
 
 gloriad_org:ets a nml:Topology,
         owl:NamedIndividual;
     nml:hasBidirectionalPort gloriad_org:bi-gloriad-krlight,
         gloriad_org:bi-gloriad-startap,
-        gloriad_org:bi-ps-sea,
-        gloriad_org:bi-ps-chi;
+        gloriad_org:bi-ps;
     nml:hasInboundPort gloriad_org:krlight-gloriad,
-        gloriad_org:ps-in-sea,
-        gloriad_org:ps-in-chi,
+        gloriad_org:ps-in,
         gloriad_org:startap-gloriad;
     nml:hasOutboundPort gloriad_org:gloriad-krlight,
         gloriad_org:gloriad-startap,
-        gloriad_org:ps-out-sea,
-        gloriad_org:ps-out-chi;
+        gloriad_org:ps-out;
     nml:locatedAt gloriad_org:location;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.org.n3";
     nsi:managedBy gloriad_org:nsa .
@@ -815,19 +808,11 @@ geant_net:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-gloriad_org:ps-in-chi a nml:PortGroup,
+gloriad_org:ps-in a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 
-gloriad_org:ps-out-chi a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-gloriad_org:ps-in-sea a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-gloriad_org:ps-out-sea a nml:PortGroup,
+gloriad_org:ps-out a nml:PortGroup,
         owl:NamedIndividual;
     nmleth:vlans "1780-1783" .
 

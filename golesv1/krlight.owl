@@ -49,22 +49,22 @@
     <!-- urn:ogf:network:stp:krlight.ets:glo-80 -->
     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:krlight.ets:glo-80">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-80"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.0"/>
     </owl:NamedIndividual>
     <!-- urn:ogf:network:stp:krlight.ets:glo-81 -->
     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:krlight.ets:glo-81">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-81"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.1"/>
     </owl:NamedIndividual>
     <!-- urn:ogf:network:stp:krlight.ets:glo-82 -->
     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:krlight.ets:glo-82">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-82"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.2"/>
     </owl:NamedIndividual>
     <!-- urn:ogf:network:stp:krlight.ets:glo-83 -->
     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:krlight.ets:glo-83">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-83"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.3"/>
     </owl:NamedIndividual>
     
     <!-- urn:ogf:network:nsnetwork:krlight.ets -->
