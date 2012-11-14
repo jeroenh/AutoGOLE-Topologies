@@ -4,218 +4,122 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ams-83">
+  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:poz-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-82"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-83"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ps-82">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:glo-85">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:psnc.ets:ps-82">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:ps-83">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:tok-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:ps-81-sea">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:gloriad.ets:location">
+    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.866342</dtox:lat>
+    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.607777</dtox:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ams-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:starlight.ets:location">
+    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.947906</dtox:lat>
+    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.655791</dtox:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:ps-83-sea">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:krl-81">
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:poz-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:ams-81"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:krlight.ets:glo-81"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#managedBy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:sl.0">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:glo-84"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:netherlight.ets">
-    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:netherlight"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:ps-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:ps-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:ps-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:ps-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-81"/>
+  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-1">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1781"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:esnet.ets">
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:chi-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:chi-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:ps-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:ps-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:chi-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:ps-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:chi-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:ps-82"/>
+    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:esnet"/>
+    <rdfs:label xml:lang="en">esnet.ets</rdfs:label>
+    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:esnet.ets:location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:netherlight.ets:location"/>
-    <rdfs:label xml:lang="en">netherlight.ets</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:cph-83">
+  <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:ps-82">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-83"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:krl-83">
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:uva-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-83"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:krlight.ets:glo-83"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsa:netherlight">
+  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ps-83">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:kddi-labs.ets:location">
+    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35.879</dtox:lat>
+    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">139.517</dtox:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:pionier.ets:location">
+    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.412</dtox:lat>
+    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.916</dtox:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsa:czechlight">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            OpenDRAC (SURFnet) 
-            Proj Manager: John MacAuley 
-            email: john.macauley@surfnet.nl 
-            phone:  1-613-220-6817 
-            skype: john.macauley
-            Software Developer: John MacAuley 
-            email: john.macauley@surfnet.nl 
-            phone:  1-613-220-6817 
-            skype: john.macauley
-        </dtox:adminContact>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
         </dtox:csProviderEndpoint>
-    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:netherlight.ets"/>
-    <rdfs:label xml:lang="en">netherlight</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:uva-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ams-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:gn3-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:ams-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:ps-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:esn-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:esnet.ets:chi-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:krl-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:krlight.ets:glo-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ams-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:starlight.ets">
-    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:starlight"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:esn-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:tok-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-86"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-85"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:esn-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:tok-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ps-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:esn-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:tok-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:tok-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-87"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ps-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ps-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-84"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ps-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:esn-82"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:starlight.ets:location"/>
-    <rdfs:label xml:lang="en">starlight.ets</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:ps-82-sea">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:ps-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ps-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:poz-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:ams-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:poz-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:ams-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ps-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:pionier.ets">
-    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:pionier"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ams-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ps-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ps-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ps-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ams-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ams-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ps-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ams-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-82"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:pionier.ets:location"/>
-    <rdfs:label xml:lang="en">pionier.ets</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:ps-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:uvalight.ets:location">
-    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.953</dtox:long>
-    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.357</dtox:lat>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:ps-80-sea">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#NSNetwork">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsa:czechlight">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
     <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: OpenDRAC (SURFnet) 
             Proj Manager: Michal Altmann  
@@ -227,627 +131,12 @@
             phone:  1-613-220-6817 
             skype: john.macauley
         </dtox:adminContact>
-    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
-        </dtox:csProviderEndpoint>
     <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:czechlight.ets"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:esn-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:esnet.ets:chi-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:tsu-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:aist.ets:tok-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:chi-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:esn-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:cph-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:chi-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:esn-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#mapsTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:tsu-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:aist.ets:tok-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ams-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ps-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:chi-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:esn-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:krlight.ets:location">
-    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">127.359</dtox:long>
-    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.366</dtox:lat>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:gn3-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:ams-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:ps-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:glo-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#connectedTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:ps-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:glo-85">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:northernlight.ets">
-    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:northernlight"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1782"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ps-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ps-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1783"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1780"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ps-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ps-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1781"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:northernlight.ets:location"/>
-    <rdfs:label xml:lang="en">northernlight.ets</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ps-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:fuj-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#partOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:sl-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:glo-86"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#NSA">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:ps-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:pra-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:kddi-labs.ets">
-    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:kddi-labs"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:ps-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:ps-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:ps-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:ps-82"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:kddi-labs.ets:location"/>
-    <rdfs:label xml:lang="en">kddi-labs.ets</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:poz-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:ams-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:psnc.ets">
-    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:psnc"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:ps-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:poz-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:ps-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:poz-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:poz-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:poz-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:ps-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:ps-82"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:psnc.ets:location"/>
-    <rdfs:label xml:lang="en">psnc.ets</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:tok-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:gn3-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:ams-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:tok-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:gloriad.ets">
-    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:gloriad"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-83-sea"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-82-chi"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-81-sea"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-82-sea"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-80-chi"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-83-chi"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-81-chi"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-80-sea"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-80"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:gloriad.ets:location"/>
-    <rdfs:label xml:lang="en">gloriad.ets</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ps-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:sl-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:glo-84"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ams-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:psnc.ets:poz-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#csProviderEndpoint">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#managing">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ams-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:tok-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:chi-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:ams-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:psnc-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:psnc.ets:poz-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#locatedAt">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:jgnx.ets">
-    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:jgnx"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:ps-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:ps-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:ps-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:ps-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-81"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:jgnx.ets:location"/>
-    <rdfs:label xml:lang="en">jgnx.ets</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:glo-84">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ps-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:poz-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ams-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:ps-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:gn3-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:poz-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ps-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:psnc.ets:ps-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ps-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:tsu-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:aist.ets:tok-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:fuj-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:pra-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:poz-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:tok-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsa:aist">
-    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:aist.ets"/>
-    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            NSA:  G-Lambda/AIST  (AIST)
-            Project manager: Tomohiro Kudoh 
-            email: t.kudoh@aist.go.jp 
-            mobile:  81-90-8741-3165 
-            skype: t.kudoh 4.3.
-            Key software engineer: Atsuko Takefusa 
-            email: nsi-gl@m.aist.go.jp 
-            mobile:  81-29-861-3091 
-            skype: taketake320
-        </dtox:adminContact>
-    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://163.220.30.174:28080/nsi2/services/ConnectionProvider
-        </dtox:csProviderEndpoint>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsa:northernlight">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            NSA: OpenNSA (NORDUnet)
-            Project Management: Jerry Sobieski
-            email: jerry@nordu.net
-            mobile:  1-301-346-1849
-            skype: jerry.sobieski
-            Software Development: Henrik Thostrup-Jensen
-            email: htj@nordu.net
-            skype: henrik.thostrup.jensen
-        </dtox:adminContact>
-    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://nsi.nordu.net:9443/NSI/services/ConnectionService</dtox:csProviderEndpoint>
-    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:northernlight.ets"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsa:esnet">
-    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:esnet.ets"/>
-    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            NSA: OSCARS 
-            Project Manager: Inder Monga 
-            Email: imonga@es.net 
-            Software development engineer: Evangelos Chaniotakis 
-            Email:  haniotak@es.net
-        </dtox:adminContact>
-    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://jupiter.es.net:8288/ConnectionService
-        </dtox:csProviderEndpoint>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:sl-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:glo-87"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:northernlight.ets:location">
-    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.641</dtox:long>
-    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">55.637</dtox:lat>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ps-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ps-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:tok-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:tsu-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:aist.ets:tok-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:ps-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:pra-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ams-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:psnc-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:psnc.ets:poz-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:uva-1783">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-3"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-0">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1780"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:psnc.ets:ps-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:kddi-labs.ets:location">
-    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">139.517</dtox:long>
-    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35.879</dtox:lat>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ps-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:psnc.ets:ps-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:glo-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:psnc-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:psnc.ets:poz-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ams-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:chi-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:tok-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ams-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:gn3-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:poz-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ams-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:ps-81-chi">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ams-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:pionier.ets:location">
-    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.916</dtox:long>
-    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.412</dtox:lat>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:chi-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:ams-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ps-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:starlight.ets:location">
-    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.655791</dtox:long>
-    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.947906</dtox:lat>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:chi-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:tok-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:ps-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:netherlight.ets:location">
-    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.953</dtox:long>
-    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.357</dtox:lat>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ps-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:psnc-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:psnc.ets:poz-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ps-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:ps-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:gn3-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:ams-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ps-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:chi-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:esn-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ps-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:ps-83-chi">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:gn3-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:poz-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:czechlight.ets">
-    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:czechlight"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ps-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ps-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ps-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ps-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-81"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:czechlight.ets:location"/>
-    <rdfs:label xml:lang="en">czechlight.ets</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#hasSTP">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:ps-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:nsa:psnc">
-    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:psnc.ets"/>
+    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+             http://194.132.53.174:9282/nsi/ConnectionProvider 
+        </dtox:csProviderEndpoint>
     <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: PSNC 
             Project manager: Radek Krzywania  
@@ -857,99 +146,157 @@
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
         </dtox:adminContact>
-    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-             http://194.132.53.174:9282/nsi/ConnectionProvider 
-        </dtox:csProviderEndpoint>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsa:starlight">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-             NSA: OpenNSA (NORDUnet) over Argia 
-             Project manager: Scott Campbell 
-             email: scott.campbell@crc.gc.ca  
-             mobile:   
-             skype: scottcampbell00 
-             Key software engineer: Henrik Thostrup-Jensen 
-             email: htj@nordu.net 
-             skype: henrik.thostrup.jensen
-         </dtox:adminContact>
-    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-             http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
-         </dtox:csProviderEndpoint>
-    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:starlight.ets"/>
+    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:psnc.ets"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:aist.ets">
-    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:aist"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:ps-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:tok-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:ps-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:ps-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:tok-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:tok-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:tok-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:ps-83"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:pra-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:aist.ets:location"/>
-    <rdfs:label xml:lang="en">aist.ets</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:ps-80">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:ps-83">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:poz-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:ams-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ps-83">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:ps-81">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:uva-1781">
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:psnc-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:psnc.ets:poz-80"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:tok-82">
+  <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:ps-80">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-82"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-2">
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:cph-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-80"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1782"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:geant.ets">
-    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:geant"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ps-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:poz-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ps-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:poz-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ps-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ams-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ams-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ps-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ams-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ams-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:poz-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:poz-82"/>
+  <rdf:Description rdf:about="urn:ogf:network:stp:psnc.ets:ps-81">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:tsu-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:aist.ets:tok-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ams-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:chi-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:esn-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ps-83">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:ps-82">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:uva-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:krlight.ets">
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:ps-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:ps-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:glo-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:glo-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:ps-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:ps-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:glo-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:glo-82"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:geant.ets:location"/>
-    <rdfs:label xml:lang="en">geant.ets</rdfs:label>
+    <rdfs:label xml:lang="en">krlight.ets</rdfs:label>
+    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:krlight.ets:location"/>
+    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:krlight"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:poz-83">
+  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#locatedAt">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:aist.ets">
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:tok-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:tok-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:ps-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:ps-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:ps-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:tok-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:ps-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:aist.ets:tok-82"/>
+    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:aist"/>
+    <rdfs:label xml:lang="en">aist.ets</rdfs:label>
+    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:aist.ets:location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#managedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:northernlight.ets">
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ps-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ps-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ps-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1782"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1781"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ps-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1780"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1783"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-80"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
+    <rdfs:label xml:lang="en">northernlight.ets</rdfs:label>
+    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:northernlight.ets:location"/>
+    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:northernlight"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:glo-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-81"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-83"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:uva-81">
+  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ps-80">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-81"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:ps-83">
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:glo-86">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-82"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:nsa:geant">
-    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:geant.ets"/>
+    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+           http://gnscdemo.geant.net:8080/nsi/ConnectionProvider
+        </dtox:csProviderEndpoint>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: AutoBAHN  (GEANT)
             Project manager: 
@@ -960,99 +307,51 @@
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
         </dtox:adminContact>
-    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-           http://gnscdemo.geant.net:8080/nsi/ConnectionProvider
-        </dtox:csProviderEndpoint>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
+    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:geant.ets"/>
     <rdfs:comment xml:lang="en">Position : [2800,100]</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:tok-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:ps-80">
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:tsu-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:aist.ets:tok-80"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsa:uvalight">
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:jgnx.ets">
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:ps-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:ps-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:ps-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:jgnx.ets:ps-81"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            NSA: OpenNSA   
-            Project manager: Jeroen van der Ham   
-            email: vdham@uva.nl mobile: use skype   
-            skype: just1sand0s  
-            Network Engineer: Ralph Koning 
-            email: r.koning@uva.nl  
-            skype: ralph-uva-sne
-            Key software engineer: Jeroen van der Ham
-            email: vdham@uva.nl mobile: use skype   
-            skype: just1sand0s  
-        </dtox:adminContact>
-    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://nsa.uvalight.nl:9080/NSI/services/ConnectionService/        
-        </dtox:csProviderEndpoint>
-    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:uvalight.ets"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
+    <rdfs:label xml:lang="en">jgnx.ets</rdfs:label>
+    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:jgnx.ets:location"/>
+    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:jgnx"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:chi-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:ams-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:ps-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:tok-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:fuj-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ps-82">
+  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:ps-82-sea">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:cph-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:geant.ets:location">
-    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.295</dtox:long>
-    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48.859</dtox:lat>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#hasPart">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:ps-82">
+  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:ps-80-sea">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:ps-82-chi">
+  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:poz-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-83"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:chi-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:tok-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:cph-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-81"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:nsa:gloriad">
-    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:gloriad.ets"/>
     <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: OpenNSA 
             Project Manager: Predrag Redulovic 
@@ -1063,220 +362,160 @@
     <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             http://nsa.gloriad.org:9080/NSI/services/ConnectionService
         </dtox:csProviderEndpoint>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:gloriad.ets"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsa:pionier">
-    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:pionier.ets"/>
-    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            NSA: AutoBAHN  (GEANT) 
-            Project manager: Radek Krzywania  
-            email: radek.krzywania@man.poznan.pl  
-            skype: Radoslaw.krzywania 
-            Software development: Michal Balcerkiewicz  
-            email: michalb@man.poznan.pl  
-            skype= michalb.psnc
-        </dtox:adminContact>
-    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://194.132.53.174:9280/nsi/ConnectionProvider
-        </dtox:csProviderEndpoint>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:uva-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:uva-1780">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-0"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:glo-87">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:chi-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:tok-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:glo-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:psnc.ets:location">
-    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.916</dtox:long>
-    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.412</dtox:lat>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:uva-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ps-80">
+  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ams-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-82"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:gn3-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:poz-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:uva-1782">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-2"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:esn-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:esnet.ets:chi-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:ps-80">
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:chi-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:ams-81"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:sl-81">
+  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:poz-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-81"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:glo-85"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ams-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-83"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:stp:psnc.ets:poz-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:poz-80">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:ams-80"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ps-83">
+  <rdf:Description rdf:about="urn:ogf:network:stp:psnc.ets:ps-83">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ams-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-83"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ams-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:uvalight.ets">
-    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:uvalight"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-1"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-3"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ps-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ps-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-2"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ps-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ps-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-0"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-80"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:uvalight.ets:location"/>
-    <rdfs:label xml:lang="en">uvalight.ets</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:czechlight.ets:location">
-    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">14.421</dtox:long>
-    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.088</dtox:lat>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:glo-81">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-81"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ams-80">
+  <rdf:Description rdf:about="urn:ogf:network:stp:psnc.ets:ps-80">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-80"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsa:jgnx">
+  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-0">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1780"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            NSA: G-Lambda/KDDILabs (KDDI Labs) 
-            Project manager name: Jin Tanaka  
-            email: tanaka@ote.kddi.com  
-            mobile: +81-80-5062-9352   
-            skype: jintanapan 
-            Key software engineer: Takahiro Miyamoto  
-            email: tk-miyamoto@kddilabs.jp 
-            mobile:  81-90-1966-5153  
-            skype: takahiro.miyamoto 
-        </dtox:adminContact>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsa:esnet">
     <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://202.180.38.130:8080/2012/03/connectionprovider
+            http://jupiter.es.net:8288/ConnectionService
         </dtox:csProviderEndpoint>
-    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:jgnx.ets"/>
+    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            NSA: OSCARS 
+            Project Manager: Inder Monga 
+            Email: imonga@es.net 
+            Software development engineer: Evangelos Chaniotakis 
+            Email:  haniotak@es.net
+        </dtox:adminContact>
+    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:esnet.ets"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:krlight.ets">
-    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:krlight"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:ps-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:ps-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:glo-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:ps-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:glo-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:glo-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:ps-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:krlight.ets:glo-82"/>
+  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:sl.2">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:glo-86"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:ps-82-chi">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:chi-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:ams-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:psnc.ets">
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:ps-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:ps-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:ps-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:poz-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:poz-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:ps-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:poz-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:poz-80"/>
+    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:psnc"/>
+    <rdfs:label xml:lang="en">psnc.ets</rdfs:label>
+    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:psnc.ets:location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:krlight.ets:location"/>
-    <rdfs:label xml:lang="en">krlight.ets</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:pra-83">
+  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:chi-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:esn-83"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-83"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:tok-80">
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:glo-87">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-83"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-80"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ams-82">
+  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#csProviderEndpoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ams-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-82"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-82"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:tsu-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:aist.ets:tok-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:pra-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:uva-1781">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-1"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:stp:psnc.ets:poz-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:tok-81">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-81"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:fuj-81">
+  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ams-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-82"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-81"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:glo-86">
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:poz-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:ams-80"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-82"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:uva-1783">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-3"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:aist.ets:location">
+    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.060</dtox:lat>
+    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">140.133</dtox:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:nsa:krlight">
-    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:krlight.ets"/>
+    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://203.230.116.202:8090/NSI_v2.0/ConnectionServiceProvider
+        </dtox:csProviderEndpoint>
     <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             DynamicKL  (KISTI) 
             Project Mgmt: 
@@ -1295,190 +534,184 @@
             - Kwangjong Cho, +82-10-4192-8992, kjcho@kisti.re.kr, kwangjong cho
             : SC2011 booth#  656  KISTI
         </dtox:adminContact>
-    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://203.230.116.202:8090/NSI_v2.0/ConnectionServiceProvider
-        </dtox:csProviderEndpoint>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ams-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-81"/>
+    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:krlight.ets"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#STP">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:krl-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:krlight.ets:glo-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ams-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ps-82">
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:fuj-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-83"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#Location">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:psnc.ets:poz-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:poz-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:ps-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:gloriad.ets:location">
-    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.607777</dtox:long>
-    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.866342</dtox:lat>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:tok-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:ps-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:ps-81-sea">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:esn-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:esnet.ets:chi-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ams-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-82"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ps-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:chi-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:ams-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ams-83">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-83"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#adminContact">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:ps-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ams-81">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-81"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:ps-82">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:tok-82">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:krlight.ets:location">
+    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.366</dtox:lat>
+    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">127.359</dtox:long>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ps-83">
+  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#NSNetwork">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:fuj-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-82"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ams-80">
+  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:tok-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-83"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-80"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:ps-83">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:gn3-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:poz-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:gn3-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:ams-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:psnc.ets:poz-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:esn-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:esnet.ets:chi-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:cph-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:chi-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:tok-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsa:northernlight">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://nsi.nordu.net:9443/NSI/services/ConnectionService</dtox:csProviderEndpoint>
+    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            NSA: OpenNSA (NORDUnet)
+            Project Management: Jerry Sobieski
+            email: jerry@nordu.net
+            mobile:  1-301-346-1849
+            skype: jerry.sobieski
+            Software Development: Henrik Thostrup-Jensen
+            email: htj@nordu.net
+            skype: henrik.thostrup.jensen
+        </dtox:adminContact>
+    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:northernlight.ets"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:tok-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:cph-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:netherlight.ets:location">
+    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.357</dtox:lat>
+    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.953</dtox:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:geant.ets:location">
+    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48.859</dtox:lat>
+    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.295</dtox:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:psnc-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:psnc.ets:poz-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ps-80">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:ps-83">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:krl.1">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:krlight.ets:glo-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:ps-82">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:gn3-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:ams-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ams-80">
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-80"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:jgnx.ets:location">
-    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">139.764</dtox:long>
-    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35.688</dtox:lat>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-1">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1781"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-2">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1782"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:ps-81">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:ps-80-chi">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ps-81">
+  <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:tok-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-82"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ams-83">
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:chi-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:ams-83"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-83"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:esnet.ets">
-    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:esnet"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:chi-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:chi-81"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:chi-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:chi-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:ps-80"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:ps-83"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:ps-82"/>
-    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:ps-81"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:esnet.ets:location"/>
-    <rdfs:label xml:lang="en">esnet.ets</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:esnet.ets:location">
-    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.988120</dtox:long>
-    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.703516</dtox:lat>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:aist.ets:location">
-    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">140.133</dtox:long>
-    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.060</dtox:lat>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ps-83">
+  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ams-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-80"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:nsa:kddi-labs">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
+    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://210.196.65.114:9352/2012/03/connectionprovider
+        </dtox:csProviderEndpoint>
     <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: G-Lambda/KDDILabs (KDDI Labs) 
             Project manager: Takahiro Miyamoto  
@@ -1490,29 +723,796 @@
             mobile:  81-90-1966-5153  
             skype: takahiro.miyamoto 
         </dtox:adminContact>
-    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://210.196.65.114:9352/2012/03/connectionprovider
-        </dtox:csProviderEndpoint>
     <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:kddi-labs.ets"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:ps-82">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:ps-81-chi">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#managing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:ps-81">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#connectedTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ps-82">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:uva-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#adminContact">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:ps-80">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ps-83">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ps-81">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsa:aist">
+    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://163.220.30.174:28080/nsi2/services/ConnectionProvider
+        </dtox:csProviderEndpoint>
+    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            NSA:  G-Lambda/AIST  (AIST)
+            Project manager: Tomohiro Kudoh 
+            email: t.kudoh@aist.go.jp 
+            mobile:  81-90-8741-3165 
+            skype: t.kudoh 4.3.
+            Key software engineer: Atsuko Takefusa 
+            email: nsi-gl@m.aist.go.jp 
+            mobile:  81-29-861-3091 
+            skype: taketake320
+        </dtox:adminContact>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:aist.ets"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:geant.ets">
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ps-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:poz-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:poz-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:poz-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ps-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ams-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ps-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ams-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ams-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:poz-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ps-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:geant.ets:ams-80"/>
+    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:geant"/>
+    <rdfs:label xml:lang="en">geant.ets</rdfs:label>
+    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:geant.ets:location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ams-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:uvalight.ets:location">
+    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.357</dtox:lat>
+    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.953</dtox:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:gn3-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:poz-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ps-80">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ams-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:gn3-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:poz-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:krl.0">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:krlight.ets:glo-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:uvalight.ets">
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-3"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ps-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-1"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ps-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-2"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ps-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-0"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:uvalight.ets:ps-83"/>
+    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:uvalight"/>
+    <rdfs:label xml:lang="en">uvalight.ets</rdfs:label>
+    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:uvalight.ets:location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ps-81">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ams-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:ps-81">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:ps-80">
+  <rdf:Description rdf:about="urn:ogf:network:nsa:jgnx">
+    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://202.180.38.130:8080/2012/03/connectionprovider
+        </dtox:csProviderEndpoint>
+    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            NSA: G-Lambda/KDDILabs (KDDI Labs) 
+            Project manager name: Jin Tanaka  
+            email: tanaka@ote.kddi.com  
+            mobile: +81-80-5062-9352   
+            skype: jintanapan 
+            Key software engineer: Takahiro Miyamoto  
+            email: tk-miyamoto@kddilabs.jp 
+            mobile:  81-90-1966-5153  
+            skype: takahiro.miyamoto 
+        </dtox:adminContact>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:jgnx.ets"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ps-82">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-3">
+  <rdf:Description rdf:about="urn:ogf:network:nsa:netherlight">
+    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
+        </dtox:csProviderEndpoint>
+    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            OpenDRAC (SURFnet) 
+            Proj Manager: John MacAuley 
+            email: john.macauley@surfnet.nl 
+            phone:  1-613-220-6817 
+            skype: john.macauley
+            Software Developer: John MacAuley 
+            email: john.macauley@surfnet.nl 
+            phone:  1-613-220-6817 
+            skype: john.macauley
+        </dtox:adminContact>
+    <rdfs:label xml:lang="en">netherlight</rdfs:label>
+    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:netherlight.ets"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:tok-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-81"/>
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1783"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:psnc.ets:location">
+    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.412</dtox:lat>
+    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.916</dtox:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:esn-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:esnet.ets:chi-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ams-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:ps-83">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#partOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:gn3-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:ams-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:chi-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:esn-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:kddi-labs.ets">
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:ps-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:ps-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:ps-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:ps-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-81"/>
+    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:kddi-labs"/>
+    <rdfs:label xml:lang="en">kddi-labs.ets</rdfs:label>
+    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:kddi-labs.ets:location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:esn-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:esnet.ets:chi-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ams-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ams-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:chi-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:tok-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:uva-1780">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-0"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:glo-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:northernlight.ets:location">
+    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">55.637</dtox:lat>
+    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.641</dtox:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:uva-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ams-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:psnc-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:psnc.ets:poz-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:uva-1782">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-2"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ams-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:tok-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:chi-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:tok-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ps-83">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:tok-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:fuj-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:psnc-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:psnc.ets:poz-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:psnc.ets:poz-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsa:starlight">
+    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+             NSA: OpenNSA (NORDUnet) over Argia 
+             Project manager: Scott Campbell 
+             email: scott.campbell@crc.gc.ca  
+             mobile:   
+             skype: scottcampbell00 
+             Key software engineer: Henrik Thostrup-Jensen 
+             email: htj@nordu.net 
+             skype: henrik.thostrup.jensen
+         </dtox:adminContact>
+    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+             http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
+         </dtox:csProviderEndpoint>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:starlight.ets"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:ps-80">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ps-83">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:netherlight.ets">
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:ps-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:pra-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:ps-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:poz-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:ps-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:netherlight.ets:ps-82"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
+    <rdfs:label xml:lang="en">netherlight.ets</rdfs:label>
+    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:netherlight.ets:location"/>
+    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:netherlight"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:ps-82">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:ogf:network:stp:psnc.ets:ps-82">
+  <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ps-82">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#STP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsa:pionier">
+    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://194.132.53.174:9280/nsi/ConnectionProvider
+        </dtox:csProviderEndpoint>
+    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            NSA: AutoBAHN  (GEANT) 
+            Project manager: Radek Krzywania  
+            email: radek.krzywania@man.poznan.pl  
+            skype: Radoslaw.krzywania 
+            Software development: Michal Balcerkiewicz  
+            email: michalb@man.poznan.pl  
+            skype= michalb.psnc
+        </dtox:adminContact>
+    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:pionier.ets"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ps-81">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:glo-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:jgnx.ets:location">
+    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35.688</dtox:lat>
+    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">139.764</dtox:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:fuj-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ps-82">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:ps-81">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:tok-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ams-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:krlight.ets:glo-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:krl-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:poz-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:ams-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:ps-83-chi">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ps-81">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsa:uvalight">
+    <dtox:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            http://nsa.uvalight.nl:9080/NSI/services/ConnectionService/        
+        </dtox:csProviderEndpoint>
+    <dtox:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            NSA: OpenNSA   
+            Project manager: Jeroen van der Ham   
+            email: vdham@uva.nl mobile: use skype   
+            skype: just1sand0s  
+            Network Engineer: Ralph Koning 
+            email: r.koning@uva.nl  
+            skype: ralph-uva-sne
+            Key software engineer: Jeroen van der Ham
+            email: vdham@uva.nl mobile: use skype   
+            skype: just1sand0s  
+        </dtox:adminContact>
+    <dtox:managing rdf:resource="urn:ogf:network:nsnetwork:uvalight.ets"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ps-81">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:esnet.ets:location">
+    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.703516</dtox:lat>
+    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.988120</dtox:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#NSA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:tok-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:poz-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:krl.2">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:krlight.ets:glo-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ps-81">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:chi-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:tok-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:ps-82">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ams-81">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-81"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ams-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:uva-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ams-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:gn3-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:ams-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:pra-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:pra-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:sl.3">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:glo-87"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:glo-84">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:gloriad.ets:sl-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:sl.1">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:glo-85"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:chi-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:ams-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#hasPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:gn3-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:geant.ets:poz-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:ps-80">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:esn-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:esnet.ets:chi-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:fuj-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:kddi-labs.ets:tok-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#mapsTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:ams-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:chi-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:aist.ets:tok-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:tsu-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:pionier.ets:ps-80">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:czechlight.ets:location">
+    <dtox:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.088</dtox:lat>
+    <dtox:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">14.421</dtox:long>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.glif.is/working-groups/tech/dtox#hasSTP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:esnet.ets:chi-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:esn-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:pionier.ets">
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ps-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ams-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ps-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:gn3-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ps-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ams-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ps-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ams-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:pionier.ets:ams-80"/>
+    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:pionier"/>
+    <rdfs:label xml:lang="en">pionier.ets</rdfs:label>
+    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:pionier.ets:location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ps-80">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:tok-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:uvalight.ets:ndn-3">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1783"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:starlight.ets">
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:esn-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:esn-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ps-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-87"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:esn-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-85"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:tok-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ps-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ps-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:tok-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:tok-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ams-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:esn-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:ps-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-84"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:glo-86"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:starlight.ets:tok-83"/>
+    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:starlight"/>
+    <rdfs:label xml:lang="en">starlight.ets</rdfs:label>
+    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:starlight.ets:location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:gloriad.ets:krl.3">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:krlight.ets:glo-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:northernlight.ets:ams-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:gloriad.ets">
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-83-chi"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:sl.3"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:sl.1"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.1"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-83-sea"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.3"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:sl.0"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.2"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:krl.0"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-80-chi"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-81-sea"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-81-chi"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-82-sea"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-80-sea"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:sl.2"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:gloriad.ets:ps-82-chi"/>
+    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:gloriad"/>
+    <rdfs:label xml:lang="en">gloriad.ets</rdfs:label>
+    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:gloriad.ets:location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ps-82">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:nsnetwork:czechlight.ets">
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ps-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ps-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-82"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-83"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ps-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-80"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ams-81"/>
+    <dtox:hasSTP rdf:resource="urn:ogf:network:stp:czechlight.ets:ps-80"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
+    <rdfs:label xml:lang="en">czechlight.ets</rdfs:label>
+    <dtox:locatedAt rdf:resource="urn:ogf:network:nsnetwork:czechlight.ets:location"/>
+    <dtox:managedBy rdf:resource="urn:ogf:network:nsa:czechlight"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:tsu-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:aist.ets:tok-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:ps-83">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:jgnx.ets:ps-81">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:netherlight.ets:cph-82">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-82"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:kddi-labs.ets:ps-80">
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:starlight.ets:tok-80">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:jgnx.ets:chi-80"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:geant.ets:ams-83">
+    <dtox:connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:gn3-83"/>
+    <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:ogf:network:stp:czechlight.ets:ps-80">
     <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
