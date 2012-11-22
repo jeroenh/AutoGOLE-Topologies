@@ -78,6 +78,7 @@
             - Kwangjong Cho, +82-10-4192-8992, kjcho@kisti.re.kr, kwangjong cho
             : SC2011 booth#  656  KISTI
         </nsi:adminContact>
+        <nsi:discoveryEndpoint>http://202.180.38.130:8080/2012/03/discoveryprovider</nsi:discoveryEndpoint>
         <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             http://203.230.116.202:8090/NSI_v2.0/ConnectionServiceProvider
         </nsi:csProviderEndpoint>

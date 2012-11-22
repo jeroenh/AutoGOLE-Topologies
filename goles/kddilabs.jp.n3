@@ -49,6 +49,7 @@ kddilabs:nsa a nsi:NSA,
             mobile:  81-90-1966-5153  
             skype: takahiro.miyamoto 
         """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:discoveryEndpoint """http://210.196.65.114:9352/2012/03/discoveryprovider"""^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:csProviderEndpoint """
             http://210.196.65.114:9352/2012/03/connectionprovider
         """^^<http://www.w3.org/2001/XMLSchema#string>;

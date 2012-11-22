@@ -56,6 +56,7 @@ krlight:nsa a nsi:NSA,
             - Kwangjong Cho, +82-10-4192-8992, kjcho@kisti.re.kr, kwangjong cho
             : SC2011 booth#  656  KISTI
         """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:discoveryEndpoint """http://202.180.38.130:8080/2012/03/discoveryprovider"""^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:csProviderEndpoint """
             http://203.230.116.202:8090/NSI_v2.0/ConnectionServiceProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
