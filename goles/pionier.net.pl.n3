@@ -71,6 +71,7 @@ pionier:nsa a nsi:NSA,
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
         """^^<http://www.w3.org/2001/XMLSchema#string>;
+    nsi:discoveryEndpoint """http://194.132.53.174:9280/nsi/DiscoveryProvider"""^^<http://www.w3.org/2001/XMLSchema#string>;
     nsi:csProviderEndpoint """
             http://194.132.53.174:9280/nsi/ConnectionProvider
         """^^<http://www.w3.org/2001/XMLSchema#string>;

@@ -98,6 +98,7 @@
       <nsi:NSA rdf:about="urn:ogf:network:pionier.net.pl:2012:nsa">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <nsi:managing rdf:resource="urn:ogf:network:pionier.net.pl:2012:ets"/>
+        <nsi:discoveryEndpoint>http://194.132.53.174:9280/nsi/DiscoveryProvider</nsi:discoveryEndpoint>
         <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             http://194.132.53.174:9280/nsi/ConnectionProvider
         </nsi:csProviderEndpoint>
