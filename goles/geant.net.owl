@@ -79,6 +79,7 @@
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
         </nsi:adminContact>
+        <nsi:discoveryEndpoint>http://194.132.53.174:9282/nsi/DiscoveryProvider</nsi:discoveryEndpoint>
         <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
            http://gnscdemo.geant.net:8080/nsi/ConnectionProvider
         </nsi:csProviderEndpoint>
