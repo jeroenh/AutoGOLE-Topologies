@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nml:Topology xmlns:nml="http://schemas.ogf.org/nml/2012/10/base"
+              id="urn:ogf:network:example.net:2012:org"
+              version="20120814">
+
+    <nml:Port id="urn:ogf:network:nordu.net:2012:bi-ps-in">
+        <nml:Label labeltype="http://schemas.ogf.org/nml/2012/10/ethernet/vlan">1780-1783</nml:Label>
+    </nml:Port>
+    <nml:Port id="urn:ogf:network:nordu.net:2012:bi-ps-out">
+        <nml:Label labeltype="http://schemas.ogf.org/nml/2012/10/ethernet/vlan">1780-1783</nml:Label>
+    </nml:Port>
+
+    <nml:Port id="urn:ogf:network:nordu.net:2012:uvalight-in">
+        <nml:Label labeltype="http://schemas.ogf.org/nml/2012/10/ethernet/vlan">1780-1783</nml:Label>
+        <nml:isAlias id="urn:ogf:network:uvalight.net:2012:nordu-uvalight-out"/>
+    </nml:Port>
+     <nml:Port id="urn:ogf:network:nordu.net:2012:uvalight-out">
+        <nml:Label labeltype="http://schemas.ogf.org/nml/2012/10/ethernet/vlan">1780-1783</nml:Label>
+        <nml:isAlias id="urn:ogf:network:uvalight.net:2012:nordu-uvalight-in"/>
+    </nml:Port>
+
+    <nml:Port id="urn:ogf:network:nordu.net:2012:netherlight-in">
+        <nml:Label labeltype="http://schemas.ogf.org/nml/2012/10/ethernet/vlan">1780-1783</nml:Label>
+        <nml:isAlias id="urn:ogf:network:netherlight.net:2012:nordu-netherlight-out"/>
+    </nml:Port>
+     <nml:Port id="urn:ogf:network:nordu.net:2012:netherlight-out">
+        <nml:Label labeltype="http://schemas.ogf.org/nml/2012/10/ethernet/vlan">1780-1783</nml:Label>
+        <nml:isAlias id="urn:ogf:network:netherlight.net:2012:nordu-netherlight-in"/>
+    </nml:Port>
+
+    <nml:BidirectionalPort id="urn:ogf:network:nordu.net:2012:ps">
+        <nml:name>ps</nml:name>
+        <nml:Port idRef="urn:ogf:network:nordu.net:2012:bi-ps-in">
+        <nml:Port idRef="urn:ogf:network:nordu.net:2012:bi-ps-out">
+    </nml:BidirectionalPort>
+
+    <nml:BidirectionalPort id="urn:ogf:network:nordu.net:2012:uvalight">
+        <nml:name>uvalight</nml:name>
+        <nml:Port idRef="urn:ogf:network:nordu.net:2012:uvalight-in">
+        <nml:Port idRef="urn:ogf:network:nordu.net:2012:uvalight-out">
+    </nml:BidirectionalPort>
+
+    <nml:BidirectionalPort id="urn:ogf:network:nordu.net:2012:netherlight">
+        <nml:name>uvalight</nml:name>
+        <nml:Port idRef="urn:ogf:network:nordu.net:2012:netherlight-in">
+        <nml:Port idRef="urn:ogf:network:nordu.net:2012:netherlight-out">
+    </nml:BidirectionalPort>
+
+    <nml:Location id="urn:ogf:network:nordu.net:2012:location">
+        <nml:name>NORDUnet HQ</nml:name>
+        <nml:latitude>55.637</nml:latitude>
+        <nml:longitude>12.641</nml:longitude>
+    </nml:Location>
+
+    <nsi:NSA id="urn:ogf:network:nordu.net:2012:nsa">
+        <nsi:csProviderEndpoint>https://nsi.nordu.net:9443/NSI/services/ConnectionService</nsi:csProviderEndpoint>
+        <nsi:adminContact>
+            NSA: OpenNSA (NORDUnet)
+            Project Management: Jerry Sobieski
+            email: jerry@nordu.net
+            mobile:  1-301-346-1849
+            skype: jerry.sobieski
+            Software Development: Henrik Thostrup-Jensen
+            email: htj@nordu.net
+            skype: henrik.thostrup.jensen
+        </nsi:adminContact>
+    </nsi:NSA>
+
+    <nml:Node id="urn:ogf:network:nordu.net:2012:ets">
+        <nml:Relation type="http://schemas.ogf.org/nml/2012/10/base/hasInboundPort">
+            <nml:Port idRef="urn:ogf:network:nordu.net:2012:netherlight-in"/>
+            <nml:Port idRef="urn:ogf:network:nordu.net:2012:uvalight-in"/>
+            <nml:Port idRef="urn:ogf:network:nordu.net:2012:ps-in"/>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2012/10/base/hasOutboundPort">
+            <nml:Port idRef="urn:ogf:network:nordu.net:2012:netherlight-out"/>
+            <nml:Port idRef="urn:ogf:network:nordu.net:2012:uvalight-out"/>
+            <nml:Port idRef="urn:ogf:network:nordu.net:2012:ps-out"/>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2012/10/base/hasBidirectionalPort">
+            <nml:BidirectionalPort idRef="urn:ogf:network:nordu.net:2012:bi-nordu-uvalight"/>
+            <nml:BidirectionalPort idRef="urn:ogf:network:nordu.net:2012:bi-nordu-netherlight"/>
+            <nml:BidirectionalPort idRef="urn:ogf:network:nordu.net:2012:bi-ps"/>
+        <nml:Location idRef="urn:ogf:network:nordu.net:2012:location"/>
+        <nsi:managedBy idRef="urn:ogf:network:nordu.net:2012:nsa"/>
+    </nml:Node>
+
+</nml:Topology>
+
+
+<nml:Topology xmlns:nml="http://schemas.ogf.org/nml/2012/10/base"
+    idRef="https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.net.xml"/>
+
+<nml:Topology xmlns:nml="http://schemas.ogf.org/nml/2012/10/base"
+    idRef="https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.xml"/>
+
+
+
