@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<nml:Topology xmlns:nml="http://schemas.ogf.org/nml/2012/10/base"
+<nml:Topology xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
+              xmlns:nsi="http://schemas.ogf.org/nsi/2013/03/topology#"
               id="urn:ogf:network:example.net:2012:org"
               version="20120814">
 
@@ -30,20 +31,20 @@
 
     <nml:BidirectionalPort id="urn:ogf:network:nordu.net:2012:ps">
         <nml:name>ps</nml:name>
-        <nml:Port idRef="urn:ogf:network:nordu.net:2012:bi-ps-in">
-        <nml:Port idRef="urn:ogf:network:nordu.net:2012:bi-ps-out">
+        <nml:Port idRef="urn:ogf:network:nordu.net:2012:bi-ps-in" />
+        <nml:Port idRef="urn:ogf:network:nordu.net:2012:bi-ps-out" />
     </nml:BidirectionalPort>
 
     <nml:BidirectionalPort id="urn:ogf:network:nordu.net:2012:uvalight">
         <nml:name>uvalight</nml:name>
-        <nml:Port idRef="urn:ogf:network:nordu.net:2012:uvalight-in">
-        <nml:Port idRef="urn:ogf:network:nordu.net:2012:uvalight-out">
+        <nml:Port idRef="urn:ogf:network:nordu.net:2012:uvalight-in" />
+        <nml:Port idRef="urn:ogf:network:nordu.net:2012:uvalight-out" />
     </nml:BidirectionalPort>
 
     <nml:BidirectionalPort id="urn:ogf:network:nordu.net:2012:netherlight">
         <nml:name>uvalight</nml:name>
-        <nml:Port idRef="urn:ogf:network:nordu.net:2012:netherlight-in">
-        <nml:Port idRef="urn:ogf:network:nordu.net:2012:netherlight-out">
+        <nml:Port idRef="urn:ogf:network:nordu.net:2012:netherlight-in" />
+        <nml:Port idRef="urn:ogf:network:nordu.net:2012:netherlight-out" /> 
     </nml:BidirectionalPort>
 
     <nml:Location id="urn:ogf:network:nordu.net:2012:location">
@@ -67,32 +68,34 @@
     </nsi:NSA>
 
     <nml:Node id="urn:ogf:network:nordu.net:2012:ets">
+      
         <nml:Relation type="http://schemas.ogf.org/nml/2012/10/base/hasInboundPort">
-            <nml:Port idRef="urn:ogf:network:nordu.net:2012:netherlight-in"/>
-            <nml:Port idRef="urn:ogf:network:nordu.net:2012:uvalight-in"/>
-            <nml:Port idRef="urn:ogf:network:nordu.net:2012:ps-in"/>
+            <nml:Port idRef="urn:ogf:network:nordu.net:2012:netherlight-in" />
+            <nml:Port idRef="urn:ogf:network:nordu.net:2012:uvalight-in" />
+            <nml:Port idRef="urn:ogf:network:nordu.net:2012:ps-in" />
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2012/10/base/hasOutboundPort">
-            <nml:Port idRef="urn:ogf:network:nordu.net:2012:netherlight-out"/>
-            <nml:Port idRef="urn:ogf:network:nordu.net:2012:uvalight-out"/>
-            <nml:Port idRef="urn:ogf:network:nordu.net:2012:ps-out"/>
+            <nml:Port idRef="urn:ogf:network:nordu.net:2012:netherlight-out" />
+            <nml:Port idRef="urn:ogf:network:nordu.net:2012:uvalight-out" />
+            <nml:Port idRef="urn:ogf:network:nordu.net:2012:ps-out" />
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2012/10/base/hasBidirectionalPort">
-            <nml:BidirectionalPort idRef="urn:ogf:network:nordu.net:2012:bi-nordu-uvalight"/>
-            <nml:BidirectionalPort idRef="urn:ogf:network:nordu.net:2012:bi-nordu-netherlight"/>
-            <nml:BidirectionalPort idRef="urn:ogf:network:nordu.net:2012:bi-ps"/>
-        <nml:Location idRef="urn:ogf:network:nordu.net:2012:location"/>
-        <nsi:managedBy idRef="urn:ogf:network:nordu.net:2012:nsa"/>
+            <nml:BidirectionalPort idRef="urn:ogf:network:nordu.net:2012:bi-nordu-uvalight" />
+            <nml:BidirectionalPort idRef="urn:ogf:network:nordu.net:2012:bi-nordu-netherlight" />
+            <nml:BidirectionalPort idRef="urn:ogf:network:nordu.net:2012:bi-ps" />
+        </nml:Relation>
+        <nml:Location idRef="urn:ogf:network:nordu.net:2012:location" />
+        <nsi:managedBy idRef="urn:ogf:network:nordu.net:2012:nsa" />
     </nml:Node>
 
 </nml:Topology>
 
 
-<nml:Topology xmlns:nml="http://schemas.ogf.org/nml/2012/10/base"
+<!-- <nml:Topology xmlns:nml="http://schemas.ogf.org/nml/2012/10/base"
     idRef="https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.net.xml"/>
 
 <nml:Topology xmlns:nml="http://schemas.ogf.org/nml/2012/10/base"
-    idRef="https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.xml"/>
+    idRef="https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.xml"/> -->
 
 
 
