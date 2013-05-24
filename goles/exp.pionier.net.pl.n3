@@ -6,38 +6,36 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:pionier.net.pl:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3" .
-
 exp:bi-exp-pionier a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort exp:exp-pionier,
         exp:pionier-exp .
 
 exp:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort exp:ps-in,
         exp:ps-out .
 
+<urn:ogf:network:pionier.net.pl:2012:ets> a nml:Topology,
+        owl:NamedIndividual ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3" .
+
 exp:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort exp:bi-exp-pionier,
-        exp:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort exp:pionier-exp,
-        exp:ps-in;
+        exp:ps-in ;
     nml:hasOutboundPort exp:exp-pionier,
-        exp:ps-out;
-    nml:locatedAt exp:location;
+        exp:ps-out ;
+    nml:locatedAt exp:location ;
     nsi:managedBy exp:nsa .
 
 exp:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "16.916"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 exp:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA: PSNC 
             Project manager: Radek Krzywania  
@@ -46,27 +44,27 @@ exp:nsa a nsi:NSA,
             Software development: Michal Balcerkiewicz  
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
              http://194.132.53.174:9282/nsi/ConnectionProvider 
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing exp:ets .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages exp:ets .
 
 exp:exp-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:exp-pionier>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:exp-pionier> ;
     nmleth:vlans "1780-1783" .
 
 exp:pionier-exp a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:pionier-exp>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:pionier-exp> ;
     nmleth:vlans "1780-1783" .
 
 exp:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 exp:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 

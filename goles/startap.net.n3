@@ -7,73 +7,68 @@
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:es.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/es.net.n3" .
 
 <urn:ogf:network:gloriad.org:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.org.n3" .
 
 <urn:ogf:network:jgn-x.jp:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn-x.jp.n3" .
 
 <urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3" .
 
 startap:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort startap:ps-in,
         startap:ps-out .
 
 startap:bi-startap-es a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort startap:es-startap,
         startap:startap-es .
 
 startap:bi-startap-gloriad a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort startap:gloriad-startap,
         startap:startap-gloriad .
 
 startap:bi-startap-jgn-x a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort startap:jgn-x-startap,
         startap:startap-jgn-x .
 
 startap:bi-startap-netherlight a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort startap:netherlight-startap,
         startap:startap-netherlight .
 
 startap:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort startap:bi-ps,
-        startap:bi-startap-es,
-        startap:bi-startap-gloriad,
-        startap:bi-startap-jgn-x,
-        startap:bi-startap-netherlight;
+        owl:NamedIndividual ;
     nml:hasInboundPort startap:es-startap,
         startap:gloriad-startap,
         startap:jgn-x-startap,
         startap:netherlight-startap,
-        startap:ps-in;
+        startap:ps-in ;
     nml:hasOutboundPort startap:ps-out,
         startap:startap-es,
         startap:startap-gloriad,
         startap:startap-jgn-x,
-        startap:startap-netherlight;
-    nml:locatedAt startap:location;
+        startap:startap-netherlight ;
+    nml:locatedAt startap:location ;
     nsi:managedBy startap:nsa .
 
 startap:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "41.947906"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "41.947906"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "-87.655791"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 startap:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
              NSA: OpenNSA (NORDUnet) over Argia 
              Project manager: Scott Campbell 
@@ -83,57 +78,57 @@ startap:nsa a nsi:NSA,
              Key software engineer: Henrik Thostrup-Jensen 
              email: htj@nordu.net 
              skype: henrik.thostrup.jensen
-         """^^<http://www.w3.org/2001/XMLSchema#string>;
+         """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
              http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
-         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing startap:ets .
+         """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages startap:ets .
 
 startap:es-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:es.net:2012:es-startap>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:es.net:2012:es-startap> ;
     nmleth:vlans "1780-1783" .
 
 startap:gloriad-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:gloriad.org:2012:gloriad-startap>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:gloriad.org:2012:gloriad-startap> ;
     nmleth:vlans "1780-1783" .
 
 startap:jgn-x-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgn-x.jp:2012:jgn-x-startap>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:jgn-x.jp:2012:jgn-x-startap> ;
     nmleth:vlans "1780-1783" .
 
 startap:netherlight-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-startap>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-startap> ;
     nmleth:vlans "1780-1783" .
 
 startap:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 startap:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 startap:startap-es a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:es.net:2012:startap-es>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:es.net:2012:startap-es> ;
     nmleth:vlans "1780-1783" .
 
 startap:startap-gloriad a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:gloriad.org:2012:startap-gloriad>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:gloriad.org:2012:startap-gloriad> ;
     nmleth:vlans "1780-1783" .
 
 startap:startap-jgn-x a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgn-x.jp:2012:startap-jgn-x>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:jgn-x.jp:2012:startap-jgn-x> ;
     nmleth:vlans "1780-1783" .
 
 startap:startap-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:startap-netherlight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:startap-netherlight> ;
     nmleth:vlans "1780-1783" .
 

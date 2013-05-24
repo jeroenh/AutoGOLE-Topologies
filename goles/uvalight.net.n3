@@ -7,35 +7,35 @@
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3" .
 
 <urn:ogf:network:nordu.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3" .
 
 uvalight:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort uvalight:ps-in,
         uvalight:ps-out .
 
 uvalight:bi-uvalight-netherlight a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort uvalight:netherlight-uvalight,
         uvalight:uvalight-netherlight .
 
 uvalight:bi-uvalight-nordu a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort uvalight:nordu-uvalight,
         uvalight:uvalight-nordu .
 
 uvalight:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 uvalight:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA: OpenNSA   
             Project manager: Jeroen van der Ham   
@@ -47,51 +47,48 @@ uvalight:nsa a nsi:NSA,
             Key software engineer: Jeroen van der Ham
             email: vdham@uva.nl mobile: use skype   
             skype: just1sand0s  
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://nsa.uvalight.nl:9080/NSI/services/ConnectionService/        
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing uvalight:topology .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages uvalight:topology .
 
 uvalight:topology a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort uvalight:bi-ps,
-        uvalight:bi-uvalight-netherlight,
-        uvalight:bi-uvalight-nordu;
+        owl:NamedIndividual ;
     nml:hasInboundPort uvalight:netherlight-uvalight,
         uvalight:nordu-uvalight,
-        uvalight:ps-in;
+        uvalight:ps-in ;
     nml:hasOutboundPort uvalight:ps-out,
         uvalight:uvalight-netherlight,
-        uvalight:uvalight-nordu;
-    nml:locatedAt uvalight:location;
+        uvalight:uvalight-nordu ;
+    nml:locatedAt uvalight:location ;
     nsi:managedBy uvalight:nsa .
 
 uvalight:netherlight-uvalight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-uvalight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-uvalight> ;
     nmleth:vlans "1780-1783" .
 
 uvalight:nordu-uvalight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:nordu.net:2012:nordu-uvalight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:nordu.net:2012:nordu-uvalight> ;
     nmleth:vlans "1780-1783" .
 
 uvalight:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 uvalight:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 uvalight:uvalight-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:uvalight-netherlight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:uvalight-netherlight> ;
     nmleth:vlans "1780-1783" .
 
 uvalight:uvalight-nordu a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:nordu.net:2012:uvalight-nordu>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:nordu.net:2012:uvalight-nordu> ;
     nmleth:vlans "1780-1783" .
 

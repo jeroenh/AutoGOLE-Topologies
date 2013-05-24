@@ -82,7 +82,7 @@ class AGTopology:
         self.storev2.add((nsa,RDF.type,OWL.NamedIndividual))
         self.storev2.add((nsa,RDF.type,NSI.NSA))
         self.storev2.add((topo,NSI.managedBy,nsa))
-        self.storev2.add((nsa,NSI.managing,topo))
+        self.storev2.add((nsa,NSI.manages,topo))
         oldnsa = self.storev1.value(subject=oldtopo,predicate=DTOX.managedBy)
         MAPPING[nsa] = oldnsa
         adminContact = self.storev1.value(subject=oldnsa,predicate=DTOX.adminContact)
@@ -134,7 +134,7 @@ class AGTopology:
         self.storev2.add((biport,RDF.type,NML.BidirectionalPort))
         self.storev2.add((biport,NML.hasPort,outPort))
         self.storev2.add((biport,NML.hasPort,inPort))
-        self.storev2.add((topo,NML.hasBidirectionalPort,biport))
+        # self.storev2.add((topo,NML.hasBidirectionalPort,biport))
         return biport
         
     def convert(self):

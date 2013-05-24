@@ -7,37 +7,35 @@
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:gloriad.org:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.org.n3" .
 
 krlight:bi-krlight-gloriad a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort krlight:gloriad-krlight,
         krlight:krlight-gloriad .
 
 krlight:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort krlight:ps-in,
         krlight:ps-out .
 
 krlight:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort krlight:bi-krlight-gloriad,
-        krlight:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort krlight:gloriad-krlight,
-        krlight:ps-in;
+        krlight:ps-in ;
     nml:hasOutboundPort krlight:krlight-gloriad,
-        krlight:ps-out;
-    nml:locatedAt krlight:location;
+        krlight:ps-out ;
+    nml:locatedAt krlight:location ;
     nsi:managedBy krlight:nsa .
 
 krlight:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "36.366"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "36.366"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "127.359"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 krlight:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             DynamicKL  (KISTI) 
             Project Mgmt: 
@@ -55,28 +53,27 @@ krlight:nsa a nsi:NSA,
             - Kyungmin Lee, +82-10-9958-8979, tsoc@naver.com, kyungmin_ 
             - Kwangjong Cho, +82-10-4192-8992, kjcho@kisti.re.kr, kwangjong cho
             : SC2011 booth#  656  KISTI
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:discoveryEndpoint """http://202.180.38.130:8080/2012/03/discoveryprovider"""^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://203.230.116.202:8090/NSI_v2.0/ConnectionServiceProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing krlight:ets .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages krlight:ets .
 
 krlight:gloriad-krlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:gloriad.org:2012:gloriad-krlight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:gloriad.org:2012:gloriad-krlight> ;
     nmleth:vlans "1780-1783" .
 
 krlight:krlight-gloriad a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:gloriad.org:2012:krlight-gloriad>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:gloriad.org:2012:krlight-gloriad> ;
     nmleth:vlans "1780-1783" .
 
 krlight:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 krlight:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 

@@ -7,61 +7,57 @@
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:exp.pionier.net.pl:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/exp.pionier.net.pl.n3" .
 
 <urn:ogf:network:geant.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/geant.net.n3" .
 
 <urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3" .
 
 pionier:bi-pionier-exp a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort pionier:exp-pionier,
         pionier:pionier-exp .
 
 pionier:bi-pionier-geant a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort pionier:geant-pionier,
         pionier:pionier-geant .
 
 pionier:bi-pionier-netherlight a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort pionier:netherlight-pionier,
         pionier:pionier-netherlight .
 
 pionier:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort pionier:ps-in,
         pionier:ps-out .
 
 pionier:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort pionier:bi-pionier-exp,
-        pionier:bi-pionier-geant,
-        pionier:bi-pionier-netherlight,
-        pionier:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort pionier:exp-pionier,
         pionier:geant-pionier,
         pionier:netherlight-pionier,
-        pionier:ps-in;
+        pionier:ps-in ;
     nml:hasOutboundPort pionier:pionier-exp,
         pionier:pionier-geant,
         pionier:pionier-netherlight,
-        pionier:ps-out;
-    nml:locatedAt pionier:location;
+        pionier:ps-out ;
+    nml:locatedAt pionier:location ;
     nsi:managedBy pionier:nsa .
 
 pionier:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "16.916"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 pionier:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA: AutoBAHN  (GEANT) 
             Project manager: Radek Krzywania  
@@ -70,48 +66,47 @@ pionier:nsa a nsi:NSA,
             Software development: Michal Balcerkiewicz  
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:discoveryEndpoint """http://194.132.53.174:9280/nsi/DiscoveryProvider"""^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://194.132.53.174:9280/nsi/ConnectionProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing pionier:ets .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages pionier:ets .
 
 pionier:exp-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:exp.pionier.net.pl:2012:exp-pionier>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:exp.pionier.net.pl:2012:exp-pionier> ;
     nmleth:vlans "1780-1783" .
 
 pionier:geant-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:geant.net:2012:geant-pionier>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:geant.net:2012:geant-pionier> ;
     nmleth:vlans "1780-1783" .
 
 pionier:netherlight-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-pionier>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-pionier> ;
     nmleth:vlans "1780-1783" .
 
 pionier:pionier-exp a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:exp.pionier.net.pl:2012:pionier-exp>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:exp.pionier.net.pl:2012:pionier-exp> ;
     nmleth:vlans "1780-1783" .
 
 pionier:pionier-geant a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:geant.net:2012:pionier-geant>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:geant.net:2012:pionier-geant> ;
     nmleth:vlans "1780-1783" .
 
 pionier:pionier-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:pionier-netherlight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:pionier-netherlight> ;
     nmleth:vlans "1780-1783" .
 
 pionier:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 pionier:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 

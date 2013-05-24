@@ -76,7 +76,7 @@ jgn:nsa a nsi:NSA,
     nsi:csProviderEndpoint """
             http://202.180.38.130:8080/connectionprovider
         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing jgn:ets .
+    nsi:manages jgn:ets .
 
 jgn:aist-jgn a nml:PortGroup,
         owl:NamedIndividual;

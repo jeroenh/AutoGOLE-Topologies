@@ -6,50 +6,47 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3" .
-
-<urn:ogf:network:pionier.net.pl:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3" .
-
 geant:bi-geant-netherlight a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort geant:geant-netherlight,
         geant:netherlight-geant .
 
 geant:bi-geant-pionier a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort geant:geant-pionier,
         geant:pionier-geant .
 
 geant:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort geant:ps-in,
         geant:ps-out .
 
+<urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
+        owl:NamedIndividual ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3" .
+
+<urn:ogf:network:pionier.net.pl:2012:ets> a nml:Topology,
+        owl:NamedIndividual ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3" .
+
 geant:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort geant:bi-geant-netherlight,
-        geant:bi-geant-pionier,
-        geant:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort geant:netherlight-geant,
         geant:pionier-geant,
-        geant:ps-in;
+        geant:ps-in ;
     nml:hasOutboundPort geant:geant-netherlight,
         geant:geant-pionier,
-        geant:ps-out;
-    nml:locatedAt geant:location;
+        geant:ps-out ;
+    nml:locatedAt geant:location ;
     nsi:managedBy geant:nsa .
 
 geant:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "48.859"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "48.859"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "2.295"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 geant:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA: AutoBAHN  (GEANT)
             Project manager: 
@@ -59,38 +56,37 @@ geant:nsa a nsi:NSA,
             Key software engineer: Michal Balcerkiewicz  
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:discoveryEndpoint """http://194.132.53.174:9282/nsi/DiscoveryProvider"""^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
            http://gnscdemo.geant.net:8080/nsi/ConnectionProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing geant:ets .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages geant:ets .
 
 geant:geant-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:geant-netherlight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:geant-netherlight> ;
     nmleth:vlans "1780-1783" .
 
 geant:geant-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:geant-pionier>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:geant-pionier> ;
     nmleth:vlans "1780-1783" .
 
 geant:netherlight-geant a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-geant>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:netherlight.net:2012:netherlight-geant> ;
     nmleth:vlans "1780-1783" .
 
 geant:pionier-geant a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:pionier-geant>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:pionier-geant> ;
     nmleth:vlans "1780-1783" .
 
 geant:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 geant:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 

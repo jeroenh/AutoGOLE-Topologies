@@ -6,22 +6,21 @@
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
-    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
-  </rdf:Description>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:netherlight.net:2012:ets">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3</nsi:isReference>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:nordu.net:2012:ets">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3</nsi:isReference>
-  </owl:NamedIndividual>
-  <nml:Location rdf:about="urn:ogf:network:uvalight.net:2012:location">
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:uvalight.net:2012:bi-ps">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.357</nml:lat>
-    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.953</nml:long>
-  </nml:Location>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:uvalight.net:2012:ps-out">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:uvalight.net:2012:ps-in">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nmleth:vlans>1780-1783</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
   <nml:BidirectionalPort rdf:about="urn:ogf:network:uvalight.net:2012:bi-uvalight-netherlight">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <nml:hasPort>
@@ -39,6 +38,13 @@
       </nml:PortGroup>
     </nml:hasPort>
   </nml:BidirectionalPort>
+  <nml:Topology rdf:about="urn:ogf:network:netherlight.net:2012:ets">
+    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3</nsi:isReference>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:Topology>
+  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
+    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
+  </rdf:Description>
   <nml:BidirectionalPort rdf:about="urn:ogf:network:uvalight.net:2012:bi-uvalight-nordu">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <nml:hasPort>
@@ -56,39 +62,16 @@
       </nml:PortGroup>
     </nml:hasPort>
   </nml:BidirectionalPort>
-  <nml:BidirectionalPort rdf:about="urn:ogf:network:uvalight.net:2012:bi-ps">
+  <nml:Topology rdf:about="urn:ogf:network:nordu.net:2012:ets">
+    <nsi:isReference>https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3</nsi:isReference>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:uvalight.net:2012:ps-in">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasPort>
-    <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:uvalight.net:2012:ps-out">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nmleth:vlans>1780-1783</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasPort>
-  </nml:BidirectionalPort>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:uvalight.net:2012:nsa">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
-    <nsi:managing>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:uvalight.net:2012:topology">
-        <nml:locatedAt rdf:resource="urn:ogf:network:uvalight.net:2012:location"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:uvalight.net:2012:uvalight-nordu"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:uvalight.net:2012:ps-out"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:uvalight.net:2012:uvalight-netherlight"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:uvalight.net:2012:bi-uvalight-nordu"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:uvalight.net:2012:bi-uvalight-netherlight"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:uvalight.net:2012:bi-ps"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:uvalight.net:2012:netherlight-uvalight"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:uvalight.net:2012:ps-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:uvalight.net:2012:nordu-uvalight"/>
-        <nsi:managedBy rdf:resource="urn:ogf:network:uvalight.net:2012:nsa"/>
-      </owl:NamedIndividual>
-    </nsi:managing>
+  </nml:Topology>
+  <nml:Location rdf:about="urn:ogf:network:uvalight.net:2012:location">
+    <nml:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.357</nml:lat>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nml:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.953</nml:long>
+  </nml:Location>
+  <nsi:NSA rdf:about="urn:ogf:network:uvalight.net:2012:nsa">
     <nsi:adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             NSA: OpenNSA   
             Project manager: Jeroen van der Ham   
@@ -101,8 +84,22 @@
             email: vdham@uva.nl mobile: use skype   
             skype: just1sand0s  
         </nsi:adminContact>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <nsi:csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
             http://nsa.uvalight.nl:9080/NSI/services/ConnectionService/        
         </nsi:csProviderEndpoint>
-  </owl:NamedIndividual>
+    <nsi:manages>
+      <nml:Topology rdf:about="urn:ogf:network:uvalight.net:2012:topology">
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:uvalight.net:2012:ps-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:uvalight.net:2012:uvalight-netherlight"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:uvalight.net:2012:uvalight-nordu"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:uvalight.net:2012:ps-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:uvalight.net:2012:netherlight-uvalight"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:uvalight.net:2012:nordu-uvalight"/>
+        <nml:locatedAt rdf:resource="urn:ogf:network:uvalight.net:2012:location"/>
+        <nsi:managedBy rdf:resource="urn:ogf:network:uvalight.net:2012:nsa"/>
+      </nml:Topology>
+    </nsi:manages>
+  </nsi:NSA>
 </rdf:RDF>

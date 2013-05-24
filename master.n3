@@ -20,34 +20,242 @@
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 aist_go_jp:bi-aist-jgn-x a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort aist_go_jp:aist-jgn-x,
         aist_go_jp:jgn-x-aist .
 
 aist_go_jp:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort aist_go_jp:ps-in,
         aist_go_jp:ps-out .
 
+czechlight_cesnet_cz:bi-czechlight-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort czechlight_cesnet_cz:czechlight-netherlight,
+        czechlight_cesnet_cz:netherlight-czechlight .
+
+czechlight_cesnet_cz:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort czechlight_cesnet_cz:ps-in,
+        czechlight_cesnet_cz:ps-out .
+
+es_net:bi-es-startap a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort es_net:es-startap,
+        es_net:startap-es .
+
+es_net:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort es_net:ps-in,
+        es_net:ps-out .
+
+exp_pionier_net_pl:bi-exp-pionier a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort exp_pionier_net_pl:exp-pionier,
+        exp_pionier_net_pl:pionier-exp .
+
+exp_pionier_net_pl:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort exp_pionier_net_pl:ps-in,
+        exp_pionier_net_pl:ps-out .
+
+geant_net:bi-geant-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort geant_net:geant-netherlight,
+        geant_net:netherlight-geant .
+
+geant_net:bi-geant-pionier a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort geant_net:geant-pionier,
+        geant_net:pionier-geant .
+
+geant_net:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort geant_net:ps-in,
+        geant_net:ps-out .
+
+gloriad_org:bi-gloriad-krlight a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort gloriad_org:gloriad-krlight,
+        gloriad_org:krlight-gloriad .
+
+gloriad_org:bi-gloriad-startap a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort gloriad_org:gloriad-startap,
+        gloriad_org:startap-gloriad .
+
+gloriad_org:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort gloriad_org:ps-in,
+        gloriad_org:ps-out .
+
+jgn-x_jp:bi-jgn-x-aist a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort jgn-x_jp:aist-jgn-x,
+        jgn-x_jp:jgn-x-aist .
+
+jgn-x_jp:bi-jgn-x-kddilabs a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort jgn-x_jp:jgn-x-kddilabs,
+        jgn-x_jp:kddilabs-jgn-x .
+
+jgn-x_jp:bi-jgn-x-startap a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort jgn-x_jp:jgn-x-startap,
+        jgn-x_jp:startap-jgn-x .
+
+jgn-x_jp:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort jgn-x_jp:ps-in,
+        jgn-x_jp:ps-out .
+
+kddilabs_jp:bi-kddilabs-jgn-x a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort kddilabs_jp:jgn-x-kddilabs,
+        kddilabs_jp:kddilabs-jgn-x .
+
+kddilabs_jp:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort kddilabs_jp:ps-in,
+        kddilabs_jp:ps-out .
+
+krlight_net:bi-krlight-gloriad a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort krlight_net:gloriad-krlight,
+        krlight_net:krlight-gloriad .
+
+krlight_net:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort krlight_net:ps-in,
+        krlight_net:ps-out .
+
+netherlight_net:bi-netherlight-czechlight a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort netherlight_net:czechlight-netherlight,
+        netherlight_net:netherlight-czechlight .
+
+netherlight_net:bi-netherlight-geant a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort netherlight_net:geant-netherlight,
+        netherlight_net:netherlight-geant .
+
+netherlight_net:bi-netherlight-nordu a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort netherlight_net:netherlight-nordu,
+        netherlight_net:nordu-netherlight .
+
+netherlight_net:bi-netherlight-pionier a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort netherlight_net:netherlight-pionier,
+        netherlight_net:pionier-netherlight .
+
+netherlight_net:bi-netherlight-startap a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort netherlight_net:netherlight-startap,
+        netherlight_net:startap-netherlight .
+
+netherlight_net:bi-netherlight-uvalight a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort netherlight_net:netherlight-uvalight,
+        netherlight_net:uvalight-netherlight .
+
+netherlight_net:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort netherlight_net:ps-in,
+        netherlight_net:ps-out .
+
+nordu_net:bi-nordu-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort nordu_net:netherlight-nordu,
+        nordu_net:nordu-netherlight .
+
+nordu_net:bi-nordu-uvalight a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort nordu_net:nordu-uvalight,
+        nordu_net:uvalight-nordu .
+
+nordu_net:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort nordu_net:ps-in,
+        nordu_net:ps-out .
+
+pionier_net_pl:bi-pionier-exp a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort pionier_net_pl:exp-pionier,
+        pionier_net_pl:pionier-exp .
+
+pionier_net_pl:bi-pionier-geant a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort pionier_net_pl:geant-pionier,
+        pionier_net_pl:pionier-geant .
+
+pionier_net_pl:bi-pionier-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort pionier_net_pl:netherlight-pionier,
+        pionier_net_pl:pionier-netherlight .
+
+pionier_net_pl:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort pionier_net_pl:ps-in,
+        pionier_net_pl:ps-out .
+
+startap_net:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort startap_net:ps-in,
+        startap_net:ps-out .
+
+startap_net:bi-startap-es a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort startap_net:es-startap,
+        startap_net:startap-es .
+
+startap_net:bi-startap-gloriad a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort startap_net:gloriad-startap,
+        startap_net:startap-gloriad .
+
+startap_net:bi-startap-jgn-x a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort startap_net:jgn-x-startap,
+        startap_net:startap-jgn-x .
+
+startap_net:bi-startap-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort startap_net:netherlight-startap,
+        startap_net:startap-netherlight .
+
+uvalight_net:bi-ps a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort uvalight_net:ps-in,
+        uvalight_net:ps-out .
+
+uvalight_net:bi-uvalight-netherlight a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort uvalight_net:netherlight-uvalight,
+        uvalight_net:uvalight-netherlight .
+
+uvalight_net:bi-uvalight-nordu a nml:BidirectionalPort,
+        owl:NamedIndividual ;
+    nml:hasPort uvalight_net:nordu-uvalight,
+        uvalight_net:uvalight-nordu .
+
 aist_go_jp:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort aist_go_jp:bi-aist-jgn-x,
-        aist_go_jp:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort aist_go_jp:jgn-x-aist,
-        aist_go_jp:ps-in;
+        aist_go_jp:ps-in ;
     nml:hasOutboundPort aist_go_jp:aist-jgn-x,
-        aist_go_jp:ps-out;
-    nml:locatedAt aist_go_jp:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/aist.go.jp.n3";
+        aist_go_jp:ps-out ;
+    nml:locatedAt aist_go_jp:location ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/aist.go.jp.n3" ;
     nsi:managedBy aist_go_jp:nsa .
 
 aist_go_jp:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "36.060"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "36.060"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "140.133"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 aist_go_jp:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA:  G-Lambda/AIST  (AIST)
             Project manager: Tomohiro Kudoh 
@@ -58,41 +266,29 @@ aist_go_jp:nsa a nsi:NSA,
             email: nsi-gl@m.aist.go.jp 
             mobile:  81-29-861-3091 
             skype: taketake320
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://163.220.30.174:28080/nsi2/services/ConnectionProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing aist_go_jp:ets .
-
-czechlight_cesnet_cz:bi-czechlight-netherlight a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort czechlight_cesnet_cz:czechlight-netherlight,
-        czechlight_cesnet_cz:netherlight-czechlight .
-
-czechlight_cesnet_cz:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort czechlight_cesnet_cz:ps-in,
-        czechlight_cesnet_cz:ps-out .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages aist_go_jp:ets .
 
 czechlight_cesnet_cz:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort czechlight_cesnet_cz:bi-czechlight-netherlight,
-        czechlight_cesnet_cz:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort czechlight_cesnet_cz:netherlight-czechlight,
-        czechlight_cesnet_cz:ps-in;
+        czechlight_cesnet_cz:ps-in ;
     nml:hasOutboundPort czechlight_cesnet_cz:czechlight-netherlight,
-        czechlight_cesnet_cz:ps-out;
-    nml:locatedAt czechlight_cesnet_cz:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/czechlight.cesnet.cz.n3";
+        czechlight_cesnet_cz:ps-out ;
+    nml:locatedAt czechlight_cesnet_cz:location ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/czechlight.cesnet.cz.n3" ;
     nsi:managedBy czechlight_cesnet_cz:nsa .
 
 czechlight_cesnet_cz:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "50.088"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "50.088"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "14.421"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 czechlight_cesnet_cz:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA: OpenDRAC (SURFnet) 
             Proj Manager: Michal Altmann  
@@ -103,82 +299,58 @@ czechlight_cesnet_cz:nsa a nsi:NSA,
             email: john.macauley@surfnet.nl 
             phone:  1-613-220-6817 
             skype: john.macauley
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing czechlight_cesnet_cz:ets .
-
-es_net:bi-es-startap a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort es_net:es-startap,
-        es_net:startap-es .
-
-es_net:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort es_net:ps-in,
-        es_net:ps-out .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages czechlight_cesnet_cz:ets .
 
 es_net:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort es_net:bi-es-startap,
-        es_net:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort es_net:ps-in,
-        es_net:startap-es;
+        es_net:startap-es ;
     nml:hasOutboundPort es_net:es-startap,
-        es_net:ps-out;
-    nml:locatedAt es_net:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/es.net.n3";
+        es_net:ps-out ;
+    nml:locatedAt es_net:location ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/es.net.n3" ;
     nsi:managedBy es_net:nsa .
 
 es_net:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "41.703516"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "41.703516"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "-87.988120"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 es_net:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA: OSCARS 
             Project Manager: Inder Monga 
             Email: imonga@es.net 
             Software development engineer: Evangelos Chaniotakis 
             Email:  haniotak@es.net
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://jupiter.es.net:8288/ConnectionService
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing es_net:ets .
-
-exp_pionier_net_pl:bi-exp-pionier a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort exp_pionier_net_pl:exp-pionier,
-        exp_pionier_net_pl:pionier-exp .
-
-exp_pionier_net_pl:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort exp_pionier_net_pl:ps-in,
-        exp_pionier_net_pl:ps-out .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages es_net:ets .
 
 exp_pionier_net_pl:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort exp_pionier_net_pl:bi-exp-pionier,
-        exp_pionier_net_pl:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort exp_pionier_net_pl:pionier-exp,
-        exp_pionier_net_pl:ps-in;
+        exp_pionier_net_pl:ps-in ;
     nml:hasOutboundPort exp_pionier_net_pl:exp-pionier,
-        exp_pionier_net_pl:ps-out;
-    nml:locatedAt exp_pionier_net_pl:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/exp.pionier.net.pl.n3";
+        exp_pionier_net_pl:ps-out ;
+    nml:locatedAt exp_pionier_net_pl:location ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/exp.pionier.net.pl.n3" ;
     nsi:managedBy exp_pionier_net_pl:nsa .
 
 exp_pionier_net_pl:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "16.916"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 exp_pionier_net_pl:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA: PSNC 
             Project manager: Radek Krzywania  
@@ -187,49 +359,31 @@ exp_pionier_net_pl:nsa a nsi:NSA,
             Software development: Michal Balcerkiewicz  
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
              http://194.132.53.174:9282/nsi/ConnectionProvider 
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing exp_pionier_net_pl:ets .
-
-geant_net:bi-geant-netherlight a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort geant_net:geant-netherlight,
-        geant_net:netherlight-geant .
-
-geant_net:bi-geant-pionier a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort geant_net:geant-pionier,
-        geant_net:pionier-geant .
-
-geant_net:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort geant_net:ps-in,
-        geant_net:ps-out .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages exp_pionier_net_pl:ets .
 
 geant_net:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort geant_net:bi-geant-netherlight,
-        geant_net:bi-geant-pionier,
-        geant_net:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort geant_net:netherlight-geant,
         geant_net:pionier-geant,
-        geant_net:ps-in;
+        geant_net:ps-in ;
     nml:hasOutboundPort geant_net:geant-netherlight,
         geant_net:geant-pionier,
-        geant_net:ps-out;
-    nml:locatedAt geant_net:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/geant.net.n3";
+        geant_net:ps-out ;
+    nml:locatedAt geant_net:location ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/geant.net.n3" ;
     nsi:managedBy geant_net:nsa .
 
 geant_net:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "48.859"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "48.859"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "2.295"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 geant_net:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA: AutoBAHN  (GEANT)
             Project manager: 
@@ -239,114 +393,64 @@ geant_net:nsa a nsi:NSA,
             Key software engineer: Michal Balcerkiewicz  
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
            http://gnscdemo.geant.net:8080/nsi/ConnectionProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing geant_net:ets .
-
-gloriad_org:bi-gloriad-krlight a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort gloriad_org:gloriad-krlight,
-        gloriad_org:krlight-gloriad .
-
-gloriad_org:bi-gloriad-startap a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort gloriad_org:gloriad-startap,
-        gloriad_org:startap-gloriad .
-
-gloriad_org:bi-ps-sea a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort gloriad_org:ps-in-sea,
-        gloriad_org:ps-out-sea .
-
-gloriad_org:bi-ps-chi a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort gloriad_org:ps-in-chi,
-        gloriad_org:ps-out-chi .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages geant_net:ets .
 
 gloriad_org:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort gloriad_org:bi-gloriad-krlight,
-        gloriad_org:bi-gloriad-startap,
-        gloriad_org:bi-ps-sea,
-        gloriad_org:bi-ps-chi;
+        owl:NamedIndividual ;
     nml:hasInboundPort gloriad_org:krlight-gloriad,
-        gloriad_org:ps-in-sea,
-        gloriad_org:ps-in-chi,
-        gloriad_org:startap-gloriad;
+        gloriad_org:ps-in,
+        gloriad_org:startap-gloriad ;
     nml:hasOutboundPort gloriad_org:gloriad-krlight,
         gloriad_org:gloriad-startap,
-        gloriad_org:ps-out-sea,
-        gloriad_org:ps-out-chi;
-    nml:locatedAt gloriad_org:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.org.n3";
+        gloriad_org:ps-out ;
+    nml:locatedAt gloriad_org:location ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.org.n3" ;
     nsi:managedBy gloriad_org:nsa .
 
 gloriad_org:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "41.866342"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "41.866342"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "-87.607777"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 gloriad_org:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA: OpenNSA 
             Project Manager: Predrag Redulovic 
             Email: predrag@gloriad.net
             Software development engineer: Henrik Thostrup.Jensen 
             Email:  htj@nordu.net
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://nsa.gloriad.org:9080/NSI/services/ConnectionService
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing gloriad_org:ets .
-
-jgn-x_jp:bi-jgn-x-aist a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort jgn-x_jp:aist-jgn-x,
-        jgn-x_jp:jgn-x-aist .
-
-jgn-x_jp:bi-jgn-x-kddilabs a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort jgn-x_jp:jgn-x-kddilabs,
-        jgn-x_jp:kddilabs-jgn-x .
-
-jgn-x_jp:bi-jgn-x-startap a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort jgn-x_jp:jgn-x-startap,
-        jgn-x_jp:startap-jgn-x .
-
-jgn-x_jp:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort jgn-x_jp:ps-in,
-        jgn-x_jp:ps-out .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages gloriad_org:ets .
 
 jgn-x_jp:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort jgn-x_jp:bi-jgn-x-aist,
-        jgn-x_jp:bi-jgn-x-kddilabs,
-        jgn-x_jp:bi-jgn-x-startap,
-        jgn-x_jp:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort jgn-x_jp:aist-jgn-x,
         jgn-x_jp:kddilabs-jgn-x,
         jgn-x_jp:ps-in,
-        jgn-x_jp:startap-jgn-x;
+        jgn-x_jp:startap-jgn-x ;
     nml:hasOutboundPort jgn-x_jp:jgn-x-aist,
         jgn-x_jp:jgn-x-kddilabs,
         jgn-x_jp:jgn-x-startap,
-        jgn-x_jp:ps-out;
-    nml:locatedAt jgn-x_jp:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn-x.jp.n3";
+        jgn-x_jp:ps-out ;
+    nml:locatedAt jgn-x_jp:location ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn-x.jp.n3" ;
     nsi:managedBy jgn-x_jp:nsa .
 
 jgn-x_jp:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "35.688"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "35.688"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "139.764"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 jgn-x_jp:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA: G-Lambda/KDDILabs (KDDI Labs) 
             Project manager name: Jin Tanaka  
@@ -357,41 +461,29 @@ jgn-x_jp:nsa a nsi:NSA,
             email: tk-miyamoto@kddilabs.jp 
             mobile:  81-90-1966-5153  
             skype: takahiro.miyamoto 
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://202.180.38.130:8080/2012/03/connectionprovider
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing jgn-x_jp:ets .
-
-kddilabs_jp:bi-kddilabs-jgn-x a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort kddilabs_jp:jgn-x-kddilabs,
-        kddilabs_jp:kddilabs-jgn-x .
-
-kddilabs_jp:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort kddilabs_jp:ps-in,
-        kddilabs_jp:ps-out .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages jgn-x_jp:ets .
 
 kddilabs_jp:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort kddilabs_jp:bi-kddilabs-jgn-x,
-        kddilabs_jp:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort kddilabs_jp:jgn-x-kddilabs,
-        kddilabs_jp:ps-in;
+        kddilabs_jp:ps-in ;
     nml:hasOutboundPort kddilabs_jp:kddilabs-jgn-x,
-        kddilabs_jp:ps-out;
-    nml:locatedAt kddilabs_jp:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/kddilabs.jp.n3";
+        kddilabs_jp:ps-out ;
+    nml:locatedAt kddilabs_jp:location ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/kddilabs.jp.n3" ;
     nsi:managedBy kddilabs_jp:nsa .
 
 kddilabs_jp:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "35.879"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "35.879"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "139.517"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 kddilabs_jp:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA: G-Lambda/KDDILabs (KDDI Labs) 
             Project manager: Takahiro Miyamoto  
@@ -402,41 +494,29 @@ kddilabs_jp:nsa a nsi:NSA,
             email: tk-miyamoto@kddilabs.jp 
             mobile:  81-90-1966-5153  
             skype: takahiro.miyamoto 
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://210.196.65.114:9352/2012/03/connectionprovider
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing kddilabs_jp:ets .
-
-krlight_net:bi-krlight-gloriad a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort krlight_net:gloriad-krlight,
-        krlight_net:krlight-gloriad .
-
-krlight_net:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort krlight_net:ps-in,
-        krlight_net:ps-out .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages kddilabs_jp:ets .
 
 krlight_net:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort krlight_net:bi-krlight-gloriad,
-        krlight_net:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort krlight_net:gloriad-krlight,
-        krlight_net:ps-in;
+        krlight_net:ps-in ;
     nml:hasOutboundPort krlight_net:krlight-gloriad,
-        krlight_net:ps-out;
-    nml:locatedAt krlight_net:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/krlight.net.n3";
+        krlight_net:ps-out ;
+    nml:locatedAt krlight_net:location ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/krlight.net.n3" ;
     nsi:managedBy krlight_net:nsa .
 
 krlight_net:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "36.366"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "36.366"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "127.359"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 krlight_net:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             DynamicKL  (KISTI) 
             Project Mgmt: 
@@ -454,81 +534,39 @@ krlight_net:nsa a nsi:NSA,
             - Kyungmin Lee, +82-10-9958-8979, tsoc@naver.com, kyungmin_ 
             - Kwangjong Cho, +82-10-4192-8992, kjcho@kisti.re.kr, kwangjong cho
             : SC2011 booth#  656  KISTI
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://203.230.116.202:8090/NSI_v2.0/ConnectionServiceProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing krlight_net:ets .
-
-netherlight_net:bi-netherlight-czechlight a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort netherlight_net:czechlight-netherlight,
-        netherlight_net:netherlight-czechlight .
-
-netherlight_net:bi-netherlight-geant a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort netherlight_net:geant-netherlight,
-        netherlight_net:netherlight-geant .
-
-netherlight_net:bi-netherlight-nordu a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort netherlight_net:netherlight-nordu,
-        netherlight_net:nordu-netherlight .
-
-netherlight_net:bi-netherlight-pionier a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort netherlight_net:netherlight-pionier,
-        netherlight_net:pionier-netherlight .
-
-netherlight_net:bi-netherlight-startap a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort netherlight_net:netherlight-startap,
-        netherlight_net:startap-netherlight .
-
-netherlight_net:bi-netherlight-uvalight a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort netherlight_net:netherlight-uvalight,
-        netherlight_net:uvalight-netherlight .
-
-netherlight_net:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort netherlight_net:ps-in,
-        netherlight_net:ps-out .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages krlight_net:ets .
 
 netherlight_net:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort netherlight_net:bi-netherlight-czechlight,
-        netherlight_net:bi-netherlight-geant,
-        netherlight_net:bi-netherlight-nordu,
-        netherlight_net:bi-netherlight-pionier,
-        netherlight_net:bi-netherlight-startap,
-        netherlight_net:bi-netherlight-uvalight,
-        netherlight_net:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort netherlight_net:czechlight-netherlight,
         netherlight_net:geant-netherlight,
         netherlight_net:nordu-netherlight,
         netherlight_net:pionier-netherlight,
         netherlight_net:ps-in,
         netherlight_net:startap-netherlight,
-        netherlight_net:uvalight-netherlight;
+        netherlight_net:uvalight-netherlight ;
     nml:hasOutboundPort netherlight_net:netherlight-czechlight,
         netherlight_net:netherlight-geant,
         netherlight_net:netherlight-nordu,
         netherlight_net:netherlight-pionier,
         netherlight_net:netherlight-startap,
         netherlight_net:netherlight-uvalight,
-        netherlight_net:ps-out;
-    nml:locatedAt netherlight_net:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3";
+        netherlight_net:ps-out ;
+    nml:locatedAt netherlight_net:location ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3" ;
     nsi:managedBy netherlight_net:nsa .
 
 netherlight_net:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 netherlight_net:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             OpenDRAC (SURFnet) 
             Proj Manager: John MacAuley 
@@ -539,49 +577,31 @@ netherlight_net:nsa a nsi:NSA,
             email: john.macauley@surfnet.nl 
             phone:  1-613-220-6817 
             skype: john.macauley
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing netherlight_net:ets .
-
-nordu_net:bi-nordu-netherlight a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu_net:netherlight-nordu,
-        nordu_net:nordu-netherlight .
-
-nordu_net:bi-nordu-uvalight a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu_net:nordu-uvalight,
-        nordu_net:uvalight-nordu .
-
-nordu_net:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort nordu_net:ps-in,
-        nordu_net:ps-out .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages netherlight_net:ets .
 
 nordu_net:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort nordu_net:bi-nordu-netherlight,
-        nordu_net:bi-nordu-uvalight,
-        nordu_net:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort nordu_net:netherlight-nordu,
         nordu_net:ps-in,
-        nordu_net:uvalight-nordu;
+        nordu_net:uvalight-nordu ;
     nml:hasOutboundPort nordu_net:nordu-netherlight,
         nordu_net:nordu-uvalight,
-        nordu_net:ps-out;
-    nml:locatedAt nordu_net:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3";
+        nordu_net:ps-out ;
+    nml:locatedAt nordu_net:location ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3" ;
     nsi:managedBy nordu_net:nsa .
 
 nordu_net:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "55.637"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "55.637"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "12.641"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 nordu_net:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA: OpenNSA (NORDUnet)
             Project Management: Jerry Sobieski
@@ -591,55 +611,31 @@ nordu_net:nsa a nsi:NSA,
             Software Development: Henrik Thostrup-Jensen
             email: htj@nordu.net
             skype: henrik.thostrup.jensen
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:csProviderEndpoint "https://nsi.nordu.net:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing nordu_net:ets .
-
-pionier_net_pl:bi-pionier-exp a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort pionier_net_pl:exp-pionier,
-        pionier_net_pl:pionier-exp .
-
-pionier_net_pl:bi-pionier-geant a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort pionier_net_pl:geant-pionier,
-        pionier_net_pl:pionier-geant .
-
-pionier_net_pl:bi-pionier-netherlight a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort pionier_net_pl:netherlight-pionier,
-        pionier_net_pl:pionier-netherlight .
-
-pionier_net_pl:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort pionier_net_pl:ps-in,
-        pionier_net_pl:ps-out .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:csProviderEndpoint "https://nsi.nordu.net:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages nordu_net:ets .
 
 pionier_net_pl:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort pionier_net_pl:bi-pionier-exp,
-        pionier_net_pl:bi-pionier-geant,
-        pionier_net_pl:bi-pionier-netherlight,
-        pionier_net_pl:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort pionier_net_pl:exp-pionier,
         pionier_net_pl:geant-pionier,
         pionier_net_pl:netherlight-pionier,
-        pionier_net_pl:ps-in;
+        pionier_net_pl:ps-in ;
     nml:hasOutboundPort pionier_net_pl:pionier-exp,
         pionier_net_pl:pionier-geant,
         pionier_net_pl:pionier-netherlight,
-        pionier_net_pl:ps-out;
-    nml:locatedAt pionier_net_pl:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3";
+        pionier_net_pl:ps-out ;
+    nml:locatedAt pionier_net_pl:location ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3" ;
     nsi:managedBy pionier_net_pl:nsa .
 
 pionier_net_pl:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "16.916"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 pionier_net_pl:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA: AutoBAHN  (GEANT) 
             Project manager: Radek Krzywania  
@@ -648,65 +644,35 @@ pionier_net_pl:nsa a nsi:NSA,
             Software development: Michal Balcerkiewicz  
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://194.132.53.174:9280/nsi/ConnectionProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing pionier_net_pl:ets .
-
-startap_net:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort startap_net:ps-in,
-        startap_net:ps-out .
-
-startap_net:bi-startap-es a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort startap_net:es-startap,
-        startap_net:startap-es .
-
-startap_net:bi-startap-gloriad a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort startap_net:gloriad-startap,
-        startap_net:startap-gloriad .
-
-startap_net:bi-startap-jgn-x a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort startap_net:jgn-x-startap,
-        startap_net:startap-jgn-x .
-
-startap_net:bi-startap-netherlight a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort startap_net:netherlight-startap,
-        startap_net:startap-netherlight .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages pionier_net_pl:ets .
 
 startap_net:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort startap_net:bi-ps,
-        startap_net:bi-startap-es,
-        startap_net:bi-startap-gloriad,
-        startap_net:bi-startap-jgn-x,
-        startap_net:bi-startap-netherlight;
+        owl:NamedIndividual ;
     nml:hasInboundPort startap_net:es-startap,
         startap_net:gloriad-startap,
         startap_net:jgn-x-startap,
         startap_net:netherlight-startap,
-        startap_net:ps-in;
+        startap_net:ps-in ;
     nml:hasOutboundPort startap_net:ps-out,
         startap_net:startap-es,
         startap_net:startap-gloriad,
         startap_net:startap-jgn-x,
-        startap_net:startap-netherlight;
-    nml:locatedAt startap_net:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3";
+        startap_net:startap-netherlight ;
+    nml:locatedAt startap_net:location ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3" ;
     nsi:managedBy startap_net:nsa .
 
 startap_net:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "41.947906"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "41.947906"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "-87.655791"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 startap_net:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
              NSA: OpenNSA (NORDUnet) over Argia 
              Project manager: Scott Campbell 
@@ -716,34 +682,19 @@ startap_net:nsa a nsi:NSA,
              Key software engineer: Henrik Thostrup-Jensen 
              email: htj@nordu.net 
              skype: henrik.thostrup.jensen
-         """^^<http://www.w3.org/2001/XMLSchema#string>;
+         """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
              http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
-         """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing startap_net:ets .
-
-uvalight_net:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort uvalight_net:ps-in,
-        uvalight_net:ps-out .
-
-uvalight_net:bi-uvalight-netherlight a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort uvalight_net:netherlight-uvalight,
-        uvalight_net:uvalight-netherlight .
-
-uvalight_net:bi-uvalight-nordu a nml:BidirectionalPort,
-        owl:NamedIndividual;
-    nml:hasPort uvalight_net:nordu-uvalight,
-        uvalight_net:uvalight-nordu .
+         """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages startap_net:ets .
 
 uvalight_net:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 uvalight_net:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA: OpenNSA   
             Project manager: Jeroen van der Ham   
@@ -755,444 +706,433 @@ uvalight_net:nsa a nsi:NSA,
             Key software engineer: Jeroen van der Ham
             email: vdham@uva.nl mobile: use skype   
             skype: just1sand0s  
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://nsa.uvalight.nl:9080/NSI/services/ConnectionService/        
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing uvalight_net:topology .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages uvalight_net:topology .
 
 uvalight_net:topology a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort uvalight_net:bi-ps,
-        uvalight_net:bi-uvalight-netherlight,
-        uvalight_net:bi-uvalight-nordu;
+        owl:NamedIndividual ;
     nml:hasInboundPort uvalight_net:netherlight-uvalight,
         uvalight_net:nordu-uvalight,
-        uvalight_net:ps-in;
+        uvalight_net:ps-in ;
     nml:hasOutboundPort uvalight_net:ps-out,
         uvalight_net:uvalight-netherlight,
-        uvalight_net:uvalight-nordu;
-    nml:locatedAt uvalight_net:location;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.net.n3";
+        uvalight_net:uvalight-nordu ;
+    nml:locatedAt uvalight_net:location ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.net.n3" ;
     nsi:managedBy uvalight_net:nsa .
 
 aist_go_jp:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 aist_go_jp:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 czechlight_cesnet_cz:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 czechlight_cesnet_cz:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 es_net:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 es_net:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 exp_pionier_net_pl:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 exp_pionier_net_pl:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 geant_net:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 geant_net:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
-gloriad_org:ps-in-chi a nml:PortGroup,
-        owl:NamedIndividual;
+gloriad_org:ps-in a nml:PortGroup,
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
-gloriad_org:ps-out-chi a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-gloriad_org:ps-in-sea a nml:PortGroup,
-        owl:NamedIndividual;
-    nmleth:vlans "1780-1783" .
-
-gloriad_org:ps-out-sea a nml:PortGroup,
-        owl:NamedIndividual;
+gloriad_org:ps-out a nml:PortGroup,
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 jgn-x_jp:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 jgn-x_jp:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 kddilabs_jp:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 kddilabs_jp:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 krlight_net:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 krlight_net:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 nordu_net:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 nordu_net:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 pionier_net_pl:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 pionier_net_pl:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 startap_net:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 startap_net:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 uvalight_net:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 uvalight_net:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 aist_go_jp:aist-jgn-x a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias jgn-x_jp:aist-jgn-x;
+        owl:NamedIndividual ;
+    nml:isAlias jgn-x_jp:aist-jgn-x ;
     nmleth:vlans "1780-1783" .
 
 aist_go_jp:jgn-x-aist a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias jgn-x_jp:jgn-x-aist;
+        owl:NamedIndividual ;
+    nml:isAlias jgn-x_jp:jgn-x-aist ;
     nmleth:vlans "1780-1783" .
 
 czechlight_cesnet_cz:czechlight-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight_net:czechlight-netherlight;
+        owl:NamedIndividual ;
+    nml:isAlias netherlight_net:czechlight-netherlight ;
     nmleth:vlans "1780-1783" .
 
 czechlight_cesnet_cz:netherlight-czechlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight_net:netherlight-czechlight;
+        owl:NamedIndividual ;
+    nml:isAlias netherlight_net:netherlight-czechlight ;
     nmleth:vlans "1780-1783" .
 
 es_net:es-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias startap_net:es-startap;
+        owl:NamedIndividual ;
+    nml:isAlias startap_net:es-startap ;
     nmleth:vlans "1780-1783" .
 
 es_net:startap-es a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias startap_net:startap-es;
+        owl:NamedIndividual ;
+    nml:isAlias startap_net:startap-es ;
     nmleth:vlans "1780-1783" .
 
 exp_pionier_net_pl:exp-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias pionier_net_pl:exp-pionier;
+        owl:NamedIndividual ;
+    nml:isAlias pionier_net_pl:exp-pionier ;
     nmleth:vlans "1780-1783" .
 
 exp_pionier_net_pl:pionier-exp a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias pionier_net_pl:pionier-exp;
+        owl:NamedIndividual ;
+    nml:isAlias pionier_net_pl:pionier-exp ;
     nmleth:vlans "1780-1783" .
 
 geant_net:geant-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight_net:geant-netherlight;
+        owl:NamedIndividual ;
+    nml:isAlias netherlight_net:geant-netherlight ;
     nmleth:vlans "1780-1783" .
 
 geant_net:geant-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias pionier_net_pl:geant-pionier;
+        owl:NamedIndividual ;
+    nml:isAlias pionier_net_pl:geant-pionier ;
     nmleth:vlans "1780-1783" .
 
 geant_net:netherlight-geant a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight_net:netherlight-geant;
+        owl:NamedIndividual ;
+    nml:isAlias netherlight_net:netherlight-geant ;
     nmleth:vlans "1780-1783" .
 
 geant_net:pionier-geant a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias pionier_net_pl:pionier-geant;
+        owl:NamedIndividual ;
+    nml:isAlias pionier_net_pl:pionier-geant ;
     nmleth:vlans "1780-1783" .
 
 gloriad_org:gloriad-krlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias krlight_net:gloriad-krlight;
+        owl:NamedIndividual ;
+    nml:isAlias krlight_net:gloriad-krlight ;
     nmleth:vlans "1780-1783" .
 
 gloriad_org:gloriad-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias startap_net:gloriad-startap;
+        owl:NamedIndividual ;
+    nml:isAlias startap_net:gloriad-startap ;
     nmleth:vlans "1780-1783" .
 
 gloriad_org:krlight-gloriad a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias krlight_net:krlight-gloriad;
+        owl:NamedIndividual ;
+    nml:isAlias krlight_net:krlight-gloriad ;
     nmleth:vlans "1780-1783" .
 
 gloriad_org:startap-gloriad a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias startap_net:startap-gloriad;
+        owl:NamedIndividual ;
+    nml:isAlias startap_net:startap-gloriad ;
     nmleth:vlans "1780-1783" .
 
 jgn-x_jp:aist-jgn-x a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias aist_go_jp:aist-jgn-x;
+        owl:NamedIndividual ;
+    nml:isAlias aist_go_jp:aist-jgn-x ;
     nmleth:vlans "1780-1783" .
 
 jgn-x_jp:jgn-x-aist a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias aist_go_jp:jgn-x-aist;
+        owl:NamedIndividual ;
+    nml:isAlias aist_go_jp:jgn-x-aist ;
     nmleth:vlans "1780-1783" .
 
 jgn-x_jp:jgn-x-kddilabs a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias kddilabs_jp:jgn-x-kddilabs;
+        owl:NamedIndividual ;
+    nml:isAlias kddilabs_jp:jgn-x-kddilabs ;
     nmleth:vlans "1780-1783" .
 
 jgn-x_jp:jgn-x-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias startap_net:jgn-x-startap;
+        owl:NamedIndividual ;
+    nml:isAlias startap_net:jgn-x-startap ;
     nmleth:vlans "1780-1783" .
 
 jgn-x_jp:kddilabs-jgn-x a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias kddilabs_jp:kddilabs-jgn-x;
+        owl:NamedIndividual ;
+    nml:isAlias kddilabs_jp:kddilabs-jgn-x ;
     nmleth:vlans "1780-1783" .
 
 jgn-x_jp:startap-jgn-x a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias startap_net:startap-jgn-x;
+        owl:NamedIndividual ;
+    nml:isAlias startap_net:startap-jgn-x ;
     nmleth:vlans "1780-1783" .
 
 kddilabs_jp:jgn-x-kddilabs a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias jgn-x_jp:jgn-x-kddilabs;
+        owl:NamedIndividual ;
+    nml:isAlias jgn-x_jp:jgn-x-kddilabs ;
     nmleth:vlans "1780-1783" .
 
 kddilabs_jp:kddilabs-jgn-x a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias jgn-x_jp:kddilabs-jgn-x;
+        owl:NamedIndividual ;
+    nml:isAlias jgn-x_jp:kddilabs-jgn-x ;
     nmleth:vlans "1780-1783" .
 
 krlight_net:gloriad-krlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias gloriad_org:gloriad-krlight;
+        owl:NamedIndividual ;
+    nml:isAlias gloriad_org:gloriad-krlight ;
     nmleth:vlans "1780-1783" .
 
 krlight_net:krlight-gloriad a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias gloriad_org:krlight-gloriad;
+        owl:NamedIndividual ;
+    nml:isAlias gloriad_org:krlight-gloriad ;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:czechlight-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias czechlight_cesnet_cz:czechlight-netherlight;
+        owl:NamedIndividual ;
+    nml:isAlias czechlight_cesnet_cz:czechlight-netherlight ;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:geant-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias geant_net:geant-netherlight;
+        owl:NamedIndividual ;
+    nml:isAlias geant_net:geant-netherlight ;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:netherlight-czechlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias czechlight_cesnet_cz:netherlight-czechlight;
+        owl:NamedIndividual ;
+    nml:isAlias czechlight_cesnet_cz:netherlight-czechlight ;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:netherlight-geant a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias geant_net:netherlight-geant;
+        owl:NamedIndividual ;
+    nml:isAlias geant_net:netherlight-geant ;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:netherlight-nordu a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias nordu_net:netherlight-nordu;
+        owl:NamedIndividual ;
+    nml:isAlias nordu_net:netherlight-nordu ;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:netherlight-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias pionier_net_pl:netherlight-pionier;
+        owl:NamedIndividual ;
+    nml:isAlias pionier_net_pl:netherlight-pionier ;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:netherlight-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias startap_net:netherlight-startap;
+        owl:NamedIndividual ;
+    nml:isAlias startap_net:netherlight-startap ;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:netherlight-uvalight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias uvalight_net:netherlight-uvalight;
+        owl:NamedIndividual ;
+    nml:isAlias uvalight_net:netherlight-uvalight ;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:nordu-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias nordu_net:nordu-netherlight;
+        owl:NamedIndividual ;
+    nml:isAlias nordu_net:nordu-netherlight ;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:pionier-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias pionier_net_pl:pionier-netherlight;
+        owl:NamedIndividual ;
+    nml:isAlias pionier_net_pl:pionier-netherlight ;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:startap-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias startap_net:startap-netherlight;
+        owl:NamedIndividual ;
+    nml:isAlias startap_net:startap-netherlight ;
     nmleth:vlans "1780-1783" .
 
 netherlight_net:uvalight-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias uvalight_net:uvalight-netherlight;
+        owl:NamedIndividual ;
+    nml:isAlias uvalight_net:uvalight-netherlight ;
     nmleth:vlans "1780-1783" .
 
 nordu_net:netherlight-nordu a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight_net:netherlight-nordu;
+        owl:NamedIndividual ;
+    nml:isAlias netherlight_net:netherlight-nordu ;
     nmleth:vlans "1780-1783" .
 
 nordu_net:nordu-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight_net:nordu-netherlight;
+        owl:NamedIndividual ;
+    nml:isAlias netherlight_net:nordu-netherlight ;
     nmleth:vlans "1780-1783" .
 
 nordu_net:nordu-uvalight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias uvalight_net:nordu-uvalight;
+        owl:NamedIndividual ;
+    nml:isAlias uvalight_net:nordu-uvalight ;
     nmleth:vlans "1780-1783" .
 
 nordu_net:uvalight-nordu a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias uvalight_net:uvalight-nordu;
+        owl:NamedIndividual ;
+    nml:isAlias uvalight_net:uvalight-nordu ;
     nmleth:vlans "1780-1783" .
 
 pionier_net_pl:exp-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias exp_pionier_net_pl:exp-pionier;
+        owl:NamedIndividual ;
+    nml:isAlias exp_pionier_net_pl:exp-pionier ;
     nmleth:vlans "1780-1783" .
 
 pionier_net_pl:geant-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias geant_net:geant-pionier;
+        owl:NamedIndividual ;
+    nml:isAlias geant_net:geant-pionier ;
     nmleth:vlans "1780-1783" .
 
 pionier_net_pl:netherlight-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight_net:netherlight-pionier;
+        owl:NamedIndividual ;
+    nml:isAlias netherlight_net:netherlight-pionier ;
     nmleth:vlans "1780-1783" .
 
 pionier_net_pl:pionier-exp a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias exp_pionier_net_pl:pionier-exp;
+        owl:NamedIndividual ;
+    nml:isAlias exp_pionier_net_pl:pionier-exp ;
     nmleth:vlans "1780-1783" .
 
 pionier_net_pl:pionier-geant a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias geant_net:pionier-geant;
+        owl:NamedIndividual ;
+    nml:isAlias geant_net:pionier-geant ;
     nmleth:vlans "1780-1783" .
 
 pionier_net_pl:pionier-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight_net:pionier-netherlight;
+        owl:NamedIndividual ;
+    nml:isAlias netherlight_net:pionier-netherlight ;
     nmleth:vlans "1780-1783" .
 
 startap_net:es-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias es_net:es-startap;
+        owl:NamedIndividual ;
+    nml:isAlias es_net:es-startap ;
     nmleth:vlans "1780-1783" .
 
 startap_net:gloriad-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias gloriad_org:gloriad-startap;
+        owl:NamedIndividual ;
+    nml:isAlias gloriad_org:gloriad-startap ;
     nmleth:vlans "1780-1783" .
 
 startap_net:jgn-x-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias jgn-x_jp:jgn-x-startap;
+        owl:NamedIndividual ;
+    nml:isAlias jgn-x_jp:jgn-x-startap ;
     nmleth:vlans "1780-1783" .
 
 startap_net:netherlight-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight_net:netherlight-startap;
+        owl:NamedIndividual ;
+    nml:isAlias netherlight_net:netherlight-startap ;
     nmleth:vlans "1780-1783" .
 
 startap_net:startap-es a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias es_net:startap-es;
+        owl:NamedIndividual ;
+    nml:isAlias es_net:startap-es ;
     nmleth:vlans "1780-1783" .
 
 startap_net:startap-gloriad a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias gloriad_org:startap-gloriad;
+        owl:NamedIndividual ;
+    nml:isAlias gloriad_org:startap-gloriad ;
     nmleth:vlans "1780-1783" .
 
 startap_net:startap-jgn-x a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias jgn-x_jp:startap-jgn-x;
+        owl:NamedIndividual ;
+    nml:isAlias jgn-x_jp:startap-jgn-x ;
     nmleth:vlans "1780-1783" .
 
 startap_net:startap-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight_net:startap-netherlight;
+        owl:NamedIndividual ;
+    nml:isAlias netherlight_net:startap-netherlight ;
     nmleth:vlans "1780-1783" .
 
 uvalight_net:netherlight-uvalight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight_net:netherlight-uvalight;
+        owl:NamedIndividual ;
+    nml:isAlias netherlight_net:netherlight-uvalight ;
     nmleth:vlans "1780-1783" .
 
 uvalight_net:nordu-uvalight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias nordu_net:nordu-uvalight;
+        owl:NamedIndividual ;
+    nml:isAlias nordu_net:nordu-uvalight ;
     nmleth:vlans "1780-1783" .
 
 uvalight_net:uvalight-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias netherlight_net:uvalight-netherlight;
+        owl:NamedIndividual ;
+    nml:isAlias netherlight_net:uvalight-netherlight ;
     nmleth:vlans "1780-1783" .
 
 uvalight_net:uvalight-nordu a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias nordu_net:uvalight-nordu;
+        owl:NamedIndividual ;
+    nml:isAlias nordu_net:uvalight-nordu ;
     nmleth:vlans "1780-1783" .
 

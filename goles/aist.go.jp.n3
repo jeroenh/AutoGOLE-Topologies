@@ -6,38 +6,36 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:jgn-x.jp:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn-x.jp.n3" .
-
 aist:bi-aist-jgn-x a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort aist:aist-jgn-x,
         aist:jgn-x-aist .
 
 aist:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort aist:ps-in,
         aist:ps-out .
 
+<urn:ogf:network:jgn-x.jp:2012:ets> a nml:Topology,
+        owl:NamedIndividual ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn-x.jp.n3" .
+
 aist:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort aist:bi-aist-jgn-x,
-        aist:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort aist:jgn-x-aist,
-        aist:ps-in;
+        aist:ps-in ;
     nml:hasOutboundPort aist:aist-jgn-x,
-        aist:ps-out;
-    nml:locatedAt aist:location;
+        aist:ps-out ;
+    nml:locatedAt aist:location ;
     nsi:managedBy aist:nsa .
 
 aist:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "36.060"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "36.060"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "140.133"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 aist:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             NSA:  G-Lambda/AIST  (AIST)
             Project manager: Tomohiro Kudoh 
@@ -48,27 +46,27 @@ aist:nsa a nsi:NSA,
             email: nsi-gl@m.aist.go.jp 
             mobile:  81-29-861-3091 
             skype: taketake320
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://163.220.30.174:28080/nsi2/services/ConnectionProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing aist:ets .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages aist:ets .
 
 aist:aist-jgn-x a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgn-x.jp:2012:aist-jgn-x>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:jgn-x.jp:2012:aist-jgn-x> ;
     nmleth:vlans "1780-1783" .
 
 aist:jgn-x-aist a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:jgn-x.jp:2012:jgn-x-aist>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:jgn-x.jp:2012:jgn-x-aist> ;
     nmleth:vlans "1780-1783" .
 
 aist:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 aist:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 

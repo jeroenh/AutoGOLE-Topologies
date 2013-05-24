@@ -125,7 +125,7 @@
             http://202.180.38.130:8080/connectionprovider
         </nsi:csProviderEndpoint>
         <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
-        <nsi:managing rdf:resource="urn:ogf:network:jgn.nict.go.jp:2012:ets"/>
+        <nsi:manages rdf:resource="urn:ogf:network:jgn.nict.go.jp:2012:ets"/>
       </owl:NamedIndividual>
     </nsi:managedBy>
   </nml:Topology>

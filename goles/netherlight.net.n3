@@ -7,97 +7,90 @@
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:czechlight.cesnet.cz:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/czechlight.cesnet.cz.n3" .
 
 <urn:ogf:network:geant.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/geant.net.n3" .
 
-<urn:ogf:network:nordu.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3" .
-
-<urn:ogf:network:pionier.net.pl:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3" .
-
-<urn:ogf:network:startap.net:2012:ets> a nml:Topology,
-        owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3" .
-
-<urn:ogf:network:uvalight.net:2012:topology> a nml:Topology,
-        owl:NamedIndividual;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.net.n3" .
-
 netherlight:bi-netherlight-czechlight a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort netherlight:czechlight-netherlight,
         netherlight:netherlight-czechlight .
 
 netherlight:bi-netherlight-geant a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort netherlight:geant-netherlight,
         netherlight:netherlight-geant .
 
 netherlight:bi-netherlight-nordu a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort netherlight:netherlight-nordu,
         netherlight:nordu-netherlight .
 
 netherlight:bi-netherlight-pionier a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort netherlight:netherlight-pionier,
         netherlight:pionier-netherlight .
 
 netherlight:bi-netherlight-startap a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort netherlight:netherlight-startap,
         netherlight:startap-netherlight .
 
 netherlight:bi-netherlight-uvalight a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort netherlight:netherlight-uvalight,
         netherlight:uvalight-netherlight .
 
 netherlight:bi-ps a nml:BidirectionalPort,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nml:hasPort netherlight:ps-in,
         netherlight:ps-out .
 
+<urn:ogf:network:nordu.net:2012:ets> a nml:Topology,
+        owl:NamedIndividual ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3" .
+
+<urn:ogf:network:pionier.net.pl:2012:ets> a nml:Topology,
+        owl:NamedIndividual ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3" .
+
+<urn:ogf:network:startap.net:2012:ets> a nml:Topology,
+        owl:NamedIndividual ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3" .
+
+<urn:ogf:network:uvalight.net:2012:topology> a nml:Topology,
+        owl:NamedIndividual ;
+    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.net.n3" .
+
 netherlight:ets a nml:Topology,
-        owl:NamedIndividual;
-    nml:hasBidirectionalPort netherlight:bi-netherlight-czechlight,
-        netherlight:bi-netherlight-geant,
-        netherlight:bi-netherlight-nordu,
-        netherlight:bi-netherlight-pionier,
-        netherlight:bi-netherlight-startap,
-        netherlight:bi-netherlight-uvalight,
-        netherlight:bi-ps;
+        owl:NamedIndividual ;
     nml:hasInboundPort netherlight:czechlight-netherlight,
         netherlight:geant-netherlight,
         netherlight:nordu-netherlight,
         netherlight:pionier-netherlight,
         netherlight:ps-in,
         netherlight:startap-netherlight,
-        netherlight:uvalight-netherlight;
+        netherlight:uvalight-netherlight ;
     nml:hasOutboundPort netherlight:netherlight-czechlight,
         netherlight:netherlight-geant,
         netherlight:netherlight-nordu,
         netherlight:netherlight-pionier,
         netherlight:netherlight-startap,
         netherlight:netherlight-uvalight,
-        netherlight:ps-out;
-    nml:locatedAt netherlight:location;
+        netherlight:ps-out ;
+    nml:locatedAt netherlight:location ;
     nsi:managedBy netherlight:nsa .
 
 netherlight:location a nml:Location,
-        owl:NamedIndividual;
-    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float>;
+        owl:NamedIndividual ;
+    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float> ;
     nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
 
 netherlight:nsa a nsi:NSA,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nsi:adminContact """
             OpenDRAC (SURFnet) 
             Proj Manager: John MacAuley 
@@ -108,77 +101,77 @@ netherlight:nsa a nsi:NSA,
             email: john.macauley@surfnet.nl 
             phone:  1-613-220-6817 
             skype: john.macauley
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
     nsi:csProviderEndpoint """
             http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string>;
-    nsi:managing netherlight:ets .
+        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+    nsi:manages netherlight:ets .
 
 netherlight:czechlight-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:czechlight.cesnet.cz:2012:czechlight-netherlight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:czechlight.cesnet.cz:2012:czechlight-netherlight> ;
     nmleth:vlans "1780-1783" .
 
 netherlight:geant-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:geant.net:2012:geant-netherlight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:geant.net:2012:geant-netherlight> ;
     nmleth:vlans "1780-1783" .
 
 netherlight:netherlight-czechlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:czechlight.cesnet.cz:2012:netherlight-czechlight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:czechlight.cesnet.cz:2012:netherlight-czechlight> ;
     nmleth:vlans "1780-1783" .
 
 netherlight:netherlight-geant a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:geant.net:2012:netherlight-geant>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:geant.net:2012:netherlight-geant> ;
     nmleth:vlans "1780-1783" .
 
 netherlight:netherlight-nordu a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:nordu.net:2012:netherlight-nordu>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:nordu.net:2012:netherlight-nordu> ;
     nmleth:vlans "1780-1783" .
 
 netherlight:netherlight-pionier a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:netherlight-pionier>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:netherlight-pionier> ;
     nmleth:vlans "1780-1783" .
 
 netherlight:netherlight-startap a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:startap.net:2012:netherlight-startap>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:startap.net:2012:netherlight-startap> ;
     nmleth:vlans "1780-1783" .
 
 netherlight:netherlight-uvalight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:uvalight.net:2012:netherlight-uvalight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:uvalight.net:2012:netherlight-uvalight> ;
     nmleth:vlans "1780-1783" .
 
 netherlight:nordu-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:nordu.net:2012:nordu-netherlight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:nordu.net:2012:nordu-netherlight> ;
     nmleth:vlans "1780-1783" .
 
 netherlight:pionier-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:pionier-netherlight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:pionier.net.pl:2012:pionier-netherlight> ;
     nmleth:vlans "1780-1783" .
 
 netherlight:ps-in a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 netherlight:ps-out a nml:PortGroup,
-        owl:NamedIndividual;
+        owl:NamedIndividual ;
     nmleth:vlans "1780-1783" .
 
 netherlight:startap-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:startap.net:2012:startap-netherlight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:startap.net:2012:startap-netherlight> ;
     nmleth:vlans "1780-1783" .
 
 netherlight:uvalight-netherlight a nml:PortGroup,
-        owl:NamedIndividual;
-    nml:isAlias <urn:ogf:network:uvalight.net:2012:uvalight-netherlight>;
+        owl:NamedIndividual ;
+    nml:isAlias <urn:ogf:network:uvalight.net:2012:uvalight-netherlight> ;
     nmleth:vlans "1780-1783" .
 
