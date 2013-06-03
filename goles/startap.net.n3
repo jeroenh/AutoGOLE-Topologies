@@ -12,19 +12,27 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:es.net:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/es.net.n3" .
+    nml:hasInboundPort <urn:ogf:network:es.net:2012:startap-es> ;
+    nml:hasOutboundPort <urn:ogf:network:es.net:2012:es-startap> ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/es.net.owl" .
 
 <urn:ogf:network:gloriad.org:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/gloriad.org.n3" .
+    nml:hasInboundPort <urn:ogf:network:gloriad.org:2012:startap-gloriad> ;
+    nml:hasOutboundPort <urn:ogf:network:gloriad.org:2012:gloriad-startap> ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/gloriad.org.owl" .
 
 <urn:ogf:network:jgn-x.jp:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/jgn-x.jp.n3" .
+    nml:hasInboundPort <urn:ogf:network:jgn-x.jp:2012:startap-jgn-x> ;
+    nml:hasOutboundPort <urn:ogf:network:jgn-x.jp:2012:jgn-x-startap> ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/jgn-x.jp.owl" .
 
 <urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/netherlight.net.n3" .
+    nml:hasInboundPort <urn:ogf:network:netherlight.net:2012:startap-netherlight> ;
+    nml:hasOutboundPort <urn:ogf:network:netherlight.net:2012:netherlight-startap> ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/netherlight.net.owl" .
 
 startap:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual ;

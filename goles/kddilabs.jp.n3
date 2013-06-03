@@ -12,7 +12,9 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:jgn-x.jp:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/jgn-x.jp.n3" .
+    nml:hasInboundPort <urn:ogf:network:jgn-x.jp:2012:kddilabs-jgn-x> ;
+    nml:hasOutboundPort <urn:ogf:network:jgn-x.jp:2012:jgn-x-kddilabs> ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/jgn-x.jp.owl" .
 
 kddilabs:bi-kddilabs-jgn-x a nml:BidirectionalPort,
         owl:NamedIndividual ;

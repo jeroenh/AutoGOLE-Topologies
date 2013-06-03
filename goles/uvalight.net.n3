@@ -12,11 +12,15 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/netherlight.net.n3" .
+    nml:hasInboundPort <urn:ogf:network:netherlight.net:2012:uvalight-netherlight> ;
+    nml:hasOutboundPort <urn:ogf:network:netherlight.net:2012:netherlight-uvalight> ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/netherlight.net.owl" .
 
 <urn:ogf:network:nordu.net:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/nordu.net.n3" .
+    nml:hasInboundPort <urn:ogf:network:nordu.net:2012:uvalight-nordu> ;
+    nml:hasOutboundPort <urn:ogf:network:nordu.net:2012:nordu-uvalight> ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/nordu.net.owl" .
 
 uvalight:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual ;

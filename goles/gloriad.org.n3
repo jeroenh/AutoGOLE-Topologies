@@ -27,11 +27,15 @@ gloriad:bi-ps a nml:BidirectionalPort,
 
 <urn:ogf:network:krlight.net:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/krlight.net.n3" .
+    nml:hasInboundPort <urn:ogf:network:krlight.net:2012:gloriad-krlight> ;
+    nml:hasOutboundPort <urn:ogf:network:krlight.net:2012:krlight-gloriad> ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/krlight.net.owl" .
 
 <urn:ogf:network:startap.net:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/startap.net.n3" .
+    nml:hasInboundPort <urn:ogf:network:startap.net:2012:gloriad-startap> ;
+    nml:hasOutboundPort <urn:ogf:network:startap.net:2012:startap-gloriad> ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/startap.net.owl" .
 
 gloriad:ets a nml:Topology,
         owl:NamedIndividual ;

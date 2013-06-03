@@ -113,10 +113,12 @@ class AGTopology:
             self.storev2.add((outPort,NML.isAlias,inTarget))
             self.storev2.add((inPort,NML.isAlias,outTarget))
             targettopo = getTargetTopo(targetUrl)
+            self.storev2.add((targettopo,NML.hasInboundPort,inTarget))
+            self.storev2.add((targettopo,NML.hasOutboundPort,outTarget))
             self.storev2.add((targettopo,RDF.type,NML.Topology))
             self.storev2.add((targettopo,RDF.type,OWL.NamedIndividual))
             self.storev2.add((targettopo,NSI.isReference,
-                rdflib.Literal("https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/%s.n3" % targetUrl)))
+                rdflib.Literal("https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/%s.owl" % targetUrl)))
         else:
             outPort = rdflib.term.URIRef(self.prefix+stp+"-out")
             inPort = rdflib.term.URIRef(self.prefix+stp+"-in")

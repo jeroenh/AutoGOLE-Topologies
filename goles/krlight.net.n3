@@ -12,7 +12,9 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:gloriad.org:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/gloriad.org.n3" .
+    nml:hasInboundPort <urn:ogf:network:gloriad.org:2012:krlight-gloriad> ;
+    nml:hasOutboundPort <urn:ogf:network:gloriad.org:2012:gloriad-krlight> ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/gloriad.org.owl" .
 
 krlight:bi-krlight-gloriad a nml:BidirectionalPort,
         owl:NamedIndividual ;

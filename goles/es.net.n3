@@ -22,7 +22,9 @@ es:bi-ps a nml:BidirectionalPort,
 
 <urn:ogf:network:startap.net:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/startap.net.n3" .
+    nml:hasInboundPort <urn:ogf:network:startap.net:2012:es-startap> ;
+    nml:hasOutboundPort <urn:ogf:network:startap.net:2012:startap-es> ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/startap.net.owl" .
 
 es:ets a nml:Topology,
         owl:NamedIndividual ;
