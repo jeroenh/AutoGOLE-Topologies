@@ -51,7 +51,8 @@ geant:ets a nml:Topology,
 geant:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "48.859"^^xsd:float ;
-    nml:long "2.295"^^xsd:float .
+    nml:long "2.295"^^xsd:float ;
+    nml:name "geant" .
 
 geant:nsa a nsi:NSA,
         owl:NamedIndividual ;

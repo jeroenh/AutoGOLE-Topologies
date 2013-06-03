@@ -38,7 +38,8 @@ exp:ets a nml:Topology,
 exp:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "52.412"^^xsd:float ;
-    nml:long "16.916"^^xsd:float .
+    nml:long "16.916"^^xsd:float ;
+    nml:name "exp" .
 
 exp:nsa a nsi:NSA,
         owl:NamedIndividual ;

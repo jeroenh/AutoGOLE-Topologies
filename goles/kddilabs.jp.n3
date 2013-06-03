@@ -38,7 +38,8 @@ kddilabs:ets a nml:Topology,
 kddilabs:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "35.879"^^xsd:float ;
-    nml:long "139.517"^^xsd:float .
+    nml:long "139.517"^^xsd:float ;
+    nml:name "kddilabs" .
 
 kddilabs:nsa a nsi:NSA,
         owl:NamedIndividual ;

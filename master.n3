@@ -256,7 +256,8 @@ aist_go_jp:ets a nml:Topology,
 aist_go_jp:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "36.06"^^xsd:float ;
-    nml:long "140.133"^^xsd:float .
+    nml:long "140.133"^^xsd:float ;
+    nml:name "aist" .
 
 aist_go_jp:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -289,7 +290,8 @@ czechlight_cesnet_cz:ets a nml:Topology,
 czechlight_cesnet_cz:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "50.088"^^xsd:float ;
-    nml:long "14.421"^^xsd:float .
+    nml:long "14.421"^^xsd:float ;
+    nml:name "czechlight" .
 
 czechlight_cesnet_cz:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -322,7 +324,8 @@ es_net:ets a nml:Topology,
 es_net:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "41.703516"^^xsd:float ;
-    nml:long "-87.98812"^^xsd:float .
+    nml:long "-87.98812"^^xsd:float ;
+    nml:name "es" .
 
 es_net:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -351,7 +354,8 @@ exp_pionier_net_pl:ets a nml:Topology,
 exp_pionier_net_pl:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "52.412"^^xsd:float ;
-    nml:long "16.916"^^xsd:float .
+    nml:long "16.916"^^xsd:float ;
+    nml:name "exp" .
 
 exp_pionier_net_pl:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -384,7 +388,8 @@ geant_net:ets a nml:Topology,
 geant_net:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "48.859"^^xsd:float ;
-    nml:long "2.295"^^xsd:float .
+    nml:long "2.295"^^xsd:float ;
+    nml:name "geant" .
 
 geant_net:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -418,7 +423,8 @@ gloriad_org:ets a nml:Topology,
 gloriad_org:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "41.866342"^^xsd:float ;
-    nml:long "-87.607777"^^xsd:float .
+    nml:long "-87.607777"^^xsd:float ;
+    nml:name "gloriad" .
 
 gloriad_org:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -451,7 +457,8 @@ jgn-x_jp:ets a nml:Topology,
 jgn-x_jp:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "35.688"^^xsd:float ;
-    nml:long "139.764"^^xsd:float .
+    nml:long "139.764"^^xsd:float ;
+    nml:name "jgn-x" .
 
 jgn-x_jp:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -484,7 +491,8 @@ kddilabs_jp:ets a nml:Topology,
 kddilabs_jp:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "35.879"^^xsd:float ;
-    nml:long "139.517"^^xsd:float .
+    nml:long "139.517"^^xsd:float ;
+    nml:name "kddilabs" .
 
 kddilabs_jp:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -517,7 +525,8 @@ krlight_net:ets a nml:Topology,
 krlight_net:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "36.366"^^xsd:float ;
-    nml:long "127.359"^^xsd:float .
+    nml:long "127.359"^^xsd:float ;
+    nml:name "krlight" .
 
 krlight_net:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -567,7 +576,8 @@ netherlight_net:ets a nml:Topology,
 netherlight_net:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "52.357"^^xsd:float ;
-    nml:long "4.953"^^xsd:float .
+    nml:long "4.953"^^xsd:float ;
+    nml:name "netherlight" .
 
 netherlight_net:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -602,7 +612,8 @@ nordu_net:ets a nml:Topology,
 nordu_net:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "55.637"^^xsd:float ;
-    nml:long "12.641"^^xsd:float .
+    nml:long "12.641"^^xsd:float ;
+    nml:name "nordu" .
 
 nordu_net:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -636,7 +647,8 @@ pionier_net_pl:ets a nml:Topology,
 pionier_net_pl:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "52.412"^^xsd:float ;
-    nml:long "16.916"^^xsd:float .
+    nml:long "16.916"^^xsd:float ;
+    nml:name "pionier" .
 
 pionier_net_pl:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -673,7 +685,8 @@ startap_net:ets a nml:Topology,
 startap_net:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "41.947906"^^xsd:float ;
-    nml:long "-87.655791"^^xsd:float .
+    nml:long "-87.655791"^^xsd:float ;
+    nml:name "startap" .
 
 startap_net:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -695,7 +708,8 @@ startap_net:nsa a nsi:NSA,
 uvalight_net:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "52.357"^^xsd:float ;
-    nml:long "4.953"^^xsd:float .
+    nml:long "4.953"^^xsd:float ;
+    nml:name "uvalight" .
 
 uvalight_net:nsa a nsi:NSA,
         owl:NamedIndividual ;

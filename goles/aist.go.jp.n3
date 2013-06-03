@@ -38,7 +38,8 @@ aist:ets a nml:Topology,
 aist:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "36.06"^^xsd:float ;
-    nml:long "140.133"^^xsd:float .
+    nml:long "140.133"^^xsd:float ;
+    nml:name "aist" .
 
 aist:nsa a nsi:NSA,
         owl:NamedIndividual ;

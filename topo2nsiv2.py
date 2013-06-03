@@ -92,6 +92,7 @@ class AGTopology:
         self.storev2.add((nsa,NSI.csProviderEndpoint,csProviderEndpoint))
         # Location
         location = rdflib.term.URIRef(self.prefix+"location")
+        self.storev2.add((location,NML.name,rdflib.Literal(self.netname)))
         self.storev2.add((location,RDF.type,OWL.NamedIndividual))
         self.storev2.add((location,RDF.type,NML.Location))
         self.storev2.add((topo,NML.locatedAt,location))

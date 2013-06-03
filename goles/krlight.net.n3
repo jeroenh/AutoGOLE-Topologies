@@ -38,7 +38,8 @@ krlight:ets a nml:Topology,
 krlight:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "36.366"^^xsd:float ;
-    nml:long "127.359"^^xsd:float .
+    nml:long "127.359"^^xsd:float ;
+    nml:name "krlight" .
 
 krlight:nsa a nsi:NSA,
         owl:NamedIndividual ;

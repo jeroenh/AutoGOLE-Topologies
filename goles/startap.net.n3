@@ -77,7 +77,8 @@ startap:ets a nml:Topology,
 startap:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "41.947906"^^xsd:float ;
-    nml:long "-87.655791"^^xsd:float .
+    nml:long "-87.655791"^^xsd:float ;
+    nml:name "startap" .
 
 startap:nsa a nsi:NSA,
         owl:NamedIndividual ;

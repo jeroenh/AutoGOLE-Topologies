@@ -38,7 +38,8 @@ czechlight:ets a nml:Topology,
 czechlight:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "50.088"^^xsd:float ;
-    nml:long "14.421"^^xsd:float .
+    nml:long "14.421"^^xsd:float ;
+    nml:name "czechlight" .
 
 czechlight:nsa a nsi:NSA,
         owl:NamedIndividual ;

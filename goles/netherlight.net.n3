@@ -103,7 +103,8 @@ netherlight:ets a nml:Topology,
 netherlight:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "52.357"^^xsd:float ;
-    nml:long "4.953"^^xsd:float .
+    nml:long "4.953"^^xsd:float ;
+    nml:name "netherlight" .
 
 netherlight:nsa a nsi:NSA,
         owl:NamedIndividual ;

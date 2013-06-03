@@ -40,7 +40,8 @@ uvalight:bi-uvalight-nordu a nml:BidirectionalPort,
 uvalight:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "52.357"^^xsd:float ;
-    nml:long "4.953"^^xsd:float .
+    nml:long "4.953"^^xsd:float ;
+    nml:name "uvalight" .
 
 uvalight:nsa a nsi:NSA,
         owl:NamedIndividual ;

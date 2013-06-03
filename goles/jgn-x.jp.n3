@@ -64,7 +64,8 @@ jgn-x:ets a nml:Topology,
 jgn-x:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "35.688"^^xsd:float ;
-    nml:long "139.764"^^xsd:float .
+    nml:long "139.764"^^xsd:float ;
+    nml:name "jgn-x" .
 
 jgn-x:nsa a nsi:NSA,
         owl:NamedIndividual ;

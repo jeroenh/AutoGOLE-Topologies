@@ -64,7 +64,8 @@ pionier:ets a nml:Topology,
 pionier:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "52.412"^^xsd:float ;
-    nml:long "16.916"^^xsd:float .
+    nml:long "16.916"^^xsd:float ;
+    nml:name "pionier" .
 
 pionier:nsa a nsi:NSA,
         owl:NamedIndividual ;

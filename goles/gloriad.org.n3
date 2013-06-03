@@ -51,7 +51,8 @@ gloriad:ets a nml:Topology,
 gloriad:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "41.866342"^^xsd:float ;
-    nml:long "-87.607777"^^xsd:float .
+    nml:long "-87.607777"^^xsd:float ;
+    nml:name "gloriad" .
 
 gloriad:nsa a nsi:NSA,
         owl:NamedIndividual ;

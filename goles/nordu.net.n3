@@ -51,7 +51,8 @@ nordu:ets a nml:Topology,
 nordu:location a nml:Location,
         owl:NamedIndividual ;
     nml:lat "55.637"^^xsd:float ;
-    nml:long "12.641"^^xsd:float .
+    nml:long "12.641"^^xsd:float ;
+    nml:name "nordu" .
 
 nordu:nsa a nsi:NSA,
         owl:NamedIndividual ;
