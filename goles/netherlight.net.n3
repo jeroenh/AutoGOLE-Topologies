@@ -3,16 +3,20 @@
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:czechlight.cesnet.cz:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/czechlight.cesnet.cz.n3" .
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/czechlight.cesnet.cz.n3" .
 
 <urn:ogf:network:geant.net:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/geant.net.n3" .
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/geant.net.n3" .
 
 netherlight:bi-netherlight-czechlight a nml:BidirectionalPort,
         owl:NamedIndividual ;
@@ -51,19 +55,19 @@ netherlight:bi-ps a nml:BidirectionalPort,
 
 <urn:ogf:network:nordu.net:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3" .
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/nordu.net.n3" .
 
 <urn:ogf:network:pionier.net.pl:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3" .
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/pionier.net.pl.n3" .
 
 <urn:ogf:network:startap.net:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3" .
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/startap.net.n3" .
 
 <urn:ogf:network:uvalight.net:2012:topology> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.net.n3" .
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/uvalight.net.n3" .
 
 netherlight:ets a nml:Topology,
         owl:NamedIndividual ;
@@ -86,8 +90,8 @@ netherlight:ets a nml:Topology,
 
 netherlight:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "52.357"^^xsd:float ;
+    nml:long "4.953"^^xsd:float .
 
 netherlight:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -101,10 +105,10 @@ netherlight:nsa a nsi:NSA,
             email: john.macauley@surfnet.nl 
             phone:  1-613-220-6817 
             skype: john.macauley
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
             http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages netherlight:ets .
 
 netherlight:czechlight-netherlight a nml:PortGroup,

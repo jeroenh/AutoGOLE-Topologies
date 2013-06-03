@@ -3,6 +3,10 @@
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
@@ -18,7 +22,7 @@ exp:bi-ps a nml:BidirectionalPort,
 
 <urn:ogf:network:pionier.net.pl:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3" .
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/pionier.net.pl.n3" .
 
 exp:ets a nml:Topology,
         owl:NamedIndividual ;
@@ -31,8 +35,8 @@ exp:ets a nml:Topology,
 
 exp:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "16.916"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "52.412"^^xsd:float ;
+    nml:long "16.916"^^xsd:float .
 
 exp:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -44,10 +48,10 @@ exp:nsa a nsi:NSA,
             Software development: Michal Balcerkiewicz  
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
              http://194.132.53.174:9282/nsi/ConnectionProvider 
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages exp:ets .
 
 exp:exp-pionier a nml:PortGroup,

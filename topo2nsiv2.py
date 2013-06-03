@@ -54,10 +54,11 @@ class AGTopology:
         self.url = url
         self.storev1 = rdflib.Graph()
         self.storev2 = rdflib.Graph()
-        try:
-            self.storev1.parse(url)
-        except Exception as e:
-            print e
+        # try:
+        print "Parsing %s" % url
+        self.storev1.parse(url)
+        # except Exception as e:
+        #     print e
         self.topo = self.storev1.value(predicate=RDF.type, object=DTOX.NSNetwork)
         self.urlname = getUrlName(self.topo.split(":")[-1][:-4])
         self.netname = getNetName(self.topo.split(":")[-1][:-4])
@@ -115,7 +116,7 @@ class AGTopology:
             self.storev2.add((targettopo,RDF.type,NML.Topology))
             self.storev2.add((targettopo,RDF.type,OWL.NamedIndividual))
             self.storev2.add((targettopo,NSI.isReference,
-                rdflib.Literal("https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/%s.n3" % targetUrl)))
+                rdflib.Literal("https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/%s.n3" % targetUrl)))
         else:
             outPort = rdflib.term.URIRef(self.prefix+stp+"-out")
             inPort = rdflib.term.URIRef(self.prefix+stp+"-in")

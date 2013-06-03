@@ -2,17 +2,21 @@
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix uvalight: <urn:ogf:network:uvalight.net:2012:> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:netherlight.net:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3" .
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/netherlight.net.n3" .
 
 <urn:ogf:network:nordu.net:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3" .
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/nordu.net.n3" .
 
 uvalight:bi-ps a nml:BidirectionalPort,
         owl:NamedIndividual ;
@@ -31,8 +35,8 @@ uvalight:bi-uvalight-nordu a nml:BidirectionalPort,
 
 uvalight:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "52.357"^^xsd:float ;
+    nml:long "4.953"^^xsd:float .
 
 uvalight:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -47,10 +51,10 @@ uvalight:nsa a nsi:NSA,
             Key software engineer: Jeroen van der Ham
             email: vdham@uva.nl mobile: use skype   
             skype: just1sand0s  
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
             http://nsa.uvalight.nl:9080/NSI/services/ConnectionService/        
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages uvalight:topology .
 
 uvalight:topology a nml:Topology,

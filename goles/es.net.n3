@@ -3,6 +3,10 @@
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
@@ -18,7 +22,7 @@ es:bi-ps a nml:BidirectionalPort,
 
 <urn:ogf:network:startap.net:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3" .
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/startap.net.n3" .
 
 es:ets a nml:Topology,
         owl:NamedIndividual ;
@@ -31,8 +35,8 @@ es:ets a nml:Topology,
 
 es:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "41.703516"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "-87.988120"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "41.703516"^^xsd:float ;
+    nml:long "-87.98812"^^xsd:float .
 
 es:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -42,10 +46,10 @@ es:nsa a nsi:NSA,
             Email: imonga@es.net 
             Software development engineer: Evangelos Chaniotakis 
             Email:  haniotak@es.net
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
             http://jupiter.es.net:8288/ConnectionService
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages es:ets .
 
 es:es-startap a nml:PortGroup,

@@ -14,8 +14,12 @@
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pionier_net_pl: <urn:ogf:network:pionier.net.pl:2012:> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix startap_net: <urn:ogf:network:startap.net:2012:> .
 @prefix uvalight_net: <urn:ogf:network:uvalight.net:2012:> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
@@ -246,13 +250,13 @@ aist_go_jp:ets a nml:Topology,
     nml:hasOutboundPort aist_go_jp:aist-jgn-x,
         aist_go_jp:ps-out ;
     nml:locatedAt aist_go_jp:location ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/aist.go.jp.n3" ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/aist.go.jp.n3" ;
     nsi:managedBy aist_go_jp:nsa .
 
 aist_go_jp:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "36.060"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "140.133"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "36.06"^^xsd:float ;
+    nml:long "140.133"^^xsd:float .
 
 aist_go_jp:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -266,10 +270,10 @@ aist_go_jp:nsa a nsi:NSA,
             email: nsi-gl@m.aist.go.jp 
             mobile:  81-29-861-3091 
             skype: taketake320
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
             http://163.220.30.174:28080/nsi2/services/ConnectionProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages aist_go_jp:ets .
 
 czechlight_cesnet_cz:ets a nml:Topology,
@@ -279,13 +283,13 @@ czechlight_cesnet_cz:ets a nml:Topology,
     nml:hasOutboundPort czechlight_cesnet_cz:czechlight-netherlight,
         czechlight_cesnet_cz:ps-out ;
     nml:locatedAt czechlight_cesnet_cz:location ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/czechlight.cesnet.cz.n3" ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/czechlight.cesnet.cz.n3" ;
     nsi:managedBy czechlight_cesnet_cz:nsa .
 
 czechlight_cesnet_cz:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "50.088"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "14.421"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "50.088"^^xsd:float ;
+    nml:long "14.421"^^xsd:float .
 
 czechlight_cesnet_cz:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -299,10 +303,10 @@ czechlight_cesnet_cz:nsa a nsi:NSA,
             email: john.macauley@surfnet.nl 
             phone:  1-613-220-6817 
             skype: john.macauley
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
             http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages czechlight_cesnet_cz:ets .
 
 es_net:ets a nml:Topology,
@@ -312,13 +316,13 @@ es_net:ets a nml:Topology,
     nml:hasOutboundPort es_net:es-startap,
         es_net:ps-out ;
     nml:locatedAt es_net:location ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/es.net.n3" ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/es.net.n3" ;
     nsi:managedBy es_net:nsa .
 
 es_net:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "41.703516"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "-87.988120"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "41.703516"^^xsd:float ;
+    nml:long "-87.98812"^^xsd:float .
 
 es_net:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -328,10 +332,10 @@ es_net:nsa a nsi:NSA,
             Email: imonga@es.net 
             Software development engineer: Evangelos Chaniotakis 
             Email:  haniotak@es.net
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
             http://jupiter.es.net:8288/ConnectionService
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages es_net:ets .
 
 exp_pionier_net_pl:ets a nml:Topology,
@@ -341,13 +345,13 @@ exp_pionier_net_pl:ets a nml:Topology,
     nml:hasOutboundPort exp_pionier_net_pl:exp-pionier,
         exp_pionier_net_pl:ps-out ;
     nml:locatedAt exp_pionier_net_pl:location ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/exp.pionier.net.pl.n3" ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/exp.pionier.net.pl.n3" ;
     nsi:managedBy exp_pionier_net_pl:nsa .
 
 exp_pionier_net_pl:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "16.916"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "52.412"^^xsd:float ;
+    nml:long "16.916"^^xsd:float .
 
 exp_pionier_net_pl:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -359,10 +363,10 @@ exp_pionier_net_pl:nsa a nsi:NSA,
             Software development: Michal Balcerkiewicz  
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
              http://194.132.53.174:9282/nsi/ConnectionProvider 
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages exp_pionier_net_pl:ets .
 
 geant_net:ets a nml:Topology,
@@ -374,13 +378,13 @@ geant_net:ets a nml:Topology,
         geant_net:geant-pionier,
         geant_net:ps-out ;
     nml:locatedAt geant_net:location ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/geant.net.n3" ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/geant.net.n3" ;
     nsi:managedBy geant_net:nsa .
 
 geant_net:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "48.859"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "2.295"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "48.859"^^xsd:float ;
+    nml:long "2.295"^^xsd:float .
 
 geant_net:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -393,10 +397,10 @@ geant_net:nsa a nsi:NSA,
             Key software engineer: Michal Balcerkiewicz  
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
            http://gnscdemo.geant.net:8080/nsi/ConnectionProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages geant_net:ets .
 
 gloriad_org:ets a nml:Topology,
@@ -408,13 +412,13 @@ gloriad_org:ets a nml:Topology,
         gloriad_org:gloriad-startap,
         gloriad_org:ps-out ;
     nml:locatedAt gloriad_org:location ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/gloriad.org.n3" ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/gloriad.org.n3" ;
     nsi:managedBy gloriad_org:nsa .
 
 gloriad_org:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "41.866342"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "-87.607777"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "41.866342"^^xsd:float ;
+    nml:long "-87.607777"^^xsd:float .
 
 gloriad_org:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -424,10 +428,10 @@ gloriad_org:nsa a nsi:NSA,
             Email: predrag@gloriad.net
             Software development engineer: Henrik Thostrup.Jensen 
             Email:  htj@nordu.net
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
             http://nsa.gloriad.org:9080/NSI/services/ConnectionService
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages gloriad_org:ets .
 
 jgn-x_jp:ets a nml:Topology,
@@ -441,13 +445,13 @@ jgn-x_jp:ets a nml:Topology,
         jgn-x_jp:jgn-x-startap,
         jgn-x_jp:ps-out ;
     nml:locatedAt jgn-x_jp:location ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn-x.jp.n3" ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/jgn-x.jp.n3" ;
     nsi:managedBy jgn-x_jp:nsa .
 
 jgn-x_jp:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "35.688"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "139.764"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "35.688"^^xsd:float ;
+    nml:long "139.764"^^xsd:float .
 
 jgn-x_jp:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -461,10 +465,10 @@ jgn-x_jp:nsa a nsi:NSA,
             email: tk-miyamoto@kddilabs.jp 
             mobile:  81-90-1966-5153  
             skype: takahiro.miyamoto 
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
             http://202.180.38.130:8080/2012/03/connectionprovider
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages jgn-x_jp:ets .
 
 kddilabs_jp:ets a nml:Topology,
@@ -474,13 +478,13 @@ kddilabs_jp:ets a nml:Topology,
     nml:hasOutboundPort kddilabs_jp:kddilabs-jgn-x,
         kddilabs_jp:ps-out ;
     nml:locatedAt kddilabs_jp:location ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/kddilabs.jp.n3" ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/kddilabs.jp.n3" ;
     nsi:managedBy kddilabs_jp:nsa .
 
 kddilabs_jp:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "35.879"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "139.517"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "35.879"^^xsd:float ;
+    nml:long "139.517"^^xsd:float .
 
 kddilabs_jp:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -494,10 +498,10 @@ kddilabs_jp:nsa a nsi:NSA,
             email: tk-miyamoto@kddilabs.jp 
             mobile:  81-90-1966-5153  
             skype: takahiro.miyamoto 
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
             http://210.196.65.114:9352/2012/03/connectionprovider
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages kddilabs_jp:ets .
 
 krlight_net:ets a nml:Topology,
@@ -507,13 +511,13 @@ krlight_net:ets a nml:Topology,
     nml:hasOutboundPort krlight_net:krlight-gloriad,
         krlight_net:ps-out ;
     nml:locatedAt krlight_net:location ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/krlight.net.n3" ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/krlight.net.n3" ;
     nsi:managedBy krlight_net:nsa .
 
 krlight_net:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "36.366"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "127.359"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "36.366"^^xsd:float ;
+    nml:long "127.359"^^xsd:float .
 
 krlight_net:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -534,10 +538,10 @@ krlight_net:nsa a nsi:NSA,
             - Kyungmin Lee, +82-10-9958-8979, tsoc@naver.com, kyungmin_ 
             - Kwangjong Cho, +82-10-4192-8992, kjcho@kisti.re.kr, kwangjong cho
             : SC2011 booth#  656  KISTI
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
             http://203.230.116.202:8090/NSI_v2.0/ConnectionServiceProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages krlight_net:ets .
 
 netherlight_net:ets a nml:Topology,
@@ -557,13 +561,13 @@ netherlight_net:ets a nml:Topology,
         netherlight_net:netherlight-uvalight,
         netherlight_net:ps-out ;
     nml:locatedAt netherlight_net:location ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/netherlight.net.n3" ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/netherlight.net.n3" ;
     nsi:managedBy netherlight_net:nsa .
 
 netherlight_net:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "52.357"^^xsd:float ;
+    nml:long "4.953"^^xsd:float .
 
 netherlight_net:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -577,10 +581,10 @@ netherlight_net:nsa a nsi:NSA,
             email: john.macauley@surfnet.nl 
             phone:  1-613-220-6817 
             skype: john.macauley
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
             http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages netherlight_net:ets .
 
 nordu_net:ets a nml:Topology,
@@ -592,13 +596,13 @@ nordu_net:ets a nml:Topology,
         nordu_net:nordu-uvalight,
         nordu_net:ps-out ;
     nml:locatedAt nordu_net:location ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/nordu.net.n3" ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/nordu.net.n3" ;
     nsi:managedBy nordu_net:nsa .
 
 nordu_net:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "55.637"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "12.641"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "55.637"^^xsd:float ;
+    nml:long "12.641"^^xsd:float .
 
 nordu_net:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -611,8 +615,8 @@ nordu_net:nsa a nsi:NSA,
             Software Development: Henrik Thostrup-Jensen
             email: htj@nordu.net
             skype: henrik.thostrup.jensen
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
-    nsi:csProviderEndpoint "https://nsi.nordu.net:9443/NSI/services/ConnectionService"^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
+    nsi:csProviderEndpoint "https://nsi.nordu.net:9443/NSI/services/ConnectionService"^^xsd:string ;
     nsi:manages nordu_net:ets .
 
 pionier_net_pl:ets a nml:Topology,
@@ -626,13 +630,13 @@ pionier_net_pl:ets a nml:Topology,
         pionier_net_pl:pionier-netherlight,
         pionier_net_pl:ps-out ;
     nml:locatedAt pionier_net_pl:location ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/pionier.net.pl.n3" ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/pionier.net.pl.n3" ;
     nsi:managedBy pionier_net_pl:nsa .
 
 pionier_net_pl:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "52.412"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "16.916"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "52.412"^^xsd:float ;
+    nml:long "16.916"^^xsd:float .
 
 pionier_net_pl:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -644,10 +648,10 @@ pionier_net_pl:nsa a nsi:NSA,
             Software development: Michal Balcerkiewicz  
             email: michalb@man.poznan.pl  
             skype= michalb.psnc
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
             http://194.132.53.174:9280/nsi/ConnectionProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages pionier_net_pl:ets .
 
 startap_net:ets a nml:Topology,
@@ -663,13 +667,13 @@ startap_net:ets a nml:Topology,
         startap_net:startap-jgn-x,
         startap_net:startap-netherlight ;
     nml:locatedAt startap_net:location ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/startap.net.n3" ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/startap.net.n3" ;
     nsi:managedBy startap_net:nsa .
 
 startap_net:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "41.947906"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "-87.655791"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "41.947906"^^xsd:float ;
+    nml:long "-87.655791"^^xsd:float .
 
 startap_net:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -682,16 +686,16 @@ startap_net:nsa a nsi:NSA,
              Key software engineer: Henrik Thostrup-Jensen 
              email: htj@nordu.net 
              skype: henrik.thostrup.jensen
-         """^^<http://www.w3.org/2001/XMLSchema#string> ;
+         """^^xsd:string ;
     nsi:csProviderEndpoint """
              http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
-         """^^<http://www.w3.org/2001/XMLSchema#string> ;
+         """^^xsd:string ;
     nsi:manages startap_net:ets .
 
 uvalight_net:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "52.357"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "4.953"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "52.357"^^xsd:float ;
+    nml:long "4.953"^^xsd:float .
 
 uvalight_net:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -706,10 +710,10 @@ uvalight_net:nsa a nsi:NSA,
             Key software engineer: Jeroen van der Ham
             email: vdham@uva.nl mobile: use skype   
             skype: just1sand0s  
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
             http://nsa.uvalight.nl:9080/NSI/services/ConnectionService/        
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages uvalight_net:topology .
 
 uvalight_net:topology a nml:Topology,
@@ -721,7 +725,7 @@ uvalight_net:topology a nml:Topology,
         uvalight_net:uvalight-netherlight,
         uvalight_net:uvalight-nordu ;
     nml:locatedAt uvalight_net:location ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/uvalight.net.n3" ;
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/uvalight.net.n3" ;
     nsi:managedBy uvalight_net:nsa .
 
 aist_go_jp:ps-in a nml:PortGroup,

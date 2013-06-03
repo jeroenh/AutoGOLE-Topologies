@@ -3,6 +3,10 @@
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
@@ -18,7 +22,7 @@ aist:bi-ps a nml:BidirectionalPort,
 
 <urn:ogf:network:jgn-x.jp:2012:ets> a nml:Topology,
         owl:NamedIndividual ;
-    nsi:isReference "https://github.com/jeroenh/AutoGOLE-Topologies/blob/nsiv2/goles/jgn-x.jp.n3" .
+    nsi:isReference "https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/jgn-x.jp.n3" .
 
 aist:ets a nml:Topology,
         owl:NamedIndividual ;
@@ -31,8 +35,8 @@ aist:ets a nml:Topology,
 
 aist:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "36.060"^^<http://www.w3.org/2001/XMLSchema#float> ;
-    nml:long "140.133"^^<http://www.w3.org/2001/XMLSchema#float> .
+    nml:lat "36.06"^^xsd:float ;
+    nml:long "140.133"^^xsd:float .
 
 aist:nsa a nsi:NSA,
         owl:NamedIndividual ;
@@ -46,10 +50,10 @@ aist:nsa a nsi:NSA,
             email: nsi-gl@m.aist.go.jp 
             mobile:  81-29-861-3091 
             skype: taketake320
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:csProviderEndpoint """
             http://163.220.30.174:28080/nsi2/services/ConnectionProvider
-        """^^<http://www.w3.org/2001/XMLSchema#string> ;
+        """^^xsd:string ;
     nsi:manages aist:ets .
 
 aist:aist-jgn-x a nml:PortGroup,
