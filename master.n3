@@ -323,8 +323,8 @@ es_net:ets a nml:Topology,
 
 es_net:location a nml:Location,
         owl:NamedIndividual ;
-    nml:lat "41.703516"^^xsd:float ;
-    nml:long "-87.98812"^^xsd:float ;
+    nml:lat "37.87161"^^xsd:float ;
+    nml:long "-122.272996"^^xsd:float ;
     nml:name "es" .
 
 es_net:nsa a nsi:NSA,

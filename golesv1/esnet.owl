@@ -88,8 +88,8 @@
     
     <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:esnet.ets:location">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-        <lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.703516</lat>
-        <long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.988120</long>
+        <lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">37.871610</lat>
+        <long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-122.272996</long>
     </owl:NamedIndividual>
     
     <!-- urn:ogf:network:nsa:esnet -->
