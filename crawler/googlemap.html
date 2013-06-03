@@ -20,7 +20,7 @@
 		var map = new GMap2(document.getElementById("map"));
 		map.addControl(new GLargeMapControl());
 		map.addControl(new GMapTypeControl());
-		map.setCenter(new GLatLng(40, 0), 1);
+		map.setCenter(new GLatLng(40, -100), 2);
 	    map.setMapType(G_SATELLITE_MAP);
 		function createMarker(point, name, url, links) {
 			var marker = new GMarker(point);
@@ -64,6 +64,6 @@
 	<p>The map shown above shows several GLIF exchange points for which we created NML/NSI descriptions. The descriptions that this map is based on can be found <a href="https://github.com/jeroenh/AutoGOLE-Topologies/tree/nsiv2/goles">here</a>.</p>
 	<p>The script that gathers the data from these distributed descriptions is available in the topology repository also.</p>
     </div>
-    <div id="map" style="width: 700px; height: 500px" />
+    <div id="map" style="width: 1000px; height: 500px" />
   </body>
 </html>
