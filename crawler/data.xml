@@ -1,0 +1,31 @@
+<markers>
+  <connection lat1='41.703516' lng1='-87.988120' lat2='41.947906' lng2='-87.655791' />
+  <connection lat1='52.412000' lng1='16.916000' lat2='48.859000' lng2='2.295000' />
+  <connection lat1='52.412000' lng1='16.916000' lat2='52.357000' lng2='4.953000' />
+  <connection lat1='52.412000' lng1='16.916000' lat2='52.412000' lng2='16.916000' />
+  <connection lat1='48.859000' lng1='2.295000' lat2='52.357000' lng2='4.953000' />
+  <connection lat1='52.357000' lng1='4.953000' lat2='55.637000' lng2='12.641000' />
+  <connection lat1='52.357000' lng1='4.953000' lat2='52.357000' lng2='4.953000' />
+  <connection lat1='36.060000' lng1='140.133000' lat2='35.688000' lng2='139.764000' />
+  <connection lat1='50.088000' lng1='14.421000' lat2='52.357000' lng2='4.953000' />
+  <connection lat1='41.866342' lng1='-87.607777' lat2='36.366000' lng2='127.359000' />
+  <connection lat1='41.866342' lng1='-87.607777' lat2='41.947906' lng2='-87.655791' />
+  <connection lat1='55.637000' lng1='12.641000' lat2='52.357000' lng2='4.953000' />
+  <connection lat1='41.947906' lng1='-87.655791' lat2='35.688000' lng2='139.764000' />
+  <connection lat1='41.947906' lng1='-87.655791' lat2='52.357000' lng2='4.953000' />
+  <connection lat1='35.879000' lng1='139.517000' lat2='35.688000' lng2='139.764000' />
+  <marker lat='35.688000' lng='139.764000' name='jgn-x' url='https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/jgn-x.jp.owl' links='aist, kddilabs, startap'/>
+  <marker lat='35.879000' lng='139.517000' name='kddilabs' url='https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/kddilabs.jp.owl' links='jgn-x'/>
+  <marker lat='52.357000' lng='4.953000' name='netherlight' url='https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/netherlight.net.owl' links='czechlight, geant, nordu, pionier, startap, uvalight'/>
+  <marker lat='41.947906' lng='-87.655791' name='startap' url='https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/startap.net.owl' links='es, gloriad, jgn-x, netherlight'/>
+  <marker lat='36.366000' lng='127.359000' name='krlight' url='https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/krlight.net.owl' links='gloriad'/>
+  <marker lat='55.637000' lng='12.641000' name='nordu' url='https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/nordu.net.owl' links='netherlight, uvalight'/>
+  <marker lat='41.866342' lng='-87.607777' name='gloriad' url='https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/gloriad.org.owl' links='krlight, startap'/>
+  <marker lat='52.412000' lng='16.916000' name='exp' url='https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/exp.pionier.net.pl.owl' links='pionier'/>
+  <marker lat='50.088000' lng='14.421000' name='czechlight' url='https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/czechlight.cesnet.cz.owl' links='netherlight'/>
+  <marker lat='36.060000' lng='140.133000' name='aist' url='https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/aist.go.jp.owl' links='jgn-x'/>
+  <marker lat='52.357000' lng='4.953000' name='uvalight' url='https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/uvalight.net.owl' links='netherlight, nordu'/>
+  <marker lat='48.859000' lng='2.295000' name='geant' url='https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/geant.net.owl' links='netherlight, pionier'/>
+  <marker lat='52.412000' lng='16.916000' name='pionier' url='https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/pionier.net.pl.owl' links='exp, geant, netherlight'/>
+  <marker lat='41.703516' lng='-87.988120' name='es' url='https://raw.github.com/jeroenh/AutoGOLE-Topologies/nsiv2/goles/es.net.owl' links='startap'/>
+</markers>

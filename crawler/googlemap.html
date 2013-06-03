@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Interactive GLIF Map</title>
+	<style type="text/css">
+	    v\:* {
+	      behavior:url(#default#VML);
+	    }
+    </style>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAXHl05q19PEEYKZ49xf70IxQJf0Vf6sVA46F_YfJERtdVxA1sFxRB8YLMYAb69SCCjAKmvUoJWAX5og"
+      type="text/javascript"></script>
+    <script type="text/javascript">
+
+    //<![CDATA[
+	
+    function load() {
+      if (GBrowserIsCompatible()) {
+		var map = new GMap2(document.getElementById("map"));
+		map.addControl(new GLargeMapControl());
+		map.addControl(new GMapTypeControl());
+		map.setCenter(new GLatLng(40, 0), 1);
+	    map.setMapType(G_SATELLITE_MAP);
+		function createMarker(point, name, url, links) {
+			var marker = new GMarker(point);
+			GEvent.addListener(marker, "click", function() {
+			    marker.openInfoWindowHtml("<a target='_blank' href='"+url+"'><h3>"+name+"</h3></a><p>Connected to: "+links+"</p>");
+			});
+			return marker;
+		}
+		GDownloadUrl("data.xml", function(data, responseCode) {
+		  var xml = GXml.parse(data);
+		  var markers = xml.documentElement.getElementsByTagName("marker");
+		  for (var i = 0; i < markers.length; i++) {
+		    var point = new GLatLng(parseFloat(markers[i].getAttribute("lat")),
+		                            parseFloat(markers[i].getAttribute("lng")));
+		    var name =  (markers[i].getAttribute("name"));
+			var url =   (markers[i].getAttribute("url"));
+			var links = (markers[i].getAttribute("links"));
+		    map.addOverlay(createMarker(point, name, url, links));
+		  }
+		  var connections = xml.documentElement.getElementsByTagName("connection");
+		  for (var i = 0; i < connections.length; i++) {
+		    var points = []
+			points.push(new GLatLng(parseFloat(connections[i].getAttribute("lat1")),
+                          			  parseFloat(connections[i].getAttribute("lng1"))))
+			points.push(new GLatLng(parseFloat(connections[i].getAttribute("lat2")),
+						              parseFloat(connections[i].getAttribute("lng2"))));
+			map.addOverlay(new GPolyline(points));
+		  }
+		});
+
+	 
+	  }
+    }
+
+    //]]>
+    </script>
+  </head>
+  <body onload="load()" onunload="GUnload()">
+	<h1>Interactive GLIF Map</h1>
+    <div id="body">
+	<p>The map shown above shows several GLIF exchange points for which we created NML/NSI descriptions. The descriptions that this map is based on can be found <a href="https://github.com/jeroenh/AutoGOLE-Topologies/tree/nsiv2/goles">here</a>.</p>
+	<p>The script that gathers the data from these distributed descriptions is available in the topology repository also.</p>
+    </div>
+    <div id="map" style="width: 700px; height: 500px" />
+  </body>
+</html>
