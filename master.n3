@@ -1,23 +1,23 @@
-@prefix aist_go_jp: <urn:ogf:network:aist.go.jp:2012:> .
-@prefix czechlight_cesnet_cz: <urn:ogf:network:czechlight.cesnet.cz:2012:> .
-@prefix es_net: <urn:ogf:network:es.net:2012:> .
-@prefix exp_pionier_net_pl: <urn:ogf:network:exp.pionier.net.pl:2012:> .
-@prefix geant_net: <urn:ogf:network:geant.net:2012:> .
-@prefix gloriad_org: <urn:ogf:network:gloriad.org:2012:> .
-@prefix jgn-x_jp: <urn:ogf:network:jgn-x.jp:2012:> .
-@prefix kddilabs_jp: <urn:ogf:network:kddilabs.jp:2012:> .
-@prefix krlight_net: <urn:ogf:network:krlight.net:2012:> .
-@prefix netherlight_net: <urn:ogf:network:netherlight.net:2012:> .
-@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix aist_go_jp: <urn:ogf:network:aist.go.jp:2013:> .
+@prefix czechlight_cesnet_cz: <urn:ogf:network:czechlight.cesnet.cz:2013:> .
+@prefix es_net: <urn:ogf:network:es.net:2013:> .
+@prefix exp_pionier_net_pl: <urn:ogf:network:exp.pionier.net.pl:2013:> .
+@prefix geant_net: <urn:ogf:network:geant.net:2013:> .
+@prefix gloriad_org: <urn:ogf:network:gloriad.org:2013:> .
+@prefix jgn-x_jp: <urn:ogf:network:jgn-x.jp:2013:> .
+@prefix kddilabs_jp: <urn:ogf:network:kddilabs.jp:2013:> .
+@prefix krlight_net: <urn:ogf:network:krlight.net:2013:> .
+@prefix netherlight_net: <urn:ogf:network:netherlight.net:2013:> .
+@prefix nml: <http://schemas.ogf.org/nml/2013/05/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
-@prefix nordu_net: <urn:ogf:network:nordu.net:2012:> .
-@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix nordu_net: <urn:ogf:network:nordu.net:2013:> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2013/09/topology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix pionier_net_pl: <urn:ogf:network:pionier.net.pl:2012:> .
+@prefix pionier_net_pl: <urn:ogf:network:pionier.net.pl:2013:> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix startap_net: <urn:ogf:network:startap.net:2012:> .
-@prefix uvalight_net: <urn:ogf:network:uvalight.net:2012:> .
+@prefix startap_net: <urn:ogf:network:startap.net:2013:> .
+@prefix uvalight_net: <urn:ogf:network:uvalight.net:2013:> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -856,301 +856,301 @@ uvalight_net:ps-out a nml:PortGroup,
 
 aist_go_jp:aist-jgn-x a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias jgn-x_jp:aist-jgn-x ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias jgn-x_jp:aist-jgn-x .
 
 aist_go_jp:jgn-x-aist a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias jgn-x_jp:jgn-x-aist ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias jgn-x_jp:jgn-x-aist .
 
 czechlight_cesnet_cz:czechlight-netherlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias netherlight_net:czechlight-netherlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias netherlight_net:czechlight-netherlight .
 
 czechlight_cesnet_cz:netherlight-czechlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias netherlight_net:netherlight-czechlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias netherlight_net:netherlight-czechlight .
 
 es_net:es-startap a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias startap_net:es-startap ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias startap_net:es-startap .
 
 es_net:startap-es a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias startap_net:startap-es ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias startap_net:startap-es .
 
 exp_pionier_net_pl:exp-pionier a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias pionier_net_pl:exp-pionier ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias pionier_net_pl:exp-pionier .
 
 exp_pionier_net_pl:pionier-exp a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias pionier_net_pl:pionier-exp ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias pionier_net_pl:pionier-exp .
 
 geant_net:geant-netherlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias netherlight_net:geant-netherlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias netherlight_net:geant-netherlight .
 
 geant_net:geant-pionier a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias pionier_net_pl:geant-pionier ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias pionier_net_pl:geant-pionier .
 
 geant_net:netherlight-geant a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias netherlight_net:netherlight-geant ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias netherlight_net:netherlight-geant .
 
 geant_net:pionier-geant a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias pionier_net_pl:pionier-geant ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias pionier_net_pl:pionier-geant .
 
 gloriad_org:gloriad-krlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias krlight_net:gloriad-krlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias krlight_net:gloriad-krlight .
 
 gloriad_org:gloriad-startap a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias startap_net:gloriad-startap ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias startap_net:gloriad-startap .
 
 gloriad_org:krlight-gloriad a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias krlight_net:krlight-gloriad ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias krlight_net:krlight-gloriad .
 
 gloriad_org:startap-gloriad a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias startap_net:startap-gloriad ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias startap_net:startap-gloriad .
 
 jgn-x_jp:aist-jgn-x a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias aist_go_jp:aist-jgn-x ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias aist_go_jp:aist-jgn-x .
 
 jgn-x_jp:jgn-x-aist a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias aist_go_jp:jgn-x-aist ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias aist_go_jp:jgn-x-aist .
 
 jgn-x_jp:jgn-x-kddilabs a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias kddilabs_jp:jgn-x-kddilabs ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias kddilabs_jp:jgn-x-kddilabs .
 
 jgn-x_jp:jgn-x-startap a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias startap_net:jgn-x-startap ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias startap_net:jgn-x-startap .
 
 jgn-x_jp:kddilabs-jgn-x a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias kddilabs_jp:kddilabs-jgn-x ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias kddilabs_jp:kddilabs-jgn-x .
 
 jgn-x_jp:startap-jgn-x a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias startap_net:startap-jgn-x ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias startap_net:startap-jgn-x .
 
 kddilabs_jp:jgn-x-kddilabs a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias jgn-x_jp:jgn-x-kddilabs ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias jgn-x_jp:jgn-x-kddilabs .
 
 kddilabs_jp:kddilabs-jgn-x a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias jgn-x_jp:kddilabs-jgn-x ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias jgn-x_jp:kddilabs-jgn-x .
 
 krlight_net:gloriad-krlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias gloriad_org:gloriad-krlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias gloriad_org:gloriad-krlight .
 
 krlight_net:krlight-gloriad a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias gloriad_org:krlight-gloriad ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias gloriad_org:krlight-gloriad .
 
 netherlight_net:czechlight-netherlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias czechlight_cesnet_cz:czechlight-netherlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias czechlight_cesnet_cz:czechlight-netherlight .
 
 netherlight_net:geant-netherlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias geant_net:geant-netherlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias geant_net:geant-netherlight .
 
 netherlight_net:netherlight-czechlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias czechlight_cesnet_cz:netherlight-czechlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias czechlight_cesnet_cz:netherlight-czechlight .
 
 netherlight_net:netherlight-geant a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias geant_net:netherlight-geant ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias geant_net:netherlight-geant .
 
 netherlight_net:netherlight-nordu a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias nordu_net:netherlight-nordu ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias nordu_net:netherlight-nordu .
 
 netherlight_net:netherlight-pionier a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias pionier_net_pl:netherlight-pionier ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias pionier_net_pl:netherlight-pionier .
 
 netherlight_net:netherlight-startap a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias startap_net:netherlight-startap ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias startap_net:netherlight-startap .
 
 netherlight_net:netherlight-uvalight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias uvalight_net:netherlight-uvalight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias uvalight_net:netherlight-uvalight .
 
 netherlight_net:nordu-netherlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias nordu_net:nordu-netherlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias nordu_net:nordu-netherlight .
 
 netherlight_net:pionier-netherlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias pionier_net_pl:pionier-netherlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias pionier_net_pl:pionier-netherlight .
 
 netherlight_net:startap-netherlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias startap_net:startap-netherlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias startap_net:startap-netherlight .
 
 netherlight_net:uvalight-netherlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias uvalight_net:uvalight-netherlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias uvalight_net:uvalight-netherlight .
 
 nordu_net:netherlight-nordu a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias netherlight_net:netherlight-nordu ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias netherlight_net:netherlight-nordu .
 
 nordu_net:nordu-netherlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias netherlight_net:nordu-netherlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias netherlight_net:nordu-netherlight .
 
 nordu_net:nordu-uvalight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias uvalight_net:nordu-uvalight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias uvalight_net:nordu-uvalight .
 
 nordu_net:uvalight-nordu a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias uvalight_net:uvalight-nordu ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias uvalight_net:uvalight-nordu .
 
 pionier_net_pl:exp-pionier a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias exp_pionier_net_pl:exp-pionier ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias exp_pionier_net_pl:exp-pionier .
 
 pionier_net_pl:geant-pionier a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias geant_net:geant-pionier ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias geant_net:geant-pionier .
 
 pionier_net_pl:netherlight-pionier a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias netherlight_net:netherlight-pionier ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias netherlight_net:netherlight-pionier .
 
 pionier_net_pl:pionier-exp a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias exp_pionier_net_pl:pionier-exp ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias exp_pionier_net_pl:pionier-exp .
 
 pionier_net_pl:pionier-geant a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias geant_net:pionier-geant ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias geant_net:pionier-geant .
 
 pionier_net_pl:pionier-netherlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias netherlight_net:pionier-netherlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias netherlight_net:pionier-netherlight .
 
 startap_net:es-startap a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias es_net:es-startap ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias es_net:es-startap .
 
 startap_net:gloriad-startap a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias gloriad_org:gloriad-startap ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias gloriad_org:gloriad-startap .
 
 startap_net:jgn-x-startap a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias jgn-x_jp:jgn-x-startap ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias jgn-x_jp:jgn-x-startap .
 
 startap_net:netherlight-startap a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias netherlight_net:netherlight-startap ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias netherlight_net:netherlight-startap .
 
 startap_net:startap-es a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias es_net:startap-es ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias es_net:startap-es .
 
 startap_net:startap-gloriad a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias gloriad_org:startap-gloriad ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias gloriad_org:startap-gloriad .
 
 startap_net:startap-jgn-x a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias jgn-x_jp:startap-jgn-x ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias jgn-x_jp:startap-jgn-x .
 
 startap_net:startap-netherlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias netherlight_net:startap-netherlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias netherlight_net:startap-netherlight .
 
 uvalight_net:netherlight-uvalight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias netherlight_net:netherlight-uvalight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias netherlight_net:netherlight-uvalight .
 
 uvalight_net:nordu-uvalight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias nordu_net:nordu-uvalight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias nordu_net:nordu-uvalight .
 
 uvalight_net:uvalight-netherlight a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias netherlight_net:uvalight-netherlight ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias netherlight_net:uvalight-netherlight .
 
 uvalight_net:uvalight-nordu a nml:PortGroup,
         owl:NamedIndividual ;
-    nml:isAlias nordu_net:uvalight-nordu ;
-    nmleth:vlans "1780-1783" .
+    nmleth:vlans "1780-1783" ;
+    nml:isAlias nordu_net:uvalight-nordu .
 

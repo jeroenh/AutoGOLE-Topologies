@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" id="urn:ogf:network:kddilabs.jp:2013:nsa" version="20130708T145339Z"><nml:Topology id="urn:ogf:network:kddilabs.jp:2013:location"><nml:lat>35.879</nml:lat><nml:long>139.517</nml:long></nml:Topology><nml:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#adminContact">TODO: Convert this to vCard notation
+
+            NSA: G-Lambda/KDDILabs (KDDI Labs) 
+            Project manager: Takahiro Miyamoto  
+            email: tk-miyamoto@kddilabs.jp 
+            mobile:  81-90-1966-5153  
+            skype: takahiro.miyamoto  
+            Key software engineer: Takahiro Miyamoto  
+            email: tk-miyamoto@kddilabs.jp 
+            mobile:  81-90-1966-5153  
+            skype: takahiro.miyamoto 
+        </nml:Relation><nml:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith"><nsi:NSA id="urn:ogf:network:jgn-x.jp:2013:nsa" /></nml:Relation><nml:Topology id="http://schemas.ogf.org/nsi/2013/09/topology#kddilabs.jp"><nml:name>kddilabs.jp</nml:name><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort"><nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:kddilabs-jgn-x"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias"><nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:jgn-x-kddilabs" /></nml:Relation></nml:PortGroup></nml:Relation><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort"><nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:kddilabs-jgn-x"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias"><nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:jgn-x-kddilabs" /></nml:Relation></nml:PortGroup></nml:Relation><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort"><nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:ps-out"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup></nml:PortGroup></nml:Relation><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort"><nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:ps-in"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup></nml:PortGroup></nml:Relation></nml:Topology></nsi:NSA>

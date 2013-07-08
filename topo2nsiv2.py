@@ -1,15 +1,18 @@
 #!/usr/bin/env python
 import rdflib
 import collections
+import xml.etree.ElementTree as ET
+from time import strftime
+import sys
 
 # This file implements an extremely limited converter for DTOX to NSI topology files
 # It expects a certain format, and only converts those parts it knows about.
 
 RDF = rdflib.Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
 RDFS = rdflib.Namespace("http://www.w3.org/2000/01/rdf-schema#")
-NML = rdflib.Namespace("http://schemas.ogf.org/nml/2012/10/base#")
+NML = rdflib.Namespace("http://schemas.ogf.org/nml/2013/05/base#")
 NMLETH = rdflib.Namespace("http://schemas.ogf.org/nml/2012/10/ethernet#")
-NSI = rdflib.Namespace("http://schemas.ogf.org/nsi/2012/10/topology#")
+NSI = rdflib.Namespace("http://schemas.ogf.org/nsi/2013/09/topology#")
 DTOX = rdflib.Namespace("http://www.glif.is/working-groups/tech/dtox#")
 OWL = rdflib.Namespace("http://www.w3.org/2002/07/owl#")
 
@@ -45,12 +48,114 @@ def getNetName(name):
 def getTargetTopo(target):
     # UvA believes there is more to GOLEs than just Ethernet.
     if "uva" in target:
-        return rdflib.term.URIRef("urn:ogf:network:%s:2012:topology" % target)
+        return rdflib.term.URIRef("urn:ogf:network:%s:2013:topology" % target)
     else:
-        return rdflib.term.URIRef("urn:ogf:network:%s:2012:ets" % target)
+        return rdflib.term.URIRef("urn:ogf:network:%s:2013:ets" % target)
 
+class AGXMLTopology:
+    def __init__(self, url):
+        """docstring for __init__"""
+        self.url = url
+        self.storev1 = rdflib.Graph()
+        print "Parsing %s" % url
+        self.storev1.parse(url)
+        self.topo = self.storev1.value(predicate=RDF.type, object=DTOX.NSNetwork)
+        self.urlname = getUrlName(self.topo.split(":")[-1][:-4])
+        self.netname = getNetName(self.topo.split(":")[-1][:-4])
+        self.prefix = "urn:ogf:network:%s:2013:" % self.urlname
+        ET.register_namespace("nml",NML)
+        ET.register_namespace("nsi",NSI)
+        ET.register_namespace("nmleth",NMLETH)
+    
+    def make_xml():
+         node = Element('foo')
+         node.text = 'bar'
+
+    def addPorts(self,stp,topo,targetUrl=None, targetNet=None):
+        if targetUrl and targetNet:
+            outPortRel = ET.SubElement(topo,"{%s}%s"%(NML,"Relation"), {"type":NML+"hasOutboundPort"})
+            outPortGrp = ET.SubElement(outPortRel,"{%s}%s"%(NML,"PortGroup"), {"id":self.prefix+self.netname+"-"+targetNet})
+            outLabel = ET.SubElement(outPortGrp,"{%s}%s"%(NML,"LabelGroup"), {"labeltype":NMLETH+"vlan"})
+            outLabel.text = "1780-1783"
+            outTargetRel = ET.SubElement(outPortGrp,"{%s}%s"%(NML,"Relation"), {"type":NML+"isAlias"})
+            outTargetGrp = ET.SubElement(outTargetRel, "{%s}%s"%(NML,"PortGroup"), 
+                    {"id":"urn:ogf:network:%s:2013:%s-%s" % (targetUrl,targetNet,self.netname)})
+
+            inPortRel = ET.SubElement(topo,"{%s}%s"%(NML,"Relation"), {"type":NML+"hasInboundPort"})
+            inPortGrp = ET.SubElement(inPortRel,"{%s}%s"%(NML,"PortGroup"), {"id":self.prefix+self.netname+"-"+targetNet})
+            inLabel = ET.SubElement(inPortGrp,"{%s}%s"%(NML,"LabelGroup"), {"labeltype":NMLETH+"vlan"})
+            inLabel.text = "1780-1783"
+            inTargetRel = ET.SubElement(inPortGrp,"{%s}%s"%(NML,"Relation"), {"type":NML+"isAlias"})
+            inTargetGrp = ET.SubElement(inTargetRel, "{%s}%s"%(NML,"PortGroup"), 
+                    {"id":"urn:ogf:network:%s:2013:%s-%s" % (targetUrl,targetNet,self.netname)})
+        else:
+            outPortRel = ET.SubElement(topo,"{%s}%s"%(NML,"Relation"), {"type":NML+"hasOutboundPort"})
+            outPortGrp = ET.SubElement(outPortRel,"{%s}%s"%(NML,"PortGroup"), {"id":self.prefix+stp+"-out"})
+            outLabel = ET.SubElement(outPortGrp,"{%s}%s"%(NML,"LabelGroup"), {"labeltype":NMLETH+"vlan"})
+            outLabel.text = "1780-1783"
+            inPortRel = ET.SubElement(topo,"{%s}%s"%(NML,"Relation"), {"type":NML+"hasInboundPort"})
+            inPortGrp = ET.SubElement(inPortRel,"{%s}%s"%(NML,"PortGroup"), {"id":self.prefix+stp+"-in"})
+            inLabel = ET.SubElement(inPortGrp,"{%s}%s"%(NML,"LabelGroup"), {"labeltype":NMLETH+"vlan"})
+            inLabel.text = "1780-1783"
+
+    def convert(self):
+        oldnsa = self.storev1.value(subject=self.topo,predicate=DTOX.managedBy)
+        version = strftime("%Y%m%dT%H%M%SZ")
+        nsa = ET.Element("{%s}%s" % (NSI,"NSA"),{"id": self.prefix+"nsa", "version": version })
+        # Location
+        oldloc = self.storev1.value(subject=self.topo,predicate=DTOX.locatedAt)
+        location = ET.SubElement(nsa, "{%s}%s"%(NML,"Topology"), {"id":self.prefix+"location"})
+        lat = ET.SubElement(location, "{%s}%s"%(NML, "lat"))
+        lat.text = self.storev1.value(subject=oldloc,predicate=DTOX.lat)
+        lng = ET.SubElement(location, "{%s}%s"%(NML, "long"))
+        lng.text = self.storev1.value(subject=oldloc,predicate=DTOX.long)
+        # Service
+        
+        # Relation: AdminContact
+        admin = ET.SubElement(nsa, "{%s}%s"%(NML,"Relation"), {"type":NSI+"adminContact"})
+        admin.text = "TODO: Convert this to vCard notation\n"+ self.storev1.value(subject=oldnsa,predicate=DTOX.adminContact)
+        # Relation: peersWith
+        peeringNets = []
+        for stp in self.storev1.objects(self.topo,DTOX.hasSTP):
+            target = self.storev1.value(subject=stp,predicate=DTOX.connectedTo)
+            if target:
+                targetUrl = getUrlName(target.split(":")[4][:-4])
+                if targetUrl not in peeringNets:
+                    pwrel = ET.SubElement(nsa, "{%s}%s"%(NML,"Relation"), {"type":NSI+"peersWith"})
+                    peeringNSA = ET.SubElement(pwrel, "{%s}%s"%(NSI,"NSA"),{"id":"urn:ogf:network:%s:2013:nsa" % (targetUrl)})
+                    peeringNets.append(targetUrl)   
+        # Topology
+        topo = ET.SubElement(nsa,"{%s}%s"%(NML,"Topology"), {"id":NSI+self.urlname})
+        tname = ET.SubElement(topo,"{%s}%s"%(NML,"name"))
+        tname.text = self.urlname
+        # Ports
+        localstps = []
+        for stp in self.storev1.objects(self.topo,DTOX.hasSTP):
+            target = self.storev1.value(subject=stp,predicate=DTOX.connectedTo)
+            # We take off the invalid network urn prefix
+            localstp = stp.split(":")[-1]
+            # and then we take off the label suffix
+            localstp = localstp.split("-")[0]
+            if localstp not in localstps:
+                if target:
+                    # We take out the network name of the other end to pass as target
+                    # We need both the URL name for the right prefix, and the netname for nicer postfixes
+                    targetUrl = getUrlName(target.split(":")[4][:-4])
+                    targetNet = getNetName(target.split(":")[4][:-4])
+                    self.addPorts(localstp,topo,targetUrl,targetNet)
+                else:
+                    self.addPorts(localstp,topo)
+                localstps.append(localstp)
+        
+        
+        doc = ET.ElementTree(nsa)
+        return doc
+        
+     
+            
 class AGTopology:
     def __init__(self, url):
+        print "WARNING! This is not NML NSI syntax yet."
         self.url = url
         self.storev1 = rdflib.Graph()
         self.storev2 = rdflib.Graph()
@@ -62,7 +167,7 @@ class AGTopology:
         self.topo = self.storev1.value(predicate=RDF.type, object=DTOX.NSNetwork)
         self.urlname = getUrlName(self.topo.split(":")[-1][:-4])
         self.netname = getNetName(self.topo.split(":")[-1][:-4])
-        self.prefix = rdflib.Namespace("urn:ogf:network:%s:2012:" % self.urlname)
+        self.prefix = rdflib.Namespace("urn:ogf:network:%s:2013:" % self.urlname)
         self.storev2.bind(self.netname.replace(".","-"),self.prefix)
         self.init_v2()
     
@@ -72,8 +177,7 @@ class AGTopology:
         self.storev2.bind("nmleth",NMLETH)
         self.storev2.bind("owl",OWL)
         
-        
-        
+
     def addTopo(self,oldtopo):
         topo = getTargetTopo(self.urlname)
         self.storev2.add((topo,RDF.type,OWL.NamedIndividual))
@@ -107,9 +211,9 @@ class AGTopology:
         if targetUrl and targetNet:
             outPort = rdflib.term.URIRef(self.prefix+self.netname+"-"+targetNet)
             inPort = rdflib.term.URIRef(self.prefix+targetNet+"-"+self.netname)
-            outTarget = rdflib.term.URIRef("urn:ogf:network:%s:2012:%s-%s" %
+            outTarget = rdflib.term.URIRef("urn:ogf:network:%s:2013:%s-%s" %
                                                  (targetUrl,targetNet,self.netname))
-            inTarget = rdflib.term.URIRef("urn:ogf:network:%s:2012:%s-%s" %
+            inTarget = rdflib.term.URIRef("urn:ogf:network:%s:2013:%s-%s" %
                                                  (targetUrl,self.netname,targetNet))
             self.storev2.add((outPort,NML.isAlias,inTarget))
             self.storev2.add((inPort,NML.isAlias,outTarget))
@@ -171,7 +275,7 @@ def jerrify(mapping):
     mapping['urn:ogf:network:startap.net:2012:bi-startap-gloriad']= ['urn:ogf:network:stp:starlight.ets:glo-06f4', 'urn:ogf:network:stp:starlight.ets:glo-06f5', 'urn:ogf:network:stp:starlight.ets:glo-o6f6', 'urn:ogf:network:stp:starlight.ets:glo-06f7']
     mapping['urn:ogf:network:uvalight.net:2012:bi-uvalight-nordu']= ['urn:ogf:network:stp:uvalight.ets:ndn-0', 'urn:ogf:network:stp:uvalight.ets:ndn-1', 'urn:ogf:network:stp:uvalight.ets:ndn-2', 'urn:ogf:network:stp:uvalight.ets:ndn-3']
 
-def main():
+def OWLConversion():
     master = rdflib.Graph()
     master.bind("nml",NML)
     master.bind("nsi",NSI)
@@ -184,6 +288,7 @@ def main():
     master1.bind("owl",OWL)
     master1.bind("dtox",DTOX)
     
+    # OWL
     for name in ["aist","czechlight","esnet","geant","gloriad","jgnx","kddi-labs","krlight","netherlight","northernlight","pionier","starlight","uvalight","psnc"]:
         newname = getUrlName(name)
         topo = AGTopology("golesv1/%s.owl" % name)
@@ -200,7 +305,16 @@ def main():
     master.serialize("master.owl",format="pretty-xml")
     master.serialize("master.n3",format="n3")
     master1.serialize("AutoGOLE-Topo.owl",format="xml")
-    
+
+def XMLConversion():
+    # XML
+    for name in ["aist","czechlight","esnet","geant","gloriad","jgnx","kddi-labs","krlight","netherlight","northernlight","pionier","starlight","uvalight","psnc"]:
+        newname = getUrlName(name)
+        topo = AGXMLTopology("golesv1/%s.owl" % name)
+        doc = topo.convert()
+        doc.write("goles/%s.xml"%newname,encoding="UTF-8",xml_declaration=True)
+
+def createMapping():
     # Write the mapping file. Remember to undo the jerrification:
     f = open("mapping.txt",'w')
     jerrify(MAPPING)
@@ -209,5 +323,10 @@ def main():
             MAPPING[x].sort()
         f.write("%s: %s\n" % (x,MAPPING[x]))
     f.close()
+            
+def main():
+    # OWLConversion()
+    XMLConversion()
+    # createMapping()
 if __name__ == '__main__':
     main()
