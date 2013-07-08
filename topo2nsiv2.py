@@ -112,7 +112,14 @@ class AGXMLTopology:
         lng = ET.SubElement(location, "{%s}%s"%(NML, "long"))
         lng.text = self.storev1.value(subject=oldloc,predicate=DTOX.long)
         # Service
-        
+        csProviderEndpoint = self.storev1.value(subject=oldnsa,predicate=DTOX.csProviderEndpoint)
+        pserv = ET.SubElement(nsa,"{%s}%s"%(NSI,"Service"), {"id":self.prefix+"nsa-provserv"})
+        pservlink = ET.SubElement(pserv,"{%s}%s"%(NSI,"link"))
+        pservlink.text = self.storev1.value(subject=oldnsa,predicate=DTOX.csProviderEndpoint)
+        pservtype = ET.SubElement(pserv,"{%s}%s"%(NSI,"type"))
+        pservtype.text = "application/vnd.org.ogf.nsi.cs.v2+soap"
+        pservprov = ET.SubElement(pserv, "{%s}%s"%(NSI,"Relation"), {"type":NSI+"providedBy"})
+        pservprovnsa = ET.SubElement(pservprov, "{%s}%s" % (NSI,"NSA"),{"id": self.prefix+"nsa"})
         # Relation: AdminContact
         # admin = ET.SubElement(nsa, "{%s}%s"%(NML,"Relation"), {"type":NSI+"adminContact"})
         admin = ET.SubElement(nsa, "{%s}%s"%(NSI,"adminContact"))

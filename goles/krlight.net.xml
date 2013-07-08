@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:krlight.net:2013:nsa" version="2013-07-08T16:29:48Z"><nml:Location id="urn:ogf:network:krlight.net:2013:location"><nml:lat>36.366</nml:lat><nml:long>127.359</nml:long></nml:Location><nsi:adminContact><vc:text>TODO: Convert this to vCard notation
+<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:krlight.net:2013:nsa" version="2013-07-08T16:34:18Z"><nml:Location id="urn:ogf:network:krlight.net:2013:location"><nml:lat>36.366</nml:lat><nml:long>127.359</nml:long></nml:Location><nsi:Service id="urn:ogf:network:krlight.net:2013:nsa-provserv"><nsi:link>
+            http://203.230.116.202:8090/NSI_v2.0/ConnectionServiceProvider
+        </nsi:link><nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type><nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy"><nsi:NSA id="urn:ogf:network:krlight.net:2013:nsa" /></nsi:Relation></nsi:Service><nsi:adminContact><vc:text>TODO: Convert this to vCard notation
 
             DynamicKL  (KISTI) 
             Project Mgmt: 
