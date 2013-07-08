@@ -14,6 +14,7 @@ NML = rdflib.Namespace("http://schemas.ogf.org/nml/2013/05/base#")
 NMLETH = rdflib.Namespace("http://schemas.ogf.org/nml/2012/10/ethernet#")
 NSI = rdflib.Namespace("http://schemas.ogf.org/nsi/2013/09/topology#")
 DTOX = rdflib.Namespace("http://www.glif.is/working-groups/tech/dtox#")
+VC = rdflib.Namespace("urn:ietf:params:xml:ns:vcard-4.0")
 OWL = rdflib.Namespace("http://www.w3.org/2002/07/owl#")
 
 golenames = {
@@ -66,6 +67,7 @@ class AGXMLTopology:
         ET.register_namespace("nml",NML)
         ET.register_namespace("nsi",NSI)
         ET.register_namespace("nmleth",NMLETH)
+        ET.register_namespace("vc",VC)
     
     def make_xml():
          node = Element('foo')
@@ -100,11 +102,11 @@ class AGXMLTopology:
 
     def convert(self):
         oldnsa = self.storev1.value(subject=self.topo,predicate=DTOX.managedBy)
-        version = strftime("%Y%m%dT%H%M%SZ")
+        version = strftime("%Y-%m-%dT%H:%M:%SZ")
         nsa = ET.Element("{%s}%s" % (NSI,"NSA"),{"id": self.prefix+"nsa", "version": version })
         # Location
         oldloc = self.storev1.value(subject=self.topo,predicate=DTOX.locatedAt)
-        location = ET.SubElement(nsa, "{%s}%s"%(NML,"Topology"), {"id":self.prefix+"location"})
+        location = ET.SubElement(nsa, "{%s}%s"%(NML,"Location"), {"id":self.prefix+"location"})
         lat = ET.SubElement(location, "{%s}%s"%(NML, "lat"))
         lat.text = self.storev1.value(subject=oldloc,predicate=DTOX.lat)
         lng = ET.SubElement(location, "{%s}%s"%(NML, "long"))
@@ -112,8 +114,10 @@ class AGXMLTopology:
         # Service
         
         # Relation: AdminContact
-        admin = ET.SubElement(nsa, "{%s}%s"%(NML,"Relation"), {"type":NSI+"adminContact"})
-        admin.text = "TODO: Convert this to vCard notation\n"+ self.storev1.value(subject=oldnsa,predicate=DTOX.adminContact)
+        # admin = ET.SubElement(nsa, "{%s}%s"%(NML,"Relation"), {"type":NSI+"adminContact"})
+        admin = ET.SubElement(nsa, "{%s}%s"%(NSI,"adminContact"))
+        admintext = ET.SubElement(admin, "{%s}%s"%(VC,"text"))
+        admintext.text = "TODO: Convert this to vCard notation\n"+ self.storev1.value(subject=oldnsa,predicate=DTOX.adminContact)
         # Relation: peersWith
         peeringNets = []
         for stp in self.storev1.objects(self.topo,DTOX.hasSTP):
@@ -121,7 +125,7 @@ class AGXMLTopology:
             if target:
                 targetUrl = getUrlName(target.split(":")[4][:-4])
                 if targetUrl not in peeringNets:
-                    pwrel = ET.SubElement(nsa, "{%s}%s"%(NML,"Relation"), {"type":NSI+"peersWith"})
+                    pwrel = ET.SubElement(nsa, "{%s}%s"%(NSI,"Relation"), {"type":NSI+"peersWith"})
                     peeringNSA = ET.SubElement(pwrel, "{%s}%s"%(NSI,"NSA"),{"id":"urn:ogf:network:%s:2013:nsa" % (targetUrl)})
                     peeringNets.append(targetUrl)   
         # Topology
