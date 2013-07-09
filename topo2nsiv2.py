@@ -121,8 +121,8 @@ class AGXMLTopology:
         pservprov = ET.SubElement(pserv, "{%s}%s"%(NSI,"Relation"), {"type":NSI+"providedBy"})
         pservprovnsa = ET.SubElement(pservprov, "{%s}%s" % (NSI,"NSA"),{"id": self.prefix+"nsa"})
         # Relation: AdminContact
-        # admin = ET.SubElement(nsa, "{%s}%s"%(NML,"Relation"), {"type":NSI+"adminContact"})
-        admin = ET.SubElement(nsa, "{%s}%s"%(NSI,"adminContact"))
+        admin = ET.SubElement(nsa, "{%s}%s"%(NSI,"Relation"), {"type":NSI+"adminContact"})
+        # admin = ET.SubElement(nsa, "{%s}%s"%(NSI,"adminContact"))
         admintext = ET.SubElement(admin, "{%s}%s"%(VC,"text"))
         admintext.text = "TODO: Convert this to vCard notation\n"+ self.storev1.value(subject=oldnsa,predicate=DTOX.adminContact)
         # Relation: peersWith
