@@ -75,16 +75,17 @@ class AGXMLTopology:
 
     def addPorts(self,stp,topo,targetUrl=None, targetNet=None):
         if targetUrl and targetNet:
+            print "adding %s, %s" % (targetUrl,targetNet)
             outPortRel = ET.SubElement(topo,"{%s}%s"%(NML,"Relation"), {"type":NML+"hasOutboundPort"})
             outPortGrp = ET.SubElement(outPortRel,"{%s}%s"%(NML,"PortGroup"), {"id":self.prefix+self.netname+"-"+targetNet})
             outLabel = ET.SubElement(outPortGrp,"{%s}%s"%(NML,"LabelGroup"), {"labeltype":NMLETH+"vlan"})
             outLabel.text = "1780-1783"
             outTargetRel = ET.SubElement(outPortGrp,"{%s}%s"%(NML,"Relation"), {"type":NML+"isAlias"})
             outTargetGrp = ET.SubElement(outTargetRel, "{%s}%s"%(NML,"PortGroup"), 
-                    {"id":"urn:ogf:network:%s:2013:%s-%s" % (targetUrl,targetNet,self.netname)})
+                    {"id":"urn:ogf:network:%s:2013:%s-%s" % (targetUrl,self.netname, targetNet)})
 
             inPortRel = ET.SubElement(topo,"{%s}%s"%(NML,"Relation"), {"type":NML+"hasInboundPort"})
-            inPortGrp = ET.SubElement(inPortRel,"{%s}%s"%(NML,"PortGroup"), {"id":self.prefix+self.netname+"-"+targetNet})
+            inPortGrp = ET.SubElement(inPortRel,"{%s}%s"%(NML,"PortGroup"), {"id":self.prefix+targetNet+"-"+self.netname})
             inLabel = ET.SubElement(inPortGrp,"{%s}%s"%(NML,"LabelGroup"), {"labeltype":NMLETH+"vlan"})
             inLabel.text = "1780-1783"
             inTargetRel = ET.SubElement(inPortGrp,"{%s}%s"%(NML,"Relation"), {"type":NML+"isAlias"})
@@ -126,21 +127,23 @@ class AGXMLTopology:
         admintext = ET.SubElement(admin, "{%s}%s"%(VC,"text"))
         admintext.text = "TODO: Convert this to vCard notation\n"+ self.storev1.value(subject=oldnsa,predicate=DTOX.adminContact)
         # Relation: peersWith
-        peeringNets = []
-        for stp in self.storev1.objects(self.topo,DTOX.hasSTP):
-            target = self.storev1.value(subject=stp,predicate=DTOX.connectedTo)
-            if target:
-                targetUrl = getUrlName(target.split(":")[4][:-4])
-                if targetUrl not in peeringNets:
-                    pwrel = ET.SubElement(nsa, "{%s}%s"%(NSI,"Relation"), {"type":NSI+"peersWith"})
-                    peeringNSA = ET.SubElement(pwrel, "{%s}%s"%(NSI,"NSA"),{"id":"urn:ogf:network:%s:2013:nsa" % (targetUrl)})
-                    peeringNets.append(targetUrl)   
+        # peeringNets = []
+        # for stp in self.storev1.objects(self.topo,DTOX.hasSTP):
+        #     target = self.storev1.value(subject=stp,predicate=DTOX.connectedTo)
+        #     if target:
+        #         targetUrl = getUrlName(target.split(":")[4][:-4])
+        #         print targetUrl, peeringNets, targetUrl in peeringNets
+        #         if targetUrl not in peeringNets:
+        #             pwrel = ET.SubElement(nsa, "{%s}%s"%(NSI,"Relation"), {"type":NSI+"peersWith"})
+        #             peeringNSA = ET.SubElement(pwrel, "{%s}%s"%(NSI,"NSA"),{"id":"urn:ogf:network:%s:2013:nsa" % (targetUrl)})
+        #             peeringNets.append(targetUrl)   
         # Topology
         topo = ET.SubElement(nsa,"{%s}%s"%(NML,"Topology"), {"id":NSI+self.urlname})
         tname = ET.SubElement(topo,"{%s}%s"%(NML,"name"))
         tname.text = self.urlname
         # Ports
         localstps = []
+        peeringNets = []
         for stp in self.storev1.objects(self.topo,DTOX.hasSTP):
             target = self.storev1.value(subject=stp,predicate=DTOX.connectedTo)
             # We take off the invalid network urn prefix
@@ -153,7 +156,11 @@ class AGXMLTopology:
                     # We need both the URL name for the right prefix, and the netname for nicer postfixes
                     targetUrl = getUrlName(target.split(":")[4][:-4])
                     targetNet = getNetName(target.split(":")[4][:-4])
-                    self.addPorts(localstp,topo,targetUrl,targetNet)
+                    if targetUrl not in peeringNets:
+                        pwrel = ET.SubElement(nsa, "{%s}%s"%(NSI,"Relation"), {"type":NSI+"peersWith"})
+                        peeringNSA = ET.SubElement(pwrel, "{%s}%s"%(NSI,"NSA"),{"id":"urn:ogf:network:%s:2013:nsa" % (targetUrl)})
+                        peeringNets.append(targetUrl)   
+                        self.addPorts(localstp,topo,targetUrl,targetNet)
                 else:
                     self.addPorts(localstp,topo)
                 localstps.append(localstp)
