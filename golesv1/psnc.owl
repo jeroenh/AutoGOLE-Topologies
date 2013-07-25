@@ -27,85 +27,88 @@
     <owl:Class rdf:about="http://www.glif.is/working-groups/tech/dtox#Location"/>
 
 
-	<!-- *** ESnet -->    
-    
-    <!-- urn:ogf:network:stp:esnet.ets:ps-80 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:esnet.ets:ps-80">
+
+	<!-- *** Pionier -->
+
+    <!-- urn:ogf:network:stp:psnc.ets:ps-80 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:psnc.ets:ps-80">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:esnet.ets:ps-81 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:esnet.ets:ps-81">
+    <!-- urn:ogf:network:stp:psnc.ets:ps-81 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:psnc.ets:ps-81">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:esnet.ets:ps-82 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:esnet.ets:ps-82">
+    <!-- urn:ogf:network:stp:psnc.ets:ps-82 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:psnc.ets:ps-82">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
     </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:esnet.ets:ps-83 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:esnet.ets:ps-83">
+    <!-- urn:ogf:network:stp:psnc.ets:ps-83 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:psnc.ets:ps-83">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-    </owl:NamedIndividual>
-    
-    <!-- urn:ogf:network:stp:esnet.ets:chi-80 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:esnet.ets:chi-80">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:esn-80"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:esnet.ets:chi-81 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:esnet.ets:chi-81">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:esn-81"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:esnet.ets:chi-82 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:esnet.ets:chi-82">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:esn-82"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:esnet.ets:chi-83 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:esnet.ets:chi-83">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:starlight.ets:esn-83"/>
     </owl:NamedIndividual>
     
-    <!-- urn:ogf:network:nsnetwork:esnet.ets -->
+    <!-- urn:ogf:network:stp:psnc.ets:poz-80  -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:psnc.ets:poz-80">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-80"/>
+    </owl:NamedIndividual>
+    <!-- urn:ogf:network:stp:psnc.ets:poz-81 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:psnc.ets:poz-81">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-81"/>
+    </owl:NamedIndividual>
+    <!-- urn:ogf:network:stp:psnc.ets:poz-82 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:psnc.ets:poz-82">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-82"/>
+    </owl:NamedIndividual>
+    <!-- urn:ogf:network:stp:psnc.ets:poz-83 -->
+    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:psnc.ets:poz-83">
+        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
+        <connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:psnc-83"/>
+    </owl:NamedIndividual>
     
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:esnet.ets">
+    <!-- urn:ogf:network:nsnetwork:psnc.ets -->
+    
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:psnc.ets">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSNetwork"/>
-        <rdfs:label xml:lang="en">esnet.ets</rdfs:label>
-        <hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:ps-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:ps-81"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:ps-82"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:ps-83"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:chi-80"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:chi-81"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:chi-82"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:esnet.ets:chi-83"/>
-        <managedBy rdf:resource="urn:ogf:network:nsa:esnet"/>
-        <locatedAt rdf:resource="urn:ogf:network:nsnetwork:esnet.ets:location"/>
-    </owl:NamedIndividual>
+        <rdfs:label xml:lang="en">psnc.ets</rdfs:label>
+        <hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:ps-80"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:ps-81"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:ps-82"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:ps-83"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:poz-80"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:poz-81"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:poz-82"/>
+        <hasSTP rdf:resource="urn:ogf:network:stp:psnc.ets:poz-83"/>
+        <managedBy rdf:resource="urn:ogf:network:nsa:psnc"/>
+        <locatedAt rdf:resource="urn:ogf:network:nsnetwork:psnc.ets:location"/>
+    </owl:NamedIndividual> 
     
-    <!-- urn:ogf:network:nsnetwork:esnet.ets:location  ???, US -->
+    <!-- urn:ogf:network:nsnetwork:psnc.ets:location Poznan,PL -->
     
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:esnet.ets:location">
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsnetwork:psnc.ets:location">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#Location"/>
-        <lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.703516</lat>
-        <long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.988120</long>
+        <lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.412</lat>
+        <long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.916</long>
     </owl:NamedIndividual>
     
-    <!-- urn:ogf:network:nsa:esnet -->
+    <!-- urn:ogf:network:nsa:psnc -->
     
-    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:esnet">
+    <owl:NamedIndividual rdf:about="urn:ogf:network:nsa:psnc">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#NSA"/>
-        <managing rdf:resource="urn:ogf:network:nsnetwork:esnet.ets" />
+        <managing rdf:resource="urn:ogf:network:nsnetwork:psnc.ets" />
         <adminContact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            NSA: OSCARS 
-            Project Manager: Inder Monga 
-            Email: imonga@es.net 
-            Software development engineer: Evangelos Chaniotakis 
-            Email:  haniotak@es.net
+            NSA: PSNC 
+            Project manager: Radek Krzywania  
+            email: radek.krzywania@man.poznan.pl  
+            skype: Radoslaw.krzywania 
+            Software development: Michal Balcerkiewicz  
+            email: michalb@man.poznan.pl  
+            skype= michalb.psnc
         </adminContact>
         <csProviderEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-            http://jupiter.es.net:8288/ConnectionService
+             http://194.132.53.174:9282/nsi/ConnectionProvider 
         </csProviderEndpoint>
     </owl:NamedIndividual>
-</rdf:RDF>
+    </rdf:RDF>

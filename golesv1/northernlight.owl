@@ -66,65 +66,28 @@
         <connectedTo rdf:resource="urn:ogf:network:stp:netherlight.ets:cph-83"/>
     </owl:NamedIndividual>
 
-    <!-- urn:ogf:network:stp:northernlight.ets:poz-0 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:poz-0">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:cpha"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:northernlight.ets:poz-1 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:poz-1">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:cphb"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:northernlight.ets:poz-2 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:poz-2">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:cphc"/>
-    </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:northernlight.ets:poz-3 -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:poz-3">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:pionier.ets:cphd"/>
-    </owl:NamedIndividual>
 
-    <!-- urn:ogf:network:stp:northernlight.ets:uva-1780 -->
+    <!-- urn:ogf:network:stp:northernlight.ets:uva-80 -->
     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:uva-1780">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
         <connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-0"/>
     </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:northernlight.ets:uva-1781 -->
+    <!-- urn:ogf:network:stp:northernlight.ets:uva-81 -->
     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:uva-1781">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
         <connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-1"/>
     </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:northernlight.ets:uva-1782 -->
+    <!-- urn:ogf:network:stp:northernlight.ets:uva-82 -->
     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:uva-1782">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
         <connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-2"/>
     </owl:NamedIndividual>
-    <!-- urn:ogf:network:stp:northernlight.ets:uva-1783 -->
+    <!-- urn:ogf:network:stp:northernlight.ets:uva-83 -->
     <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:uva-1783">
         <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
         <connectedTo rdf:resource="urn:ogf:network:stp:uvalight.ets:ndn-3"/>
     </owl:NamedIndividual>
 
-    <!-- MAX -->
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:max-80">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:ndn-80"/>
-    </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:max-81">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:ndn-81"/>
-    </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:max-82">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:ndn-82"/>
-    </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="urn:ogf:network:stp:northernlight.ets:max-83">
-        <rdf:type rdf:resource="http://www.glif.is/working-groups/tech/dtox#STP"/>
-        <connectedTo rdf:resource="urn:ogf:network:stp:max.ets:ndn-83"/>
-    </owl:NamedIndividual>
 
     <!-- urn:ogf:network:nsnetwork:northernlight.ets -->
 
@@ -139,10 +102,6 @@
         <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-81"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-82"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:ams-83"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-0"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-1"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-2"/>
-        <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:poz-3"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1780"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1781"/>
         <hasSTP rdf:resource="urn:ogf:network:stp:northernlight.ets:uva-1782"/>
