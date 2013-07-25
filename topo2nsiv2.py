@@ -75,7 +75,6 @@ class AGXMLTopology:
 
     def addPorts(self,stp,topo,targetUrl=None, targetNet=None):
         if targetUrl and targetNet:
-            print "adding %s, %s" % (targetUrl,targetNet)
             outPortRel = ET.SubElement(topo,"{%s}%s"%(NML,"Relation"), {"type":NML+"hasOutboundPort"})
             outPortGrp = ET.SubElement(outPortRel,"{%s}%s"%(NML,"PortGroup"), {"id":self.prefix+self.netname+"-"+targetNet})
             outLabel = ET.SubElement(outPortGrp,"{%s}%s"%(NML,"LabelGroup"), {"labeltype":NMLETH+"vlan"})
@@ -138,7 +137,7 @@ class AGXMLTopology:
         #             peeringNSA = ET.SubElement(pwrel, "{%s}%s"%(NSI,"NSA"),{"id":"urn:ogf:network:%s:2013:nsa" % (targetUrl)})
         #             peeringNets.append(targetUrl)   
         # Topology
-        topo = ET.SubElement(nsa,"{%s}%s"%(NML,"Topology"), {"id":NSI+self.urlname})
+        topo = ET.SubElement(nsa,"{%s}%s"%(NML,"Topology"), {"id":self.prefix+"topology"})
         tname = ET.SubElement(topo,"{%s}%s"%(NML,"name"))
         tname.text = self.urlname
         # Ports
