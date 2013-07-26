@@ -90,6 +90,9 @@ class AGXMLTopology:
             inTargetRel = ET.SubElement(inPortGrp,"{%s}%s"%(NML,"Relation"), {"type":NML+"isAlias"})
             inTargetGrp = ET.SubElement(inTargetRel, "{%s}%s"%(NML,"PortGroup"), 
                     {"id":"urn:ogf:network:%s:2013:%s-%s" % (targetUrl,targetNet,self.netname)})
+            biPort = ET.SubElement(topo,"{%s}%s"%(NML,"BidirectionalPort"), {"id":self.prefix+"bi-"+self.netname+"-"+targetNet})
+            biPortOut = ET.SubElement(biPort,"{%s}%s"%(NML,"PortGroup"), {"id":self.prefix+self.netname+"-"+targetNet})
+            biPortIn = ET.SubElement(biPort,"{%s}%s"%(NML,"PortGroup"), {"id":self.prefix+targetNet+"-"+self.netname})
         else:
             outPortRel = ET.SubElement(topo,"{%s}%s"%(NML,"Relation"), {"type":NML+"hasOutboundPort"})
             outPortGrp = ET.SubElement(outPortRel,"{%s}%s"%(NML,"PortGroup"), {"id":self.prefix+stp+"-out"})
@@ -99,6 +102,9 @@ class AGXMLTopology:
             inPortGrp = ET.SubElement(inPortRel,"{%s}%s"%(NML,"PortGroup"), {"id":self.prefix+stp+"-in"})
             inLabel = ET.SubElement(inPortGrp,"{%s}%s"%(NML,"LabelGroup"), {"labeltype":NMLETH+"vlan"})
             inLabel.text = "1780-1783"
+            biPort = ET.SubElement(topo,"{%s}%s"%(NML,"BidirectionalPort"), {"id":self.prefix+"bi-"+stp})
+            biPortOut = ET.SubElement(biPort,"{%s}%s"%(NML,"PortGroup"), {"id":self.prefix+stp+"-in"})
+            biPortIn = ET.SubElement(biPort,"{%s}%s"%(NML,"PortGroup"), {"id":self.prefix+stp+"-out"})
 
     def convert(self):
         oldnsa = self.storev1.value(subject=self.topo,predicate=DTOX.managedBy)
