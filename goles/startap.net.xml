@@ -1,7 +1,20 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:startap.net:2013:nsa" version="2013-07-26T10:42:44Z"><nml:Location id="urn:ogf:network:startap.net:2013:location"><nml:lat>41.947906</nml:lat><nml:long>-87.655791</nml:long></nml:Location><nsi:Service id="urn:ogf:network:startap.net:2013:nsa-provserv"><nsi:link>
+<?xml version="1.0" encoding="UTF-8"?>
+<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:startap.net:2013:nsa" version="2013-07-26T10:42:44Z">
+    <nml:Location id="urn:ogf:network:startap.net:2013:location">
+        <nml:lat>41.947906</nml:lat>
+        <nml:long>-87.655791</nml:long>
+    </nml:Location>
+    <nsi:Service id="urn:ogf:network:startap.net:2013:nsa-provserv">
+        <nsi:link>
              http://nsa.badlab.crc.ca:9080/NSI/services/ConnectionService
-         </nsi:link><nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type><nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy"><nsi:NSA id="urn:ogf:network:startap.net:2013:nsa" /></nsi:Relation></nsi:Service><nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#adminContact"><vc:text>TODO: Convert this to vCard notation
+         </nsi:link>
+        <nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type>
+        <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy">
+            <nsi:NSA id="urn:ogf:network:startap.net:2013:nsa"/>
+        </nsi:Relation>
+    </nsi:Service>
+    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#adminContact">
+        <vc:text>TODO: Convert this to vCard notation
 
              NSA: OpenNSA (NORDUnet) over Argia 
              Project manager: Scott Campbell 
@@ -11,4 +24,108 @@
              Key software engineer: Henrik Thostrup-Jensen 
              email: htj@nordu.net 
              skype: henrik.thostrup.jensen
-         </vc:text></nsi:Relation><nml:Topology id="urn:ogf:network:startap.net:2013:topology"><nml:name>startap.net</nml:name><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort"><nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-jgn-x"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias"><nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:startap-jgn-x" /></nml:Relation></nml:PortGroup></nml:Relation><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort"><nml:PortGroup id="urn:ogf:network:startap.net:2013:jgn-x-startap"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias"><nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:jgn-x-startap" /></nml:Relation></nml:PortGroup></nml:Relation><nml:BidirectionalPort id="urn:ogf:network:startap.net:2013:bi-startap-jgn-x"><nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-jgn-x" /><nml:PortGroup id="urn:ogf:network:startap.net:2013:jgn-x-startap" /></nml:BidirectionalPort><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort"><nml:PortGroup id="urn:ogf:network:startap.net:2013:ps-out"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup></nml:PortGroup></nml:Relation><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort"><nml:PortGroup id="urn:ogf:network:startap.net:2013:ps-in"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup></nml:PortGroup></nml:Relation><nml:BidirectionalPort id="urn:ogf:network:startap.net:2013:bi-ps"><nml:PortGroup id="urn:ogf:network:startap.net:2013:ps-in" /><nml:PortGroup id="urn:ogf:network:startap.net:2013:ps-out" /></nml:BidirectionalPort><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort"><nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-es"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias"><nml:PortGroup id="urn:ogf:network:es.net:2013:startap-es" /></nml:Relation></nml:PortGroup></nml:Relation><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort"><nml:PortGroup id="urn:ogf:network:startap.net:2013:es-startap"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias"><nml:PortGroup id="urn:ogf:network:es.net:2013:es-startap" /></nml:Relation></nml:PortGroup></nml:Relation><nml:BidirectionalPort id="urn:ogf:network:startap.net:2013:bi-startap-es"><nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-es" /><nml:PortGroup id="urn:ogf:network:startap.net:2013:es-startap" /></nml:BidirectionalPort><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort"><nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-netherlight"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias"><nml:PortGroup id="urn:ogf:network:netherlight.net:2013:startap-netherlight" /></nml:Relation></nml:PortGroup></nml:Relation><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort"><nml:PortGroup id="urn:ogf:network:startap.net:2013:netherlight-startap"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias"><nml:PortGroup id="urn:ogf:network:netherlight.net:2013:netherlight-startap" /></nml:Relation></nml:PortGroup></nml:Relation><nml:BidirectionalPort id="urn:ogf:network:startap.net:2013:bi-startap-netherlight"><nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-netherlight" /><nml:PortGroup id="urn:ogf:network:startap.net:2013:netherlight-startap" /></nml:BidirectionalPort><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort"><nml:PortGroup id="urn:ogf:network:startap.net:2013:glo-out"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup></nml:PortGroup></nml:Relation><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort"><nml:PortGroup id="urn:ogf:network:startap.net:2013:glo-in"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup></nml:PortGroup></nml:Relation><nml:BidirectionalPort id="urn:ogf:network:startap.net:2013:bi-glo"><nml:PortGroup id="urn:ogf:network:startap.net:2013:glo-in" /><nml:PortGroup id="urn:ogf:network:startap.net:2013:glo-out" /></nml:BidirectionalPort></nml:Topology><nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith"><nsi:NSA id="urn:ogf:network:jgn-x.jp:2013:nsa" /></nsi:Relation><nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith"><nsi:NSA id="urn:ogf:network:es.net:2013:nsa" /></nsi:Relation><nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith"><nsi:NSA id="urn:ogf:network:netherlight.net:2013:nsa" /></nsi:Relation></nsi:NSA>
+         </vc:text>
+    </nsi:Relation>
+    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
+        <nsi:NSA id="urn:ogf:network:jgn-x.jp:2013:nsa"/>
+    </nsi:Relation>
+    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
+        <nsi:NSA id="urn:ogf:network:es.net:2013:nsa"/>
+    </nsi:Relation>
+    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
+        <nsi:NSA id="urn:ogf:network:netherlight.net:2013:nsa"/>
+    </nsi:Relation>
+    <nml:Topology id="urn:ogf:network:startap.net:2013:topology">
+        <nml:name>startap.net</nml:name>
+        <nml:BidirectionalPort id="urn:ogf:network:startap.net:2013:bi-startap-jgn-x">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-jgn-x"/>
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:jgn-x-startap"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:startap.net:2013:bi-ps">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:ps-in"/>
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:ps-out"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:startap.net:2013:bi-startap-es">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-es"/>
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:es-startap"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:startap.net:2013:bi-startap-netherlight">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-netherlight"/>
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:netherlight-startap"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:startap.net:2013:bi-glo">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:glo-in"/>
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:glo-out"/>
+        </nml:BidirectionalPort>
+        
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-jgn-x">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:startap-jgn-x"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:jgn-x-startap">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:jgn-x-startap"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:ps-out">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:ps-in">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-es">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:es.net:2013:startap-es"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:es-startap">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:es.net:2013:es-startap"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-netherlight">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:startap-netherlight"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:netherlight-startap">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:netherlight-startap"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:glo-out">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:glo-in">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+    </nml:Topology>
+
+</nsi:NSA>

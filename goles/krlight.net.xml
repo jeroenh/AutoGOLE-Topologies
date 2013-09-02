@@ -1,7 +1,20 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:krlight.net:2013:nsa" version="2013-07-26T10:42:44Z"><nml:Location id="urn:ogf:network:krlight.net:2013:location"><nml:lat>36.366</nml:lat><nml:long>127.359</nml:long></nml:Location><nsi:Service id="urn:ogf:network:krlight.net:2013:nsa-provserv"><nsi:link>
+<?xml version="1.0" encoding="UTF-8"?>
+<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:krlight.net:2013:nsa" version="2013-07-26T10:42:44Z">
+    <nml:Location id="urn:ogf:network:krlight.net:2013:location">
+        <nml:lat>36.366</nml:lat>
+        <nml:long>127.359</nml:long>
+    </nml:Location>
+    <nsi:Service id="urn:ogf:network:krlight.net:2013:nsa-provserv">
+        <nsi:link>
             http://203.230.116.202:8090/NSI_v2.0/ConnectionServiceProvider
-        </nsi:link><nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type><nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy"><nsi:NSA id="urn:ogf:network:krlight.net:2013:nsa" /></nsi:Relation></nsi:Service><nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#adminContact"><vc:text>TODO: Convert this to vCard notation
+        </nsi:link>
+        <nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type>
+        <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy">
+            <nsi:NSA id="urn:ogf:network:krlight.net:2013:nsa"/>
+        </nsi:Relation>
+    </nsi:Service>
+    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#adminContact">
+        <vc:text>TODO: Convert this to vCard notation
 
             DynamicKL  (KISTI) 
             Project Mgmt: 
@@ -19,4 +32,48 @@
             - Kyungmin Lee, +82-10-9958-8979, tsoc@naver.com, kyungmin_ 
             - Kwangjong Cho, +82-10-4192-8992, kjcho@kisti.re.kr, kwangjong cho
             : SC2011 booth#  656  KISTI
-        </vc:text></nsi:Relation><nml:Topology id="urn:ogf:network:krlight.net:2013:topology"><nml:name>krlight.net</nml:name><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort"><nml:PortGroup id="urn:ogf:network:krlight.net:2013:krlight-gloriad"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias"><nml:PortGroup id="urn:ogf:network:gloriad.org:2013:krlight-gloriad" /></nml:Relation></nml:PortGroup></nml:Relation><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort"><nml:PortGroup id="urn:ogf:network:krlight.net:2013:gloriad-krlight"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias"><nml:PortGroup id="urn:ogf:network:gloriad.org:2013:gloriad-krlight" /></nml:Relation></nml:PortGroup></nml:Relation><nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:bi-krlight-gloriad"><nml:PortGroup id="urn:ogf:network:krlight.net:2013:krlight-gloriad" /><nml:PortGroup id="urn:ogf:network:krlight.net:2013:gloriad-krlight" /></nml:BidirectionalPort><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort"><nml:PortGroup id="urn:ogf:network:krlight.net:2013:ps-out"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup></nml:PortGroup></nml:Relation><nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort"><nml:PortGroup id="urn:ogf:network:krlight.net:2013:ps-in"><nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup></nml:PortGroup></nml:Relation><nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:bi-ps"><nml:PortGroup id="urn:ogf:network:krlight.net:2013:ps-in" /><nml:PortGroup id="urn:ogf:network:krlight.net:2013:ps-out" /></nml:BidirectionalPort></nml:Topology><nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith"><nsi:NSA id="urn:ogf:network:gloriad.org:2013:nsa" /></nsi:Relation></nsi:NSA>
+        </vc:text>
+    </nsi:Relation>
+    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
+        <nsi:NSA id="urn:ogf:network:gloriad.org:2013:nsa"/>
+    </nsi:Relation>
+    
+    <nml:Topology id="urn:ogf:network:krlight.net:2013:topology">
+        <nml:name>krlight.net</nml:name>
+        <nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:bi-krlight-gloriad">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:krlight-gloriad"/>
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:gloriad-krlight"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:bi-ps">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:ps-in"/>
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:ps-out"/>
+        </nml:BidirectionalPort>
+        
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:krlight-gloriad">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:gloriad.org:2013:krlight-gloriad"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:gloriad-krlight">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:gloriad.org:2013:gloriad-krlight"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:ps-out">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:ps-in">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+    </nml:Topology>
+</nsi:NSA>
