@@ -1,6 +1,8 @@
 <nml:Topology id="urn:ogf:network:glif.is:2013:autogole-topology"
     xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#"
     xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#">
+    <nml:Topology id="urn:ogf:network:ampath.net:2013:topology"
+		nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/ampath.net.xml" />
     
     <nml:Topology id="urn:ogf:network:aist.go.jp:2013:topology"
 		nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/aist.go.jp.xml" />

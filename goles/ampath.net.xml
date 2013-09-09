@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0"  id="urn:ogf:network:ampath.net:2013:nsa" version="2013-09-06T03:00:00Z">
+  <nml:Location id="urn:ogf:network:ampath.net:2013:miami">
+    <nml:lat>25.78</nml:lat>
+    <nml:long>-80.194</nml:long>
+  </nml:Location>
+  <nsi:Service id="urn:ogf:network:ampath.net:2013:nsa-provserv">
+    <nsi:link>http://forge.ampath.net:9080/NSI/services/CS2</nsi:link>
+    <nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type>
+    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy">
+      <nsi:NSA id="urn:ogf:network:ampath.net:2013:nsa"/>
+    </nsi:Relation>
+  </nsi:Service>
+  <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#adminContact">
+    <vc:text>TODO:ConvertthistovCardnotation
+
+    NSA: OpenNSA
+    Projectmanager:JeronimoBezerra
+    email:jab@ampath.net
+    mobile:55-19-98238-6330
+    skype:jab1982
+    </vc:text>
+  </nsi:Relation>
+  <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
+    <nsi:NSA id="urn:ogf:network:startap.net:2013:nsa"/>
+  </nsi:Relation>
+  <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
+    <nsi:NSA id="urn:ogf:network:southernlight.net:2013:nsa"/>
+  </nsi:Relation>
+
+  <nml:Topology id="urn:ogf:network:ampath.net:2013:topology">
+      <nml:name>ampath.net</nml:name>
+      <nml:BidirectionalPort id="urn:ogf:network:ampath.net:2013:bi-ampath-southernlight">
+         <nml:PortGroup id="urn:ogf:network:ampath.net:2013:ampath-southernlight"/>
+         <nml:PortGroup id="urn:ogf:network:ampath.net:2013:southernlight-ampath"/>
+      </nml:BidirectionalPort>
+      <nml:BidirectionalPort id="urn:ogf:network:ampath.net:2013:bi-ampath-startap">
+         <nml:PortGroup id="urn:ogf:network:ampath.net:2013:ampath-startap"/>
+         <nml:PortGroup id="urn:ogf:network:ampath.net:2013:startap-ampath"/>
+      </nml:BidirectionalPort>
+      <nml:BidirectionalPort id="urn:ogf:network:ampath.net:2013:bi-ps">
+         <nml:PortGroup id="urn:ogf:network:ampath.net:2013:ps-in"/>
+         <nml:PortGroup id="urn:ogf:network:ampath.net:2013:ps-out"/>
+      </nml:BidirectionalPort>
+
+      <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+         <nml:PortGroup id="urn:ogf:network:ampath.net:2013:ampath-southernlight">
+           <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1800</nml:LabelGroup>
+           <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+             <nml:PortGroup id="urn:ogf:network:ampath.net:2013:ampath-southernlight"/>
+           </nml:Relation>
+         </nml:PortGroup>
+      </nml:Relation>
+      <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+         <nml:PortGroup id="urn:ogf:network:ampath.net:2013:southernlight-ampath">
+           <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1800</nml:LabelGroup>
+           <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+             <nml:PortGroup id="urn:ogf:network:ampath.net:2013:southernlight-ampath"/>
+           </nml:Relation>
+         </nml:PortGroup>
+      </nml:Relation>
+
+      <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+         <nml:PortGroup id="urn:ogf:network:ampath.net:2013:ampath-startap">
+           <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1800</nml:LabelGroup>
+           <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+             <nml:PortGroup id="urn:ogf:network:ampath.net:2013:ampath-startap"/>
+           </nml:Relation>
+         </nml:PortGroup>
+      </nml:Relation>
+      <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+         <nml:PortGroup id="urn:ogf:network:ampath.net:2013:startap-ampath">
+           <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1800</nml:LabelGroup>
+           <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+             <nml:PortGroup id="urn:ogf:network:ampath.net:2013:startap-ampath"/>
+           </nml:Relation>
+         </nml:PortGroup>
+      </nml:Relation>
+
+      <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+         <nml:PortGroup id="urn:ogf:network:ampath.net:2013:ps-out">
+         <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1800</nml:LabelGroup>
+         </nml:PortGroup>
+      </nml:Relation>
+      <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+         <nml:PortGroup id="urn:ogf:network:ampath.net:2013:ps-in">
+         <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1800</nml:LabelGroup>
+         </nml:PortGroup>
+      </nml:Relation>
+  </nml:Topology>
+</nsi:NSA>
