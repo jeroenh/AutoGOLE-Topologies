@@ -24,7 +24,7 @@
     <nml:Topology id="urn:ogf:network:netherlight.net:2013:topology"
         nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/netherlight.net.xml" />
     <nml:Topology id="urn:ogf:network:nordu.net:2013:topology"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/nordu.net.xml" />
+        nsi:isReference="https://nsi.nordu.net:9443/NSI/topology/nordu.net:2013.xml" />
     <nml:Topology id="urn:ogf:network:pionier.net.pl:2013:topology"
         nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/pionier.net.pl.xml" />
     <nml:Topology id="urn:ogf:network:startap.net:2013:topology"
