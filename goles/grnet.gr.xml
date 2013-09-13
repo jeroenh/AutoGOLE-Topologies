@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:pionier.net.pl:2013:nsa" version="2013-07-26T10:42:44Z">
-    <nml:Location id="urn:ogf:network:pionier.net.pl:2013:location">
+<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:grnet.gr:2013:nsa" version="2013-07-26T10:42:44Z">
+    <nml:Location id="urn:ogf:network:grnet.gr:2013:location">
         <nml:lat>52.412</nml:lat>
         <nml:long>16.916</nml:long>
     </nml:Location>
-    <nsi:Service id="urn:ogf:network:pionier.net.pl:2013:nsa-provserv">
+    <nsi:Service id="urn:ogf:network:grnet.gr:2013:nsa-provserv">
         <nsi:link>
-            http://194.132.53.174:9080/nsi/ConnectionProvider
+             http://194.132.53.174:9092/nsi/ConnectionProvider 
         </nsi:link>
         <nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type>
         <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy">
-            <nsi:NSA id="urn:ogf:network:pionier.net.pl:2013:nsa"/>
+            <nsi:NSA id="urn:ogf:network:grnet.gr:2013:nsa"/>
         </nsi:Relation>
     </nsi:Service>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#adminContact">
         <vc:text>TODO: Convert this to vCard notation
 
-            NSA: AutoBAHN  (GEANT) 
+            NSA: PSNC 
             Project manager: Radek Krzywania  
             email: radek.krzywania@man.poznan.pl  
             skype: Radoslaw.krzywania 
@@ -26,45 +26,46 @@
         </vc:text>
     </nsi:Relation>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
-        <nsi:NSA id="urn:ogf:network:netherlight.net:2013:nsa"/>
+        <nsi:NSA id="urn:ogf:network:grnet.gr:2013:nsa"/>
     </nsi:Relation>
-    <nml:Topology id="urn:ogf:network:pionier.net.pl:2013:topology">
-        <nml:name>pionier.net.pl</nml:name>
-        <nml:BidirectionalPort id="urn:ogf:network:pionier.net.pl:2013:bi-pionier-netherlight">
-            <nml:PortGroup id="urn:ogf:network:pionier.net.pl:2013:pionier-netherlight"/>
-            <nml:PortGroup id="urn:ogf:network:pionier.net.pl:2013:netherlight-pionier"/>
+    
+    <nml:Topology id="urn:ogf:network:grnet.gr:2013:topology">
+        <nml:name>grnet.gr</nml:name>
+        <nml:BidirectionalPort id="urn:ogf:network:grnet.gr:2013:bi-grnet-geant">
+            <nml:PortGroup id="urn:ogf:network:grnet.gr:2013:grnet-geant"/>
+            <nml:PortGroup id="urn:ogf:network:grnet.gr:2013:geant-grnet"/>
         </nml:BidirectionalPort>
-        <nml:BidirectionalPort id="urn:ogf:network:pionier.net.pl:2013:bi-ps">
-            <nml:PortGroup id="urn:ogf:network:pionier.net.pl:2013:ps-in"/>
-            <nml:PortGroup id="urn:ogf:network:pionier.net.pl:2013:ps-out"/>
+        <nml:BidirectionalPort id="urn:ogf:network:grnet.gr:2013:bi-ps">
+            <nml:PortGroup id="urn:ogf:network:grnet.gr:2013:ps-in"/>
+            <nml:PortGroup id="urn:ogf:network:grnet.gr:2013:ps-out"/>
         </nml:BidirectionalPort>
+        
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:pionier.net.pl:2013:pionier-netherlight">
+            <nml:PortGroup id="urn:ogf:network:grnet.gr:2013:grnet-geant">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:pionier-netherlight"/>
+                    <nml:PortGroup id="urn:ogf:network:geant.net:2013:grnet-geant"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:pionier.net.pl:2013:netherlight-pionier">
+            <nml:PortGroup id="urn:ogf:network:grnet.gr:2013:geant-grnet">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:netherlight-pionier"/>
+                    <nml:PortGroup id="urn:ogf:network:geant.net:2013:geant-grnet"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:pionier.net.pl:2013:ps-out">
+            <nml:PortGroup id="urn:ogf:network:grnet.gr:2013:ps-out">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:pionier.net.pl:2013:ps-in">
+            <nml:PortGroup id="urn:ogf:network:grnet.gr:2013:ps-in">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
     </nml:Topology>
-
 </nsi:NSA>
 

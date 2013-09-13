@@ -6,7 +6,7 @@
     </nml:Location>
     <nsi:Service id="urn:ogf:network:geant.net:2013:nsa-provserv">
         <nsi:link>
-           http://gnscdemo.geant.net:8080/nsi/ConnectionProvider
+          http://194.132.53.174:9090/nsi/ConnectionProvider
         </nsi:link>
         <nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type>
         <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy">
@@ -27,16 +27,16 @@
         </vc:text>
     </nsi:Relation>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
-        <nsi:NSA id="urn:ogf:network:pionier.net.pl:2013:nsa"/>
+        <nsi:NSA id="urn:ogf:network:grnet.gr:2013:nsa"/>
     </nsi:Relation>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
         <nsi:NSA id="urn:ogf:network:netherlight.net:2013:nsa"/>
     </nsi:Relation>
     <nml:Topology id="urn:ogf:network:geant.net:2013:topology">
         <nml:name>geant.net</nml:name>
-        <nml:BidirectionalPort id="urn:ogf:network:geant.net:2013:bi-geant-pionier">
-            <nml:PortGroup id="urn:ogf:network:geant.net:2013:geant-pionier"/>
-            <nml:PortGroup id="urn:ogf:network:geant.net:2013:pionier-geant"/>
+        <nml:BidirectionalPort id="urn:ogf:network:geant.net:2013:bi-geant-grnet">
+            <nml:PortGroup id="urn:ogf:network:geant.net:2013:geant-grnet"/>
+            <nml:PortGroup id="urn:ogf:network:geant.net:2013:grnet-geant"/>
         </nml:BidirectionalPort>
         <nml:BidirectionalPort id="urn:ogf:network:geant.net:2013:bi-ps">
             <nml:PortGroup id="urn:ogf:network:geant.net:2013:ps-in"/>
@@ -47,18 +47,18 @@
             <nml:PortGroup id="urn:ogf:network:geant.net:2013:netherlight-geant"/>
         </nml:BidirectionalPort>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:geant.net:2013:geant-pionier">
+            <nml:PortGroup id="urn:ogf:network:geant.net:2013:geant-grnet">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:pionier.net.pl:2013:geant-pionier"/>
+                    <nml:PortGroup id="urn:ogf:network:grnet.gr:2013:geant-grnet"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:geant.net:2013:pionier-geant">
+            <nml:PortGroup id="urn:ogf:network:geant.net:2013:grnet-geant">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:pionier.net.pl:2013:pionier-geant"/>
+                    <nml:PortGroup id="urn:ogf:network:grnet.gr:2013:grnet-geant"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
@@ -90,3 +90,4 @@
         </nml:Relation>
     </nml:Topology>
 </nsi:NSA>
+

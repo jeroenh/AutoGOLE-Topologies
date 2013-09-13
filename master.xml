@@ -31,4 +31,7 @@
         nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/startap.net.xml" />
     <nml:Topology id="urn:ogf:network:uvalight.net:2013:topology"
         nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/uvalight.net.xml" />
+    <nml:Topology id="urn:ogf:network:grnet.gr:2013:topology"
+        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/grnet.gr.xml" />
+    
 </nml:Topology>
