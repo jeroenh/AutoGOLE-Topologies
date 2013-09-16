@@ -21,7 +21,7 @@
         nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/kddilabs.jp.xml" />
     <nml:Topology id="urn:ogf:network:krlight.net:2013:topology"
         nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/krlight.net.xml" />
-    <nml:Topology id="urn:ogf:network:netherlight.net:2013:topology"
+    <nml:Topology id="urn:ogf:network:netherlight.net:2013:topology:a-gole:testbed"
         nsi:isReference=" https://bod.netherlight.net/nsi-topology" />
     <nml:Topology id="urn:ogf:network:nordu.net:2013:topology"
         nsi:isReference="https://nsi.nordu.net:9443/NSI/topology/nordu.net:2013.xml" />
