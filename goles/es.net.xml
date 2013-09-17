@@ -30,37 +30,37 @@
         <nsi:NSA id="urn:ogf:network:startap.net:2013:nsa"/>
     </nsi:Relation>
 
-    <nml:Topology id="urn:ogf:network:es.net:2013:topology">
+    <nml:Topology id="urn:ogf:network:es.net:2013">
         <nml:name>es.net</nml:name>
 
-        <nml:BidirectionalPort id="urn:ogf:network:es.net:2013:topology:ps:sunn:1">
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:topology:ps:sunn:1:in"/>
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:topology:ps:sunn:1:out"/>
+        <nml:BidirectionalPort id="urn:ogf:network:es.net:2013:ps:sunn:1">
+            <nml:PortGroup id="urn:ogf:network:es.net:2013:ps:sunn:1:in"/>
+            <nml:PortGroup id="urn:ogf:network:es.net:2013:ps:sunn:1:out"/>
         </nml:BidirectionalPort>
 
-        <nml:BidirectionalPort id="urn:ogf:network:es.net:2013:topology:manlan:aofa:1">
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:topology:manlan:aofa:1:in"/>
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:topology:manlan:aofa:1:out"/>
+        <nml:BidirectionalPort id="urn:ogf:network:es.net:2013:manlan:aofa:1">
+            <nml:PortGroup id="urn:ogf:network:es.net:2013:manlan:aofa:1:in"/>
+            <nml:PortGroup id="urn:ogf:network:es.net:2013:manlan:aofa:1:out"/>
         </nml:BidirectionalPort>
 
-        <nml:BidirectionalPort id="urn:ogf:network:es.net:2013:topology:starlight:star:1">
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:topology:starlight:star:1:in"/>
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:topology:starlight:star:1:out"/>
+        <nml:BidirectionalPort id="urn:ogf:network:es.net:2013:starlight:star:1">
+            <nml:PortGroup id="urn:ogf:network:es.net:2013:starlight:star:1:in"/>
+            <nml:PortGroup id="urn:ogf:network:es.net:2013:starlight:star:1:out"/>
         </nml:BidirectionalPort>
 
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:topology:ps:sunn:1:in"/>
+            <nml:PortGroup id="urn:ogf:network:es.net:2013:ps:sunn:1:in"/>
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:topology:ps:sunn:1:out"/>
+            <nml:PortGroup id="urn:ogf:network:es.net:2013:ps:sunn:1:out"/>
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
 
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:topology:manlan:aofa:1:in"/>
+            <nml:PortGroup id="urn:ogf:network:es.net:2013:manlan:aofa:1:in"/>
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:manlan.net:2013:es:out"/>
@@ -68,7 +68,7 @@
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:topology:manlan:aofa:1:out"/>
+            <nml:PortGroup id="urn:ogf:network:es.net:2013:manlan:aofa:1:out"/>
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:manlan.net:2013:es:in"/>
@@ -77,7 +77,7 @@
         </nml:Relation>
 
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:topology:starlight:star:1:in"/>
+            <nml:PortGroup id="urn:ogf:network:es.net:2013:starlight:star:1:in"/>
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-es"/>
@@ -85,7 +85,7 @@
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:topology:starlight:star:1:out"/>
+            <nml:PortGroup id="urn:ogf:network:es.net:2013:starlight:star:1:out"/>
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:startap.net:2013:es-startap"/>
@@ -95,4 +95,3 @@
 
     </nml:Topology>
 </nsi:NSA>
-
