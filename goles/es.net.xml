@@ -30,7 +30,7 @@
         <nsi:NSA id="urn:ogf:network:startap.net:2013:nsa"/>
     </nsi:Relation>
 
-    <nml:Topology id="urn:ogf:network:es.net:2013">
+    <nml:Topology id="urn:ogf:network:es.net:2013:">
         <nml:name>es.net</nml:name>
 
         <nml:BidirectionalPort id="urn:ogf:network:es.net:2013:ps:sunn:1">
