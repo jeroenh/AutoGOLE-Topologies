@@ -33,7 +33,7 @@
         <nsi:NSA id="urn:ogf:network:es.net:2013:nsa"/>
     </nsi:Relation>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
-        <nsi:NSA id="urn:ogf:network:netherlight.net:2013:nsa"/>
+        <nsi:NSA id="urn:ogf:network:netherlight.net:2013:nsa:bod"/>
     </nsi:Relation>
     <nml:Topology id="urn:ogf:network:startap.net:2013:topology">
         <nml:name>startap.net</nml:name>
@@ -104,7 +104,7 @@
             <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-netherlight">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:startap-netherlight"/>
+                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:port:a-gole:testbed:starlight:1:in"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
@@ -112,7 +112,7 @@
             <nml:PortGroup id="urn:ogf:network:startap.net:2013:netherlight-startap">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:netherlight-startap"/>
+                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:port:a-gole:testbed:starlight:1:out"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
