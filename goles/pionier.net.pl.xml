@@ -26,7 +26,7 @@
         </vc:text>
     </nsi:Relation>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
-        <nsi:NSA id="urn:ogf:network:netherlight.net:2013:nsa"/>
+        <nsi:NSA id="urn:ogf:network:netherlight.net:2013:nsa:bod"/>
     </nsi:Relation>
     <nml:Topology id="urn:ogf:network:pionier.net.pl:2013:topology">
         <nml:name>pionier.net.pl</nml:name>
@@ -42,7 +42,7 @@
             <nml:PortGroup id="urn:ogf:network:pionier.net.pl:2013:pionier-netherlight">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:pionier-netherlight"/>
+                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:port:a-gole:testbed:pionier:1:in"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
@@ -50,7 +50,7 @@
             <nml:PortGroup id="urn:ogf:network:pionier.net.pl:2013:netherlight-pionier">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:netherlight-pionier"/>
+                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:port:a-gole:testbed:pionier:1:out"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
