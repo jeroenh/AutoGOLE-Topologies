@@ -35,4 +35,6 @@
         nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/grnet.gr.xml" />
     <nml:Topology id="urn:ogf:network:manlan.net:2013:"
         nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/manlan.net.xml" />
+    <nml:Topology id="urn:ogf:network:surfnet.nl:1990:topology:surfnet6:production"
+        nsi:isReference="https://bod.surfnet.nl/nsi-topology" />        
 </nml:Topology>
