@@ -28,7 +28,6 @@
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
         <nsi:NSA id="urn:ogf:network:pionier.net.pl:2013:nsa"/>
     </nsi:Relation>
-    
     <nml:Topology id="urn:ogf:network:exp.pionier.net.pl:2013:topology">
         <nml:name>exp.pionier.net.pl</nml:name>
         <nml:BidirectionalPort id="urn:ogf:network:exp.pionier.net.pl:2013:bi-exp-pionier">
@@ -39,7 +38,6 @@
             <nml:PortGroup id="urn:ogf:network:exp.pionier.net.pl:2013:ps-in"/>
             <nml:PortGroup id="urn:ogf:network:exp.pionier.net.pl:2013:ps-out"/>
         </nml:BidirectionalPort>
-        
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
             <nml:PortGroup id="urn:ogf:network:exp.pionier.net.pl:2013:exp-pionier">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>

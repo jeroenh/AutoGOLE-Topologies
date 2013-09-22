@@ -16,7 +16,7 @@
             <vc:text>Administrator</vc:text>
         </vc:fn>
         <vc:n>
-            <vc:surname>Dale/vc:surname>
+            <vc:surname>Dale</vc:surname>
             <vc:given>Finkelson</vc:given>
         </vc:n>
         <vc:org>
@@ -44,7 +44,7 @@
         </nml:BidirectionalPort>
 
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:manlan.net:2013:es:in"/>
+            <nml:PortGroup id="urn:ogf:network:manlan.net:2013:es:in">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:es.net:2013:manlan:aofa:1:out"/>
@@ -52,7 +52,7 @@
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:manlan.net:2013:es:out"/>
+            <nml:PortGroup id="urn:ogf:network:manlan.net:2013:es:out">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:es.net:2013:manlan:aofa:1:in"/>
@@ -61,7 +61,7 @@
         </nml:Relation>
 
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:manlan.net:2013:netherlight:in"/>
+            <nml:PortGroup id="urn:ogf:network:manlan.net:2013:netherlight:in">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:port:a-gole:testbed:manlan:1:out">
@@ -69,7 +69,7 @@
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:manlan.net:2013:netherlight:out"/>
+            <nml:PortGroup id="urn:ogf:network:manlan.net:2013:netherlight:out">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:port:a-gole:testbed:manlan:1:in">

@@ -5,9 +5,7 @@
         <nml:long>140.133</nml:long>
     </nml:Location>
     <nsi:Service id="urn:ogf:network:aist.go.jp:2013:nsa-provserv">
-        <nsi:link>
-            http://163.220.30.174:28080/nsi2/services/ConnectionProvider
-        </nsi:link>
+        <nsi:link>http://163.220.30.174:28080/nsi2/services/ConnectionProvider</nsi:link>
         <nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type>
         <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy">
             <nsi:NSA id="urn:ogf:network:aist.go.jp:2013:nsa"/>
