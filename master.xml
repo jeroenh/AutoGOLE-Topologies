@@ -30,7 +30,7 @@
     <nml:Topology id="urn:ogf:network:startap.net:2013:topology"
         nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/startap.net.xml" />
     <nml:Topology id="urn:ogf:network:southernlight.net:2013:topology"
-        nsi:isReference="http://agole.ansp.br:9080/NSI/topology/southerlight.net:2013.xml" />
+        nsi:isReference="http://agole.ansp.br:9080/NSI/topology/southernlight.net:2013.xml" />
     <nml:Topology id="urn:ogf:network:uvalight.net:2013:topology"
         nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/uvalight.net.xml" />
     <nml:Topology id="urn:ogf:network:grnet.gr:2013:topology"
