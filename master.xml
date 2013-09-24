@@ -1,42 +1,24 @@
 <nml:Topology id="urn:ogf:network:glif.is:2013:autogole-topology"
     xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#"
     xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#">
-    <nml:Topology id="urn:ogf:network:ampath.net:2013:topology"
-        nsi:isReference="http://nsi.ampath.net:9080/NSI/topology/ampath.net:2013.xml" />
-    <nml:Topology id="urn:ogf:network:aist.go.jp:2013:topology"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/aist.go.jp.xml" />
-    <nml:Topology id="urn:ogf:network:czechlight.cesnet.cz:2013:topology"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/czechlight.cesnet.cz.xml" />
-    <nml:Topology id="urn:ogf:network:es.net:2013:"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/es.net.xml" />
-    <nml:Topology id="urn:ogf:network:exp.pionier.net.pl:2013:topology"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/exp.pionier.net.pl.xml" />
-    <nml:Topology id="urn:ogf:network:geant.net:2013:topology"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/geant.net.xml" />
-    <nml:Topology id="urn:ogf:network:gloriad.org:2013:topology"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/gloriad.org.xml" />
-    <nml:Topology id="urn:ogf:network:jgn-x.jp:2013:topology"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/jgn-x.jp.xml" />
-    <nml:Topology id="urn:ogf:network:kddilabs.jp:2013:topology"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/kddilabs.jp.xml" />
-    <nml:Topology id="urn:ogf:network:krlight.net:2013:topology"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/krlight.net.xml" />
-    <nml:Topology id="urn:ogf:network:netherlight.net:2013:topology:a-gole:testbed"
-        nsi:isReference="https://bod.netherlight.net/nsi-topology" />
-    <nml:Topology id="urn:ogf:network:nordu.net:2013:topology"
-        nsi:isReference="https://nsi.nordu.net:9443/NSI/topology/nordu.net:2013.xml" />
-    <nml:Topology id="urn:ogf:network:pionier.net.pl:2013:topology"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/pionier.net.pl.xml" />
-    <nml:Topology id="urn:ogf:network:startap.net:2013:topology"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/startap.net.xml" />
-    <nml:Topology id="urn:ogf:network:southernlight.net:2013:topology"
-        nsi:isReference="http://agole.ansp.br:9080/NSI/topology/southernlight.net:2013.xml" />
-    <nml:Topology id="urn:ogf:network:uvalight.net:2013:topology"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/uvalight.net.xml" />
-    <nml:Topology id="urn:ogf:network:grnet.gr:2013:topology"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/grnet.gr.xml" />
-    <nml:Topology id="urn:ogf:network:manlan.net:2013:"
-        nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/manlan.net.xml" />
-    <nml:Topology id="urn:ogf:network:surfnet.nl:1990:topology:surfnet6:production"
-        nsi:isReference="https://bod.surfnet.nl/nsi-topology" />
+    <nml:Topology id="urn:ogf:network:ampath.net:2013:topology" nsi:isReference="http://nsi.ampath.net:9080/NSI/topology/ampath.net:2013.xml" />
+    <nml:Topology id="urn:ogf:network:aist.go.jp:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/aist.go.jp.xml" />
+    <nml:Topology id="urn:ogf:network:czechlight.cesnet.cz:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/czechlight.cesnet.cz.xml" />
+    <nml:Topology id="urn:ogf:network:es.net:2013:" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/es.net.xml" />
+    <nml:Topology id="urn:ogf:network:exp.pionier.net.pl:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/exp.pionier.net.pl.xml" />
+    <nml:Topology id="urn:ogf:network:geant.net:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/geant.net.xml" />
+    <nml:Topology id="urn:ogf:network:gloriad.org:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/gloriad.org.xml" />
+    <nml:Topology id="urn:ogf:network:jgn-x.jp:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/jgn-x.jp.xml" />
+    <nml:Topology id="urn:ogf:network:kddilabs.jp:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/kddilabs.jp.xml" />
+    <nml:Topology id="urn:ogf:network:krlight.net:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/krlight.net.xml" />
+    <nml:Topology id="urn:ogf:network:netherlight.net:2013:topology:a-gole:testbed" nsi:isReference="https://bod.netherlight.net/nsi-topology" />
+    <nml:Topology id="urn:ogf:network:nordu.net:2013:topology" nsi:isReference="https://nsi.nordu.net:9443/NSI/topology/nordu.net:2013.xml" />
+    <nml:Topology id="urn:ogf:network:pionier.net.pl:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/pionier.net.pl.xml" />
+    <nml:Topology id="urn:ogf:network:startap.net:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/startap.net.xml" />
+    <nml:Topology id="urn:ogf:network:southernlight.net:2013:topology" nsi:isReference="http://agole.ansp.br:9080/NSI/topology/southernlight.net:2013.xml" />
+    <nml:Topology id="urn:ogf:network:uvalight.net:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/uvalight.net.xml" />
+    <nml:Topology id="urn:ogf:network:grnet.gr:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/grnet.gr.xml" />
+    <nml:Topology id="urn:ogf:network:manlan.internet2.net:2013:" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/manlan.internet2.net.xml" />
+    <nml:Topology id="urn:ogf:network:surfnet.nl:1990:topology:surfnet6:production" nsi:isReference="https://bod.surfnet.nl/nsi-topology" />
+    <nml:Topology id="urn:ogf:network:singaren.net:2013" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/singaren.net.xml" />
 </nml:Topology>
