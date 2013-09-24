@@ -29,6 +29,8 @@
         nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/pionier.net.pl.xml" />
     <nml:Topology id="urn:ogf:network:startap.net:2013:topology"
         nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/startap.net.xml" />
+    <nml:Topology id="urn:ogf:network:southernlight.net:2013:topology"
+        nsi:isReference="http://agole.ansp.br:9080/NSI/topology/southerlight.net:2013.xml" />
     <nml:Topology id="urn:ogf:network:uvalight.net:2013:topology"
         nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/uvalight.net.xml" />
     <nml:Topology id="urn:ogf:network:grnet.gr:2013:topology"
@@ -36,5 +38,5 @@
     <nml:Topology id="urn:ogf:network:manlan.net:2013:"
         nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/manlan.net.xml" />
     <nml:Topology id="urn:ogf:network:surfnet.nl:1990:topology:surfnet6:production"
-        nsi:isReference="https://bod.surfnet.nl/nsi-topology" />        
+        nsi:isReference="https://bod.surfnet.nl/nsi-topology" />
 </nml:Topology>
