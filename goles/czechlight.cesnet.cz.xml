@@ -8,7 +8,7 @@
         <nsi:link>
             http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider
         </nsi:link>
-        <nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type>
+        <nsi:type>application/vnd.org.ogf.nsi.cs.v1+soap</nsi:type>
         <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy">
             <nsi:NSA id="urn:ogf:network:czechlight.cesnet.cz:2013:nsa"/>
         </nsi:Relation>
