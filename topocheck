@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# simple topology checker
+
+echo " --------------- "
+
+# for some reason this gets the two first urls on the same line...
+# other than that, it seems to work
+
+for topourl in `xmlstarlet select -t -v "/nml:Topology/nml:Topology/@nsi:isReference" master.xml`; do
+
+    echo $topourl
+    curl $topourl -s | xmllint -noout --schema schemas/nsi-ext.xsd -
+    echo " --------------- "
+
+done
+
+
+
