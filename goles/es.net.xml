@@ -25,15 +25,9 @@
         <vc:org>
             <vc:text>ESnet, http://www.es.net</vc:text>
         </vc:org>
-<<<<<<< HEAD
-    </nsi:adminContact>
+    </nsi:Relation>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
         <nsi:NSA id="urn:ogf:network:manlan.internet2.edu:2013:nsa"/>
-=======
-</nsi:Relation>
-        <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
-        <nsi:NSA id="urn:ogf:network:manlan.internet2.net:2013:nsa"/>
->>>>>>> 0330d5d17e3e167617f0a39199ab72c304991668
     </nsi:Relation>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
         <nsi:NSA id="urn:ogf:network:startap.net:2013:nsa"/>
