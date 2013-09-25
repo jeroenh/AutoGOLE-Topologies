@@ -12,7 +12,7 @@
             <nsi:NSA id="urn:ogf:network:manlan.internet2.net:2013:nsa"/>
         </nsi:Relation>
     </nsi:Service>
-    <nsi:adminContact>
+    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#adminContact">
         <vc:fn>
             <vc:text>Administrator</vc:text>
         </vc:fn>
@@ -23,8 +23,8 @@
         <vc:org>
             <vc:text>MANLAN, http://www.internet2.edu/manlan</vc:text>
         </vc:org>
-    </nsi:adminContact>
-    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
+</nsi:Relation>
+        <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
         <nsi:NSA id="urn:ogf:network:es.net:2013:nsa"/>
     </nsi:Relation>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
