@@ -1,16 +1,15 @@
 #!/bin/sh
 
-# simple topology checker
+# simple topology checker (only checks xsd validation)
 
 echo " --------------- "
 
-# for some reason this gets the two first urls on the same line...
-# other than that, it seems to work
+# xmlstarlet 1.3.0 will print the first two urls on the same line, get 1.5.0
 
 for topourl in `xmlstarlet select -t -v "/nml:Topology/nml:Topology/@nsi:isReference" master.xml`; do
 
     echo $topourl
-    curl $topourl -s | xmllint -noout --schema schemas/nsi-ext.xsd -
+    curl $topourl -fsS | xmllint -noout --schema schemas/nsi-ext.xsd -
     echo " --------------- "
 
 done
