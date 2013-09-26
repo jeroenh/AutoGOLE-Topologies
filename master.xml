@@ -18,7 +18,8 @@
     <nml:Topology id="urn:ogf:network:southernlight.net:2013:topology" nsi:isReference="http://agole.ansp.br:9080/NSI/topology/southernlight.net:2013.xml" />
     <nml:Topology id="urn:ogf:network:uvalight.net:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/uvalight.net.xml" />
     <nml:Topology id="urn:ogf:network:grnet.gr:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/grnet.gr.xml" />
-    <nml:Topology id="urn:ogf:network:manlan.internet2.net:2013:" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/manlan.internet2.net.xml" />
+    <nml:Topology id="urn:ogf:network:manlan.internet2.edu:2013:" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/manlan.internet2.net.xml" />
     <nml:Topology id="urn:ogf:network:surfnet.nl:1990:topology:surfnet6:production" nsi:isReference="https://bod.surfnet.nl/nsi-topology" />
     <nml:Topology id="urn:ogf:network:singaren.net:2013" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/singaren.net.xml" />
+    <nml:Topology id="urn:ogf:network:icair.org:2013:topology" nsi:isReference="http://pmri061.it.northwestern.edu:9080/NSI/topology/icair.org:2013.xml" />
 </nml:Topology>

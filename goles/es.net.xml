@@ -25,9 +25,9 @@
         <vc:org>
             <vc:text>ESnet, http://www.es.net</vc:text>
         </vc:org>
-</nsi:Relation>
-        <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
-        <nsi:NSA id="urn:ogf:network:manlan.internet2.net:2013:nsa"/>
+    </nsi:Relation>
+    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
+        <nsi:NSA id="urn:ogf:network:manlan.internet2.edu:2013:nsa"/>
     </nsi:Relation>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
         <nsi:NSA id="urn:ogf:network:startap.net:2013:nsa"/>
@@ -64,7 +64,7 @@
             <nml:PortGroup id="urn:ogf:network:es.net:2013:manlan:aofa:1:in">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:manlan.internet2.net:2013:es:out"/>
+                    <nml:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013:es:out"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
@@ -72,7 +72,7 @@
             <nml:PortGroup id="urn:ogf:network:es.net:2013:manlan:aofa:1:out">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:manlan.internet2.net:2013:es:in"/>
+                    <nml:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013:es:in"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
