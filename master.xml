@@ -3,7 +3,7 @@
     xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#">
     <nml:Topology id="urn:ogf:network:ampath.net:2013:topology" nsi:isReference="http://nsi.ampath.net:9080/NSI/topology/ampath.net:2013.xml" />
     <nml:Topology id="urn:ogf:network:aist.go.jp:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/aist.go.jp.xml" />
-    <nml:Topology id="urn:ogf:network:czechlight.cesnet.cz:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/czechlight.cesnet.cz.xml" />
+    <nml:Topology id="urn:ogf:network:czechlight.cesnet.cz:2013:topology:a-gole:testbed" nsi:isReference="https://bod2.surfnet.nl/nsi-topology" />
     <nml:Topology id="urn:ogf:network:es.net:2013:" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/es.net.xml" />
     <nml:Topology id="urn:ogf:network:exp.pionier.net.pl:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/exp.pionier.net.pl.xml" />
     <nml:Topology id="urn:ogf:network:geant.net:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/geant.net.xml" />
