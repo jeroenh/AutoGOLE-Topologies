@@ -12,7 +12,7 @@
     <nml:Topology id="urn:ogf:network:kddilabs.jp:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/kddilabs.jp.xml" />
     <nml:Topology id="urn:ogf:network:krlight.net:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/krlight.net.xml" />
     <nml:Topology id="urn:ogf:network:netherlight.net:2013:topology:a-gole:testbed" nsi:isReference="https://bod.netherlight.net/nsi-topology" />
-    <nml:Topology id="urn:ogf:network:nordu.net:2013:topology" nsi:isReference="https://nsi.nordu.net:9443/NSI/topology/nordu.net:2013.xml" />
+    <nml:Topology id="urn:ogf:network:nordu.net:2013" nsi:isReference="https://nsi.nordu.net:9443/NSI/topology/nordu.net:2013.xml" />
     <nml:Topology id="urn:ogf:network:pionier.net.pl:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/pionier.net.pl.xml" />
     <nml:Topology id="urn:ogf:network:startap.net:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/startap.net.xml" />
     <nml:Topology id="urn:ogf:network:southernlight.net:2013:topology" nsi:isReference="http://agole.ansp.br:9080/NSI/topology/southernlight.net:2013.xml" />
