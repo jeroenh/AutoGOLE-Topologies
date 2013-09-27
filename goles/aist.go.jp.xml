@@ -5,7 +5,7 @@
         <nml:long>140.133</nml:long>
     </nml:Location>
     <nsi:Service id="urn:ogf:network:aist.go.jp:2013:nsa-provserv">
-        <nsi:link>http://163.220.30.174:28080/nsi2/services/ConnectionProvider</nsi:link>
+        <nsi:link>http://163.220.30.173:22211/nrm/services/ConnectionProvider</nsi:link>
         <nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type>
         <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy">
             <nsi:NSA id="urn:ogf:network:aist.go.jp:2013:nsa"/>
@@ -20,7 +20,7 @@
             mobile:  81-90-8741-3165 
             skype: t.kudoh 4.3.
             Key software engineer: Atsuko Takefusa 
-            email: nsi-gl@m.aist.go.jp 
+            email: nsi-ml@aist.go.jp 
             mobile:  81-29-861-3091 
             skype: taketake320
         </vc:text>
@@ -39,10 +39,14 @@
             <nml:PortGroup id="urn:ogf:network:aist.go.jp:2013:ps-in"/>
             <nml:PortGroup id="urn:ogf:network:aist.go.jp:2013:ps-out"/>
         </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:aist.go.jp:2013:bi-video">
+            <nml:PortGroup id="urn:ogf:network:aist.go.jp:2013:video-in"/>
+            <nml:PortGroup id="urn:ogf:network:aist.go.jp:2013:video-out"/>
+        </nml:BidirectionalPort>
         
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
             <nml:PortGroup id="urn:ogf:network:aist.go.jp:2013:aist-jgn-x">
-                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1784</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:aist-jgn-x"/>
                 </nml:Relation>
@@ -50,7 +54,7 @@
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
             <nml:PortGroup id="urn:ogf:network:aist.go.jp:2013:jgn-x-aist">
-                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1784</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:jgn-x-aist"/>
                 </nml:Relation>
@@ -58,12 +62,22 @@
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
             <nml:PortGroup id="urn:ogf:network:aist.go.jp:2013:ps-out">
-                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1784</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
             <nml:PortGroup id="urn:ogf:network:aist.go.jp:2013:ps-in">
-                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1784</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:aist.go.jp:2013:video-out">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1784</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:aist.go.jp:2013:video-in">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1784</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
     </nml:Topology>
