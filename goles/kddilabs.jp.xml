@@ -6,7 +6,7 @@
     </nml:Location>
     <nsi:Service id="urn:ogf:network:kddilabs.jp:2013:nsa-provserv">
         <nsi:link>
-            http://210.196.65.114:9352/2012/03/connectionprovider
+            http://210.196.65.114:9352/2013/07/connectionprovider
         </nsi:link>
         <nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type>
         <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy">
