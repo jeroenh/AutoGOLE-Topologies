@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" version="2013-07-26T10:42:44Z">
+<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#"
+    xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#"
+    xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0"
+    id="urn:ogf:network:grnet.gr:2013:nsa"
+    version="2013-07-26T10:42:44Z">
+    
     <nml:Location id="urn:ogf:network:grnet.gr:2013:location">
         <nml:lat>52.412</nml:lat>
         <nml:long>16.916</nml:long>
