@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:singaren.net:2013:nsa" version="2013-09-23T21:44:00Z">
+<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:singaren.net:2013:nsa" version="2013-09-27T21:44:00Z">
     <nml:Location id="urn:ogf:network:singaren.net:2013:location">
         <nml:lat>1.3447</nml:lat>
         <nml:long>103.6814</nml:long>
@@ -23,8 +23,14 @@
             <vc:text>MANLAN, http://www.singaren.net.sg</vc:text>
         </vc:org>
     </nsi:Relation>
-        <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
+    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
         <nsi:NSA id="urn:ogf:network:es.net:2013:nsa"/>
+    </nsi:Relation>
+    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
+        <nsi:NSA id="urn:ogf:network:startap.net:2013:nsa"/>
+    </nsi:Relation>
+    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
+        <nsi:NSA id="urn:ogf:network:jgn-x.jp:2013:nsa"/>
     </nsi:Relation>
     <nml:Topology id="urn:ogf:network:singaren.net:2013">
         <nml:name>singaren.net</nml:name>
@@ -39,6 +45,10 @@
         <nml:BidirectionalPort id="urn:ogf:network:singaren.net:2013:startap">
             <nml:PortGroup id="urn:ogf:network:singaren.net:2013:startap:in"/>
             <nml:PortGroup id="urn:ogf:network:singaren.net:2013:startap:out"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:singaren.net:2013:jgn-x">
+            <nml:PortGroup id="urn:ogf:network:singaren.net:2013:jgn-x-singaren"/>
+            <nml:PortGroup id="urn:ogf:network:singaren.net:2013:singaren-jgn-x"/>
         </nml:BidirectionalPort>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
             <nml:PortGroup id="urn:ogf:network:singaren.net:2013:videohost:in">
@@ -68,7 +78,7 @@
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
             <nml:PortGroup id="urn:ogf:network:singaren.net:2013:startap:in">
-                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779,1785-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-singaren"/>
                 </nml:Relation>
@@ -76,9 +86,25 @@
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
             <nml:PortGroup id="urn:ogf:network:singaren.net:2013:startap:out">
-                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779,1785-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:startap.net:2013:singaren-startap"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:singaren.net:2013:jgn-x-singaren">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:jgn-x-singaren"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:singaren.net:2013:singaren-jgn-x">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:singaren-jgn-x" />
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
