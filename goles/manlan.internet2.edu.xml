@@ -6,7 +6,7 @@
         <nml:long>-74.003</nml:long>
     </nml:Location>
     <nsi:Service id="urn:ogf:network:manlan.internet2.edu:2013:nsa:connection-service">
-        <nsi:link>https://oscars.manlan.internet2.edu/ConnectionService</nsi:link>
+        <nsi:link>https://oscars.manlan.internet2.edu:8500/nsi-v2/ConnectionServiceProvider</nsi:link>
         <nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type>
         <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy">
             <nsi:NSA id="urn:ogf:network:manlan.internet2.edu:2013:nsa"/>
