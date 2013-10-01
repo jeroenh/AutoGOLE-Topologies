@@ -57,6 +57,10 @@
             <nml:PortGroup id="urn:ogf:network:startap.net:2013:glo-in"/>
             <nml:PortGroup id="urn:ogf:network:startap.net:2013:glo-out"/>
         </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:startap.net:2013:bi-singaren">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-singaren"/>
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-singaren"/>
+        </nml:BidirectionalPort>
         
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
             <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-jgn-x">
@@ -126,6 +130,23 @@
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1781,1784</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-singaren">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779,1785-1799</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:singaren.net:2013:startap:in"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:singaren-startap">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779,1785-1799</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:singaren.net:2013:startap:out"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        
     </nml:Topology>
 
 </nsi:NSA>
