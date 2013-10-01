@@ -73,7 +73,7 @@
             <nml:PortGroup id="urn:ogf:network:gloriad.org:2013:gloriad-startap">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:startap.net:2013:gloriad-startap"/>
+                    <nml:PortGroup id="urn:ogf:network:icair.org:2013:gloriad-in"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
@@ -81,7 +81,7 @@
             <nml:PortGroup id="urn:ogf:network:gloriad.org:2013:startap-gloriad">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-gloriad"/>
+                    <nml:PortGroup id="urn:ogf:network:icair.org:2013:gloriad-out"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>

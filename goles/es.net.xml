@@ -42,10 +42,6 @@
             <nml:PortGroup id="urn:ogf:network:es.net:2013:manlan:aofa:1:in"/>
             <nml:PortGroup id="urn:ogf:network:es.net:2013:manlan:aofa:1:out"/>
         </nml:BidirectionalPort>
-        <nml:BidirectionalPort id="urn:ogf:network:es.net:2013:singaren:star:1">
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:singaren:star:1:in"/>
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:singaren:star:1:out"/>
-        </nml:BidirectionalPort>
         <nml:BidirectionalPort id="urn:ogf:network:es.net:2013:startap:star:1">
             <nml:PortGroup id="urn:ogf:network:es.net:2013:startap:star:1:in"/>
             <nml:PortGroup id="urn:ogf:network:es.net:2013:startap:star:1:out"/>
@@ -77,26 +73,10 @@
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:singaren:star:1:in">
-                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
-                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:singaren.net:2013:es:out"/>
-                </nml:Relation>
-            </nml:PortGroup>
-        </nml:Relation>
-        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:es.net:2013:singaren:star:1:out">
-                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
-                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:singaren.net:2013:es:in"/>
-                </nml:Relation>
-            </nml:PortGroup>
-        </nml:Relation>
-        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
             <nml:PortGroup id="urn:ogf:network:es.net:2013:startap:star:1:in">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-es"/>
+                    <nml:PortGroup id="urn:ogf:network:icair.org:2013:startap-es-out"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
@@ -104,7 +84,7 @@
             <nml:PortGroup id="urn:ogf:network:es.net:2013:startap:star:1:out">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:startap.net:2013:es-startap"/>
+                    <nml:PortGroup id="urn:ogf:network:icair.org:2013:startap-es-in"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>

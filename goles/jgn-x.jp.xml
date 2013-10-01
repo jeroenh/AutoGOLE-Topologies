@@ -105,7 +105,7 @@
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:startap-jgn-x-out">
+            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:jgn-x-startap">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:icair.org:2013:startap-jgn-x-in"/>
@@ -113,7 +113,7 @@
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:startap-jgn-x-in">
+            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:startap-jgn-x">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:icair.org:2013:startap-jgn-x-out"/>
