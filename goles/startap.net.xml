@@ -59,7 +59,11 @@
         </nml:BidirectionalPort>
         <nml:BidirectionalPort id="urn:ogf:network:startap.net:2013:bi-singaren">
             <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-singaren"/>
-            <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-singaren"/>
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:singaren-startap"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:startap.net:2013:bi-gloriad">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-gloriad"/>
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:gloriad-startap"/>
         </nml:BidirectionalPort>
         
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
@@ -143,6 +147,22 @@
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779,1785-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:singaren.net:2013:startap:out"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-gloriad">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:gloriad.org:2013:startap-gloriad"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:startap.net:2013:gloriad-startap">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:gloriad.org:2013:gloriad-startap"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
