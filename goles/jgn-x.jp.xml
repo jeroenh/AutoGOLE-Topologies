@@ -34,7 +34,7 @@
         <nsi:NSA id="urn:ogf:network:aist.go.jp:2013:nsa"/>
     </nsi:Relation>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
-        <nsi:NSA id="urn:ogf:network:startap.net:2013:nsa"/>
+        <nsi:NSA id="urn:ogf:network:icair.org:2013:nsa"/>
     </nsi:Relation>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
 		<nsi:NSA id="urn:ogf:network:singaren.net:2013:nsa"/>
@@ -105,18 +105,18 @@
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:jgn-x-startap">
+            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:startap-jgn-x-out">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:startap.net:2013:jgn-x-startap"/>
+                    <nml:PortGroup id="urn:ogf:network:icair.org:2013:startap-jgn-x-in"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:startap-jgn-x">
+            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:startap-jgn-x-in">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-jgn-x"/>
+                    <nml:PortGroup id="urn:ogf:network:icair.org:2013:startap-jgn-x-out"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
