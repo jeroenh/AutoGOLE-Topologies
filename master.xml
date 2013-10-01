@@ -15,7 +15,7 @@
     <nml:Topology id="urn:ogf:network:nordu.net:2013" nsi:isReference="https://nsi.nordu.net:9443/NSI/topology/nordu.net:2013.xml" />
     <nml:Topology id="urn:ogf:network:pionier.net.pl:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/pionier.net.pl.xml" />
     <nml:Topology id="urn:ogf:network:southernlight.net:2013" nsi:isReference="http://agole.ansp.br:9080/NSI/topology/southernlight.net:2013.xml" />
-    <nml:Topology id="urn:ogf:network:uvalight.net:2013" nsi:isReference="http://nsa.uvalight.net:9080/NSI/topology/uvalight.net:2013.xml" />
+    <nml:Topology id="urn:ogf:network:uvalight.net:2013" nsi:isReference="https://nsa.uvalight.net:9443/NSI/topology/uvalight.net:2013.xml" />
     <nml:Topology id="urn:ogf:network:grnet.gr:2013:topology" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/grnet.gr.xml" />
     <nml:Topology id="urn:ogf:network:manlan.internet2.edu:2013:" nsi:isReference="https://raw.github.com/jeroenh/AutoGOLE-Topologies/master/goles/manlan.internet2.edu.xml" />
     <!-- <nml:Topology id="urn:ogf:network:surfnet.nl:1990:topology:surfnet6:production" nsi:isReference="https://bod.surfnet.nl/nsi-topology" /> -->
