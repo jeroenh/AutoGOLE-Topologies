@@ -1,0 +1,64 @@
+<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" id="urn:ogf:network:ampath.net:2013:nsa" version="2013-09-30T18:05:45.451905">
+    <nsi:Service id="urn:ogf:network:ampath.net:2013:nsa-cs">
+        <nsi:link>http://nsi.ampath.net:9080/NSI/services/CS2</nsi:link>
+        <nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type>
+    </nsi:Service>
+    <nml:Topology id="urn:ogf:network:ampath.net:2013">
+        <nml:name>ampath.net:2013</nml:name>
+        <nml:BidirectionalPort id="urn:ogf:network:ampath.net:2013:starlight">
+            <nml:name>starlight</nml:name>
+            <nml:PortGroup id="urn:ogf:network:ampath.net:2013:starlight-in"/>
+            <nml:PortGroup id="urn:ogf:network:ampath.net:2013:starlight-out"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:ampath.net:2013:southernlight">
+            <nml:name>southernlight</nml:name>
+            <nml:PortGroup id="urn:ogf:network:ampath.net:2013:southernlight-in"/>
+            <nml:PortGroup id="urn:ogf:network:ampath.net:2013:southernlight-out"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:ampath.net:2013:ndn">
+            <nml:name>ndn</nml:name>
+            <nml:PortGroup id="urn:ogf:network:ampath.net:2013:ndn-in"/>
+            <nml:PortGroup id="urn:ogf:network:ampath.net:2013:ndn-out"/>
+        </nml:BidirectionalPort>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:ampath.net:2013:starlight-in">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1800</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:icair.org:2013:ampath-out"/>
+                </nml:Relation>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:ampath.net:2013:southernlight-in">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1800</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:southernlight.net:2013:bi-ampath-out"/>
+                </nml:Relation>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:ampath.net:2013:ndn-in">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1782-1785</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:nordu.net:2013:ampath-out"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:ampath.net:2013:starlight-out">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1800</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:icair.org:2013:ampath-in"/>
+                </nml:Relation>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:ampath.net:2013:southernlight-out">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1800</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:southernlight.net:2013:bi-ampath-in"/>
+                </nml:Relation>
+            </nml:PortGroup>
+            <nml:PortGroup id="urn:ogf:network:ampath.net:2013:ndn-out">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1782-1785</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:nordu.net:2013:ampath-in"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+    </nml:Topology>
+</nsi:NSA>
