@@ -35,14 +35,14 @@
         </vc:text>
     </nsi:Relation>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
-        <nsi:NSA id="urn:ogf:network:gloriad.org:2013:nsa"/>
+        <nsi:NSA id="urn:ogf:network:startap.net:2013:nsa"/>
     </nsi:Relation>
     
     <nml:Topology id="urn:ogf:network:krlight.net:2013:topology">
         <nml:name>krlight.net</nml:name>
-        <nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:bi-krlight-gloriad">
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:krlight-gloriad"/>
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:gloriad-krlight"/>
+        <nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:bi-krlight-startap">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:krlight-startap"/>
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:startap-krlight"/>
         </nml:BidirectionalPort>
         <nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:bi-ps">
             <nml:PortGroup id="urn:ogf:network:krlight.net:2013:ps-in"/>
@@ -50,18 +50,18 @@
         </nml:BidirectionalPort>
         
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:krlight-gloriad">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:krlight-startap">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:gloriad.org:2013:krlight-gloriad"/>
+                    <nml:PortGroup id="urn:ogf:network:startap.net:2013:krlight-startap"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:gloriad-krlight">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:startap-krlight">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:gloriad.org:2013:gloriad-krlight"/>
+                    <nml:PortGroup id="urn:ogf:network:startap.net:2013:startap-krlight"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
