@@ -35,10 +35,6 @@
             <nml:PortGroup id="urn:ogf:network:singaren.net:2013:videohost:in"/>
             <nml:PortGroup id="urn:ogf:network:singaren.net:2013:videohost:out"/>
         </nml:BidirectionalPort>
-        <nml:BidirectionalPort id="urn:ogf:network:singaren.net:2013:es">
-            <nml:PortGroup id="urn:ogf:network:singaren.net:2013:es:in"/>
-            <nml:PortGroup id="urn:ogf:network:singaren.net:2013:es:out"/>
-        </nml:BidirectionalPort>
         <nml:BidirectionalPort id="urn:ogf:network:singaren.net:2013:startap">
             <nml:PortGroup id="urn:ogf:network:singaren.net:2013:startap:in"/>
             <nml:PortGroup id="urn:ogf:network:singaren.net:2013:startap:out"/>
