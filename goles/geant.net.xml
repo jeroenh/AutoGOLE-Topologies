@@ -76,7 +76,7 @@
             <nml:PortGroup id="urn:ogf:network:geant.net:2013:geant-netherlight">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:geant-netherlight"/>
+                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:port:a-gole:testbed:geant:1:in"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
@@ -84,7 +84,7 @@
             <nml:PortGroup id="urn:ogf:network:geant.net:2013:netherlight-geant">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1780-1783</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:netherlight-geant"/>
+                    <nml:PortGroup id="urn:ogf:network:netherlight.net:2013:port:a-gole:testbed:geant:1:out"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
