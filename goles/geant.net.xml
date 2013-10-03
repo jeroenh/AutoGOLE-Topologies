@@ -32,7 +32,7 @@
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
         <nsi:NSA id="urn:ogf:network:netherlight.net:2013:nsa"/>
     </nsi:Relation>
-    <nml:Topology id="urn:ogf:network:geant.net:2013:topology">
+    <nml:Topology id="urn:ogf:network:geant.net:2013:nsa">
         <nml:name>geant.net</nml:name>
         <nml:BidirectionalPort id="urn:ogf:network:geant.net:2013:bi-geant-grnet">
             <nml:PortGroup id="urn:ogf:network:geant.net:2013:geant-grnet"/>
