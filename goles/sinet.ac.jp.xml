@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:sinet.ac.jp:2013:nsa" version="2013-07-26T10:42:44Z">
+    <nml:Location id="urn:ogf:network:sinet.ac.jp:2013:location">
+        <nml:lat>35.693</nml:lat>
+        <nml:long>139.758</nml:long>
+    </nml:Location>
+    <nsi:Service id="urn:ogf:network:sinet.ac.jp:2013:nsa-provserv">
+        <nsi:link>
+            http://150.100.12.124:9090/sinet_upa/services/connectionprovider
+        </nsi:link>
+        <nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type>
+        <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy">
+            <nsi:NSA id="urn:ogf:network:sinet.ac.jp:2013:nsa"/>
+        </nsi:Relation>
+    </nsi:Service>
+    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#adminContact">
+        <vc:text>TODO: Convert this to vCard notation
+
+            NSA: G-Lambda/SINET (NII)
+            Project manager: Michihiro Aoki
+            email: aoki-m@nii.ac.jp
+            mobile: 81-90-7827-4226
+            skype: maokini2
+            Key software engineer: Michihiro Aoki
+            email: aoki-m@nii.ac.jp
+            mobile: 81-90-7827-4226
+            skype: maokini2
+        </vc:text>
+    </nsi:Relation>
+    <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
+        <nsi:NSA id="urn:ogf:network:sinet.ac.jp:2013:nsa"/>
+    </nsi:Relation>
+    <nml:Topology id="urn:ogf:network:sinet.ac.jp:2013:topology">
+        <nml:name>sinet.ac.jp</nml:name>
+        <nml:BidirectionalPort id="urn:ogf:network:sinet.ac.jp:2013:bi-sinet-jgn-x">
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:sinet-jgn-x"/>
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:jgn-x-sinet"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:sinet.ac.jp:2013:bi-ps">
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:ps-in"/>
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:ps-out"/>
+        </nml:BidirectionalPort>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:ps-out">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1790</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:ps-in">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1790</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:sinet-jgn-x">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1790</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:sinet-jgn-x"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:jgn-x-sinet">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1790</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:jgn-x-sinet"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+
+    </nml:Topology>
+
+</nsi:NSA>
