@@ -28,7 +28,7 @@
         </vc:text>
     </nsi:Relation>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#peersWith">
-        <nsi:NSA id="urn:ogf:network:sinet.ac.jp:2013:nsa"/>
+        <nsi:NSA id="urn:ogf:network:jgn-x.jp:2013:nsa"/>
     </nsi:Relation>
     <nml:Topology id="urn:ogf:network:sinet.ac.jp:2013:topology">
         <nml:name>sinet.ac.jp</nml:name>
