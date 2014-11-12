@@ -48,6 +48,14 @@
             <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:ps-in"/>
             <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:ps-out"/>
         </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:jgn-x.jp:2013:bi-demo-ote">
+            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:demo-ote-in"/>
+            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:demo-ote-out"/>
+        </nml:BidirectionalPort>
+        <nml:BidirectionalPort id="urn:ogf:network:jgn-x.jp:2013:bi-demo-dev">
+            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:demo-dev-in"/>
+            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:demo-dev-out"/>
+        </nml:BidirectionalPort>
         <nml:BidirectionalPort id="urn:ogf:network:jgn-x.jp:2013:bi-jgn-x-kddilabs">
             <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:jgn-x-kddilabs"/>
             <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:kddilabs-jgn-x"/>
@@ -76,6 +84,26 @@
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
             <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:ps-in">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1790</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:demo-ote-out">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1790</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:demo-ote-in">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1790</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:demo-dev-out">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1790</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:demo-dev-in">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1790</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
