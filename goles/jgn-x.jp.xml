@@ -6,7 +6,7 @@
     </nml:Location>
     <nsi:Service id="urn:ogf:network:jgn-x.jp:2013:nsa-provserv">
         <nsi:link>
-            http://202.180.38.130:8080/2013/07/connectionprovider
+            https://glambda.dcn.jgn-x.jp:8443/connectionprovider
         </nsi:link>
         <nsi:type>application/vnd.org.ogf.nsi.cs.v2+soap</nsi:type>
         <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#providedBy">
