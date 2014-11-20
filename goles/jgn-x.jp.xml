@@ -198,7 +198,7 @@
             <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:if-jgn-x-krlight">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:icair.org:2013:topology:krlight-in"/>
+                    <nml:PortGroup id="urn:ogf:network:krlight.net:2013:if-jgn-x-krlight"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
@@ -206,7 +206,7 @@
             <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:if-krlight-jgn-x">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:icair.org:2013:topology:krlight-out"/>
+                    <nml:PortGroup id="urn:ogf:network:krlight.net:2013:if-krlight-jgn-x"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
