@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:krlight.net:2013:nsa" version="2013-07-26T10:42:44Z">
+<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:krlight.net:2013:nsa" version="2015-03-11T10:42:44Z">
     <nml:Location id="urn:ogf:network:krlight.net:2013:location">
         <nml:lat>36.366</nml:lat>
         <nml:long>127.359</nml:long>
@@ -64,7 +64,7 @@
             <nml:PortGroup id="urn:ogf:network:krlight.net:2013:if-krlight-startap">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:icair.org:2013:krlight-in"/>
+                    <nml:PortGroup id="urn:ogf:network:icair.org:2013:topology:krlight-in"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
@@ -72,7 +72,7 @@
             <nml:PortGroup id="urn:ogf:network:krlight.net:2013:if-startap-krlight">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:icair.org:2013:krlight-out"/>
+                    <nml:PortGroup id="urn:ogf:network:icair.org:2013:topology:krlight-out"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
