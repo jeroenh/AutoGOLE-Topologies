@@ -4,7 +4,6 @@
         xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#">
 
     <nml:Topology id="urn:ogf:network:aist.go.jp:2013:topology" nsi:isReference="https://raw.githubusercontent.com/jeroenh/AutoGOLE-Topologies/master/goles/aist.go.jp.xml"/>
-    <nml:Topology id="urn:ogf:network:jgn-x.jp:2013:topology" nsi:isReference="https://raw.githubusercontent.com/jeroenh/AutoGOLE-Topologies/master/goles/jgn-x.jp.xml"/>
     <nml:Topology id="urn:ogf:network:sinet.ac.jp:2013:topology" nsi:isReference="https://raw.githubusercontent.com/jeroenh/AutoGOLE-Topologies/master/goles/sinet.ac.jp.xml"/>
     <nml:Topology id="urn:ogf:network:kddilabs.jp:2013:topology" nsi:isReference="https://raw.githubusercontent.com/jeroenh/AutoGOLE-Topologies/master/goles/kddilabs.jp.xml"/>
     <nml:Topology id="urn:ogf:network:krlight.net:2013:topology" nsi:isReference="https://raw.githubusercontent.com/jeroenh/AutoGOLE-Topologies/master/goles/krlight.net.xml"/>
