@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:krlight.net:2013:nsa" version="2015-03-11T10:42:44Z">
+<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:krlight.net:2013:nsa" version="2015-05-14T10:42:44Z">
     <nml:Location id="urn:ogf:network:krlight.net:2013:location">
         <nml:lat>36.366</nml:lat>
         <nml:long>127.359</nml:long>
@@ -43,25 +43,25 @@
     
     <nml:Topology id="urn:ogf:network:krlight.net:2013:topology">
         <nml:name>krlight.net</nml:name>
-        <nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:bi-krlight-gloriad">
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:if-krlight-startap"/>
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:if-startap-krlight"/>
+        <nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:topology:bi-krlight-gloriad">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:if-krlight-startap"/>
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:if-startap-krlight"/>
         </nml:BidirectionalPort>
-        <nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:bi-ps">
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:ps-in"/>
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:ps-out"/>
+        <nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:topology:bi-ps">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:ps-in"/>
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:ps-out"/>
         </nml:BidirectionalPort>
-        <nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:bi-video">
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:video-in"/>
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:video-out"/>
+        <nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:topology:bi-video">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:video-in"/>
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:video-out"/>
         </nml:BidirectionalPort>
-        <nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:bi-krlight-jgn-x"> 
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:if-krlight-jgn-x"/> 
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:if-jgn-x-krlight"/> 
+        <nml:BidirectionalPort id="urn:ogf:network:krlight.net:2013:topology:bi-krlight-jgn-x"> 
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:if-krlight-jgn-x"/> 
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:if-jgn-x-krlight"/> 
         </nml:BidirectionalPort> 
         
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:if-krlight-startap">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:if-krlight-startap">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:icair.org:2013:topology:krlight-in"/>
@@ -69,7 +69,7 @@
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:if-startap-krlight">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:if-startap-krlight">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
                     <nml:PortGroup id="urn:ogf:network:icair.org:2013:topology:krlight-out"/>
@@ -77,23 +77,23 @@
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:ps-out">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:ps-out">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:ps-in">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:ps-in">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
         
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:video-out">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:video-out">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:video-in">
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:video-in">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
@@ -102,15 +102,15 @@
             <nml:PortGroup id="urn:ogf:network:krlight.net:2013:if-krlight-jgn-x"> 
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup> 
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias"> 
-                    <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:if-krlight-jgn-x"/> 
+                    <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:topology:if-krlight-jgn-x"/> 
                 </nml:Relation> 
             </nml:PortGroup> 
         </nml:Relation> 
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort"> 
-            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:if-jgn-x-krlight"> 
+            <nml:PortGroup id="urn:ogf:network:krlight.net:2013:topology:if-jgn-x-krlight"> 
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup> 
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias"> 
-                    <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:if-jgn-x-krlight"/> 
+                    <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:topology:if-jgn-x-krlight"/> 
                 </nml:Relation> 
             </nml:PortGroup> 
         </nml:Relation> 
