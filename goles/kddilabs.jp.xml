@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:kddilabs.jp:2013:nsa" version="2013-07-26T10:42:44Z">
+<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:kddilabs.jp:2013:nsa" version="2015-05-14T10:42:44Z">
     <nml:Location id="urn:ogf:network:kddilabs.jp:2013:location">
         <nml:lat>35.879</nml:lat>
         <nml:long>139.517</nml:long>
@@ -32,37 +32,37 @@
     </nsi:Relation>
     <nml:Topology id="urn:ogf:network:kddilabs.jp:2013:topology">
         <nml:name>kddilabs.jp</nml:name>
-        <nml:BidirectionalPort id="urn:ogf:network:kddilabs.jp:2013:bi-kddilabs-jgn-x">
-            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:kddilabs-jgn-x"/>
-            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:jgn-x-kddilabs"/>
+        <nml:BidirectionalPort id="urn:ogf:network:kddilabs.jp:2013:topology:bi-kddilabs-jgn-x">
+            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:topology:kddilabs-jgn-x"/>
+            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:topology:jgn-x-kddilabs"/>
         </nml:BidirectionalPort>
-        <nml:BidirectionalPort id="urn:ogf:network:kddilabs.jp:2013:bi-ps">
-            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:ps-in"/>
-            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:ps-out"/>
+        <nml:BidirectionalPort id="urn:ogf:network:kddilabs.jp:2013:topology:bi-ps">
+            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:topology:ps-in"/>
+            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:topology:ps-out"/>
         </nml:BidirectionalPort>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:ps-out">
+            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:topology:ps-out">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:ps-in">
+            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:topology:ps-in">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
-            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:kddilabs-jgn-x">
+            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:topology:kddilabs-jgn-x">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:kddilabs-jgn-x"/>
+                    <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:topology:kddilabs-jgn-x"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
-            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:jgn-x-kddilabs">
+            <nml:PortGroup id="urn:ogf:network:kddilabs.jp:2013:topology:jgn-x-kddilabs">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
                 <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
-                    <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:jgn-x-kddilabs"/>
+                    <nml:PortGroup id="urn:ogf:network:jgn-x.jp:2013:topology:jgn-x-kddilabs"/>
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
