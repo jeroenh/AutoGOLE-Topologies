@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#" xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" id="urn:ogf:network:sinet.ac.jp:2013:nsa" version="2015-05-14T10:42:44Z">
+<nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#"
+    xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" 
+    xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" 
+    id="urn:ogf:network:sinet.ac.jp:2013:nsa" version="2016-11-01T10:42:44Z">
     <nml:Location id="urn:ogf:network:sinet.ac.jp:2013:location">
         <nml:lat>35.693</nml:lat>
         <nml:long>139.758</nml:long>
@@ -15,7 +18,7 @@
     </nsi:Service>
     <nsi:Relation type="http://schemas.ogf.org/nsi/2013/09/topology#adminContact">
         <vc:text>TODO: Convert this to vCard notation
-
+            
             NSA: G-Lambda/SINET (NII)
             Project manager: Hiroshi Yamada
             email: h-yamada@nii.ac.jp
@@ -32,14 +35,72 @@
     </nsi:Relation>
     <nml:Topology id="urn:ogf:network:sinet.ac.jp:2013:topology">
         <nml:name>sinet.ac.jp</nml:name>
+        
+        <!-- PacificWave peering. -->
+        <nml:BidirectionalPort id="urn:ogf:network:sinet.ac.jp:2013:topology:bi-sinet-pacificwave">
+            <nml:name>sinet-to-pacwave-los_angeles</nml:name>
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet_pacificwave"/>
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:pacificwave_sinet"/>
+        </nml:BidirectionalPort>
+        
+        <!-- MANLAN peering. -->
+        <nml:BidirectionalPort id="urn:ogf:network:sinet.ac.jp:2013:topology:bi-sinet-manlan">
+            <nml:name>sinet-to-manlan</nml:name>
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet_manlan"/>
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:manlan_sinet"/>
+        </nml:BidirectionalPort>
+        
+        <!-- JGN-X peering. -->
         <nml:BidirectionalPort id="urn:ogf:network:sinet.ac.jp:2013:topology:bi-sinet-jgn-x">
+            <nml:name>sinet-to-jgn-x</nml:name>
             <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet-jgn-x"/>
             <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:jgn-x-sinet"/>
         </nml:BidirectionalPort>
+        
+        <!-- perfSONAR endpoint. -->
         <nml:BidirectionalPort id="urn:ogf:network:sinet.ac.jp:2013:topology:bi-ps">
+            <nml:name>sinet-perfSONAR</nml:name>
             <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:ps-in"/>
             <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:ps-out"/>
         </nml:BidirectionalPort>
+        
+        <!-- PacificWave peering uni-directional endpoints. -->
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet_pacificwave">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:lsanca.pacificwave.net:2016:topology:sinet-los_angeles-in"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:pacificwave_sinet">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:lsanca.pacificwave.net:2016:topology:sinet-los_angeles-out"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+
+        <!-- MANLAN peering uni-directional endpoints. -->
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet_manlan">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_6:+:in"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:manlan_sinet">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
+                <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                    <nml:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_6:+:out"/>
+                </nml:Relation>
+            </nml:PortGroup>
+        </nml:Relation>
+        
+        <!-- perfSONAR uni-directional endpoints. -->
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
             <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:ps-out">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
@@ -50,6 +111,8 @@
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
             </nml:PortGroup>
         </nml:Relation>
+        
+        <!-- JGN-X peering uni-directional endpoints. -->
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
             <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet-jgn-x">
                 <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799</nml:LabelGroup>
@@ -66,7 +129,8 @@
                 </nml:Relation>
             </nml:PortGroup>
         </nml:Relation>
-
+        
     </nml:Topology>
-
+    
 </nsi:NSA>
+
