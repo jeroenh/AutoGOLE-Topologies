@@ -2,7 +2,7 @@
 <nsi:NSA xmlns:nml="http://schemas.ogf.org/nml/2013/05/base#"
     xmlns:nsi="http://schemas.ogf.org/nsi/2013/09/topology#" 
     xmlns:vc="urn:ietf:params:xml:ns:vcard-4.0" 
-    id="urn:ogf:network:sinet.ac.jp:2013:nsa" version="2016-11-01T10:42:44Z">
+    id="urn:ogf:network:sinet.ac.jp:2013:nsa" version="2016-11-02T10:42:44Z">
     <nml:Location id="urn:ogf:network:sinet.ac.jp:2013:location">
         <nml:lat>35.693</nml:lat>
         <nml:long>139.758</nml:long>
