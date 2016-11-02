@@ -36,15 +36,22 @@
     <nml:Topology id="urn:ogf:network:sinet.ac.jp:2013:topology">
         <nml:name>sinet.ac.jp</nml:name>
         
+        <!-- Client enpoint National Institute of Informatics -->
+        <nml:BidirectionalPort id="urn:ogf:network:sinet.ac.jp:2013:topology:bi-sinet_nii-chiba">
+            <nml:name>sinet_nii-chiba</nml:name>
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet_nii-chiba"/>
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:nii-chiba_sinet"/>
+        </nml:BidirectionalPort>        
+        
         <!-- PacificWave peering. -->
-        <nml:BidirectionalPort id="urn:ogf:network:sinet.ac.jp:2013:topology:bi-sinet-pacificwave">
+        <nml:BidirectionalPort id="urn:ogf:network:sinet.ac.jp:2013:topology:bi-sinet_pacificwave">
             <nml:name>sinet-to-pacwave-los_angeles</nml:name>
             <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet_pacificwave"/>
             <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:pacificwave_sinet"/>
         </nml:BidirectionalPort>
         
         <!-- MANLAN peering. -->
-        <nml:BidirectionalPort id="urn:ogf:network:sinet.ac.jp:2013:topology:bi-sinet-manlan">
+        <nml:BidirectionalPort id="urn:ogf:network:sinet.ac.jp:2013:topology:bi-sinet_manlan">
             <nml:name>sinet-to-manlan</nml:name>
             <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet_manlan"/>
             <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:manlan_sinet"/>
@@ -63,6 +70,18 @@
             <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:ps-in"/>
             <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:ps-out"/>
         </nml:BidirectionalPort>
+
+        <!-- National Institute of Informatics client uni-directional endpoints. -->
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:sinet_nii-chiba">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">2040</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
+        <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+            <nml:PortGroup id="urn:ogf:network:sinet.ac.jp:2013:topology:nii-chiba_sinet">
+                <nml:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">2040</nml:LabelGroup>
+            </nml:PortGroup>
+        </nml:Relation>
         
         <!-- PacificWave peering uni-directional endpoints. -->
         <nml:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
